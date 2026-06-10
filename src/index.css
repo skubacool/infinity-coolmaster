@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply w-full max-w-full min-h-screen overflow-x-hidden scroll-smooth;
+}
+
+html,
+body {
+  @apply bg-bg-base text-text-main;
+  @apply flex flex-col justify-start items-stretch m-0 p-0;
+}
+
+* {
+  font-family: Inter, NotoSansThai, Arial, sans-serif;
+}
+
+@layer components {
+  /* Primary CTA — signature green-to-blue CaaS gradient */
+  .btn-caas {
+    @apply inline-flex flex-row justify-center items-center gap-x-2 rounded-full bg-gradient-caas px-7 py-3.5 text-white text-base font-semibold shadow-premium transition-all duration-200 hover:shadow-premium-md hover:brightness-105;
+  }
+
+  /* Secondary CTA — solid deep navy */
+  .btn-navy {
+    @apply inline-flex flex-row justify-center items-center gap-x-2 rounded-full bg-navy px-7 py-3.5 text-white text-base font-semibold shadow-premium transition-all duration-200 hover:bg-navy-800;
+  }
+
+  /* Tertiary CTA — crisp outline on white */
+  .btn-outline {
+    @apply inline-flex flex-row justify-center items-center gap-x-2 rounded-full bg-white border border-sep-light px-7 py-3.5 text-text-main text-base font-semibold transition-all duration-200 hover:border-brand-blue hover:text-brand-blue;
+  }
+
+  /* Headline accent matching the logo gradient */
+  .text-gradient-caas {
+    background-image: linear-gradient(90deg, #10b981 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Small uppercase section kicker */
+  .kicker {
+    @apply inline-flex items-center gap-x-2 text-xs lg:text-sm font-semibold tracking-[0.2em] uppercase text-brand-green;
+  }
+
+  /* Premium bright card */
+  .card-premium {
+    @apply bg-white rounded-2xl border border-sep-pale shadow-premium;
+  }
+}
+
+.embla {
+  @apply overflow-hidden;
+}
+
+.embla__container {
+  @apply flex h-full;
+}
+
+.embla__slide {
+  @apply min-w-0;
+  flex: 0 0 100%;
+}

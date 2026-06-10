@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 483">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0FDF9"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="483" fill="url(#bg)"/>
+  <g stroke="#0F172A" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 120 H400 M0 240 H400 M0 360 H400 M100 0 V483 M200 0 V483 M300 0 V483"/>
+  </g>
+  <path d="M140 320 L140 160 L260 160 L260 320 M185 200 h30 v25 h-30 z M178 212 h44 M200 190 v44 M165 280 h70 v40 h-70 z" fill="none" stroke="url(#ln)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/>
+  <rect x="140" y="372" width="120" height="5" rx="2.5" fill="url(#ln)"/>
+  <text x="200" y="412" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="3" fill="#475569">HEALTHCARE</text>
+</svg>
