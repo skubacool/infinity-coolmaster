@@ -81,7 +81,10 @@ const SectionSlogan = () => {
         </SafeArea>
       </div>
       {!loading && (
-        <ScrollStrip text={l(locale, localizations, 'general.slide-more')} />
+        <ScrollStrip
+          text={l(locale, localizations, 'general.slide-more')}
+          targetId="benefits"
+        />
       )}
     </section>
   );

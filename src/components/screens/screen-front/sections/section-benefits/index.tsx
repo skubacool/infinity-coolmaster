@@ -20,21 +20,24 @@ const SectionBenefits = () => {
   }, [locale, localizations, benefits]);
 
   return (
-    <section className="py-12 lg:py-[80px] bg-bg-base flex flex-col justify-start items-stretch">
+    <section
+      id="benefits"
+      className="scroll-mt-20 py-16 lg:py-24 bg-bg-base flex flex-col justify-start items-stretch"
+    >
       <SafeArea>
         <div className="flex flex-col justify-start items-stretch">
           <div className="self-center">
-            <BrandLogo markOnly height={56} />
+            <BrandLogo markOnly height={52} />
           </div>
-          <h2 className="block self-center py-4 lg:pt-6 pb-4 text-xl lg:text-3hxl font-semibold text-center text-text-main">
+          <h2 className="block self-center mt-5 mb-5 lg:mt-6 lg:mb-6 max-w-[760px] text-2xl lg:text-4hxl font-semibold tracking-tight !leading-[1.25] text-center text-text-main">
             <TextLines text={localizedTitleBenefits} />
           </h2>
-          <div className="self-center mb-10 lg:mb-12 rounded-full bg-gradient-caas w-12 h-1" />
-          <ul className="gap-x-2 flex flex-col lg:flex-row justify-center items-center lg:items-start">
+          <div className="self-center mb-12 lg:mb-16 rounded-full bg-gradient-caas w-12 h-1" />
+          <ul className="gap-y-10 gap-x-4 lg:gap-x-6 flex flex-col lg:flex-row justify-center items-center lg:items-stretch">
             {benefits.map((benefit) => {
               const { id } = benefit;
               return (
-                <li key={id} className="flex-1">
+                <li key={id} className="flex-1 max-w-[320px]">
                   <BenefitBox locale={locale} benefit={benefit} />
                 </li>
               );
