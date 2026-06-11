@@ -7,10 +7,6 @@ import { LocalizedKeyText } from '../../models/_commons/localized';
 const localizations: LocalizedKeyText[] = [
   // ---------- General ----------
   {
-    key: 'general.explore',
-    text: { th: 'เลื่อนลงเพื่อดูเพิ่มเติม', en: 'Explore' },
-  },
-  {
     key: 'general.slide-more',
     text: { th: 'เลื่อนลงเพื่อดูเพิ่มเติม', en: 'Scroll down for more' },
   },
@@ -39,6 +35,13 @@ const localizations: LocalizedKeyText[] = [
     text: {
       th: '© Infinity CoolMaster Co., Ltd. สงวนลิขสิทธิ์',
       en: '© Infinity CoolMaster Co., Ltd. All rights reserved.',
+    },
+  },
+  {
+    key: 'general.tagline',
+    text: {
+      th: 'Smart Cooling. Zero Hassle.',
+      en: 'Smart Cooling. Zero Hassle.',
     },
   },
   {
@@ -254,27 +257,6 @@ const localizations: LocalizedKeyText[] = [
       th: 'ข้อมูลของคุณจะถูกใช้เพื่อการติดต่อกลับเท่านั้น',
       en: 'Your information is used solely to respond to your request.',
     },
-  },
-
-  // ---------- Contact details ----------
-  {
-    key: 'contact.address',
-    text: {
-      th: '128 อาคารพญาไทพลาซ่า ชั้น 23 ถนนพญาไท แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400',
-      en: '128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10400, Thailand',
-    },
-  },
-  { key: 'contact.tel', text: { th: '02-026-3344', en: '+66 (0)2 026 3344' } },
-  {
-    key: 'contact.email',
-    text: {
-      th: 'sales@infinitycoolmaster.com',
-      en: 'sales@infinitycoolmaster.com',
-    },
-  },
-  {
-    key: 'contact.map-link',
-    text: { th: 'เปิดใน Google Maps', en: 'Open in Google Maps' },
   },
 
   // ---------- Partners ----------

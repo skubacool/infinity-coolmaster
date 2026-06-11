@@ -252,6 +252,11 @@ export const mediaSlots: { key: string; label: string; help: string }[] = [
     label: 'Case Studies page — hero banner',
     help: 'Photo behind the Case Studies title (a light overlay keeps the text readable). Recommended ~1600×700.',
   },
+  {
+    key: 'front.figure-impact',
+    label: 'Home — impact section illustration',
+    help: 'Shown under the verified-impact numbers on the home page. Recommended ~1000×600.',
+  },
 ];
 
 /** Group labels for the Site Text tab, keyed by localization-key prefix. */
@@ -264,7 +269,6 @@ export const textGroups: { prefix: string; label: string }[] = [
   { prefix: 'activity-list', label: 'Articles page' },
   { prefix: 'activity', label: 'Article details' },
   { prefix: 'form', label: 'Lead form' },
-  { prefix: 'contact', label: 'Contact details' },
   { prefix: 'partners', label: 'Partner section titles' },
   { prefix: 'menu', label: 'Menu' },
   { prefix: 'general', label: 'General / shared' },

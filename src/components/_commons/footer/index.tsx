@@ -5,7 +5,6 @@ import { l } from '../../../utils/localization-utils';
 import { randomWithDigits } from '../../../utils/number-utils';
 import { MenuItem } from '../../../models/menu';
 import { useVmScreen } from '../../../stores/vm-screen';
-import { SITE_TAGLINE } from '../../../config/constants';
 import SafeArea from '../safe-area';
 import BrandLogo, { BrandLogoTone } from '../brand-logo';
 import Icon from '../icon';
@@ -42,7 +41,7 @@ const Footer = () => {
                 <BrandLogo tone={BrandLogoTone.light} height={52} />
               </Link>
               <span className="text-white-a70 text-xs tracking-[0.25em] uppercase">
-                {SITE_TAGLINE}
+                {l(locale, localizations, 'general.tagline')}
               </span>
             </div>
             <div className="relative flex-1 flex flex-col justify-center items-center">

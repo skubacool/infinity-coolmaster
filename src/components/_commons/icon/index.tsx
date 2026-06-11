@@ -132,6 +132,12 @@ const paths: Record<string, ReactElement> = {
       <path d="M14 8h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V8.5A.5.5 0 0 1 14 8z" />
     </>
   ),
+  line: (
+    <>
+      <path d="M12 4c-5 0-9 3.1-9 7 0 3.5 3.1 6.3 7.3 6.9l-.3 2.6c0 .4.4.6.7.4l3.5-2.3c3.9-.6 6.8-3.7 6.8-7.6 0-3.9-4-7-9-7z" />
+      <path d="M7.5 9.5v4M10.5 9.5v4M13.5 9.5v4l2.5-4v4" />
+    </>
+  ),
   'arrow-right': <path d="M5 12h14M13 6l6 6-6 6" />,
   'arrow-down': <path d="M12 5v14M6 13l6 6 6-6" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,

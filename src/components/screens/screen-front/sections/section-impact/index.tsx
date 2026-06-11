@@ -8,7 +8,12 @@ import Icon from '../../../../_commons/icon';
 
 /** Verified portfolio impact — stats with gradient accents on white. */
 const SectionImpact = () => {
-  const { locale = 'en', localizations = [] } = useVmScreen();
+  const { locale = 'en', localizations = [], media } = useVmScreen();
+
+  const figureUrl = useMemo(
+    () => media?.find((m) => m.key === 'front.figure-impact')?.url ?? '',
+    [media]
+  );
 
   const { projectSummary } = useVmScreenFront();
   const {
@@ -100,6 +105,13 @@ const SectionImpact = () => {
                   </div>
                 ))}
               </div>
+            )}
+            {figureUrl && (
+              <img
+                src={figureUrl}
+                alt=""
+                className="mt-12 w-full max-w-[520px] self-center rounded-2xl border border-sep-pale shadow-premium"
+              />
             )}
           </div>
         </div>
