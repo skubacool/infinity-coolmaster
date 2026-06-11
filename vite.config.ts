@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // GitHub Pages base path.
-  // - Deploying to https://<user>.github.io/<repository-name>/ -> set base to '/<repository-name>/'
-  // - Deploying to a custom domain or https://<user>.github.io/  -> set base to '/'
-  base: '/infinity-coolmaster/', // TODO: replace with '/<repository-name>/'
+  // Serving at the custom domain https://infinitycoolmaster.com/ -> root base.
+  // (If ever reverting to https://<user>.github.io/<repo>/, set '/<repo>/'.)
+  base: '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
