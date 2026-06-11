@@ -9,13 +9,22 @@ import Loading from '../../../../_commons/loading';
 import Icon from '../../../../_commons/icon';
 import SafeArea from '../../../../_commons/safe-area';
 
-/** Bright gradient hero with the CaaS value proposition. */
+/** Bright hero with the CaaS value proposition; optional CMS photo background. */
 const SectionSlogan = () => {
-  const { locale = 'en', localizations = [] } = useVmScreen();
+  const { locale = 'en', localizations = [], media } = useVmScreen();
   const { loading } = useVmScreenFront();
 
+  const heroUrl = media?.find((m) => m.key === 'front.banner-hero')?.url ?? '';
+
   return (
-    <section className="relative min-h-[calc(100svh-80px)] lg:min-h-[680px] bg-gradient-hero overflow-hidden flex flex-col justify-start items-stretch">
+    <section
+      className="relative min-h-[calc(100svh-80px)] lg:min-h-[680px] bg-gradient-hero overflow-hidden flex flex-col justify-start items-stretch"
+      style={
+        heroUrl
+          ? { background: `url(${heroUrl}) no-repeat center/cover` }
+          : undefined
+      }
+    >
       {/* Decorative infinity-loop watermark */}
       <svg
         className="absolute -right-32 -bottom-24 w-[640px] h-[640px] opacity-[0.07] pointer-events-none"
@@ -38,6 +47,10 @@ const SectionSlogan = () => {
           strokeLinecap="round"
         />
       </svg>
+      {heroUrl && (
+        /* Light overlay keeps the navy headline readable over any photo */
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/50" />
+      )}
       <div className="relative z-[1] flex-1 flex flex-col justify-center items-stretch">
         <SafeArea>
           {!loading ? (

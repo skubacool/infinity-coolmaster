@@ -11,7 +11,7 @@ import TextLines from '../../_commons/text-lines';
 import Loading from '../../_commons/loading';
 
 const ScreenProjectList = () => {
-  const { locale = 'en', localizations = [] } = useVmScreen();
+  const { locale = 'en', localizations = [], media } = useVmScreen();
 
   const vmScreenProjectList = useVmScreenProjectList();
   const { loading, projects = [], projectSummary } = vmScreenProjectList;
@@ -21,9 +21,23 @@ const ScreenProjectList = () => {
     vmScreenProjectList.bind();
   }, [vmScreenProjectList]);
 
+  const bannerUrl = useMemo(
+    () => media?.find((m) => m.key === 'project-list.banner-main')?.url ?? '',
+    [media]
+  );
+
   const banner = useMemo(() => {
     return (
-      <div className="flex-1 bg-gradient-hero flex flex-col justify-start items-stretch">
+      <div
+        className="flex-1 bg-gradient-hero flex flex-col justify-start items-stretch"
+        style={
+          bannerUrl
+            ? { background: `url(${bannerUrl}) no-repeat center/cover` }
+            : undefined
+        }
+      >
+        {/* Light overlay keeps the navy text readable over any photo */}
+        <div className="absolute left-0 top-0 w-full h-full bg-white/80" />
         {projectSummary ? (
           <div className="absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
             <div className="gap-y-10 lg:gap-y-12 px-6 flex flex-col justify-center items-center">
@@ -68,7 +82,7 @@ const ScreenProjectList = () => {
         )}
       </div>
     );
-  }, [locale, localizations, projectSummary]);
+  }, [locale, localizations, projectSummary, bannerUrl]);
 
   return (
     <LayoutBanner banner={banner}>

@@ -13,7 +13,7 @@ import SectionGrowth from './sections/section-growth';
 import TextLines from '../../_commons/text-lines';
 
 const ScreenAbout = () => {
-  const { locale = 'en', localizations = [] } = useVmScreen();
+  const { locale = 'en', localizations = [], media } = useVmScreen();
 
   const vmScreenAbout = useVmScreenAbout();
   const { partners = [] } = vmScreenAbout;
@@ -23,9 +23,23 @@ const ScreenAbout = () => {
     vmScreenAbout.bind();
   }, [vmScreenAbout]);
 
+  const bannerUrl = useMemo(
+    () => media?.find((m) => m.key === 'about.banner-main')?.url ?? '',
+    [media]
+  );
+
   const banner = useMemo(() => {
     return (
-      <div className="flex-1 bg-gradient-hero flex flex-col justify-start items-stretch">
+      <div
+        className="flex-1 bg-gradient-hero flex flex-col justify-start items-stretch"
+        style={
+          bannerUrl
+            ? { background: `url(${bannerUrl}) no-repeat center/cover` }
+            : undefined
+        }
+      >
+        {/* Light overlay keeps the navy headline readable over any photo */}
+        <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
         <div className="py-16 lg:py-[84px] absolute left-0 top-0 w-full h-full flex flex-col justify-start items-start">
           <SafeArea>
             <div className="flex-1 gap-y-5 flex flex-col justify-center items-start">
@@ -46,7 +60,7 @@ const ScreenAbout = () => {
         </div>
       </div>
     );
-  }, [locale, localizations]);
+  }, [locale, localizations, bannerUrl]);
 
   return (
     <LayoutBanner isFilled banner={banner}>

@@ -33,6 +33,13 @@ const media: Media[] = [
     type: 'image',
     url: p('assets/placeholders/banner-soft.svg'),
   },
+  {
+    // Optional photo behind the home-page hero; empty = clean gradient look.
+    id: 6,
+    key: 'front.banner-hero',
+    type: 'image',
+    url: '',
+  },
 ];
 
 export default media;

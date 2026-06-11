@@ -238,19 +238,19 @@ export const listCollections: CmsListCollection[] = [
 /** Image slots editable in the "Banners & Images" tab (media collection). */
 export const mediaSlots: { key: string; label: string; help: string }[] = [
   {
+    key: 'front.banner-hero',
+    label: 'Home page — hero background photo (optional)',
+    help: 'Shown behind the big headline with a light overlay. Leave empty for the clean gradient look. Recommended ~1600×900, bright photos work best.',
+  },
+  {
     key: 'about.banner-main',
     label: 'About page — hero banner',
-    help: 'Wide image behind the About page title. Recommended ~1600×700.',
+    help: 'Photo behind the About page title (a light overlay keeps the text readable). Recommended ~1600×700.',
   },
   {
     key: 'project-list.banner-main',
     label: 'Case Studies page — hero banner',
-    help: 'Wide image behind the Case Studies title. Recommended ~1600×700.',
-  },
-  {
-    key: 'front.figure-impact',
-    label: 'Home — impact illustration',
-    help: 'Reserved illustration slot for the impact section.',
+    help: 'Photo behind the Case Studies title (a light overlay keeps the text readable). Recommended ~1600×700.',
   },
 ];
 
