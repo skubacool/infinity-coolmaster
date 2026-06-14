@@ -11,7 +11,9 @@
       }
       gtag('js', new Date());
 
-      gtag('config', 'G-K5VY9GKJYV');
+      // send_page_view: false — the app sends a page_view per route instead
+      // (single-page app; see src/utils/analytics.ts).
+      gtag('config', 'G-K5VY9GKJYV', { send_page_view: false });
     </script>
     <link rel="icon" type="image/png" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -10,6 +10,7 @@ import ScreenActivity from './components/screens/screen-activity';
 import ScreenAdmin from './components/screens/screen-admin';
 import { IVmScreen, useVmScreen } from './stores/vm-screen';
 import { DEFAULT_LOCALE } from './config/constants';
+import { trackPageView } from './utils/analytics';
 
 const ScrollToTopWrapper = (props: PropsWithChildren) => {
   const { children } = props;
@@ -21,6 +22,11 @@ const ScrollToTopWrapper = (props: PropsWithChildren) => {
     if (hash) return;
     document.documentElement.scrollTo(0, 0);
   }, [pathname, hash]);
+
+  // Count every route as its own GA4 page view (SPA navigation never reloads).
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
 
   return <>{children}</>;
 };
