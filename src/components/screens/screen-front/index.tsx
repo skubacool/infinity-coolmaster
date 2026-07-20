@@ -7,10 +7,12 @@ import Footer from '../../_commons/footer';
 import SectionSlogan from './sections/section-slogan';
 import SectionBenefits from './sections/section-benefits';
 import SectionBusiness from './sections/section-business';
+import SectionProcess from './sections/section-process';
 import SectionSectors from './sections/section-sectors';
 import SectionProjects from './sections/section-projects';
 import SectionImpact from './sections/section-impact';
 import SectionActivities from './sections/section-activities';
+import SectionFaq from './sections/section-faq';
 import SectionContact from './sections/section-contact';
 import SectionPartners from '../../sections/section-partners';
 
@@ -50,11 +52,13 @@ const ScreenFront = (): ReactElement => {
         <>
           <SectionBenefits />
           <SectionBusiness />
+          <SectionProcess />
           <SectionSectors />
           <SectionProjects />
           <SectionPartners partners={partners} />
           <SectionImpact />
           <SectionActivities />
+          <SectionFaq />
           <SectionContact />
           <Footer />
         </>

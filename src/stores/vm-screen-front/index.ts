@@ -8,12 +8,16 @@ import { Project } from '../../models/project';
 import { ProjectSummary } from '../../models/project-summary';
 import { Activity } from '../../models/activity';
 import { Partner } from '../../models/partner';
+import { ProcessStep } from '../../models/process-step';
+import { Faq } from '../../models/faq';
 import { listHeroBanners } from '../../apis/hero-banner';
 import { listBenefits } from '../../apis/benefit';
 import { listSectors } from '../../apis/sector';
 import { listLatestProjects, findProjectSummary } from '../../apis/project';
 import { listLatestActivities } from '../../apis/activity';
 import { listPartners } from '../../apis/partner';
+import { listProcessSteps } from '../../apis/process-step';
+import { listFaqs } from '../../apis/faq';
 
 const loadingState = atom<boolean>(false);
 const loadedState = atom<boolean>(false);
@@ -24,6 +28,8 @@ const projectsState = atom<Project[]>([]);
 const activitiesState = atom<Activity[]>([]);
 const projectSummaryState = atom<ProjectSummary | null>(null);
 const partnersState = atom<Partner[]>([]);
+const processStepsState = atom<ProcessStep[]>([]);
+const faqsState = atom<Faq[]>([]);
 
 export interface IVmScreenFront {
   // Observables
@@ -35,6 +41,8 @@ export interface IVmScreenFront {
   projectSummary?: ProjectSummary | null;
   activities?: Activity[];
   partners?: Partner[];
+  processSteps?: ProcessStep[];
+  faqs?: Faq[];
   // Actions
   bind?: () => void;
 }
@@ -51,6 +59,8 @@ export const useVmScreenFront = (): IVmScreenFront => {
   const [projectSummary, setProjectSummary] = useAtom(projectSummaryState);
   const [activities, setActivities] = useAtom(activitiesState);
   const [partners, setPartners] = useAtom(partnersState);
+  const [processSteps, setProcessSteps] = useAtom(processStepsState);
+  const [faqs, setFaqs] = useAtom(faqsState);
 
   const bind = useCallback(() => {
     if (loaded) return;
@@ -67,6 +77,8 @@ export const useVmScreenFront = (): IVmScreenFront => {
           listPartners().then((data) =>
             setPartners([...data].sort((a, b) => a.seq - b.seq))
           ),
+          listProcessSteps().then((data) => setProcessSteps(data ?? [])),
+          listFaqs().then((data) => setFaqs(data ?? [])),
         ]);
         for (const result of results) {
           if (result.status === 'rejected') {
@@ -89,6 +101,8 @@ export const useVmScreenFront = (): IVmScreenFront => {
     setProjectSummary,
     setProjects,
     setPartners,
+    setProcessSteps,
+    setFaqs,
   ]);
 
   // Observables
@@ -100,6 +114,8 @@ export const useVmScreenFront = (): IVmScreenFront => {
   store.projectSummary = projectSummary;
   store.activities = activities;
   store.partners = partners;
+  store.processSteps = processSteps;
+  store.faqs = faqs;
 
   // Actions
   store.bind = bind;

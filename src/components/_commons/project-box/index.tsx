@@ -53,10 +53,18 @@ const ProjectBox = (props: PropsWithChildren<ProjectBoxProps>) => {
   return (
     <Link to={`/${locale}/project/${id}`}>
       <div className="card-premium h-full overflow-hidden flex flex-col justify-start items-stretch transition-all duration-200 hover:shadow-premium-md hover:-translate-y-0.5">
-        <div
-          className="flex-shrink-0 aspect-[1.45] bg-pale"
-          style={{ background: `url(${thumbnail}) no-repeat center/cover` }}
-        />
+        <div className="relative flex-shrink-0">
+          <div
+            className="aspect-[1.45] bg-pale"
+            style={{ background: `url(${thumbnail}) no-repeat center/cover` }}
+          />
+          {/* Verified-savings badge — the headline number, front and center */}
+          {savingsPct > 0 && (
+            <span className="absolute top-3 right-3 rounded-full bg-white/95 shadow-premium px-3.5 py-1.5 text-brand-green font-bold text-base leading-none">
+              −{savingsPct}%
+            </span>
+          )}
+        </div>
         <div className="p-6 flex-1 flex flex-col justify-start items-stretch">
           <h2 className="flex-shrink-0 block text-xl lg:text-2hxl font-semibold leading-[1.25] text-text-main">
             {localizedTitle}

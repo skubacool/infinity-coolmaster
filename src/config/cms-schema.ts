@@ -6,6 +6,8 @@ import defaultBenefits from '../apis/benefit/defaults';
 import defaultHeroBanners from '../apis/hero-banner/defaults';
 import defaultSectors from '../apis/sector/defaults';
 import defaultContacts from '../apis/contact/defaults';
+import defaultProcessSteps from '../apis/process-step/defaults';
+import defaultFaqs from '../apis/faq/defaults';
 
 /**
  * Schema that drives the admin CMS form generator. Each entry describes one
@@ -200,6 +202,37 @@ export const listCollections: CmsListCollection[] = [
     ],
     defaults: defaultHeroBanners as unknown as Record<string, unknown>[],
     summary: (d) => en(d, 'title'),
+  },
+  {
+    collection: 'process_steps',
+    label: 'How It Works',
+    itemName: 'step',
+    description:
+      'The step-by-step engagement journey on the home page (audit → proposal → install → operate → verify).',
+    syncSeqIntoData: true,
+    imageFolder: 'misc',
+    fields: [
+      { name: 'title', label: 'Step title', type: 'localized' },
+      { name: 'excerpt', label: 'Description', type: 'localized-multiline' },
+      { name: 'icon', label: 'Icon', type: 'icon' },
+    ],
+    defaults: defaultProcessSteps as unknown as Record<string, unknown>[],
+    summary: (d) => en(d, 'title'),
+  },
+  {
+    collection: 'faqs',
+    label: 'FAQ',
+    itemName: 'question',
+    description:
+      'Common questions answered on the home page, just above the contact form.',
+    syncSeqIntoData: true,
+    imageFolder: 'misc',
+    fields: [
+      { name: 'question', label: 'Question', type: 'localized' },
+      { name: 'answer', label: 'Answer', type: 'localized-multiline', help: 'Leave a blank line between paragraphs.' },
+    ],
+    defaults: defaultFaqs as unknown as Record<string, unknown>[],
+    summary: (d) => en(d, 'question'),
   },
   {
     collection: 'sectors',

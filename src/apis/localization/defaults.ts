@@ -178,6 +178,32 @@ const localizations: LocalizedKeyText[] = [
     },
   },
 
+  // ---------- Front: process ("How It Works") ----------
+  {
+    key: 'front.title-process',
+    text: { th: 'ขั้นตอนการทำงาน', en: 'How It Works' },
+  },
+  {
+    key: 'front.excerpt-process',
+    text: {
+      th: 'จากการตรวจประเมินครั้งแรกสู่ผลประหยัดที่พิสูจน์ได้ — 5 ขั้นตอน โดยไม่มีความเสี่ยงฝั่งคุณ',
+      en: 'From first audit to verified savings — five steps, with zero risk on your side.',
+    },
+  },
+
+  // ---------- Front: FAQ ----------
+  {
+    key: 'front.title-faq',
+    text: { th: 'คำถามที่พบบ่อย', en: 'Frequently Asked Questions' },
+  },
+  {
+    key: 'front.excerpt-faq',
+    text: {
+      th: 'คำถามที่ CFO และผู้จัดการอาคารถามเราบ่อยที่สุด',
+      en: 'The questions CFOs and facility directors ask us most.',
+    },
+  },
+
   // ---------- Front: activities ----------
   {
     key: 'front.title-activities',
