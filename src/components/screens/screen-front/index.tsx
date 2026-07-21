@@ -9,6 +9,7 @@ import SectionBenefits from './sections/section-benefits';
 import SectionBusiness from './sections/section-business';
 import SectionProcess from './sections/section-process';
 import SectionSectors from './sections/section-sectors';
+import SectionEstimator from './sections/section-estimator';
 import SectionProjects from './sections/section-projects';
 import SectionImpact from './sections/section-impact';
 import SectionActivities from './sections/section-activities';
@@ -54,6 +55,7 @@ const ScreenFront = (): ReactElement => {
           <SectionBusiness />
           <SectionProcess />
           <SectionSectors />
+          <SectionEstimator />
           <SectionProjects />
           <SectionPartners partners={partners} />
           <SectionImpact />

@@ -66,10 +66,18 @@ const SectionSlogan = () => {
                 {l(locale, localizations, 'front.excerpt-cta')}
               </p>
               <div className="mt-2 gap-4 flex flex-col sm:flex-row justify-start items-stretch sm:items-center">
-                <a className="btn-caas" href="#contact">
+                {/* Plain href="#contact" would be treated as a route by HashRouter */}
+                <button
+                  className="btn-caas"
+                  onClick={() =>
+                    document
+                      .getElementById('contact')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                >
                   {l(locale, localizations, 'front.cta-primary')}
                   <Icon name="arrow-right" size={18} />
-                </a>
+                </button>
                 <Link className="btn-outline" to={`/${locale}/project`}>
                   {l(locale, localizations, 'front.cta-secondary')}
                 </Link>

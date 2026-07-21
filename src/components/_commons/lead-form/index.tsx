@@ -49,16 +49,16 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
     [locale, localizations]
   );
 
+  // Only the essentials are required — phone and bill are optional to reduce
+  // friction; we qualify the rest on the follow-up call.
   const isValid = useMemo(() => {
     return Boolean(
       companyName.trim() &&
         contactPerson.trim() &&
         /^\S+@\S+\.\S+$/.test(email) &&
-        phone.trim() &&
-        currentBill &&
         industry
     );
-  }, [companyName, contactPerson, email, phone, currentBill, industry]);
+  }, [companyName, contactPerson, email, industry]);
 
   const onSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
@@ -154,7 +154,7 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
         </label>
         <label className="gap-y-1.5 flex flex-col justify-start items-stretch">
           <span className="text-sm font-medium text-text-muted">
-            {t('form.phone')} *
+            {t('form.phone')}
           </span>
           <input
             className={inputClass}
@@ -162,19 +162,17 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
             name="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            required
           />
         </label>
         <label className="gap-y-1.5 flex flex-col justify-start items-stretch">
           <span className="text-sm font-medium text-text-muted">
-            {t('form.current-bill')} *
+            {t('form.current-bill')}
           </span>
           <select
             className={inputClass}
             name="current_bill"
             value={currentBill}
             onChange={(e) => setCurrentBill(e.target.value)}
-            required
           >
             <option value="" disabled>
               {t('form.select-placeholder')}

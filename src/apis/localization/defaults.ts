@@ -191,6 +191,67 @@ const localizations: LocalizedKeyText[] = [
     },
   },
 
+  // ---------- Front: savings estimator ----------
+  {
+    key: 'estimator.kicker',
+    text: { th: 'ประเมินเบื้องต้น', en: 'QUICK ESTIMATE' },
+  },
+  {
+    key: 'front.title-estimator',
+    text: {
+      th: 'ประเมินผลประหยัดของคุณ',
+      en: 'Estimate your savings',
+    },
+  },
+  {
+    key: 'front.excerpt-estimator',
+    text: {
+      th: 'กรอกค่าไฟต่อเดือนเพื่อดูช่วงผลประหยัดต่อปีโดยประมาณ',
+      en: 'Enter your monthly electricity bill to see a rough annual savings range.',
+    },
+  },
+  {
+    key: 'estimator.bill-label',
+    text: {
+      th: 'ค่าไฟฟ้าต่อเดือน (บาท)',
+      en: 'Monthly electricity bill (THB)',
+    },
+  },
+  {
+    key: 'estimator.bill-placeholder',
+    text: { th: 'เช่น 1,000,000', en: 'e.g. 1,000,000' },
+  },
+  {
+    key: 'estimator.sector-label',
+    text: { th: 'ประเภทอาคาร/โรงงาน', en: 'Facility type' },
+  },
+  {
+    key: 'estimator.result-label',
+    text: { th: 'ประหยัดได้โดยประมาณ', en: 'Estimated annual savings' },
+  },
+  {
+    key: 'estimator.result-per-year',
+    text: { th: 'ต่อปี', en: 'per year' },
+  },
+  {
+    key: 'estimator.result-note',
+    text: {
+      th: 'เป็นเพียงค่าประมาณการเบื้องต้นจากค่าไฟรวม ตัวเลขจริงยืนยันได้จากการตรวจประเมินฟรีที่หน้างาน',
+      en: 'A rough estimate based on your total bill. Your exact figure is confirmed by a free on-site audit.',
+    },
+  },
+  {
+    key: 'estimator.cta',
+    text: { th: 'ขอตัวเลขจริงของคุณ', en: 'Get your exact number' },
+  },
+  {
+    key: 'estimator.empty',
+    text: {
+      th: 'กรอกค่าไฟต่อเดือนเพื่อดูผลประหยัดโดยประมาณ',
+      en: 'Enter your monthly bill to see your estimated savings.',
+    },
+  },
+
   // ---------- Front: FAQ ----------
   {
     key: 'front.title-faq',
