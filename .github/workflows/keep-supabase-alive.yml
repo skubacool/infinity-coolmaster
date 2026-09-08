@@ -1,20 +1,34 @@
 name: Keep Supabase project alive
 
-# Supabase auto-pauses free-tier projects after ~7 days without API
-# activity. Visiting the website alone does NOT count — the site is
-# static HTML; database calls only happen once a real browser runs its
-# JS. This workflow makes one harmless read-only request every 3 days
-# so the project always shows recent activity.
+# Supabase auto-pauses free-tier projects after 7 days without a database
+# request. Visiting the website alone does NOT count — the site is static
+# HTML; database calls only happen once a real browser runs its JS. This
+# workflow makes one harmless read-only request every 3 days so the
+# project always shows recent activity. Free forever: Supabase's free
+# tier has no expiry and unlimited API requests, it only pauses on
+# inactivity — see https://supabase.com/docs/guides/platform/free-project-pausing
 #
-# The key below is the Supabase ANON (public) key — the same one
-# already shipped inside the site's JS bundle for every visitor to see.
-# It is safe to commit: Row Level Security only allows it to SELECT
-# from cms_content and INSERT into leads (see supabase/schema.sql).
+# Second job: in a PUBLIC repo, GitHub disables a scheduled workflow after
+# 60 days with no repository activity (pushes/commits — Actions runs alone
+# don't count: https://docs.github.com/actions/managing-workflow-runs/disabling-and-enabling-a-workflow).
+# Since this is an informational site whose content is edited in Supabase
+# (not git), the repo could easily go quiet that long. So this workflow
+# also commits a one-line timestamp file each run — that commit is what
+# keeps GitHub from ever disabling the schedule, making the whole thing
+# self-sustaining with zero manual maintenance.
+#
+# The key below is the Supabase ANON (public) key — the same one already
+# shipped inside the site's JS bundle for every visitor to see. Safe to
+# commit: Row Level Security only allows it to SELECT from cms_content
+# and INSERT into leads (see supabase/schema.sql).
 
 on:
   schedule:
     - cron: '0 3 */3 * *' # every 3 days at 03:00 UTC
   workflow_dispatch: {} # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write # needed to push the heartbeat commit below
 
 jobs:
   ping:
@@ -32,3 +46,17 @@ jobs:
           fi
         env:
           SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0em1uZnVpaG5xZnhmZ2h1Z3Z2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDI4MTUsImV4cCI6MjA5NjY3ODgxNX0.6Sy4bGmQ4myLFtInFcdoje2iF6a-E6pR8DV5mAr5A_8
+
+      - name: Checkout (needed to commit the heartbeat file)
+        uses: actions/checkout@v4
+
+      - name: Record heartbeat so GitHub never disables this schedule
+        run: |
+          mkdir -p .github/keepalive
+          date -u +"%Y-%m-%dT%H:%M:%SZ — Supabase ping OK" > .github/keepalive/last-run.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/keepalive/last-run.txt
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "chore: keep-alive heartbeat [skip ci]"
+          git push
