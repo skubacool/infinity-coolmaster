@@ -1,0 +1,34 @@
+name: Keep Supabase project alive
+
+# Supabase auto-pauses free-tier projects after ~7 days without API
+# activity. Visiting the website alone does NOT count — the site is
+# static HTML; database calls only happen once a real browser runs its
+# JS. This workflow makes one harmless read-only request every 3 days
+# so the project always shows recent activity.
+#
+# The key below is the Supabase ANON (public) key — the same one
+# already shipped inside the site's JS bundle for every visitor to see.
+# It is safe to commit: Row Level Security only allows it to SELECT
+# from cms_content and INSERT into leads (see supabase/schema.sql).
+
+on:
+  schedule:
+    - cron: '0 3 */3 * *' # every 3 days at 03:00 UTC
+  workflow_dispatch: {} # allow manual "Run workflow" from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping cms_content (read-only)
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            "https://ltzmnfuihnqfxfghugvv.supabase.co/rest/v1/cms_content?select=collection&limit=1")
+          echo "Supabase responded: HTTP $status"
+          if [ "$status" -ge 400 ]; then
+            echo "::error::Unexpected status from Supabase ($status) — project may need manual attention."
+            exit 1
+          fi
+        env:
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0em1uZnVpaG5xZnhmZ2h1Z3Z2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDI4MTUsImV4cCI6MjA5NjY3ODgxNX0.6Sy4bGmQ4myLFtInFcdoje2iF6a-E6pR8DV5mAr5A_8
