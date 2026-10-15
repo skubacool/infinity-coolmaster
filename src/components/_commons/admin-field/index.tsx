@@ -11,7 +11,7 @@ const inputClass =
 const labelClass = 'text-xs font-semibold text-text-muted uppercase tracking-wider';
 
 // ------------------------------------------------------------------------
-// Image input: URL box + preview + "Upload" button (Supabase Storage)
+// Image input: URL box + preview + "Upload" button (R2 image storage)
 // ------------------------------------------------------------------------
 export interface ImageInputProps {
   value: string;

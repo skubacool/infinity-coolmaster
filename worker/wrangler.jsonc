@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "icm-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "icm-cms",
+      "database_id": "74518fb4-5d67-4ea1-b4e3-83694fd38fb5"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "IMAGES",
+      "bucket_name": "icm-images"
+    }
+  ],
+  "vars": {
+    // Browser origins allowed to call the API (CORS). Local dev overrides this in .dev.vars.
+    "ALLOWED_ORIGINS": "https://infinitycoolmaster.com,https://www.infinitycoolmaster.com"
+  },
+  "observability": { "enabled": true }
+  // Secrets (never in this file): AUTH_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD — see README.md
+}

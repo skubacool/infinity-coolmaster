@@ -1,8 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { Session } from '@supabase/supabase-js';
 
-import { isSupabaseConfigured } from '../../../lib/supabaseClient';
-import { getSession, onAuthChange, signOut } from '../../../apis/admin';
+import { isApiConfigured } from '../../../lib/apiClient';
+import {
+  AdminSession,
+  getSession,
+  onAuthChange,
+  signOut,
+} from '../../../apis/admin';
 import { listCollections } from '../../../config/cms-schema';
 import BrandLogo from '../../_commons/brand-logo';
 import Loading from '../../_commons/loading';
@@ -24,14 +28,16 @@ const TABS: Tab[] = [
   ...listCollections.map((c) => ({ id: c.collection, label: c.label })),
 ];
 
-/** Hidden content manager at /#/admin — Supabase Auth protected. */
+/** Hidden content manager at /#/admin — protected by a signed login token (see /worker). */
 const ScreenAdmin = () => {
-  const [session, setSession] = useState<Session | null | undefined>(undefined);
+  const [session, setSession] = useState<AdminSession | null | undefined>(
+    undefined
+  );
   const [activeTab, setActiveTab] = useState<string>('leads');
 
   useEffect(() => {
     document.title = 'Content Manager — Infinity CoolMaster';
-    if (!isSupabaseConfigured) {
+    if (!isApiConfigured) {
       setSession(null);
       return;
     }
@@ -53,7 +59,7 @@ const ScreenAdmin = () => {
     return <SectionCollection key={schema.collection} schema={schema} />;
   }, [activeTab]);
 
-  if (!isSupabaseConfigured) {
+  if (!isApiConfigured) {
     return (
       <div className="min-h-screen bg-gradient-hero flex flex-col justify-center items-center px-6 text-center gap-y-3">
         <BrandLogo height={64} />
@@ -61,8 +67,8 @@ const ScreenAdmin = () => {
           Content Manager is not available
         </h1>
         <p className="max-w-[480px] text-sm text-text-muted">
-          This build was made without Supabase credentials (.env.local). Add
-          VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY, rebuild, and redeploy.
+          This build was made without an API address (.env.local). Add
+          VITE_API_URL, rebuild, and redeploy.
         </p>
       </div>
     );
@@ -96,7 +102,7 @@ const ScreenAdmin = () => {
             View site
           </a>
           <span className="hidden sm:block text-xs text-title-pale">
-            {session.user.email}
+            {session.email}
           </span>
           <button
             type="button"

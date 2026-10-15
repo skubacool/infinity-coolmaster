@@ -1,42 +1,27 @@
-import type { Session } from '@supabase/supabase-js';
+import { AdminSession, apiFetch, readSession, storeSession, subscribeSession } from '../../lib/apiClient';
+import { invalidateCmsCache } from '../_commons/cms';
 
-import { supabase } from '../../lib/supabaseClient';
-import { CMS_TABLE, LEADS_TABLE } from '../../config/constants';
-
-const STORAGE_BUCKET = 'site-images';
-
-const client = () => {
-  if (!supabase) {
-    throw new Error(
-      'Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.'
-    );
-  }
-  return supabase;
-};
+export type { AdminSession };
 
 // ---------------------------------------------------------------- auth ----
 
-export const getSession = async (): Promise<Session | null> => {
-  const { data } = await client().auth.getSession();
-  return data.session;
-};
+export const getSession = async (): Promise<AdminSession | null> =>
+  readSession();
 
 export const onAuthChange = (
-  callback: (session: Session | null) => void
-): (() => void) => {
-  const { data } = client().auth.onAuthStateChange((_event, session) => {
-    callback(session);
-  });
-  return () => data.subscription.unsubscribe();
-};
+  callback: (session: AdminSession | null) => void
+): (() => void) => subscribeSession(callback);
 
 export const signIn = async (email: string, password: string): Promise<void> => {
-  const { error } = await client().auth.signInWithPassword({ email, password });
-  if (error) throw new Error(error.message);
+  const session = await apiFetch<AdminSession>('/api/admin/login', {
+    method: 'POST',
+    json: { email, password },
+  });
+  storeSession(session);
 };
 
 export const signOut = async (): Promise<void> => {
-  await client().auth.signOut();
+  storeSession(null);
 };
 
 // ------------------------------------------------------------ cms rows ----
@@ -48,64 +33,52 @@ export interface CmsRow {
   data: Record<string, unknown>;
 }
 
-export const listRows = async (collection: string): Promise<CmsRow[]> => {
-  const { data, error } = await client()
-    .from(CMS_TABLE)
-    .select('collection, key, seq, data')
-    .eq('collection', collection)
-    .order('seq', { ascending: true });
-  if (error) throw new Error(error.message);
-  return (data ?? []) as CmsRow[];
-};
+export const listRows = (collection: string): Promise<CmsRow[]> =>
+  apiFetch<CmsRow[]>(
+    `/api/admin/rows?collection=${encodeURIComponent(collection)}`,
+    { auth: true }
+  );
 
 export const upsertRow = async (row: CmsRow): Promise<void> => {
-  const { error } = await client()
-    .from(CMS_TABLE)
-    .upsert(
-      { ...row, updated_at: new Date().toISOString() },
-      { onConflict: 'collection,key' }
-    );
-  if (error) throw new Error(error.message);
+  await apiFetch('/api/admin/rows', { method: 'PUT', json: row, auth: true });
+  invalidateCmsCache();
 };
 
 export const bulkUpsertRows = async (rows: CmsRow[]): Promise<void> => {
   if (!rows.length) return;
-  const { error } = await client()
-    .from(CMS_TABLE)
-    .upsert(
-      rows.map((row) => ({ ...row, updated_at: new Date().toISOString() })),
-      { onConflict: 'collection,key' }
-    );
-  if (error) throw new Error(error.message);
+  await apiFetch('/api/admin/rows/bulk', {
+    method: 'PUT',
+    json: { rows },
+    auth: true,
+  });
+  invalidateCmsCache();
 };
 
 export const deleteRow = async (
   collection: string,
   key: string
 ): Promise<void> => {
-  const { error } = await client()
-    .from(CMS_TABLE)
-    .delete()
-    .eq('collection', collection)
-    .eq('key', key);
-  if (error) throw new Error(error.message);
+  await apiFetch(
+    `/api/admin/rows?collection=${encodeURIComponent(collection)}&key=${encodeURIComponent(key)}`,
+    { method: 'DELETE', auth: true }
+  );
+  invalidateCmsCache();
 };
 
 // ------------------------------------------------------------- storage ----
 
-/** Uploads an image to the public site-images bucket; returns its public URL. */
+/** Uploads an image to the R2 bucket; returns the public URL the site serves it from. */
 export const uploadImage = async (
   file: File,
   folder: string
 ): Promise<string> => {
-  const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-  const path = `${folder}/${Date.now()}-${safeName}`;
-  const { error } = await client()
-    .storage.from(STORAGE_BUCKET)
-    .upload(path, file, { cacheControl: '3600', upsert: false });
-  if (error) throw new Error(error.message);
-  const { data } = client().storage.from(STORAGE_BUCKET).getPublicUrl(path);
-  return data.publicUrl;
+  const form = new FormData();
+  form.append('file', file);
+  const { url } = await apiFetch<{ url: string }>(
+    `/api/admin/upload?folder=${encodeURIComponent(folder)}`,
+    { method: 'POST', body: form, auth: true }
+  );
+  return url;
 };
 
 // --------------------------------------------------------------- leads ----
@@ -122,22 +95,16 @@ export interface LeadRow {
   created_at: string;
 }
 
-export const listLeads = async (): Promise<LeadRow[]> => {
-  const { data, error } = await client()
-    .from(LEADS_TABLE)
-    .select('*')
-    .order('created_at', { ascending: false });
-  if (error) throw new Error(error.message);
-  return (data ?? []) as LeadRow[];
-};
+export const listLeads = (): Promise<LeadRow[]> =>
+  apiFetch<LeadRow[]>('/api/admin/leads', { auth: true });
 
 export const updateLeadStatus = async (
   id: number,
   status: string
 ): Promise<void> => {
-  const { error } = await client()
-    .from(LEADS_TABLE)
-    .update({ status })
-    .eq('id', id);
-  if (error) throw new Error(error.message);
+  await apiFetch(`/api/admin/leads/${id}`, {
+    method: 'PATCH',
+    json: { status },
+    auth: true,
+  });
 };

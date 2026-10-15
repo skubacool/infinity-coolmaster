@@ -1,111 +1,74 @@
 # Deployment Guide — Infinity CoolMaster Website
 
-Two independent parts: **Supabase** (backend: leads + CMS) and **GitHub Pages**
-(static hosting). Do Supabase first so the production build embeds the keys.
+Two independent parts: a **Cloudflare Worker API** (backend: leads + CMS +
+image storage — see [`worker/`](worker)) and **GitHub Pages** (static
+hosting). Do the API first so the production build knows its address.
+
+> History: until Oct 2026 the backend was a Supabase project. It was replaced
+> by Cloudflare (Worker + D1 + R2) so nothing needs to be kept alive and no
+> database slot is tied up. The old Supabase project can be deleted.
 
 ---
 
-## Part 1 — Supabase
+## Part 1 — Cloudflare API (Worker + D1 database + R2 images)
 
-### 1.1 Create the project
-1. Go to <https://supabase.com> → sign in → **New project**.
-2. Pick your organization, name it `infinity-coolmaster`, set a strong
-   database password (store it in your password manager), and choose region
-   **Southeast Asia (Singapore)** for lowest latency from Thailand.
-3. Wait ~2 minutes for provisioning.
+Already set up for this project: API at `https://icm-api.skubacool.workers.dev`,
+database `icm-cms`, image bucket `icm-images`. The steps below rebuild it from
+scratch (new account, disaster recovery) or explain what each piece is.
 
-### 1.2 Create the tables
-1. In the dashboard, open **SQL Editor** → **New query**.
-2. Paste the entire contents of [`supabase/schema.sql`](supabase/schema.sql)
-   and click **Run**.
-3. Verify under **Table Editor**: you should see `leads` and `cms_content`,
-   both with RLS enabled (shield icon). The policies allow the public site to
-   *insert* leads (never read them) and *read* CMS content (never write it).
+### 1.1 Prerequisites
+- A Cloudflare account (free plan is enough).
+- Log the CLI in once: `npx wrangler login` (opens a browser).
 
-### 1.3 Get the API credentials
-1. **Project Settings → API** (or **API Keys**).
-2. Copy two values:
-   - **Project URL** — `https://<project-ref>.supabase.co`
-   - **anon / publishable key** — safe to ship in the browser; RLS is the guard.
-   - ⚠️ Never use the `service_role` key anywhere in this project.
+### 1.2 Create the resources and deploy
+```powershell
+cd "D:\Desktop\Infinity Cool Master\Website\worker"
+npm install
+npx wrangler d1 create icm-cms --location apac       # copy the printed database_id into wrangler.jsonc
+npx wrangler r2 bucket create icm-images --location apac
+npm run db:remote                                    # creates the tables (worker/schema.sql)
+npm run deploy                                       # prints https://icm-api.<account>.workers.dev
+```
 
-### 1.4 Configure the site
+### 1.3 Set the secrets (never stored in git)
+```powershell
+cd "D:\Desktop\Infinity Cool Master\Website\worker"
+npx wrangler secret put AUTH_SECRET      # any long random value; signs login tokens
+npx wrangler secret put ADMIN_EMAIL      # the admin login email
+npx wrangler secret put ADMIN_PASSWORD   # the admin login password
+```
+Wrangler asks for each value and hides what you type.
+- **Change the password:** run `npx wrangler secret put ADMIN_PASSWORD` again.
+- **Sign everyone out:** set a new `AUTH_SECRET` (all existing tokens stop working).
+- Logins are throttled: 5 wrong attempts from one address, or 30 in total,
+  lock the login for 15 minutes.
+
+### 1.4 Point the site at the API
+Create `.env.local` in the project root (gitignored):
+```
+VITE_API_URL=https://icm-api.skubacool.workers.dev
+```
+**It must exist on the machine where you run `npm run deploy`** — Vite bakes
+the value into the build. Without it the site still renders from its built-in
+default content, but the lead form and admin report that no API is configured.
+
+### 1.5 Try everything locally with fake data
 ```powershell
 cd "D:\Desktop\Infinity Cool Master\Website"
-Copy-Item .env.example .env.local
-# then edit .env.local:
-#   VITE_SUPABASE_URL=https://<project-ref>.supabase.co
-#   VITE_SUPABASE_ANON_KEY=<anon key>
-```
-`.env.local` is gitignored. **It must exist on the machine where you run
-`npm run build` / `npm run deploy`** — Vite bakes the values into the bundle
-at build time. Without it the site still renders, but the lead form shows its
-error state.
-
-### 1.5 Test the lead pipeline
-```powershell
+Copy-Item worker\.dev.vars.example worker\.dev.vars     # fake credentials, local only
+npm --prefix worker run db:local                        # local copy of the database
+npm --prefix worker run dev                             # API on http://localhost:8793
+# in a second terminal, with VITE_API_URL=http://localhost:8793 in .env.local:
 npm run dev
 ```
-Open the site → fill the **Request Your Free Audit** form → submit → you
-should see the green success card. In Supabase **Table Editor → leads**, a new
-row appears with `status = 'new'`.
+Local runs use a throw-away database and image store; production is untouched.
 
-### 1.6 Get notified of new leads (recommended)
-A lead form nobody watches is a black hole. Easiest options:
-- **Database Webhooks** (Dashboard → Database → Webhooks): fire on INSERT into
-  `leads` → point it at a Make/Zapier/n8n webhook that emails or LINE-notifies
-  your sales inbox.
-- Or simply check the Table Editor daily until volume justifies automation.
-
-### 1.7 Override content via CMS (optional, anytime)
-**Ready-made, copy-paste examples — banners, projects, articles, partner
-logos, text — live in [`supabase/seed-examples.sql`](supabase/seed-examples.sql),
-including the Storage-bucket setup for hosting your images.**
-
-Merge rules: `media` and `localizations` rows override per key (defaults fill
-the gaps); all other collections (`projects`, `activities`, `partners`, …)
-**replace** the defaults entirely once the collection has any rows — insert
-the complete list you want shown.
-
-Insert rows into `cms_content` to replace any default content without code:
-
-| column | value |
-| --- | --- |
-| `collection` | `localizations`, `media`, `benefits`, `hero_banners`, `sectors`, `projects`, `activities`, `partners`, `contacts` |
-| `key` | optional stable key (e.g. the localization key) |
-| `seq` | sort order within the collection |
-| `data` | JSON matching the TypeScript model in `src/models/*` |
-
-Example — replace the hero headline (EN/TH):
-```sql
-insert into cms_content (collection, key, seq, data) values (
-  'localizations', 'front.cta', 1,
-  '{"key":"front.cta","text":{"en":"Your new headline","th":"พาดหัวใหม่ของคุณ"}}'
-);
-```
-For images (case-study photos, banners): upload to Supabase **Storage** (make
-the bucket public), copy the public URL, and use it in the `data` JSON.
-
-> Free-tier note: Supabase pauses free projects after ~1 week of inactivity,
-> which breaks the form until you unpause. For a production lead pipeline,
-> use the Pro plan or schedule a periodic ping.
-
-### 1.8 Browser admin for non-IT staff (recommended)
+### 1.6 Browser admin for non-IT staff
 The site ships with a hidden content manager at **`https://<site>/#/admin`** —
-staff log in with email + password and edit everything through forms:
-site text (EN/TH), banners (with direct image upload), case studies,
+log in with the email + password from step 1.3 and edit everything through
+forms: site text (EN/TH), banners (with direct image upload), case studies,
 articles, partners, benefits, services, sectors, contact channels, plus a
-**Leads inbox** with status tracking.
-
-Setup (once):
-1. **SQL Editor** → run [`supabase/admin-setup.sql`](supabase/admin-setup.sql)
-   (admin policies, unique CMS key index, `site-images` storage bucket).
-2. **Authentication → Sign In / Up** → **disable “Allow new users to sign
-   up”**. ⚠️ Required — otherwise strangers could register and edit the site.
-3. **Authentication → Users → Add user** → admin email + strong password,
-   tick **Auto Confirm User**. Repeat per staff member.
-4. Open `/#/admin`, sign in, and edit. Changes are live on the next page
-   load — no redeploy.
+**Leads inbox** with status tracking. Staff instructions: [`ADMIN-GUIDE.md`](ADMIN-GUIDE.md).
 
 Editing rules inside the admin:
 - **Site Text / Banners & Images**: per-item override with a “customized”
@@ -113,8 +76,36 @@ Editing rules inside the admin:
 - **List tabs (Case Studies, Articles, …)**: the first visit shows the
   built-in defaults with an **“Enable editing (copy defaults)”** button —
   click it once, then add/edit/delete freely.
-- The SQL route ([`seed-examples.sql`](supabase/seed-examples.sql)) remains
-  available for bulk operations; both write to the same `cms_content` table.
+- Saves are live on the next page load — no redeploy.
+
+### 1.7 How content is stored
+One table, `cms_content`: a row per item with `collection`, `key`, `seq`
+(order) and `data` (JSON matching the models in `src/models/*`). The site
+fetches every collection in a single request (`GET /api/cms`).
+- `media` and `localizations` rows override the built-in defaults **per key**.
+- Every other collection (`projects`, `activities`, `partners`, …)
+  **replaces** its defaults entirely once it has any rows.
+- Images uploaded in the admin go to the R2 bucket and are served from
+  `https://icm-api.<account>.workers.dev/img/<folder>/<file>`.
+
+Direct database access (rarely needed):
+```powershell
+cd "D:\Desktop\Infinity Cool Master\Website\worker"
+npx wrangler d1 execute icm-cms --remote --command "SELECT collection, key FROM cms_content"
+```
+
+### 1.8 Leads
+Every submission of the audit-request form lands in the `leads` table and the
+admin's **Leads** tab (status: new → contacted → qualified → won/lost). Check
+the tab on working days. To get an email or LINE alert instead, hook it into
+`postLead` in `worker/src/index.ts` — the single place leads are created.
+Spam protection: a hidden honeypot field, field-length limits, and a cap of
+100 submissions per hour.
+
+### 1.9 Cost and limits
+Workers, D1 and R2 free allowances are far above what a small informational
+site uses, and — unlike many free database hosts — nothing is paused for
+inactivity, so there is nothing to keep alive.
 
 ---
 
@@ -125,12 +116,11 @@ On <https://github.com/new>: create e.g. `infinity-coolmaster` (public or
 private — Pages works on private repos only with GitHub Pro/Team).
 
 ### 2.2 Set the base path
-In [`vite.config.ts`](vite.config.ts), `base` **must exactly match the repo
-name** with both slashes:
+In [`vite.config.ts`](vite.config.ts), `base` depends on where the site lives:
 ```ts
-base: '/infinity-coolmaster/',   // repo: github.com/<you>/infinity-coolmaster
+base: '/',                       // custom domain (current setup: infinitycoolmaster.com)
+// base: '/infinity-coolmaster/', // plain https://<you>.github.io/<repo>/ address
 ```
-- Custom domain or `<you>.github.io` repo → use `base: '/'`.
 
 ### 2.3 Push the source code
 ```powershell
@@ -142,7 +132,7 @@ git branch -M main
 git remote add origin https://github.com/<your-username>/infinity-coolmaster.git
 git push -u origin main
 ```
-(`.env.local` is gitignored, so your keys are never pushed.)
+(`.env.local` and `worker/.dev.vars` are gitignored, so nothing secret is pushed.)
 
 ### 2.4 Deploy
 ```powershell
@@ -154,23 +144,20 @@ This runs the production build (with your `.env.local` baked in) and pushes
 ### 2.5 Enable Pages
 GitHub repo → **Settings → Pages** → Source: **Deploy from a branch** →
 Branch: **gh-pages**, folder **/ (root)** → Save. After ~1–2 minutes the site
-is live at:
-```
-https://<your-username>.github.io/infinity-coolmaster/
-```
-Deep links like `/#/en/project/1` survive refresh — that is why the app uses
-HashRouter.
+is live. Deep links like `/#/en/project/1` survive refresh — that is why the
+app uses HashRouter.
 
 ### 2.6 Every future update
 ```powershell
 git add . ; git commit -m "describe change" ; git push   # source history
 npm run deploy                                           # publish to Pages
 ```
+Changes to the API (`worker/`) are published separately with
+`npm --prefix worker run deploy`.
 
-### 2.7 Custom domain via GoDaddy (when ready)
+### 2.7 Custom domain via GoDaddy
 
-**Prerequisite:** finish 2.1–2.5 first and confirm the site works at
-`https://<you>.github.io/<repo>/`. Only then add the domain.
+**Prerequisite:** the site works at `https://<you>.github.io/<repo>/`.
 
 **Step 1 — Set the custom domain on GitHub (do this BEFORE touching DNS).**
 Repo → **Settings → Pages → Custom domain** → enter your apex domain, e.g.
@@ -191,48 +178,39 @@ GoDaddy → sign in → **My Products** → next to the domain click **DNS**
    185.199.111.153
    ```
 3. **Edit or add the CNAME** for `www`: type `CNAME`, name `www`, value
-   `<your-username>.github.io` (GoDaddy often has a default `www → @` CNAME —
-   change its value). GitHub will then redirect `www.…` → apex automatically.
-4. Do **not** use GoDaddy's "Forwarding" feature — the DNS records above
-   handle everything.
+   `<your-username>.github.io`. GitHub will then redirect `www.…` → apex.
+4. Do **not** use GoDaddy's "Forwarding" feature.
 
 **Step 3 — Wait for propagation, then verify.**
-Usually under an hour (worst case 48 h). Check from PowerShell:
+Usually under an hour (worst case 48 h):
 ```powershell
 Resolve-DnsName infinitycoolmaster.com -Type A      # → the four 185.199.x.153 IPs
 Resolve-DnsName www.infinitycoolmaster.com -Type CNAME  # → <you>.github.io
 ```
-Back in **Settings → Pages**, the DNS check next to the custom domain should
-turn green.
+Back in **Settings → Pages**, the DNS check should turn green.
 
-**Step 4 — Update the code for root-path hosting (two edits).**
-1. `vite.config.ts`: `base: '/'` (the repo-name base no longer applies).
+**Step 4 — Two code edits for root-path hosting.**
+1. `vite.config.ts`: `base: '/'`.
 2. `package.json`: `"deploy": "gh-pages -d dist --cname infinitycoolmaster.com"`
-   — this writes a `CNAME` file into every deploy. Without it, the custom
-   domain setting is wiped on the next `npm run deploy`.
+   — this writes a `CNAME` file into every deploy; without it the custom
+   domain is wiped on the next `npm run deploy`.
 
-Then redeploy: `npm run deploy`.
-
-**Step 5 — Enforce HTTPS.**
-**Settings → Pages**: once the certificate is issued (minutes up to ~24 h),
-tick **Enforce HTTPS**.
+**Step 5 — Enforce HTTPS** once the certificate is issued (minutes up to ~24 h).
 
 **Step 6 — Test.** Visit `https://infinitycoolmaster.com`,
-`https://www.infinitycoolmaster.com` (should redirect), and refresh a deep
-link like `…/#/en/project/1`.
+`https://www.infinitycoolmaster.com` (redirects), and refresh a deep link.
 
-**Optional hardening:** GitHub account **Settings → Pages → Add a verified
-domain** — add a TXT record GoDaddy-side to prevent domain takeover if you
-ever remove the Pages site.
+> If the site's address ever changes, add the new address to `ALLOWED_ORIGINS`
+> in `worker/wrangler.jsonc` and redeploy the Worker — the API only answers
+> browsers coming from the origins listed there.
 
 ---
 
 ## Pre-launch checklist
 - [ ] Real company facts replace placeholders (established year, capital,
-      address, phone, email) — `src/apis/localization/defaults.ts` and
-      `src/apis/contact/defaults.ts`, or via `cms_content`.
+      address, phone, email) — Site Text and Contact Channels in the admin.
 - [ ] Real case-study clients/numbers (get client consent for names/logos).
-- [ ] Real photos uploaded (Supabase Storage or `public/assets/`).
+- [ ] Real photos uploaded via the admin.
 - [ ] Lead form tested end-to-end on the live URL.
-- [ ] Lead notification (1.6) wired to a mailbox someone reads.
+- [ ] Someone checks the admin's Leads tab on working days.
 - [ ] PDPA privacy notice if you add analytics or expand data collection.

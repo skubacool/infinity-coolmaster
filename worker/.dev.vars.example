@@ -1,0 +1,6 @@
+# Copy to `.dev.vars` for local `npm run dev` — never commit .dev.vars.
+# Production values are Worker secrets set with `wrangler secret put` (see README.md).
+AUTH_SECRET=local-dev-only-change-me
+ADMIN_EMAIL=test@example.com
+ADMIN_PASSWORD=local-dev-password
+ALLOWED_ORIGINS=http://localhost:5173

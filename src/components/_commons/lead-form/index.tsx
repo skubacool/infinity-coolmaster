@@ -41,6 +41,7 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
   const [phone, setPhone] = useState('');
   const [currentBill, setCurrentBill] = useState('');
   const [industry, setIndustry] = useState('');
+  const [website, setWebsite] = useState(''); // honeypot — people never see it
   const [state, setState] = useState<SubmitState>('idle');
   const [validationError, setValidationError] = useState(false);
 
@@ -77,6 +78,7 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
           phone: phone.trim(),
           current_bill: currentBill,
           industry,
+          website,
         });
         setState('success');
       } catch (error) {
@@ -84,7 +86,16 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
         setState('error');
       }
     },
-    [isValid, companyName, contactPerson, email, phone, currentBill, industry]
+    [
+      isValid,
+      companyName,
+      contactPerson,
+      email,
+      phone,
+      currentBill,
+      industry,
+      website,
+    ]
   );
 
   if (state === 'success') {
@@ -112,6 +123,17 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
       <h3 className="text-xl lg:text-2hxl font-semibold text-text-main">
         {t('form.title')}
       </h3>
+      {/* Honeypot: hidden from people and screen readers; bots tend to fill it in. */}
+      <input
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        type="text"
+        name="website"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <div className="gap-5 grid grid-cols-1 lg:grid-cols-2">
         <label className="gap-y-1.5 flex flex-col justify-start items-stretch">
           <span className="text-sm font-medium text-text-muted">

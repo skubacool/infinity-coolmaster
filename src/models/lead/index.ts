@@ -1,4 +1,4 @@
-/** Row payload for the Supabase `leads` table. */
+/** Row payload for the `leads` table (see worker/schema.sql). */
 export interface LeadPayload {
   company_name: string;
   contact_person: string;

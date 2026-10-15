@@ -1,6 +1,5 @@
 import { LeadPayload } from '../../models/lead';
-import { supabase, isSupabaseConfigured } from '../../lib/supabaseClient';
-import { LEADS_TABLE } from '../../config/constants';
+import { ApiError, apiFetch } from '../../lib/apiClient';
 
 export class LeadSubmissionError extends Error {
   constructor(message: string) {
@@ -10,20 +9,18 @@ export class LeadSubmissionError extends Error {
 }
 
 /**
- * Inserts a lead-form submission into the Supabase `leads` table.
+ * Sends a lead-form submission to the API, which stores it in the `leads`
+ * table with status 'new'. `website` is a honeypot that people never fill in.
  * Throws LeadSubmissionError so callers can render a friendly failure state.
  */
 export const insertLead = async (
-  payload: Omit<LeadPayload, 'status'>
+  payload: Omit<LeadPayload, 'status'> & { website?: string }
 ): Promise<void> => {
-  if (!isSupabaseConfigured || !supabase) {
+  try {
+    await apiFetch('/api/leads', { method: 'POST', json: payload });
+  } catch (error) {
     throw new LeadSubmissionError(
-      'Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.'
+      error instanceof ApiError ? error.message : 'Submission failed'
     );
-  }
-  const row: LeadPayload = { ...payload, status: 'new' };
-  const { error } = await supabase.from(LEADS_TABLE).insert([row]);
-  if (error) {
-    throw new LeadSubmissionError(error.message);
   }
 };

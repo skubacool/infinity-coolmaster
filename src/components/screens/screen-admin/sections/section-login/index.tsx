@@ -79,8 +79,7 @@ const SectionLogin = () => {
           {busy ? 'Signing in…' : 'Sign in'}
         </button>
         <p className="text-xs text-title-pale text-center">
-          Accounts are created by your administrator in the Supabase dashboard
-          (Authentication → Users).
+          Access is managed by your administrator.
         </p>
       </form>
     </div>

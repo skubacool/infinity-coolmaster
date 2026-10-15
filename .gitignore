@@ -4,6 +4,11 @@
 # production
 /dist
 
+# worker (Cloudflare API)
+/worker/node_modules
+/worker/.wrangler
+/worker/.dev.vars
+
 # env
 .env
 .env.local

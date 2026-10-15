@@ -53,7 +53,7 @@ function App() {
       <AppScreen>
         <ScrollToTopWrapper>
           <Routes>
-            {/* Hidden content manager (Supabase Auth protected) */}
+            {/* Hidden content manager (login-token protected) */}
             <Route path="/admin" element={<ScreenAdmin />} />
             <Route path="/:locale/" element={<ScreenFront />} />
             <Route path="/:locale/activity" element={<ScreenActivityList />} />
