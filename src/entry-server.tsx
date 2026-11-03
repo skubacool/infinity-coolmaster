@@ -15,6 +15,10 @@ import {
 } from './config/routes';
 import { listProjects } from './apis/project';
 import { listActivities } from './apis/activity';
+import { checkCms } from './apis/_commons/cms';
+import { API_BASE } from './lib/apiClient';
+
+export { checkCms, API_BASE };
 
 /**
  * Build-time renderer, used by scripts/prerender.mjs (never shipped to the

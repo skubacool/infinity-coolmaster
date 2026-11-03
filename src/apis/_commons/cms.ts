@@ -21,6 +21,15 @@ const loadBundle = (): Promise<CmsBundle | null> => {
   return bundlePromise;
 };
 
+/**
+ * For the build: 'ok' when the live CMS answered, 'failed' when the API is
+ * configured but unreachable, 'unconfigured' when VITE_API_URL is not set.
+ */
+export const checkCms = async (): Promise<'ok' | 'failed' | 'unconfigured'> => {
+  if (!isApiConfigured) return 'unconfigured';
+  return (await loadBundle()) ? 'ok' : 'failed';
+};
+
 /** Forget the loaded content so the next read fetches it fresh (after an admin save). */
 export const invalidateCmsCache = (): void => {
   bundlePromise = null;

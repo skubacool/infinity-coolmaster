@@ -1,4 +1,11 @@
-import { PropsWithChildren, ReactElement, useEffect, useRef } from 'react';
+import {
+  lazy,
+  PropsWithChildren,
+  ReactElement,
+  Suspense,
+  useEffect,
+  useRef,
+} from 'react';
 import {
   Route,
   Navigate,
@@ -13,7 +20,6 @@ import ScreenProjectList from './components/screens/screen-project-list';
 import ScreenAbout from './components/screens/screen-about';
 import ScreenProject from './components/screens/screen-project';
 import ScreenActivity from './components/screens/screen-activity';
-import ScreenAdmin from './components/screens/screen-admin';
 import ScreenPage from './components/screens/screen-page';
 import ScreenNotFound from './components/screens/screen-not-found';
 import { IVmScreen, useVmScreen } from './stores/vm-screen';
@@ -21,6 +27,10 @@ import { DEFAULT_LOCALE } from './config/constants';
 import { trackPageView } from './utils/analytics';
 import { applyHead } from './seo/head';
 import { resolvePage } from './seo/resolve';
+
+// The content manager is only for staff: load its code on demand so public
+// pages stay light.
+const ScreenAdmin = lazy(() => import('./components/screens/screen-admin'));
 
 const ScrollToTopWrapper = (props: PropsWithChildren) => {
   const { children } = props;
@@ -94,7 +104,14 @@ function App() {
       <ScrollToTopWrapper>
         <Routes>
           {/* Hidden content manager (login-token protected) */}
-          <Route path="/admin" element={<ScreenAdmin />} />
+          <Route
+            path="/admin"
+            element={
+              <Suspense fallback={null}>
+                <ScreenAdmin />
+              </Suspense>
+            }
+          />
           <Route path="/:locale" element={guarded(<ScreenFront />)} />
           <Route path="/:locale/about" element={guarded(<ScreenAbout />)} />
           <Route

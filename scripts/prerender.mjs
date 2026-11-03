@@ -34,6 +34,34 @@ for (const marker of [
   if (!template.includes(marker)) throw new Error(`index.html lacks ${marker}`);
 }
 
+// Search engines index exactly what is rendered here, so never silently fall
+// back to the built-in sample content when the live CMS cannot be reached.
+const cms = await server.checkCms();
+if (cms === 'failed' && process.env.ALLOW_DEFAULT_CONTENT !== '1') {
+  throw new Error(
+    `Could not load content from the CMS API (${server.API_BASE}). ` +
+      'Check the internet connection and VITE_API_URL in .env.local, then build again. ' +
+      '(Set ALLOW_DEFAULT_CONTENT=1 to build with the built-in content anyway.)'
+  );
+}
+if (cms === 'unconfigured') {
+  console.warn(
+    '\n⚠  VITE_API_URL is not set: pages are pre-rendered from the built-in default content, not the live CMS.\n'
+  );
+} else {
+  console.log(
+    `content: ${cms === 'ok' ? `live CMS (${server.API_BASE})` : 'built-in defaults (ALLOW_DEFAULT_CONTENT=1)'}`
+  );
+}
+if (
+  server.API_BASE.includes('localhost') ||
+  server.API_BASE.includes('127.0.0.1')
+) {
+  console.warn(
+    `\n⚠  VITE_API_URL points at ${server.API_BASE}. Do not deploy this build: set the live API URL in .env.local.\n`
+  );
+}
+
 const legacy = await server.legacyIdMap();
 const baseTemplate = template.replace(
   /\/\*ICM_LEGACY\*\/\s*\{\s*p:\s*\{\},\s*a:\s*\{\}\s*\}/,
@@ -60,6 +88,15 @@ const write = async (urlPath, content) => {
 const today = new Date().toISOString().slice(0, 10);
 const sitemapEntries = [];
 const pages = await server.listSitePaths();
+const seen = new Set();
+for (const { path: p } of pages) {
+  if (seen.has(p)) {
+    throw new Error(
+      `Two pages share the address ${p}. Give one of them a different "Web address (slug)" in the admin.`
+    );
+  }
+  seen.add(p);
+}
 let count = 0;
 
 for (const { path: urlPath, lastmod } of pages) {

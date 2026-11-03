@@ -19,6 +19,22 @@ const getGtag = (): GtagFn | null => {
 };
 
 /**
+ * Records a submitted audit request as GA4's recommended `generate_lead`
+ * event. Mark it as a key event in GA4 (Admin → Events) to report audit
+ * requests by traffic source, e.g. organic search.
+ */
+export const trackLead = (params: { industry?: string } = {}): void => {
+  const gtag = getGtag();
+  if (!gtag) return;
+  gtag('event', 'generate_lead', {
+    form_name: 'audit_request',
+    page_location: window.location.origin + window.location.pathname,
+    industry: params.industry || undefined,
+    send_to: GA_MEASUREMENT_ID,
+  });
+};
+
+/**
  * Sends a GA4 page_view for the given route path (e.g. "/en/about/").
  * No-op when gtag is unavailable (local dev without the tag, or blocked by
  * a privacy extension), so it never throws.

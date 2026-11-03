@@ -152,6 +152,18 @@ deep links and refreshes work, and unknown paths get `404.html` with a real
 renamed slugs): visitors see admin edits immediately, but search engines read
 the pre-rendered HTML, which is only refreshed by `npm run deploy`.
 
+The build reads the live CMS through `VITE_API_URL`. If the API cannot be
+reached, the build stops instead of publishing the built-in sample content;
+fix the connection or `.env.local` and run it again.
+
+**After the first deploy with real URLs:**
+1. Wait a few minutes, then run `npm run indexnow` (asks Bing to recrawl).
+2. Google Search Console and Bing Webmaster Tools: submit
+   `https://infinitycoolmaster.com/sitemap.xml`.
+3. Google Analytics → Admin → Events: mark `generate_lead` as a **key event**.
+   Every audit-form submission sends it, so reports show audit requests per
+   traffic source (e.g. organic search).
+
 ### 2.6 Every future update
 ```powershell
 git add . ; git commit -m "describe change" ; git push   # source history
