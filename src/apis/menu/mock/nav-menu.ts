@@ -6,12 +6,12 @@ const navMenu: Menu = {
   items: [
     { id: 1, title: 'menu.home', url: '/' },
     { id: 2, title: 'menu.about', url: '/about' },
-    { id: 3, title: 'menu.projects', url: '/project' },
-    { id: 4, title: 'menu.activities', url: '/activity' },
+    { id: 3, title: 'menu.projects', url: '/case-studies' },
+    { id: 4, title: 'menu.activities', url: '/insights' },
     {
       id: 5,
       title: 'menu.contact',
-      url: '/?rand={{random}}#contact',
+      url: '/contact',
       isCta: true,
     },
   ],

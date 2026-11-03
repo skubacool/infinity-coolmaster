@@ -5,6 +5,7 @@ import { localizedDate } from '../../../utils/date-utils';
 import { Locale } from '../../../models/_commons/localized';
 import { Activity } from '../../../models/activity';
 import ActivityTag, { ActivityTagSize } from '../activity-tag';
+import { paths } from '../../../config/routes';
 
 export interface MiniActivityBoxProps {
   locale?: Locale;
@@ -13,7 +14,7 @@ export interface MiniActivityBoxProps {
 
 const MiniActivityBox = (props: PropsWithChildren<MiniActivityBoxProps>) => {
   const { locale = 'en', activity } = props;
-  const { id, thumbnail, tag, title, publishedAt } = activity;
+  const { thumbnail, tag, title, publishedAt } = activity;
 
   const localizedTitle = useMemo(() => {
     if (!title) return '';
@@ -21,7 +22,7 @@ const MiniActivityBox = (props: PropsWithChildren<MiniActivityBoxProps>) => {
   }, [locale, title]);
 
   return (
-    <Link to={`/${locale}/activity/${id}`}>
+    <Link to={paths.insight(locale, activity)}>
       <div className="gap-x-3 flex flex-row justify-start items-stretch">
         <div
           className="flex-1 max-w-[154px] aspect-[154/105] rounded-lg overflow-hidden border border-sep-pale bg-pale"

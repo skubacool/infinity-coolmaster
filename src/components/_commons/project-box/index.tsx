@@ -6,6 +6,7 @@ import { Project } from '../../../models/project';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { l } from '../../../utils/localization-utils';
 import ProjectDetailRow from '../project-detail-row';
+import { paths } from '../../../config/routes';
 
 export interface ProjectBoxProps {
   locale?: Locale;
@@ -17,7 +18,6 @@ const ProjectBox = (props: PropsWithChildren<ProjectBoxProps>) => {
 
   const { locale = 'en', project } = props;
   const {
-    id,
     thumbnail,
     title,
     excerpt,
@@ -51,7 +51,7 @@ const ProjectBox = (props: PropsWithChildren<ProjectBoxProps>) => {
   }, [localizedClient, windowWidth]);
 
   return (
-    <Link to={`/${locale}/project/${id}`}>
+    <Link to={paths.caseStudy(locale, project)}>
       <div className="card-premium h-full overflow-hidden flex flex-col justify-start items-stretch transition-all duration-200 hover:shadow-premium-md hover:-translate-y-0.5">
         <div className="relative flex-shrink-0">
           <div

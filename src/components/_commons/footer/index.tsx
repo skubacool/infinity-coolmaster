@@ -2,7 +2,13 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { l } from '../../../utils/localization-utils';
-import { randomWithDigits } from '../../../utils/number-utils';
+import { menuPath, paths } from '../../../config/routes';
+import {
+  RESOURCE_PAGES,
+  SECTOR_PAGES,
+  isDraftPage,
+  siteMeta,
+} from '../../../seo/pages';
 import { MenuItem } from '../../../models/menu';
 import { useVmScreen } from '../../../stores/vm-screen';
 import SafeArea from '../safe-area';
@@ -16,6 +22,8 @@ const Footer = () => {
     footerMenu,
     contacts,
   } = useVmScreen();
+
+  const meta = siteMeta(locale);
 
   const footerMenuItems = useMemo((): MenuItem[] => {
     if (!footerMenu) return [];
@@ -37,7 +45,10 @@ const Footer = () => {
         <div className="gap-y-6 flex flex-col justify-start items-stretch">
           <div className="pb-10 lg:pb-0 gap-y-8 lg:gap-y-0 lg:gap-x-10 flex flex-col lg:flex-row justify-start items-center lg:items-start">
             <div className="gap-y-3 flex flex-col justify-start items-center lg:items-start">
-              <Link to={`/${locale}`} aria-label="Infinity CoolMaster — Home">
+              <Link
+                to={paths.home(locale)}
+                aria-label="Infinity CoolMaster — Home"
+              >
                 <BrandLogo tone={BrandLogoTone.light} height={52} />
               </Link>
               <span className="text-white-a70 text-xs tracking-[0.25em] uppercase">
@@ -51,9 +62,7 @@ const Footer = () => {
                     const { id, title, url } = menuItem;
                     return (
                       <li key={id} className="flex-1 flex-shrink-0">
-                        <Link
-                          to={`/${locale}/${url.replace(/\{\{random}}/g, String(randomWithDigits(8)))}`}
-                        >
+                        <Link to={menuPath(locale, url)}>
                           <span className="text-sm text-white-a70 hover:text-white transition-colors whitespace-nowrap">
                             {l(locale, localizations, title)}
                           </span>
@@ -62,6 +71,32 @@ const Footer = () => {
                     );
                   })}
                 </ul>
+                {/* Sector and resource pages: internal links for visitors and crawlers. */}
+                <div className="mt-6 gap-6 grid grid-cols-1 sm:grid-cols-2 text-center lg:text-left">
+                  {[
+                    { title: meta.sectorsTitle, keys: SECTOR_PAGES },
+                    { title: meta.resourcesTitle, keys: RESOURCE_PAGES },
+                  ].map((group) => (
+                    <div key={group.title} className="gap-y-2 flex flex-col">
+                      <span className="text-xs uppercase tracking-[0.2em] text-white-a70">
+                        {group.title}
+                      </span>
+                      <ul className="gap-y-2 flex flex-col">
+                        {group.keys
+                          .filter((key) => !isDraftPage(key))
+                          .map((key) => (
+                            <li key={key}>
+                              <Link to={paths.page(locale, key)}>
+                                <span className="text-sm text-white-a70 hover:text-white transition-colors">
+                                  {meta.pages[key].label}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="h-px bg-white-a10 self-stretch lg:hidden" />

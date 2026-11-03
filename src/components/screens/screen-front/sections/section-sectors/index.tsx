@@ -2,6 +2,10 @@ import { l } from '../../../../../utils/localization-utils';
 import { useVmScreen } from '../../../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../../../stores/vm-screen-front';
 import SafeArea from '../../../../_commons/safe-area';
+import { Link } from 'react-router-dom';
+
+import { paths } from '../../../../../config/routes';
+import { SECTOR_PAGE_BY_KEY } from '../../../../../seo/pages';
 import SectorCard from '../../../../_commons/sector-card';
 
 /** Target market sectors served by the CaaS offering. */
@@ -24,10 +28,20 @@ const SectionSectors = () => {
           </div>
           <ul className="gap-5 lg:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {sectors.map((sector) => {
-              const { id } = sector;
+              const { id, key } = sector;
+              const page = SECTOR_PAGE_BY_KEY[key];
               return (
                 <li key={id}>
-                  <SectorCard locale={locale} sector={sector} />
+                  {page ? (
+                    <Link
+                      className="block h-full"
+                      to={paths.page(locale, page)}
+                    >
+                      <SectorCard locale={locale} sector={sector} />
+                    </Link>
+                  ) : (
+                    <SectorCard locale={locale} sector={sector} />
+                  )}
                 </li>
               );
             })}

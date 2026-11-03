@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
+    "build": "tsc && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --cname infinitycoolmaster.com",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "dayjs": "^1.11.20",

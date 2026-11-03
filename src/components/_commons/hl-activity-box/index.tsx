@@ -5,6 +5,7 @@ import { Locale } from '../../../models/_commons/localized';
 import { Activity } from '../../../models/activity';
 import ActivityBox from '../activity-box';
 import ActivityBoxDetails from '../activity-box-details';
+import { paths } from '../../../config/routes';
 
 export interface HlActivityBoxProps {
   locale?: Locale;
@@ -13,11 +14,11 @@ export interface HlActivityBoxProps {
 
 const HlActivityBox = (props: PropsWithChildren<HlActivityBoxProps>) => {
   const { locale = 'en', activity } = props;
-  const { id, thumbnail } = activity;
+  const { thumbnail } = activity;
 
   return (
     <div className="flex flex-col justify-start items-stretch">
-      <Link to={`/${locale}/activity/${id}`}>
+      <Link to={paths.insight(locale, activity)}>
         <div className="gap-x-10 hidden lg:flex flex-row justify-start items-stretch">
           <div
             className="max-w-[722px] h-[406px] flex-1 rounded-2xl overflow-hidden border border-sep-pale bg-pale"

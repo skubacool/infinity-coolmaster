@@ -118,8 +118,9 @@ export const listCollections: CmsListCollection[] = [
     imageFolder: 'projects',
     fields: [
       { name: 'title', label: 'Title', type: 'localized' },
+      { name: 'slug', label: 'Web address (slug)', type: 'text', help: 'Lower-case words joined by hyphens, e.g. sathorn-office-tower-28-percent-savings. Leave empty to use the English title. Changing it later breaks links already shared — redeploy the site after adding or renaming.' },
       { name: 'excerpt', label: 'Short teaser (card text)', type: 'localized-multiline' },
-      { name: 'details', label: 'Full story', type: 'localized-multiline', help: 'Leave a blank line between paragraphs.' },
+      { name: 'details', label: 'Full story', type: 'localized-multiline', help: 'Leave a blank line between paragraphs. Start a line with "## " for a heading and "- " for each bullet point.' },
       { name: 'client', label: 'Client name', type: 'localized', help: 'Use "Confidential" if the client cannot be named.' },
       { name: 'location', label: 'Location', type: 'localized' },
       { name: 'sector', label: 'Sector', type: 'select', options: ['commercial', 'industrial', 'healthcare', 'hospitality', 'retail', 'data-center'] },
@@ -145,9 +146,11 @@ export const listCollections: CmsListCollection[] = [
     imageFolder: 'articles',
     fields: [
       { name: 'title', label: 'Headline', type: 'localized' },
+      { name: 'slug', label: 'Web address (slug)', type: 'text', help: 'Lower-case words joined by hyphens, e.g. cfo-guide-cooling-as-a-service. Leave empty to use the English title. Changing it later breaks links already shared — redeploy the site after adding or renaming.' },
       { name: 'excerpt', label: 'Short teaser', type: 'localized-multiline' },
-      { name: 'details', label: 'Article body', type: 'localized-multiline', help: 'Leave a blank line between paragraphs.' },
+      { name: 'details', label: 'Article body', type: 'localized-multiline', help: 'Leave a blank line between paragraphs. Start a line with "## " for a heading, "### " for a sub-heading, and "- " for each bullet point.' },
       { name: 'publishedAt', label: 'Publish date', type: 'date' },
+      { name: 'updatedAt', label: 'Last updated (optional)', type: 'date', help: 'Set when you make a substantive change; shown on the article and to search engines.' },
       { name: 'tag', label: 'Tag badge', type: 'preset', presets: ACTIVITY_TAG_PRESETS },
       { name: 'type', label: 'Article type', type: 'preset', presets: ACTIVITY_TYPE_PRESETS },
       { name: 'thumbnail', label: 'Card photo', type: 'image' },

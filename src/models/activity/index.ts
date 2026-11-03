@@ -15,6 +15,8 @@ export interface ActivityType {
 /** An insight, technical article or company news item. */
 export interface Activity {
   id: number;
+  /** URL slug, e.g. 'cfo-guide-cooling-as-a-service'. Falls back to the English title. */
+  slug?: string;
   thumbnail: string;
   banner: string;
   tag: ActivityTag | null;
@@ -23,5 +25,9 @@ export interface Activity {
   excerpt: LocalizedText;
   details: LocalizedText;
   publishedAt: string;
+  /** Date of the last substantive edit (YYYY-MM-DD); shown as "Last updated". */
+  updatedAt?: string;
+  /** Standalone page keys (e.g. 'hotels', 'pricing-model') linked under the article. */
+  relatedPages?: string[];
   nextActivityId: number | null;
 }

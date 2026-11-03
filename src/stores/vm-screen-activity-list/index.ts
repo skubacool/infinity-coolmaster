@@ -1,11 +1,13 @@
 import { useCallback, useMemo } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { seededAtom } from '../../lib/seed';
+
 import { Activity } from '../../models/activity';
 import { listActivities } from '../../apis/activity';
 
 const loadingState = atom<boolean>(false);
-const activitiesState = atom<Activity[]>([]);
+const activitiesState = seededAtom<Activity[]>('activityList.activities', []);
 
 export interface IVmScreenActivityList {
   // Observables
@@ -23,7 +25,8 @@ export const useVmScreenActivityList = (): IVmScreenActivityList => {
   const [activities, setActivities] = useAtom(activitiesState);
 
   const bind = useCallback(() => {
-    setLoading(true);
+    // Pre-rendered pages arrive with content; refresh it without a spinner.
+    if (!activities.length) setLoading(true);
     (async () => {
       try {
         const activities = await listActivities();
@@ -34,7 +37,7 @@ export const useVmScreenActivityList = (): IVmScreenActivityList => {
         setLoading(false);
       }
     })();
-  }, [setActivities, setLoading]);
+  }, [activities.length, setActivities, setLoading]);
 
   const headActivity = useMemo(() => activities[0] ?? null, [activities]);
   const otherActivities = useMemo(() => activities.slice(1), [activities]);

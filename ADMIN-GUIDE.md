@@ -8,7 +8,7 @@ Everything is done in a normal web page with forms and buttons.
 ## 1. Logging in
 
 1. Open this address in your browser:
-   **https://skubacool.github.io/infinity-coolmaster/#/admin**
+   **https://infinitycoolmaster.com/admin/**
 2. Type your **email** and **password** (given to you by the administrator).
 3. Click **Sign in**.
 
@@ -84,6 +84,12 @@ The example projects become editable.
 2. Change any field — every field has a label, and texts have EN + TH boxes:
    - **Title / Short teaser / Full story** — the words on the page.
      In the Full story, leave an empty line between paragraphs.
+   - **Web address (slug)** — the end of the page's address, e.g.
+     `sathorn-office-tower-28-percent-savings` gives
+     `infinitycoolmaster.com/en/case-studies/sathorn-office-tower-28-percent-savings/`.
+     Lower-case words joined by hyphens. Leave it empty to use the English
+     title. Avoid changing it once the page is published — links people
+     already shared would stop working.
    - **Plant size (TR), Verified savings (%), Year in service** — the numbers
      shown on the card and page.
    - **Card photo / Page banner photo** — use the **Upload image** buttons,
@@ -103,6 +109,12 @@ The statistics on the home page (number of facilities, total TR, energy
 saved) update **automatically** from this list — you never edit them
 directly.
 
+> **Tell the website administrator after adding or changing case studies or
+> articles.** Visitors see your change right away, but Google and AI
+> assistants only see it after the site is rebuilt and redeployed
+> (`npm run deploy`). A brand-new case study or article has no page of its
+> own for search engines until then.
+
 ---
 
 ## 5. Articles & news
@@ -111,10 +123,25 @@ Works exactly like case studies: enable editing once, then Edit / Add /
 Delete. Extra fields:
 - **Publish date** — shown on the article card.
 - **Tag badge / Article type** — pick from the dropdown lists.
+- **Article body** formatting: start a line with `## ` for a heading,
+  `### ` for a sub-heading and `- ` for each bullet point; leave an empty
+  line between paragraphs.
+- **Last updated** — set it when you change an article substantially; it is
+  shown on the page and to search engines.
+
+Thirteen in-depth guides (Cooling-as-a-Service basics, chiller replacement,
+kW/TR, maintenance, IPMVP, PUE, hotels, hospitals and more) are built into
+the website itself and always appear in the list. To edit one, ask the website administrator, or
+create an article here with the same web address (slug) — yours then
+replaces the built-in one.
 
 ---
 
 ## 6. Partner and client logos
+
+The built-in logos were design placeholders and are no longer shown: the
+logo strips stay hidden until you add **real** partners and clients (with
+their written permission to show their logo).
 
 1. Open **Partners & Clients** (enable editing the first time).
 2. **+ Add partner** → type the name → **Upload image** for the logo

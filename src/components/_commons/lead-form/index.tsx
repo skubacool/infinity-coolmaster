@@ -12,6 +12,7 @@ import { l } from '../../../utils/localization-utils';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { insertLead } from '../../../apis/lead';
 import Icon from '../icon';
+import { trackLead } from '../../../utils/analytics';
 
 export interface LeadFormProps {
   locale?: Locale;
@@ -81,6 +82,7 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
           website,
         });
         setState('success');
+        trackLead({ industry });
       } catch (error) {
         console.error('>>error<< insert_lead', error);
         setState('error');

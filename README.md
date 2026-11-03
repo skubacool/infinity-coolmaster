@@ -41,17 +41,51 @@ A single Cloudflare Worker serves everything dynamic:
 | `/api/admin/*` | content, image upload and leads management (login token required) |
 
 Setup, secrets and local development: [`worker/README.md`](worker/README.md) and
-[`DEPLOYMENT.md`](DEPLOYMENT.md). Staff guide for the content manager at `/#/admin`:
+[`DEPLOYMENT.md`](DEPLOYMENT.md). Staff guide for the content manager at `/admin/`:
 [`ADMIN-GUIDE.md`](ADMIN-GUIDE.md).
 
 ## GitHub Pages deployment
 
-1. In [`vite.config.ts`](vite.config.ts), set `base` to `'/'` for the custom domain
-   (or `'/<repository-name>/'` for a plain github.io address).
+1. The site is built for the custom domain root (`base: '/'` in
+   [`vite.config.ts`](vite.config.ts), `SITE_ORIGIN` in
+   [`src/config/routes.ts`](src/config/routes.ts)).
 2. `npm run deploy` — builds and publishes `dist/` to the `gh-pages` branch.
 
-Routing uses **HashRouter**, so deep links and refreshes work on GitHub Pages
-without any 404 redirect tricks.
+### Routing and pre-rendering (SEO)
+
+Every page has a real URL (`/en/about/`, `/th/case-studies/<slug>/`, …) and is
+**pre-rendered to static HTML at build time**, so search engines and AI
+crawlers see the full text without running JavaScript. `npm run build`:
+
+1. builds the browser bundle (`vite build`),
+2. builds a server bundle of [`src/entry-server.tsx`](src/entry-server.tsx),
+3. runs [`scripts/prerender.mjs`](scripts/prerender.mjs), which renders every
+   route into `dist/<route>/index.html` and writes `404.html`, `sitemap.xml`,
+   `robots.txt` and `llms.txt`.
+
+In the browser React hydrates the static HTML and then refreshes content from
+the CMS, so admin edits still show to visitors right away. **Search engines see
+CMS changes only after the next `npm run deploy`** — redeploy after adding or
+editing case studies and articles (a new one has no static page until then).
+
+Where to edit SEO text:
+
+| What | File |
+| --- | --- |
+| Page titles, meta descriptions, standalone page copy | [`src/seo/meta.en.ts`](src/seo/meta.en.ts), [`src/seo/meta.th.ts`](src/seo/meta.th.ts) |
+| Body copy of sector and explainer pages (sections, tables, FAQs) | [`src/content/pages.en.ts`](src/content/pages.en.ts), [`src/content/pages.th.ts`](src/content/pages.th.ts) |
+| Built-in guides (always on the Insights page; a CMS article with the same slug replaces one) | [`src/content/articles/`](src/content/articles) |
+| Which standalone pages are live (others are `noindex` TODO scaffolds) | `PUBLISHED_PAGES` in [`src/seo/pages.ts`](src/seo/pages.ts) |
+| Company facts in structured data (JSON-LD) | [`src/seo/organization.ts`](src/seo/organization.ts) |
+| URL structure | [`src/config/routes.ts`](src/config/routes.ts) |
+| Case-study / article URLs | the **Web address (slug)** field in the admin |
+
+Old hash links (`/#/en/about`, `/#/en/project/1`) are redirected to the new
+URLs by a small script at the top of [`index.html`](index.html).
+
+After each deploy, wait a few minutes for GitHub Pages to publish, then run
+`npm run indexnow` to ask Bing (which also feeds ChatGPT search and Copilot)
+to recrawl every page in the sitemap.
 
 ## Architecture
 

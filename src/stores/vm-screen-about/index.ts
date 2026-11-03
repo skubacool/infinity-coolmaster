@@ -1,13 +1,18 @@
 import { useCallback } from 'react';
-import { atom, useAtom } from 'jotai';
+import { useAtom } from 'jotai';
+
+import { seededAtom } from '../../lib/seed';
 
 import { ProjectSummary } from '../../models/project-summary';
 import { Partner } from '../../models/partner';
 import { findProjectSummary } from '../../apis/project';
 import { listPartners } from '../../apis/partner';
 
-const projectSummaryState = atom<ProjectSummary | null>(null);
-const partnersState = atom<Partner[]>([]);
+const projectSummaryState = seededAtom<ProjectSummary | null>(
+  'about.projectSummary',
+  null
+);
+const partnersState = seededAtom<Partner[]>('about.partners', []);
 
 export interface IVmScreenAbout {
   // Observables

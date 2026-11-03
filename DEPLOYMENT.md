@@ -64,7 +64,7 @@ npm run dev
 Local runs use a throw-away database and image store; production is untouched.
 
 ### 1.6 Browser admin for non-IT staff
-The site ships with a hidden content manager at **`https://<site>/#/admin`** —
+The site ships with a hidden content manager at **`https://<site>/admin/`** —
 log in with the email + password from step 1.3 and edit everything through
 forms: site text (EN/TH), banners (with direct image upload), case studies,
 articles, partners, benefits, services, sectors, contact channels, plus a
@@ -144,8 +144,25 @@ This runs the production build (with your `.env.local` baked in) and pushes
 ### 2.5 Enable Pages
 GitHub repo → **Settings → Pages** → Source: **Deploy from a branch** →
 Branch: **gh-pages**, folder **/ (root)** → Save. After ~1–2 minutes the site
-is live. Deep links like `/#/en/project/1` survive refresh — that is why the
-app uses HashRouter.
+is live. Every page is a real pre-rendered file (`/en/about/index.html`), so
+deep links and refreshes work, and unknown paths get `404.html` with a real
+404 status. Old `/#/...` links are redirected by a script in `index.html`.
+
+**Redeploy after content changes in the admin** (new case studies, articles,
+renamed slugs): visitors see admin edits immediately, but search engines read
+the pre-rendered HTML, which is only refreshed by `npm run deploy`.
+
+The build reads the live CMS through `VITE_API_URL`. If the API cannot be
+reached, the build stops instead of publishing the built-in sample content;
+fix the connection or `.env.local` and run it again.
+
+**After the first deploy with real URLs:**
+1. Wait a few minutes, then run `npm run indexnow` (asks Bing to recrawl).
+2. Google Search Console and Bing Webmaster Tools: submit
+   `https://infinitycoolmaster.com/sitemap.xml`.
+3. Google Analytics → Admin → Events: mark `generate_lead` as a **key event**.
+   Every audit-form submission sends it, so reports show audit requests per
+   traffic source (e.g. organic search).
 
 ### 2.6 Every future update
 ```powershell

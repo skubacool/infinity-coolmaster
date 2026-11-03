@@ -25,14 +25,18 @@ export interface BrandLogoProps {
 const BrandLogo = (props: PropsWithChildren<BrandLogoProps>) => {
   const { tone = BrandLogoTone.dark, markOnly = false, height = 48 } = props;
 
+  // WebP copies sized for display (the PNG originals are 600–1200 px wide).
   const src = markOnly
-    ? p('assets/brand/logo-mark.png')
-    : p('assets/brand/logo-official.png');
+    ? p('assets/brand/logo-mark.webp')
+    : p('assets/brand/logo-official.webp');
+  const aspect = markOnly ? 240 / 117 : 400 / 227;
 
   const img = (
     <img
       src={src}
       alt={SITE_NAME}
+      width={Math.round(height * aspect)}
+      height={height}
       style={{ height: `${height}px` }}
       className="block w-auto select-none"
       draggable={false}

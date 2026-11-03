@@ -13,6 +13,7 @@ const photoSet = (key: string): string[] => [
 const projects: Project[] = [
   {
     id: 1,
+    slug: 'sathorn-office-tower-28-percent-savings',
     thumbnail: p('assets/placeholders/facility-commercial.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -40,6 +41,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    slug: 'chonburi-hospital-22-percent-savings',
     thumbnail: p('assets/placeholders/facility-healthcare.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -67,6 +69,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    slug: 'phuket-beach-resort-chiller-as-a-service',
     thumbnail: p('assets/placeholders/facility-hospitality.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -94,6 +97,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
+    slug: 'bang-na-cold-chain-hub-cooling-savings',
     thumbnail: p('assets/placeholders/facility-industrial.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -121,6 +125,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
+    slug: 'ratchadaphisek-mall-chiller-savings',
     thumbnail: p('assets/placeholders/facility-retail.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -148,6 +153,7 @@ const projects: Project[] = [
   },
   {
     id: 6,
+    slug: 'samut-prakan-data-center-cooling',
     thumbnail: p('assets/placeholders/facility-datacenter.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     title: {
@@ -162,7 +168,10 @@ const projects: Project[] = [
       en: 'Mission-critical loads leave no room for experimentation, so our optimization rolled out in shadow mode first: the ML engine recommended setpoints that operators approved for weeks before automation was enabled. The result — PUE down 0.26, a 15% verified cooling energy reduction, and zero impact on the facility’s concurrent maintainability certification.',
       th: 'โหลดสำคัญยิ่งยวดไม่มีพื้นที่ให้ทดลอง การปรับจูนของเราจึงเริ่มแบบ Shadow Mode — ML แนะนำค่าการทำงานให้ผู้ดูแลอนุมัติเป็นเวลาหลายสัปดาห์ก่อนเปิดอัตโนมัติเต็มรูปแบบ ผลลัพธ์คือ PUE ลดลง 0.26 ประหยัดพลังงานความเย็น 15% โดยไม่กระทบการรับรอง Concurrent Maintainability ของศูนย์',
     },
-    client: { en: 'Cloud Infrastructure Provider', th: 'ผู้ให้บริการโครงสร้างพื้นฐานคลาวด์' },
+    client: {
+      en: 'Cloud Infrastructure Provider',
+      th: 'ผู้ให้บริการโครงสร้างพื้นฐานคลาวด์',
+    },
     location: { en: 'Samut Prakan', th: 'สมุทรปราการ' },
     sector: 'data-center',
     capacityTr: 1500,

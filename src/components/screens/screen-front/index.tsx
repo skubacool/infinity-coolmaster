@@ -1,5 +1,5 @@
 import { ReactElement, useEffect } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import Nav from '../../_commons/nav';
@@ -9,7 +9,7 @@ import SectionBenefits from './sections/section-benefits';
 import SectionBusiness from './sections/section-business';
 import SectionProcess from './sections/section-process';
 import SectionSectors from './sections/section-sectors';
-import SectionEstimator from './sections/section-estimator';
+import SectionCalculatorTeaser from './sections/section-calculator-teaser';
 import SectionProjects from './sections/section-projects';
 import SectionImpact from './sections/section-impact';
 import SectionActivities from './sections/section-activities';
@@ -19,9 +19,6 @@ import SectionPartners from '../../sections/section-partners';
 
 const ScreenFront = (): ReactElement => {
   const { hash } = useLocation();
-
-  const [querystring] = useSearchParams();
-  const rand = querystring.get('rand');
 
   const vmScreenFront = useVmScreenFront();
   const { loading, partners = [] } = vmScreenFront;
@@ -43,7 +40,7 @@ const ScreenFront = (): ReactElement => {
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     window.scrollTo({ top: offsetPosition });
-  }, [hash, loading, rand]);
+  }, [hash, loading]);
 
   return (
     <div className="flex flex-col justify-start items-stretch">
@@ -55,7 +52,7 @@ const ScreenFront = (): ReactElement => {
           <SectionBusiness />
           <SectionProcess />
           <SectionSectors />
-          <SectionEstimator />
+          <SectionCalculatorTeaser />
           <SectionProjects />
           <SectionPartners partners={partners} />
           <SectionImpact />

@@ -41,24 +41,29 @@ const SectionPartners = (props: PropsWithChildren<SectionPartnersProps>) => {
     }
   }, [theme]);
 
+  if (!vendors.length && !clients.length) return null;
   return (
     <section
       className={`${bgColor} py-10 lg:py-20 flex flex-col justify-start items-stretch`}
     >
       <SafeArea>
         <div className="gap-y-12 lg:gap-y-20 flex flex-col justify-start items-stretch">
-          <div className="gap-y-7 lg:gap-y-5 flex flex-col justify-start items-stretch">
-            <h3 className="uppercase text-center text-title-light text-sm lg:text-xl font-medium tracking-wider">
-              {l(locale, localizations, 'partners.title-vendors')}
-            </h3>
-            <PartnerStrip locale={locale} partners={vendors} />
-          </div>
-          <div className="gap-y-5 flex flex-col justify-start items-stretch">
-            <h3 className="uppercase text-center text-title-light text-sm lg:text-xl font-medium tracking-wider">
-              {l(locale, localizations, 'partners.title-clients')}
-            </h3>
-            <PartnerStrip locale={locale} partners={clients} />
-          </div>
+          {vendors.length > 0 && (
+            <div className="gap-y-7 lg:gap-y-5 flex flex-col justify-start items-stretch">
+              <h3 className="uppercase text-center text-title-light text-sm lg:text-xl font-medium tracking-wider">
+                {l(locale, localizations, 'partners.title-vendors')}
+              </h3>
+              <PartnerStrip locale={locale} partners={vendors} />
+            </div>
+          )}
+          {clients.length > 0 && (
+            <div className="gap-y-5 flex flex-col justify-start items-stretch">
+              <h3 className="uppercase text-center text-title-light text-sm lg:text-xl font-medium tracking-wider">
+                {l(locale, localizations, 'partners.title-clients')}
+              </h3>
+              <PartnerStrip locale={locale} partners={clients} />
+            </div>
+          )}
         </div>
       </SafeArea>
     </section>

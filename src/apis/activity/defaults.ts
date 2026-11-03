@@ -1,13 +1,13 @@
 import { Activity, ActivityTag, ActivityType } from '../../models/activity';
 import { p } from '../../utils/path-utils';
 
-const tagCaas: ActivityTag = {
+export const tagCaas: ActivityTag = {
   id: 1,
   color: '#10B981',
   title: { en: 'CaaS', th: 'CaaS' },
 };
 
-const tagTech: ActivityTag = {
+export const tagTech: ActivityTag = {
   id: 2,
   color: '#38BDF8',
   title: { en: 'Technology', th: 'เทคโนโลยี' },
@@ -19,13 +19,13 @@ const tagNews: ActivityTag = {
   title: { en: 'News', th: 'ข่าวสาร' },
 };
 
-const typeGuide: ActivityType = {
+export const typeGuide: ActivityType = {
   id: 1,
   color: '#10B981',
   title: { en: 'Guide', th: 'คู่มือ' },
 };
 
-const typeTechnical: ActivityType = {
+export const typeTechnical: ActivityType = {
   id: 2,
   color: '#38BDF8',
   title: { en: 'Technical', th: 'เชิงเทคนิค' },
@@ -41,6 +41,7 @@ const typeNews: ActivityType = {
 const activities: Activity[] = [
   {
     id: 1,
+    slug: 'cfo-guide-cooling-as-a-service',
     thumbnail: p('assets/placeholders/facility-commercial.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagCaas,
@@ -62,6 +63,7 @@ const activities: Activity[] = [
   },
   {
     id: 2,
+    slug: 'ml-optimization-bangkok-tower-28-percent-cooling-savings',
     thumbnail: p('assets/placeholders/facility-retail.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagTech,
@@ -83,6 +85,7 @@ const activities: Activity[] = [
   },
   {
     id: 3,
+    slug: 'ipmvp-explained-how-savings-are-measured',
     thumbnail: p('assets/placeholders/facility-datacenter.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagTech,
@@ -104,6 +107,7 @@ const activities: Activity[] = [
   },
   {
     id: 4,
+    slug: 'net-zero-cooling-partnership-hotel-group',
     thumbnail: p('assets/placeholders/facility-hospitality.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagNews,

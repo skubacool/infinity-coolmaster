@@ -1,13 +1,18 @@
 import { useCallback } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { seededAtom } from '../../lib/seed';
+
 import { Project } from '../../models/project';
 import { ProjectSummary } from '../../models/project-summary';
 import { listProjects, findProjectSummary } from '../../apis/project';
 
 const loadingState = atom<boolean>(false);
-const projectsState = atom<Project[]>([]);
-const projectSummaryState = atom<ProjectSummary | null>(null);
+const projectsState = seededAtom<Project[]>('projectList.projects', []);
+const projectSummaryState = seededAtom<ProjectSummary | null>(
+  'projectList.projectSummary',
+  null
+);
 
 export interface IVmScreenProjectList {
   // Observables
@@ -26,7 +31,8 @@ export const useVmScreenProjectList = (): IVmScreenProjectList => {
   const [projectSummary, setProjectSummary] = useAtom(projectSummaryState);
 
   const bind = useCallback(() => {
-    setLoading(true);
+    // Pre-rendered pages arrive with content; refresh it without a spinner.
+    if (!projects.length) setLoading(true);
     (async () => {
       try {
         const results = await Promise.allSettled([
@@ -35,14 +41,17 @@ export const useVmScreenProjectList = (): IVmScreenProjectList => {
         ]);
         for (const result of results) {
           if (result.status === 'rejected') {
-            console.error('>>error<< vm-screen-project-list bind', result.reason);
+            console.error(
+              '>>error<< vm-screen-project-list bind',
+              result.reason
+            );
           }
         }
       } finally {
         setLoading(false);
       }
     })();
-  }, [setLoading, setProjects, setProjectSummary]);
+  }, [projects.length, setLoading, setProjects, setProjectSummary]);
 
   // Observables
   store.loading = loading;

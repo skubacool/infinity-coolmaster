@@ -42,17 +42,20 @@ const ScreenProjectList = () => {
           <div className="absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
             <div className="gap-y-10 lg:gap-y-12 px-6 flex flex-col justify-center items-center">
               <div className="gap-y-4 flex flex-col justify-start items-center">
-                <h1 className="hidden lg:block text-center text-text-main text-8xl font-semibold">
-                  {l(locale, localizations, 'project-list.title-projects')}
-                </h1>
-                <h1 className="lg:hidden text-center text-text-main text-6xl font-semibold !leading-[1.1]">
-                  <TextLines
-                    text={l(
-                      locale,
-                      localizations,
-                      'project-list.sm:title-projects'
-                    )}
-                  />
+                {/* One H1; the wording differs by screen size. */}
+                <h1 className="text-center text-text-main font-semibold">
+                  <span className="hidden lg:block text-8xl">
+                    {l(locale, localizations, 'project-list.title-projects')}
+                  </span>
+                  <span className="lg:hidden block text-6xl !leading-[1.1]">
+                    <TextLines
+                      text={l(
+                        locale,
+                        localizations,
+                        'project-list.sm:title-projects'
+                      )}
+                    />
+                  </span>
                 </h1>
                 <p className="max-w-[640px] text-center text-text-muted text-base lg:text-lg">
                   {l(locale, localizations, 'project-list.excerpt-projects')}

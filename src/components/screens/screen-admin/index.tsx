@@ -28,7 +28,7 @@ const TABS: Tab[] = [
   ...listCollections.map((c) => ({ id: c.collection, label: c.label })),
 ];
 
-/** Hidden content manager at /#/admin — protected by a signed login token (see /worker). */
+/** Hidden content manager at /admin/ — protected by a signed login token (see /worker). */
 const ScreenAdmin = () => {
   const [session, setSession] = useState<AdminSession | null | undefined>(
     undefined
@@ -95,7 +95,7 @@ const ScreenAdmin = () => {
           <span className="flex-1" />
           <a
             className="text-sm text-brand-blue underline underline-offset-4"
-            href="#/en"
+            href="/en/"
             target="_blank"
             rel="noreferrer"
           >
