@@ -34,6 +34,12 @@ export interface SiteMeta {
   draftNotice: string;
   draftSections: string[];
   ctaAudit: string;
+  /** Shown instead of case studies until the first verified one exists. */
+  firstProjectKicker: string;
+  firstProjectTitle: string;
+  firstProjectText: string;
+  firstProjectLink: string;
+  firstProjectUpdateLink: string;
   faqTitle: string;
   lastUpdated: string;
   furtherReading: string;

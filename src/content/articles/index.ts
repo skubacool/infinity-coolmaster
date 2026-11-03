@@ -2,14 +2,18 @@ import { Activity } from '../../models/activity';
 import { p } from '../../utils/path-utils';
 import {
   tagCaas,
+  tagNews,
   tagTech,
   typeGuide,
+  typeNews,
   typeTechnical,
 } from '../../apis/activity/defaults';
 import { en } from './en';
 import { th } from './th';
 import { en2 } from './en2';
 import { th2 } from './th2';
+import { en3 } from './en3';
+import { th3 } from './th3';
 
 /**
  * Evergreen guides kept in code (not in the CMS), so they are always on the
@@ -19,8 +23,8 @@ import { th2 } from './th2';
  *
  * Ids start at 1001 to stay clear of CMS item numbers.
  */
-const EN = { ...en, ...en2 };
-const TH = { ...th, ...th2 };
+const EN = { ...en, ...en2, ...en3 };
+const TH = { ...th, ...th2, ...th3 };
 type Key = keyof typeof EN;
 
 const PUBLISHED = '2026-11-03';
@@ -66,9 +70,9 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'kw-per-tr-chiller-plant-efficiency',
   ],
   factories: [
+    'plastics-factory-process-cooling',
+    'first-cooling-as-a-service-project-commissioning',
     'chiller-plant-maintenance-checklist',
-    'kw-per-tr-chiller-plant-efficiency',
-    'reduce-chiller-plant-energy-use',
   ],
   'office-buildings': [
     'signs-chiller-plant-needs-replacing',
@@ -203,5 +207,24 @@ export const builtInGuides: Activity[] = [
     nextActivityId: 1001,
     thumbnail: 'assets/placeholders/facility-healthcare.svg',
     relatedPages: ['hospitals', 'chiller-replacement'],
+  }),
+  guide(
+    1014,
+    'firstProject',
+    'first-cooling-as-a-service-project-commissioning',
+    {
+      tag: tagNews,
+      type: typeNews,
+      nextActivityId: 1015,
+      thumbnail: 'assets/placeholders/facility-industrial.svg',
+      relatedPages: ['factories', 'measurement-verification'],
+    }
+  ),
+  guide(1015, 'plasticsCooling', 'plastics-factory-process-cooling', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1001,
+    thumbnail: 'assets/placeholders/facility-industrial.svg',
+    relatedPages: ['factories', 'chiller-replacement'],
   }),
 ];

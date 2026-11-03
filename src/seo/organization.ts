@@ -6,17 +6,20 @@ import { SITE_ORIGIN } from '../config/routes';
  */
 export const ORGANIZATION = {
   name: 'Infinity CoolMaster',
-  /** As in the site footer; confirm it matches the DBD certificate. */
+  /** DBD: บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด. */
   legalName: 'Infinity CoolMaster Co., Ltd.' as string | null,
-  /** "Established 2018" on the About page. */
-  foundingDate: '2018' as string | null,
+  legalNameTh: 'บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด',
+  /** DBD juristic person registration number (also the tax ID). */
+  registrationNumber: '0105566016285',
+  /** DBD registration date: 24 January 2023 (24/01/2566). */
+  foundingDate: '2023-01-24' as string | null,
   url: `${SITE_ORIGIN}/`,
   logo: `${SITE_ORIGIN}/assets/brand/logo-official.png`,
   telephone: '+66 2 026 3344',
   email: 'sales@infinitycoolmaster.com',
   address: {
-    streetAddress: '128 Phayathai Plaza, 23rd Floor, Phayathai Road',
-    addressLocality: 'Ratchathewi',
+    streetAddress: '157/9 Soi Ari Samphan 2, Phahonyothin Road',
+    addressLocality: 'Phaya Thai',
     addressRegion: 'Bangkok',
     postalCode: '10400',
     addressCountry: 'TH',

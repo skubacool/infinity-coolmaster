@@ -7,6 +7,7 @@ import SafeArea from '../../../../_commons/safe-area';
 import ProjectGrid from '../../../../_commons/project-grid';
 import Icon from '../../../../_commons/icon';
 import { paths } from '../../../../../config/routes';
+import FirstProjectNotice from '../../../../_commons/first-project-notice';
 
 const SectionProjects = () => {
   const { locale = 'en', localizations = [] } = useVmScreen();
@@ -19,16 +20,22 @@ const SectionProjects = () => {
           <h2 className="text-center text-text-main text-2xl lg:text-4hxl font-semibold">
             {l(locale, localizations, 'front.title-projects')}
           </h2>
-          <ProjectGrid locale={locale} projects={projects} />
-          <div className="flex flex-row justify-center items-center">
-            <Link to={paths.caseStudies(locale)}>
-              <span className="btn-navy">
-                {l(locale, localizations, 'front.all-projects')} (
-                {projectSummary?.totalProjects ?? 0})
-                <Icon name="arrow-right" size={18} />
-              </span>
-            </Link>
-          </div>
+          {projects.length === 0 ? (
+            <FirstProjectNotice locale={locale} />
+          ) : (
+            <>
+              <ProjectGrid locale={locale} projects={projects} />
+              <div className="flex flex-row justify-center items-center">
+                <Link to={paths.caseStudies(locale)}>
+                  <span className="btn-navy">
+                    {l(locale, localizations, 'front.all-projects')} (
+                    {projectSummary?.totalProjects ?? 0})
+                    <Icon name="arrow-right" size={18} />
+                  </span>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </SafeArea>
     </section>

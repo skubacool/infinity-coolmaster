@@ -68,6 +68,8 @@ const SectionImpact = () => {
     ]
   );
 
+  // Portfolio totals only make sense once there are verified projects.
+  if (!totalProjects) return null;
   return (
     <section className="py-16 lg:pt-[140px] lg:pb-[120px] bg-bg-base flex flex-col justify-start items-stretch">
       <div className="gap-y-10 lg:gap-y-[100px] w-full max-w-[1328px] px-6 mx-auto flex flex-col justify-start items-stretch">

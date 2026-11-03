@@ -169,6 +169,17 @@ const pages: PageBodies = {
           'Capital stays in production equipment instead of utilities.',
         ],
       },
+      {
+        heading: 'Plastics and packaging manufacturers',
+        paragraphs: [
+          'In injection moulding, blow moulding and extrusion, chilled water cools the moulds and machines, so cooling sets cycle times and part quality as well as the energy bill. Our first Cooling-as-a-Service plant, for Platinum Pro Plastic, a Rayong-based injection-moulding manufacturer of plastic pallets, crates and bins, is in testing and commissioning in November 2026.',
+        ],
+        bullets: [
+          'Stable mould water temperatures for consistent parts and cycle times.',
+          'Loads grouped by the temperature they really need, so chillers are not used where cooling-tower water will do.',
+          'Plant output that follows the production schedule across shifts.',
+        ],
+      },
     ],
     faqs: [
       COMMON_FAQS.invest,

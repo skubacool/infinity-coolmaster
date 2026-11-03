@@ -24,7 +24,10 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'general.gwh-saved',
-    text: { th: 'กิกะวัตต์-ชั่วโมงที่ประหยัดได้ต่อปี', en: 'GWh Saved Annually' },
+    text: {
+      th: 'กิกะวัตต์-ชั่วโมงที่ประหยัดได้ต่อปี',
+      en: 'GWh Saved Annually',
+    },
   },
   {
     key: 'general.avg-savings',
@@ -33,8 +36,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'general.copyrights',
     text: {
-      th: '© Infinity CoolMaster Co., Ltd. สงวนลิขสิทธิ์',
-      en: '© Infinity CoolMaster Co., Ltd. All rights reserved.',
+      th: '© บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด · ทะเบียนนิติบุคคลเลขที่ 0105566016285 · สงวนลิขสิทธิ์',
+      en: '© Infinity CoolMaster Co., Ltd. · Registration No. 0105566016285 · All rights reserved.',
     },
   },
   {
@@ -110,8 +113,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'front.title-benefits',
     text: {
-      th: '{{total-benefits}} เหตุผลที่องค์กรชั้นนำเลือก\nInfinity CoolMaster',
-      en: '{{total-benefits}} reasons leading enterprises choose\nInfinity CoolMaster',
+      th: '{{total-benefits}} เหตุผลที่ควรเลือก\nInfinity CoolMaster',
+      en: '{{total-benefits}} reasons to choose\nInfinity CoolMaster',
     },
   },
 
@@ -144,7 +147,7 @@ const localizations: LocalizedKeyText[] = [
   // ---------- Front: projects ----------
   {
     key: 'front.title-projects',
-    text: { th: 'ผลงานล่าสุด', en: 'Recent Deployments' },
+    text: { th: 'โครงการของเรา', en: 'Our Projects' },
   },
   {
     key: 'front.all-projects',
@@ -166,8 +169,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'front.excerpt-impact',
     text: {
-      th: 'ลูกค้าของเรา {{total-projects}} แห่งทั่วประเทศ ไว้วางใจให้เราดูแลระบบทำความเย็นรวม {{total-capabilities}} ตันความเย็น พร้อมรายงานผลประหยัดตามมาตรฐาน IPMVP ทุกเดือน',
-      en: 'Across {{total-projects}} facilities nationwide, we operate {{total-capabilities}} TR of cooling capacity — with IPMVP-aligned savings reports delivered every month.',
+      th: 'ลูกค้าของเรา {{total-projects}} แห่ง ไว้วางใจให้เราดูแลระบบทำความเย็นรวม {{total-capabilities}} ตันความเย็น พร้อมรายงานผลประหยัดตามมาตรฐาน IPMVP ทุกเดือน',
+      en: 'Across {{total-projects}} facilities, we operate {{total-capabilities}} TR of cooling capacity — with IPMVP-aligned savings reports delivered every month.',
     },
   },
   {
@@ -492,7 +495,7 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'about.text-established',
-    text: { th: 'พ.ศ. 2561', en: '2018' },
+    text: { th: 'พ.ศ. 2566', en: '2023' },
   },
   {
     key: 'about.caption-capital',
@@ -500,7 +503,7 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'about.text-capital',
-    text: { th: '100 ล้านบาท', en: 'THB 100,000,000' },
+    text: { th: '3 ล้านบาท', en: 'THB 3,000,000' },
   },
   {
     key: 'about.caption-headquarter',
@@ -535,7 +538,10 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'about.title-experience',
-    text: { th: 'ประสบการณ์วิศวกรรมรวม', en: 'Combined Engineering Experience' },
+    text: {
+      th: 'ประสบการณ์วิศวกรรมรวม',
+      en: 'Combined Engineering Experience',
+    },
   },
   {
     key: 'about.excerpt-experience',
