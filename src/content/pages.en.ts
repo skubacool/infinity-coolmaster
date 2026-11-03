@@ -172,7 +172,7 @@ const pages: PageBodies = {
       {
         heading: 'Plastics and packaging manufacturers',
         paragraphs: [
-          'In injection moulding, blow moulding and extrusion, chilled water cools the moulds and machines, so cooling sets cycle times and part quality as well as the energy bill. Our first Cooling-as-a-Service plant, for Platinum Pro Plastic, is in testing and commissioning in November 2026.',
+          'In injection moulding, blow moulding and extrusion, chilled water cools the moulds and machines, so cooling sets cycle times and part quality as well as the energy bill. Our first Cooling-as-a-Service plant, for Platinum Pro Plastic, an injection-moulding manufacturer of plastic pallets, crates and bins, is in testing and commissioning in November 2026.',
         ],
         bullets: [
           'Stable mould water temperatures for consistent parts and cycle times.',

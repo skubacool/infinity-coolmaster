@@ -9,6 +9,12 @@ import { Locale } from '../models/_commons/localized';
  */
 export const FIRST_PROJECT = {
   clientName: { en: 'Platinum Pro Plastic', th: 'Platinum Pro Plastic' },
+  /** What the client does, from their own website (platinumproplastic.com). */
+  clientDescription: {
+    en: 'a Thai plastic injection-moulding manufacturer of pallets, crates, bins and OEM parts',
+    th: 'ผู้ผลิตชิ้นงานพลาสติกด้วยการฉีดขึ้นรูปของไทย ทั้งพาเลท ลังพลาสติก ถังขยะ และงาน OEM',
+  },
+  clientUrl: 'https://platinumproplastic.com/th/',
   /** Set to true once the client has agreed in writing to be named. */
   clientConsent: true,
   genericName: {

@@ -1,4 +1,4 @@
-import { firstProjectClient } from '../first-project';
+import { FIRST_PROJECT, firstProjectClient } from '../first-project';
 
 const client = firstProjectClient('en');
 
@@ -7,7 +7,7 @@ export const en3 = {
   firstProject: {
     title: 'Our first Cooling-as-a-Service plant enters commissioning',
     excerpt: `Infinity CoolMaster’s first chiller-as-a-service plant, for ${client}, is in testing and commissioning in November 2026. What is being installed, how savings will be measured, and what comes next.`,
-    body: `Infinity CoolMaster’s first Cooling-as-a-Service chiller plant is in testing and commissioning in November 2026. The client is ${client}. Under the contract, Infinity CoolMaster funds, installs, owns and operates the plant; the client pays for efficient cooling, with a minimum energy saving guaranteed in writing.
+    body: `Infinity CoolMaster’s first Cooling-as-a-Service chiller plant is in testing and commissioning in November 2026. The client is <a href="${FIRST_PROJECT.clientUrl}" rel="noopener">${client}</a>, ${FIRST_PROJECT.clientDescription.en}. Under the contract, Infinity CoolMaster funds, installs, owns and operates the plant; the client pays for efficient cooling, with a minimum energy saving guaranteed in writing.
 
 ## What testing and commissioning means
 
@@ -24,7 +24,7 @@ The saving is not estimated; it is measured. The approach follows the Internatio
 
 ## Why a plastics factory
 
-In plastics manufacturing, chilled water cools the moulds and machines, so cooling affects both the energy bill and product quality: stable mould temperatures mean consistent parts and cycle times. That makes reliable, efficient cooling a production issue, not only a utility cost. Our guide to process cooling in plastics plants explains this in more detail.
+In plastic injection moulding, the process behind products such as pallets, crates and bins, chilled water cools the moulds and machines, so cooling affects both the energy bill and product quality: stable mould temperatures mean consistent parts and cycle times. That makes reliable, efficient cooling a production issue, not only a utility cost. Our guide to process cooling in plastics plants explains this in more detail.
 
 ## What comes next
 
