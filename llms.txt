@@ -2,19 +2,12 @@
 
 > Infinity CoolMaster is a chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. We design, finance, install and operate the chiller plant at a client's building with zero upfront investment; the client pays for the cooling it uses, with energy savings measured and verified to IPMVP.
 
-Office: 128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
+Infinity CoolMaster Co., Ltd. (DBD registration no. 0105566016285, registered January 2023). Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
 
 ## Key pages
 
 - https://infinitycoolmaster.com/en/
 - https://infinitycoolmaster.com/en/about/
-- https://infinitycoolmaster.com/en/case-studies/
-- https://infinitycoolmaster.com/en/case-studies/sathorn-office-tower-28-percent-savings/
-- https://infinitycoolmaster.com/en/case-studies/chonburi-hospital-22-percent-savings/
-- https://infinitycoolmaster.com/en/case-studies/phuket-beach-resort-chiller-as-a-service/
-- https://infinitycoolmaster.com/en/case-studies/bang-na-cold-chain-hub-cooling-savings/
-- https://infinitycoolmaster.com/en/case-studies/ratchadaphisek-mall-chiller-savings/
-- https://infinitycoolmaster.com/en/case-studies/samut-prakan-data-center-cooling/
 - https://infinitycoolmaster.com/en/insights/
 - https://infinitycoolmaster.com/en/insights/what-is-cooling-as-a-service/
 - https://infinitycoolmaster.com/en/insights/chiller-replacement-cost-factors/
@@ -29,10 +22,10 @@ Office: 128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10
 - https://infinitycoolmaster.com/en/insights/data-center-cooling-pue/
 - https://infinitycoolmaster.com/en/insights/hotel-resort-cooling-cost-reduction/
 - https://infinitycoolmaster.com/en/insights/hospital-cooling-redundancy-n-plus-1-2n/
+- https://infinitycoolmaster.com/en/insights/first-cooling-as-a-service-project-commissioning/
+- https://infinitycoolmaster.com/en/insights/plastics-factory-process-cooling/
 - https://infinitycoolmaster.com/en/insights/cfo-guide-cooling-as-a-service/
-- https://infinitycoolmaster.com/en/insights/ml-optimization-bangkok-tower-28-percent-cooling-savings/
 - https://infinitycoolmaster.com/en/insights/ipmvp-explained-how-savings-are-measured/
-- https://infinitycoolmaster.com/en/insights/net-zero-cooling-partnership-hotel-group/
 - https://infinitycoolmaster.com/en/hotels/
 - https://infinitycoolmaster.com/en/hospitals/
 - https://infinitycoolmaster.com/en/shopping-malls/
