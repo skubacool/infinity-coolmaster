@@ -13,6 +13,12 @@ export const en3 = {
 
 Commissioning is the stage between installation and normal operation. Every chiller, pump, cooling tower, control and meter is checked against its design: flows, temperatures, safety trips, control sequences and alarms. The plant is then run under real production load before it is handed over for day-to-day operation.
 
+## About the client
+
+${FIRST_PROJECT.clientFacts.en}
+
+At that scale, cooling is a production utility: every injection-moulding machine depends on chilled water to cool its moulds and hydraulic systems.
+
 ## How the savings will be measured
 
 The saving is not estimated; it is measured. The approach follows the International Performance Measurement and Verification Protocol (IPMVP):
