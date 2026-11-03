@@ -7,7 +7,7 @@ export const en3 = {
   firstProject: {
     title: 'Our first Cooling-as-a-Service plant enters commissioning',
     excerpt: `Infinity CoolMaster’s first chiller-as-a-service plant, for ${client}, is in testing and commissioning in November 2026. What is being installed, how savings will be measured, and what comes next.`,
-    body: `Infinity CoolMaster’s first Cooling-as-a-Service chiller plant is in testing and commissioning in November 2026. The client is <a href="${FIRST_PROJECT.clientUrl}" rel="noopener">${client}</a>, ${FIRST_PROJECT.clientDescription.en}. Under the contract, Infinity CoolMaster funds, installs, owns and operates the plant; the client pays for efficient cooling, with a minimum energy saving guaranteed in writing.
+    body: `Infinity CoolMaster’s first Cooling-as-a-Service chiller plant, at a plastics factory in Nikhom Phatthana, Rayong, is in testing and commissioning in November 2026. The client is <a href="${FIRST_PROJECT.clientUrl}" rel="noopener">${client}</a>, ${FIRST_PROJECT.clientDescription.en}. Under the contract, Infinity CoolMaster funds, installs, owns and operates the plant; the client pays for efficient cooling, with a minimum energy saving guaranteed in writing.
 
 ## What testing and commissioning means
 

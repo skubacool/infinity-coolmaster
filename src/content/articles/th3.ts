@@ -7,7 +7,7 @@ export const th3 = {
   firstProject: {
     title: 'โครงการแรกของเราเข้าสู่ขั้นทดสอบและเดินระบบ',
     excerpt: `ระบบชิลเลอร์แบบไม่ต้องลงทุนแห่งแรกของ Infinity CoolMaster สำหรับ ${client} อยู่ระหว่างทดสอบและเดินระบบในเดือนพฤศจิกายน 2569 ติดตั้งอะไร วัดผลประหยัดอย่างไร และขั้นตอนต่อไป`,
-    body: `ระบบชิลเลอร์แบบ Cooling-as-a-Service แห่งแรกของ Infinity CoolMaster อยู่ระหว่างการทดสอบและเดินระบบ (Testing & Commissioning) ในเดือนพฤศจิกายน 2569 ลูกค้าคือ <a href="${FIRST_PROJECT.clientUrl}" rel="noopener">${client}</a> ${FIRST_PROJECT.clientDescription.th} ภายใต้สัญญานี้ Infinity CoolMaster เป็นผู้ลงทุน ติดตั้ง เป็นเจ้าของ และดูแลระบบ ลูกค้าจ่ายค่าความเย็นประสิทธิภาพสูง พร้อมการรับประกันผลประหยัดพลังงานขั้นต่ำเป็นลายลักษณ์อักษร
+    body: `ระบบชิลเลอร์แบบ Cooling-as-a-Service แห่งแรกของ Infinity CoolMaster ที่โรงงานพลาสติกในอำเภอนิคมพัฒนา จังหวัดระยอง อยู่ระหว่างการทดสอบและเดินระบบ (Testing & Commissioning) ในเดือนพฤศจิกายน 2569 ลูกค้าคือ <a href="${FIRST_PROJECT.clientUrl}" rel="noopener">${client}</a> ${FIRST_PROJECT.clientDescription.th} ภายใต้สัญญานี้ Infinity CoolMaster เป็นผู้ลงทุน ติดตั้ง เป็นเจ้าของ และดูแลระบบ ลูกค้าจ่ายค่าความเย็นประสิทธิภาพสูง พร้อมการรับประกันผลประหยัดพลังงานขั้นต่ำเป็นลายลักษณ์อักษร
 
 ## การทดสอบและเดินระบบคืออะไร
 

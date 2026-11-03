@@ -56,7 +56,7 @@ const meta: SiteMeta = {
   firstProjectKicker: 'สถานะโครงการ',
   firstProjectTitle: 'โครงการแรกของเราอยู่ระหว่างทดสอบและเดินระบบ',
   firstProjectText:
-    'ระบบชิลเลอร์แบบ Cooling-as-a-Service แห่งแรกของ Infinity CoolMaster สำหรับ {client} อยู่ระหว่างการทดสอบและเดินระบบ (Testing & Commissioning) ในเดือนพฤศจิกายน 2569 เมื่อระบบเริ่มทำงาน ผลประหยัดจะถูกตรวจวัดทุกเดือนเทียบกับ Baseline ตามแนวทาง IPMVP และเราจะเผยแพร่ผลที่ตรวจวัดแล้วที่นี่',
+    'ระบบชิลเลอร์แบบ Cooling-as-a-Service แห่งแรกของ Infinity CoolMaster สำหรับ {client} จังหวัดระยอง อยู่ระหว่างการทดสอบและเดินระบบ (Testing & Commissioning) ในเดือนพฤศจิกายน 2569 เมื่อระบบเริ่มทำงาน ผลประหยัดจะถูกตรวจวัดทุกเดือนเทียบกับ Baseline ตามแนวทาง IPMVP และเราจะเผยแพร่ผลที่ตรวจวัดแล้วที่นี่',
   firstProjectLink: 'วิธีที่เราตรวจวัดและพิสูจน์ผลประหยัด',
   firstProjectUpdateLink: 'อ่านความคืบหน้าโครงการ',
   faqTitle: 'คำถามที่พบบ่อย',
