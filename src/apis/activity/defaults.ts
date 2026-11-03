@@ -51,8 +51,8 @@ const activities: Activity[] = [
       th: 'คู่มือ Cooling-as-a-Service สำหรับ CFO',
     },
     excerpt: {
-      en: 'Why leading enterprises are moving cooling off the balance sheet — and what a performance contract really covers.',
-      th: 'ทำไมองค์กรชั้นนำจึงย้ายระบบทำความเย็นออกจากงบดุล และสัญญาแบบรับประกันผลครอบคลุมอะไรบ้าง',
+      en: 'How Cooling-as-a-Service changes capital, risk and reporting for the finance team — and what a performance contract really covers.',
+      th: 'Cooling-as-a-Service เปลี่ยนเรื่องเงินลงทุน ความเสี่ยง และการรายงานสำหรับฝ่ายการเงินอย่างไร และสัญญาแบบรับประกันผลครอบคลุมอะไรบ้าง',
     },
     details: {
       en: 'Chilled-water plants are capital-hungry assets that depreciate fast and demand specialist care. Under Cooling-as-a-Service, the provider finances, builds, owns and operates the plant, charging only for cooling delivered or savings achieved.\n\nFor the CFO, this changes three things at once. First, capital: a multi-million-baht plant replacement becomes an operating expense matched to the savings it creates. Second, risk: performance, maintenance and end-of-life obligations transfer to the provider, backed by a contractual savings guarantee. Third, transparency: IPMVP-aligned measurement & verification turns "we think we saved" into an auditable monthly statement.\n\nThe questions to ask any CaaS provider: How is the baseline set, and who verifies it? What happens if guaranteed savings are missed? Who owns the data? At Infinity CoolMaster, the answers are contractual: third-party-verifiable baselines, shortfalls compensated, and your data is yours — always.',
