@@ -64,7 +64,7 @@ npm run dev
 Local runs use a throw-away database and image store; production is untouched.
 
 ### 1.6 Browser admin for non-IT staff
-The site ships with a hidden content manager at **`https://<site>/#/admin`** —
+The site ships with a hidden content manager at **`https://<site>/admin/`** —
 log in with the email + password from step 1.3 and edit everything through
 forms: site text (EN/TH), banners (with direct image upload), case studies,
 articles, partners, benefits, services, sectors, contact channels, plus a
@@ -144,8 +144,13 @@ This runs the production build (with your `.env.local` baked in) and pushes
 ### 2.5 Enable Pages
 GitHub repo → **Settings → Pages** → Source: **Deploy from a branch** →
 Branch: **gh-pages**, folder **/ (root)** → Save. After ~1–2 minutes the site
-is live. Deep links like `/#/en/project/1` survive refresh — that is why the
-app uses HashRouter.
+is live. Every page is a real pre-rendered file (`/en/about/index.html`), so
+deep links and refreshes work, and unknown paths get `404.html` with a real
+404 status. Old `/#/...` links are redirected by a script in `index.html`.
+
+**Redeploy after content changes in the admin** (new case studies, articles,
+renamed slugs): visitors see admin edits immediately, but search engines read
+the pre-rendered HTML, which is only refreshed by `npm run deploy`.
 
 ### 2.6 Every future update
 ```powershell

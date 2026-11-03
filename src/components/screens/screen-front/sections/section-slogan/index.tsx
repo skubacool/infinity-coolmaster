@@ -8,6 +8,7 @@ import TextLines from '../../../../_commons/text-lines';
 import Loading from '../../../../_commons/loading';
 import Icon from '../../../../_commons/icon';
 import SafeArea from '../../../../_commons/safe-area';
+import { paths } from '../../../../../config/routes';
 
 /** Bright hero with the CaaS value proposition; optional CMS photo background. */
 const SectionSlogan = () => {
@@ -78,7 +79,7 @@ const SectionSlogan = () => {
                   {l(locale, localizations, 'front.cta-primary')}
                   <Icon name="arrow-right" size={18} />
                 </button>
-                <Link className="btn-outline" to={`/${locale}/project`}>
+                <Link className="btn-outline" to={paths.caseStudies(locale)}>
                   {l(locale, localizations, 'front.cta-secondary')}
                 </Link>
               </div>

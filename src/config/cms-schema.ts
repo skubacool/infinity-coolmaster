@@ -118,6 +118,7 @@ export const listCollections: CmsListCollection[] = [
     imageFolder: 'projects',
     fields: [
       { name: 'title', label: 'Title', type: 'localized' },
+      { name: 'slug', label: 'Web address (slug)', type: 'text', help: 'Lower-case words joined by hyphens, e.g. sathorn-office-tower-28-percent-savings. Leave empty to use the English title. Changing it later breaks links already shared — redeploy the site after adding or renaming.' },
       { name: 'excerpt', label: 'Short teaser (card text)', type: 'localized-multiline' },
       { name: 'details', label: 'Full story', type: 'localized-multiline', help: 'Leave a blank line between paragraphs.' },
       { name: 'client', label: 'Client name', type: 'localized', help: 'Use "Confidential" if the client cannot be named.' },
@@ -145,6 +146,7 @@ export const listCollections: CmsListCollection[] = [
     imageFolder: 'articles',
     fields: [
       { name: 'title', label: 'Headline', type: 'localized' },
+      { name: 'slug', label: 'Web address (slug)', type: 'text', help: 'Lower-case words joined by hyphens, e.g. cfo-guide-cooling-as-a-service. Leave empty to use the English title. Changing it later breaks links already shared — redeploy the site after adding or renaming.' },
       { name: 'excerpt', label: 'Short teaser', type: 'localized-multiline' },
       { name: 'details', label: 'Article body', type: 'localized-multiline', help: 'Leave a blank line between paragraphs.' },
       { name: 'publishedAt', label: 'Publish date', type: 'date' },

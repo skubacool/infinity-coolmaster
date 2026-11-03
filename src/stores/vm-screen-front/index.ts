@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { seededAtom } from '../../lib/seed';
+
 import { Benefit } from '../../models/benefit';
 import { HeroBanner } from '../../models/hero-banner';
 import { Sector } from '../../models/sector';
@@ -21,15 +23,18 @@ import { listFaqs } from '../../apis/faq';
 
 const loadingState = atom<boolean>(false);
 const loadedState = atom<boolean>(false);
-const benefitsState = atom<Benefit[]>([]);
-const heroBannersState = atom<HeroBanner[]>([]);
-const sectorsState = atom<Sector[]>([]);
-const projectsState = atom<Project[]>([]);
-const activitiesState = atom<Activity[]>([]);
-const projectSummaryState = atom<ProjectSummary | null>(null);
-const partnersState = atom<Partner[]>([]);
-const processStepsState = atom<ProcessStep[]>([]);
-const faqsState = atom<Faq[]>([]);
+const benefitsState = seededAtom<Benefit[]>('front.benefits', []);
+const heroBannersState = seededAtom<HeroBanner[]>('front.heroBanners', []);
+const sectorsState = seededAtom<Sector[]>('front.sectors', []);
+const projectsState = seededAtom<Project[]>('front.projects', []);
+const activitiesState = seededAtom<Activity[]>('front.activities', []);
+const projectSummaryState = seededAtom<ProjectSummary | null>(
+  'front.projectSummary',
+  null
+);
+const partnersState = seededAtom<Partner[]>('front.partners', []);
+const processStepsState = seededAtom<ProcessStep[]>('front.processSteps', []);
+const faqsState = seededAtom<Faq[]>('front.faqs', []);
 
 export interface IVmScreenFront {
   // Observables
@@ -64,7 +69,8 @@ export const useVmScreenFront = (): IVmScreenFront => {
 
   const bind = useCallback(() => {
     if (loaded) return;
-    setLoading(true);
+    // Pre-rendered pages arrive with content; refresh it without a spinner.
+    if (!benefits.length) setLoading(true);
     (async () => {
       try {
         const results = await Promise.allSettled([
@@ -92,6 +98,7 @@ export const useVmScreenFront = (): IVmScreenFront => {
     })();
   }, [
     loaded,
+    benefits.length,
     setLoaded,
     setLoading,
     setActivities,

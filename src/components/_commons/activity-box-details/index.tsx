@@ -47,6 +47,8 @@ const ActivityBoxDetails = (
     [mode]
   );
 
+  const TitleTag = mode === ActivityBoxDetailsMode.title ? 'h1' : 'h2';
+
   const titleLineClamp = useMemo(
     () => (mode === ActivityBoxDetailsMode.full ? 'line-clamp-2' : ''),
     [mode]
@@ -80,11 +82,12 @@ const ActivityBoxDetails = (
         </div>
       )}
       {mode === ActivityBoxDetailsMode.full ? dateAndType : null}
-      <h2
+      {/* On the article page the title is the page's H1; on cards an H2. */}
+      <TitleTag
         className={`mt-6 text-2xl lg:text-3hxl font-semibold leading-[1.2] text-text-main ${titleLineClamp}`}
       >
         {localizedTitle}
-      </h2>
+      </TitleTag>
       {mode === ActivityBoxDetailsMode.title ? dateAndType : null}
       {mode !== ActivityBoxDetailsMode.full || !excerpt ? null : (
         <span className="mt-5 lg:mt-3 text-base text-text-muted line-clamp-3">

@@ -41,6 +41,7 @@ const typeNews: ActivityType = {
 const activities: Activity[] = [
   {
     id: 1,
+    slug: 'cfo-guide-cooling-as-a-service',
     thumbnail: p('assets/placeholders/facility-commercial.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagCaas,
@@ -62,6 +63,7 @@ const activities: Activity[] = [
   },
   {
     id: 2,
+    slug: 'ml-optimization-bangkok-tower-28-percent-cooling-savings',
     thumbnail: p('assets/placeholders/facility-retail.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagTech,
@@ -83,6 +85,7 @@ const activities: Activity[] = [
   },
   {
     id: 3,
+    slug: 'ipmvp-explained-how-savings-are-measured',
     thumbnail: p('assets/placeholders/facility-datacenter.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagTech,
@@ -104,6 +107,7 @@ const activities: Activity[] = [
   },
   {
     id: 4,
+    slug: 'net-zero-cooling-partnership-hotel-group',
     thumbnail: p('assets/placeholders/facility-hospitality.svg'),
     banner: p('assets/placeholders/banner-soft.svg'),
     tag: tagNews,

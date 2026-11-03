@@ -43,13 +43,16 @@ const ScreenAbout = () => {
         <div className="py-16 lg:py-[84px] absolute left-0 top-0 w-full h-full flex flex-col justify-start items-start">
           <SafeArea>
             <div className="flex-1 gap-y-5 flex flex-col justify-center items-start">
-              <h1 className="hidden lg:block text-text-main text-8xl font-semibold">
-                {l(locale, localizations, 'about.title-company')}
-              </h1>
-              <h1 className="lg:hidden text-text-main text-6xl font-semibold !leading-[1.1]">
-                <TextLines
-                  text={l(locale, localizations, 'about.sm:title-company')}
-                />
+              {/* One H1; the wording differs by screen size. */}
+              <h1 className="text-text-main font-semibold">
+                <span className="hidden lg:block text-8xl">
+                  {l(locale, localizations, 'about.title-company')}
+                </span>
+                <span className="lg:hidden block text-6xl !leading-[1.1]">
+                  <TextLines
+                    text={l(locale, localizations, 'about.sm:title-company')}
+                  />
+                </span>
               </h1>
               <p className="max-w-[640px] text-text-muted text-base lg:text-xl">
                 {l(locale, localizations, 'about.excerpt-company')}

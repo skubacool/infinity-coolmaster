@@ -110,6 +110,8 @@ const SectionImpact = () => {
               <img
                 src={figureUrl}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="mt-12 w-full max-w-[520px] self-center rounded-2xl border border-sep-pale shadow-premium"
               />
             )}

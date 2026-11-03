@@ -1,6 +1,7 @@
 import { Project } from '../../models/project';
 import { ProjectSummary } from '../../models/project-summary';
 import { fetchCollection } from '../_commons/cms';
+import { findBySlug } from '../../config/routes';
 import defaultProjects from './defaults';
 
 const listAll = async (): Promise<Project[]> =>
@@ -19,6 +20,11 @@ export const findProjectById = async (id: number): Promise<Project | null> => {
   const projects = await listAll();
   return projects.find((p) => p.id === id) ?? null;
 };
+
+/** Looks a case study up by URL slug (or numeric id, for old links). */
+export const findProjectBySlug = async (
+  slug: string
+): Promise<Project | null> => findBySlug(await listAll(), slug);
 
 export const findProjectSummary = async (): Promise<ProjectSummary> => {
   const projects = await listAll();

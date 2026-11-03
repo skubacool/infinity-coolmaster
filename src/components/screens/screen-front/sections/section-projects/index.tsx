@@ -6,6 +6,7 @@ import { useVmScreenFront } from '../../../../../stores/vm-screen-front';
 import SafeArea from '../../../../_commons/safe-area';
 import ProjectGrid from '../../../../_commons/project-grid';
 import Icon from '../../../../_commons/icon';
+import { paths } from '../../../../../config/routes';
 
 const SectionProjects = () => {
   const { locale = 'en', localizations = [] } = useVmScreen();
@@ -20,7 +21,7 @@ const SectionProjects = () => {
           </h2>
           <ProjectGrid locale={locale} projects={projects} />
           <div className="flex flex-row justify-center items-center">
-            <Link to={`/${locale}/project`}>
+            <Link to={paths.caseStudies(locale)}>
               <span className="btn-navy">
                 {l(locale, localizations, 'front.all-projects')} (
                 {projectSummary?.totalProjects ?? 0})

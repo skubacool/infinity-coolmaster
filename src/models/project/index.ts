@@ -3,6 +3,8 @@ import { LocalizedText } from '../_commons/localized';
 /** A CaaS deployment / client success case study. */
 export interface Project {
   id: number;
+  /** URL slug, e.g. 'sathorn-office-tower-28-percent-savings'. Falls back to the English title. */
+  slug?: string;
   thumbnail: string;
   banner: string;
   title: LocalizedText;

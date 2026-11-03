@@ -1,5 +1,6 @@
 import { Activity } from '../../models/activity';
 import { fetchCollection } from '../_commons/cms';
+import { findBySlug } from '../../config/routes';
 import defaultActivities from './defaults';
 
 const listAll = async (): Promise<Activity[]> =>
@@ -20,3 +21,8 @@ export const findActivityById = async (
   const activities = await listAll();
   return activities.find((a) => a.id === id) ?? null;
 };
+
+/** Looks an article up by URL slug (or numeric id, for old links). */
+export const findActivityBySlug = async (
+  slug: string
+): Promise<Activity | null> => findBySlug(await listAll(), slug);

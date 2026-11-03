@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { l } from '../../../utils/localization-utils';
-import { randomWithDigits } from '../../../utils/number-utils';
+import { menuPath, paths } from '../../../config/routes';
 import { MenuItem } from '../../../models/menu';
 import { useVmScreen } from '../../../stores/vm-screen';
 import SafeArea from '../safe-area';
@@ -37,7 +37,10 @@ const Footer = () => {
         <div className="gap-y-6 flex flex-col justify-start items-stretch">
           <div className="pb-10 lg:pb-0 gap-y-8 lg:gap-y-0 lg:gap-x-10 flex flex-col lg:flex-row justify-start items-center lg:items-start">
             <div className="gap-y-3 flex flex-col justify-start items-center lg:items-start">
-              <Link to={`/${locale}`} aria-label="Infinity CoolMaster — Home">
+              <Link
+                to={paths.home(locale)}
+                aria-label="Infinity CoolMaster — Home"
+              >
                 <BrandLogo tone={BrandLogoTone.light} height={52} />
               </Link>
               <span className="text-white-a70 text-xs tracking-[0.25em] uppercase">
@@ -51,9 +54,7 @@ const Footer = () => {
                     const { id, title, url } = menuItem;
                     return (
                       <li key={id} className="flex-1 flex-shrink-0">
-                        <Link
-                          to={`/${locale}/${url.replace(/\{\{random}}/g, String(randomWithDigits(8)))}`}
-                        >
+                        <Link to={menuPath(locale, url)}>
                           <span className="text-sm text-white-a70 hover:text-white transition-colors whitespace-nowrap">
                             {l(locale, localizations, title)}
                           </span>

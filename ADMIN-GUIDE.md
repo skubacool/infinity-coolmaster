@@ -8,7 +8,7 @@ Everything is done in a normal web page with forms and buttons.
 ## 1. Logging in
 
 1. Open this address in your browser:
-   **https://skubacool.github.io/infinity-coolmaster/#/admin**
+   **https://infinitycoolmaster.com/admin/**
 2. Type your **email** and **password** (given to you by the administrator).
 3. Click **Sign in**.
 
@@ -84,6 +84,12 @@ The example projects become editable.
 2. Change any field — every field has a label, and texts have EN + TH boxes:
    - **Title / Short teaser / Full story** — the words on the page.
      In the Full story, leave an empty line between paragraphs.
+   - **Web address (slug)** — the end of the page's address, e.g.
+     `sathorn-office-tower-28-percent-savings` gives
+     `infinitycoolmaster.com/en/case-studies/sathorn-office-tower-28-percent-savings/`.
+     Lower-case words joined by hyphens. Leave it empty to use the English
+     title. Avoid changing it once the page is published — links people
+     already shared would stop working.
    - **Plant size (TR), Verified savings (%), Year in service** — the numbers
      shown on the card and page.
    - **Card photo / Page banner photo** — use the **Upload image** buttons,
@@ -102,6 +108,12 @@ Click **Delete** next to it and confirm. (Careful — this cannot be undone.)
 The statistics on the home page (number of facilities, total TR, energy
 saved) update **automatically** from this list — you never edit them
 directly.
+
+> **Tell the website administrator after adding or changing case studies or
+> articles.** Visitors see your change right away, but Google and AI
+> assistants only see it after the site is rebuilt and redeployed
+> (`npm run deploy`). A brand-new case study or article has no page of its
+> own for search engines until then.
 
 ---
 

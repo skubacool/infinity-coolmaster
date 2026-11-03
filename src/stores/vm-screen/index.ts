@@ -2,6 +2,8 @@ import { useCallback, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { atom, useAtom } from 'jotai';
 
+import { seededAtom } from '../../lib/seed';
+
 import { Menu } from '../../models/menu';
 import { Locale, LocalizedKeyText } from '../../models/_commons/localized';
 import { Contact } from '../../models/contact';
@@ -12,13 +14,16 @@ import { listContacts } from '../../apis/contact';
 import { listMedia } from '../../apis/media';
 import { DEFAULT_LOCALE } from '../../config/constants';
 
-const localeState = atom<Locale>(DEFAULT_LOCALE);
-const navMenuState = atom<Menu | null>(null);
-const footerMenuState = atom<Menu | null>(null);
-const contactsState = atom<Contact[]>([]);
+const localeState = seededAtom<Locale>('screen.locale', DEFAULT_LOCALE);
+const navMenuState = seededAtom<Menu | null>('screen.navMenu', null);
+const footerMenuState = seededAtom<Menu | null>('screen.footerMenu', null);
+const contactsState = seededAtom<Contact[]>('screen.contacts', []);
 const popupVisibleState = atom<boolean>(false);
-const localizationsState = atom<LocalizedKeyText[]>([]);
-const mediaState = atom<Media[]>([]);
+const localizationsState = seededAtom<LocalizedKeyText[]>(
+  'screen.localizations',
+  []
+);
+const mediaState = seededAtom<Media[]>('screen.media', []);
 const windowWidthState = atom<number>(1024);
 
 export interface IVmScreen {

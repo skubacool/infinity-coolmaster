@@ -15,6 +15,8 @@ export interface ActivityType {
 /** An insight, technical article or company news item. */
 export interface Activity {
   id: number;
+  /** URL slug, e.g. 'cfo-guide-cooling-as-a-service'. Falls back to the English title. */
+  slug?: string;
   thumbnail: string;
   banner: string;
   tag: ActivityTag | null;

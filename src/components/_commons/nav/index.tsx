@@ -1,12 +1,7 @@
 import { PropsWithChildren, useCallback, useEffect, useMemo } from 'react';
-import {
-  Link,
-  useLocation,
-  useNavigate,
-  useSearchParams,
-} from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { randomWithDigits } from '../../../utils/number-utils';
+import { menuPath, paths, switchLocalePath } from '../../../config/routes';
 import { l } from '../../../utils/localization-utils';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { MenuItem } from '../../../models/menu';
@@ -16,12 +11,7 @@ import Icon from '../icon';
 import LayoutPopup from '../../layouts/layout-popup';
 
 const Nav = (props: PropsWithChildren) => {
-  const { hash } = useLocation();
-
-  const [querystring] = useSearchParams();
-  const rand = querystring.get('rand');
-
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   const navigate = useNavigate();
 
@@ -42,7 +32,7 @@ const Nav = (props: PropsWithChildren) => {
   useEffect(() => {
     if (!setPopupVisible) return;
     setPopupVisible(false);
-  }, [pathname, hash, rand, setPopupVisible]);
+  }, [pathname, hash, setPopupVisible]);
 
   const onClickMenu = useCallback(() => {
     if (!setPopupVisible) return;
@@ -51,30 +41,20 @@ const Nav = (props: PropsWithChildren) => {
 
   const isSamePath = useCallback(
     (url: string): boolean => {
-      return (
-        pathname.replace(/\/$/, '') ===
-          `/${locale}${url}`.replace(/\/+/, '/').replace(/\/$/, '') ||
-        pathname.replace(/\/[0-9]+$/, '').replace(/\/$/, '') ===
-          `/${locale}${url}`.replace(/\/+/, '/').replace(/\/$/, '')
-      );
+      const target = menuPath(locale, url);
+      if (target === paths.home(locale)) return pathname === target;
+      // Section pages stay highlighted on their detail pages.
+      return pathname.startsWith(target);
     },
     [pathname, locale]
   );
 
   const onClickLocale = useCallback(() => {
     const nextLocale = locale === 'th' ? 'en' : 'th';
-    const path = pathname.replace(/^\/[^/]+/, `/${nextLocale}`);
-    navigate(path);
+    navigate(switchLocalePath(pathname, nextLocale));
   }, [locale, pathname, navigate]);
 
-  const itemUrl = useCallback(
-    (url: string) =>
-      `/${locale}/${url.replace(/\{\{random}}/g, String(randomWithDigits(8)))}`.replace(
-        /\/{2,}/g,
-        '/'
-      ),
-    [locale]
-  );
+  const itemUrl = useCallback((url: string) => menuPath(locale, url), [locale]);
 
   return (
     <>
@@ -82,7 +62,10 @@ const Nav = (props: PropsWithChildren) => {
       <header className="sticky top-0 z-50 w-full h-20 backdrop-blur-md bg-white/80 border-b border-sep-pale flex flex-col justify-stretch items-stretch">
         <SafeArea>
           <div className="w-full h-full flex flex-row justify-start items-center">
-            <Link to={`/${locale}`} aria-label="Infinity CoolMaster — Home">
+            <Link
+              to={paths.home(locale)}
+              aria-label="Infinity CoolMaster — Home"
+            >
               <BrandLogo height={56} />
             </Link>
             <div className="flex-1" />
@@ -136,7 +119,10 @@ const Nav = (props: PropsWithChildren) => {
       <LayoutPopup visible={popupVisible ?? false}>
         <div className="px-8 pb-8 absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-stretch items-stretch">
           <div className="py-6 h-20 flex flex-row justify-between items-center">
-            <Link to={`/${locale}`} aria-label="Infinity CoolMaster — Home">
+            <Link
+              to={paths.home(locale)}
+              aria-label="Infinity CoolMaster — Home"
+            >
               <BrandLogo height={48} />
             </Link>
             <button onClick={onClickMenu} aria-label="Close menu">

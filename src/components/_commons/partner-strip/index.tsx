@@ -45,10 +45,14 @@ const PartnerStrip = (props: PropsWithChildren<PartnerStripProps>) => {
                 className="relative flex flex-col justify-center items-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all"
               >
                 <img
-                  className="block w-[80%]"
+                  className="block w-[80%] h-auto"
                   alt={localizedName}
                   title={localizedName}
                   src={logo}
+                  width={240}
+                  height={80}
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
             );

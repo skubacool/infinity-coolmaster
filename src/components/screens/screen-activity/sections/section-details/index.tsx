@@ -43,7 +43,8 @@ const SectionDetails = () => {
                 }}
               />
               <img
-                alt="Banner"
+                alt={activity.title[locale]}
+                decoding="async"
                 className="block lg:hidden w-full h-auto rounded-xl border border-sep-pale"
                 src={thumbnailUrl}
               />
