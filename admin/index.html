@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      Old links used hash routes (/#/en/about). Send them to the real URL
+      (/en/about/) before anything else loads, and send the bare domain to
+      /en/. The build fills in the id -> slug map for old case-study and
+      article links (scripts/prerender.mjs).
+    -->
+    <script>
+      (function () {
+        var l = window.location;
+        var h = l.hash;
+        if (h.indexOf('#/') === 0) {
+          var map = {"p":{"1":"sathorn-office-tower-28-percent-savings","2":"chonburi-hospital-22-percent-savings","3":"phuket-beach-resort-chiller-as-a-service","4":"bang-na-cold-chain-hub-cooling-savings","5":"ratchadaphisek-mall-chiller-savings","6":"samut-prakan-data-center-cooling"},"a":{"1":"cfo-guide-cooling-as-a-service","2":"ml-optimization-bangkok-tower-28-percent-cooling-savings","3":"ipmvp-explained-how-savings-are-measured","4":"net-zero-cooling-partnership-hotel-group","1001":"what-is-cooling-as-a-service","1002":"chiller-replacement-cost-factors","1003":"kw-per-tr-chiller-plant-efficiency","1004":"cooling-as-a-service-contract-length-end-of-term","1005":"cooling-as-a-service-cfo-questions","1006":"reduce-chiller-plant-energy-use","1007":"signs-chiller-plant-needs-replacing","1008":"water-cooled-vs-air-cooled-chillers","1009":"chiller-plant-maintenance-checklist","1010":"ipmvp-options-a-b-c-d-explained","1011":"data-center-cooling-pue","1012":"hotel-resort-cooling-cost-reduction","1013":"hospital-cooling-redundancy-n-plus-1-2n"}};
+          var rest = h.slice(1);
+          var anchor = '';
+          var i = rest.indexOf('#');
+          if (i > -1) {
+            anchor = rest.slice(i);
+            rest = rest.slice(0, i);
+          }
+          var s = rest.split('?')[0].split('/').filter(Boolean);
+          if (s[0] === 'admin') return l.replace('/admin/');
+          var out = '/' + (s[0] === 'th' ? 'th' : 'en') + '/';
+          var sec = s[1];
+          var id = s[2];
+          if (sec === 'about') out += 'about/';
+          else if (sec === 'contact') out += 'contact/';
+          else if (sec === 'project')
+            out += 'case-studies/' + (id ? (map.p[id] || id) + '/' : '');
+          else if (sec === 'activity')
+            out += 'insights/' + (id ? (map.a[id] || id) + '/' : '');
+          l.replace(out + anchor);
+        } else if (l.pathname === '/') {
+          l.replace('/en/' + l.search + h);
+        }
+      })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K5VY9GKJYV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      // send_page_view: false — the app sends a page_view per route instead
+      // (client-side navigation; see src/utils/analytics.ts).
+      gtag('config', 'G-K5VY9GKJYV', { send_page_view: false });
+    </script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="stylesheet" href="/fonts/inter/stylesheet.css" />
+    <link rel="stylesheet" href="/fonts/noto-sans-thai/stylesheet.css" />
+    <title data-seo>Admin | Infinity CoolMaster</title>
+    <meta data-seo name="description" content="We install and own a high-efficiency chiller plant at your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Book a free audit." />
+    <meta data-seo name="robots" content="noindex, follow" />
+    <meta data-seo property="og:site_name" content="Infinity CoolMaster" />
+    <meta data-seo property="og:type" content="website" />
+    <meta data-seo property="og:title" content="Admin | Infinity CoolMaster" />
+    <meta data-seo property="og:description" content="We install and own a high-efficiency chiller plant at your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Book a free audit." />
+    <meta data-seo property="og:locale" content="en_US" />
+    <meta data-seo property="og:image" content="https://infinitycoolmaster.com/assets/brand/og-image.png" />
+    <meta data-seo property="og:image:width" content="1200" />
+    <meta data-seo property="og:image:height" content="630" />
+    <meta data-seo name="twitter:card" content="summary_large_image" />
+    <meta data-seo name="twitter:title" content="Admin | Infinity CoolMaster" />
+    <meta data-seo name="twitter:description" content="We install and own a high-efficiency chiller plant at your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Book a free audit." />
+    <meta data-seo name="twitter:image" content="https://infinitycoolmaster.com/assets/brand/og-image.png" />
+    <script type="module" crossorigin src="/assets/index-Dfh1792c.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DYIsLDKA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>

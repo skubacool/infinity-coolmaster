@@ -1,0 +1,49 @@
+# Infinity CoolMaster
+
+> Infinity CoolMaster is a chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. We design, finance, install and operate the chiller plant at a client's building with zero upfront investment; the client pays for the cooling it uses, with energy savings measured and verified to IPMVP.
+
+Office: 128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
+
+## Key pages
+
+- https://infinitycoolmaster.com/en/
+- https://infinitycoolmaster.com/en/about/
+- https://infinitycoolmaster.com/en/case-studies/
+- https://infinitycoolmaster.com/en/case-studies/sathorn-office-tower-28-percent-savings/
+- https://infinitycoolmaster.com/en/case-studies/chonburi-hospital-22-percent-savings/
+- https://infinitycoolmaster.com/en/case-studies/phuket-beach-resort-chiller-as-a-service/
+- https://infinitycoolmaster.com/en/case-studies/bang-na-cold-chain-hub-cooling-savings/
+- https://infinitycoolmaster.com/en/case-studies/ratchadaphisek-mall-chiller-savings/
+- https://infinitycoolmaster.com/en/case-studies/samut-prakan-data-center-cooling/
+- https://infinitycoolmaster.com/en/insights/
+- https://infinitycoolmaster.com/en/insights/what-is-cooling-as-a-service/
+- https://infinitycoolmaster.com/en/insights/chiller-replacement-cost-factors/
+- https://infinitycoolmaster.com/en/insights/kw-per-tr-chiller-plant-efficiency/
+- https://infinitycoolmaster.com/en/insights/cooling-as-a-service-contract-length-end-of-term/
+- https://infinitycoolmaster.com/en/insights/cooling-as-a-service-cfo-questions/
+- https://infinitycoolmaster.com/en/insights/reduce-chiller-plant-energy-use/
+- https://infinitycoolmaster.com/en/insights/signs-chiller-plant-needs-replacing/
+- https://infinitycoolmaster.com/en/insights/water-cooled-vs-air-cooled-chillers/
+- https://infinitycoolmaster.com/en/insights/chiller-plant-maintenance-checklist/
+- https://infinitycoolmaster.com/en/insights/ipmvp-options-a-b-c-d-explained/
+- https://infinitycoolmaster.com/en/insights/data-center-cooling-pue/
+- https://infinitycoolmaster.com/en/insights/hotel-resort-cooling-cost-reduction/
+- https://infinitycoolmaster.com/en/insights/hospital-cooling-redundancy-n-plus-1-2n/
+- https://infinitycoolmaster.com/en/insights/cfo-guide-cooling-as-a-service/
+- https://infinitycoolmaster.com/en/insights/ml-optimization-bangkok-tower-28-percent-cooling-savings/
+- https://infinitycoolmaster.com/en/insights/ipmvp-explained-how-savings-are-measured/
+- https://infinitycoolmaster.com/en/insights/net-zero-cooling-partnership-hotel-group/
+- https://infinitycoolmaster.com/en/hotels/
+- https://infinitycoolmaster.com/en/hospitals/
+- https://infinitycoolmaster.com/en/shopping-malls/
+- https://infinitycoolmaster.com/en/factories/
+- https://infinitycoolmaster.com/en/office-buildings/
+- https://infinitycoolmaster.com/en/data-centers/
+- https://infinitycoolmaster.com/en/pricing-model/
+- https://infinitycoolmaster.com/en/caas-vs-buying-chiller/
+- https://infinitycoolmaster.com/en/chiller-replacement/
+- https://infinitycoolmaster.com/en/savings-calculator/
+- https://infinitycoolmaster.com/en/measurement-verification/
+- https://infinitycoolmaster.com/en/contact/
+
+Thai versions of every page are under /th/.
