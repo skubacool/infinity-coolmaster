@@ -129,9 +129,9 @@ Delete. Extra fields:
 - **Last updated** — set it when you change an article substantially; it is
   shown on the page and to search engines.
 
-Five in-depth guides (what Cooling-as-a-Service is, chiller replacement cost,
-kW/TR, contract length, CFO questions) are built into the website itself and
-always appear in the list. To edit one, ask the website administrator, or
+Thirteen in-depth guides (Cooling-as-a-Service basics, chiller replacement,
+kW/TR, maintenance, IPMVP, PUE, hotels, hospitals and more) are built into
+the website itself and always appear in the list. To edit one, ask the website administrator, or
 create an article here with the same web address (slug) — yours then
 replaces the built-in one.
 

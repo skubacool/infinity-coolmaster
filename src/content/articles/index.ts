@@ -8,6 +8,8 @@ import {
 } from '../../apis/activity/defaults';
 import { en } from './en';
 import { th } from './th';
+import { en2 } from './en2';
+import { th2 } from './th2';
 
 /**
  * Evergreen guides kept in code (not in the CMS), so they are always on the
@@ -17,7 +19,9 @@ import { th } from './th';
  *
  * Ids start at 1001 to stay clear of CMS item numbers.
  */
-type Key = keyof typeof en;
+const EN = { ...en, ...en2 };
+const TH = { ...th, ...th2 };
+type Key = keyof typeof EN;
 
 const PUBLISHED = '2026-11-03';
 
@@ -36,9 +40,9 @@ const guide = (
   banner: p('assets/placeholders/banner-soft.svg'),
   tag: extra.tag,
   type: extra.type,
-  title: { en: en[key].title, th: th[key].title },
-  excerpt: { en: en[key].excerpt, th: th[key].excerpt },
-  details: { en: en[key].body, th: th[key].body },
+  title: { en: EN[key].title, th: TH[key].title },
+  excerpt: { en: EN[key].excerpt, th: TH[key].excerpt },
+  details: { en: EN[key].body, th: TH[key].body },
   publishedAt: PUBLISHED,
   nextActivityId: extra.nextActivityId,
   relatedPages: extra.relatedPages,
@@ -47,46 +51,57 @@ const guide = (
 /** Guides listed as "Further reading" on each standalone page. */
 export const GUIDES_BY_PAGE: Record<string, string[]> = {
   hotels: [
+    'hotel-resort-cooling-cost-reduction',
     'what-is-cooling-as-a-service',
-    'kw-per-tr-chiller-plant-efficiency',
+    'reduce-chiller-plant-energy-use',
   ],
   hospitals: [
+    'hospital-cooling-redundancy-n-plus-1-2n',
     'what-is-cooling-as-a-service',
-    'chiller-replacement-cost-factors',
+    'signs-chiller-plant-needs-replacing',
   ],
   'shopping-malls': [
+    'reduce-chiller-plant-energy-use',
+    'water-cooled-vs-air-cooled-chillers',
     'kw-per-tr-chiller-plant-efficiency',
-    'what-is-cooling-as-a-service',
   ],
   factories: [
+    'chiller-plant-maintenance-checklist',
     'kw-per-tr-chiller-plant-efficiency',
-    'chiller-replacement-cost-factors',
+    'reduce-chiller-plant-energy-use',
   ],
   'office-buildings': [
+    'signs-chiller-plant-needs-replacing',
     'chiller-replacement-cost-factors',
     'cooling-as-a-service-cfo-questions',
   ],
   'data-centers': [
+    'data-center-cooling-pue',
     'kw-per-tr-chiller-plant-efficiency',
-    'what-is-cooling-as-a-service',
+    'ipmvp-options-a-b-c-d-explained',
   ],
   'pricing-model': [
     'cooling-as-a-service-cfo-questions',
     'cooling-as-a-service-contract-length-end-of-term',
+    'what-is-cooling-as-a-service',
   ],
   'caas-vs-buying-chiller': [
     'what-is-cooling-as-a-service',
     'cooling-as-a-service-cfo-questions',
+    'chiller-replacement-cost-factors',
   ],
   'chiller-replacement': [
+    'signs-chiller-plant-needs-replacing',
     'chiller-replacement-cost-factors',
-    'kw-per-tr-chiller-plant-efficiency',
+    'water-cooled-vs-air-cooled-chillers',
   ],
   'measurement-verification': [
+    'ipmvp-options-a-b-c-d-explained',
     'kw-per-tr-chiller-plant-efficiency',
     'cooling-as-a-service-cfo-questions',
   ],
   'savings-calculator': [
+    'reduce-chiller-plant-energy-use',
     'kw-per-tr-chiller-plant-efficiency',
     'chiller-replacement-cost-factors',
   ],
@@ -129,8 +144,64 @@ export const builtInGuides: Activity[] = [
   guide(1005, 'cfoQuestions', 'cooling-as-a-service-cfo-questions', {
     tag: tagCaas,
     type: typeGuide,
-    nextActivityId: 1001,
+    nextActivityId: 1006,
     thumbnail: 'assets/placeholders/facility-healthcare.svg',
     relatedPages: ['pricing-model', 'measurement-verification'],
+  }),
+  guide(1006, 'cutEnergy', 'reduce-chiller-plant-energy-use', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1007,
+    thumbnail: 'assets/placeholders/facility-commercial.svg',
+    relatedPages: ['savings-calculator', 'chiller-replacement'],
+  }),
+  guide(1007, 'replaceSigns', 'signs-chiller-plant-needs-replacing', {
+    tag: tagCaas,
+    type: typeGuide,
+    nextActivityId: 1008,
+    thumbnail: 'assets/placeholders/facility-industrial.svg',
+    relatedPages: ['chiller-replacement', 'office-buildings'],
+  }),
+  guide(1008, 'waterVsAir', 'water-cooled-vs-air-cooled-chillers', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1009,
+    thumbnail: 'assets/placeholders/facility-retail.svg',
+    relatedPages: ['chiller-replacement', 'shopping-malls'],
+  }),
+  guide(1009, 'maintenance', 'chiller-plant-maintenance-checklist', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1010,
+    thumbnail: 'assets/placeholders/facility-industrial.svg',
+    relatedPages: ['factories', 'measurement-verification'],
+  }),
+  guide(1010, 'ipmvpOptions', 'ipmvp-options-a-b-c-d-explained', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1011,
+    thumbnail: 'assets/placeholders/facility-commercial.svg',
+    relatedPages: ['measurement-verification', 'pricing-model'],
+  }),
+  guide(1011, 'dataCenterPue', 'data-center-cooling-pue', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1012,
+    thumbnail: 'assets/placeholders/facility-datacenter.svg',
+    relatedPages: ['data-centers', 'measurement-verification'],
+  }),
+  guide(1012, 'hotelCooling', 'hotel-resort-cooling-cost-reduction', {
+    tag: tagCaas,
+    type: typeGuide,
+    nextActivityId: 1013,
+    thumbnail: 'assets/placeholders/facility-hospitality.svg',
+    relatedPages: ['hotels', 'savings-calculator'],
+  }),
+  guide(1013, 'hospitalRedundancy', 'hospital-cooling-redundancy-n-plus-1-2n', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1001,
+    thumbnail: 'assets/placeholders/facility-healthcare.svg',
+    relatedPages: ['hospitals', 'chiller-replacement'],
   }),
 ];
