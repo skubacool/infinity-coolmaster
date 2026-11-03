@@ -128,6 +128,10 @@ Delete. Extra fields:
 
 ## 6. Partner and client logos
 
+The built-in logos were design placeholders and are no longer shown: the
+logo strips stay hidden until you add **real** partners and clients (with
+their written permission to show their logo).
+
 1. Open **Partners & Clients** (enable editing the first time).
 2. **+ Add partner** → type the name → **Upload image** for the logo
    (a PNG with transparent background looks best).

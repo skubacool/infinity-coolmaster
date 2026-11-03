@@ -73,6 +73,7 @@ Where to edit SEO text:
 | What | File |
 | --- | --- |
 | Page titles, meta descriptions, standalone page copy | [`src/seo/meta.en.ts`](src/seo/meta.en.ts), [`src/seo/meta.th.ts`](src/seo/meta.th.ts) |
+| Body copy of sector and explainer pages (sections, tables, FAQs) | [`src/content/pages.en.ts`](src/content/pages.en.ts), [`src/content/pages.th.ts`](src/content/pages.th.ts) |
 | Which standalone pages are live (others are `noindex` TODO scaffolds) | `PUBLISHED_PAGES` in [`src/seo/pages.ts`](src/seo/pages.ts) |
 | Company facts in structured data (JSON-LD) | [`src/seo/organization.ts`](src/seo/organization.ts) |
 | URL structure | [`src/config/routes.ts`](src/config/routes.ts) |
@@ -80,6 +81,10 @@ Where to edit SEO text:
 
 Old hash links (`/#/en/about`, `/#/en/project/1`) are redirected to the new
 URLs by a small script at the top of [`index.html`](index.html).
+
+After each deploy, wait a few minutes for GitHub Pages to publish, then run
+`npm run indexnow` to ask Bing (which also feeds ChatGPT search and Copilot)
+to recrawl every page in the sitemap.
 
 ## Architecture
 

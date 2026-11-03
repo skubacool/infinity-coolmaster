@@ -5,6 +5,9 @@ import { isPageKey, paths } from '../../../config/routes';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import { isDraftPage, siteMeta } from '../../../seo/pages';
+import { pageBody } from '../../../content';
+import PageBodyView from './sections/page-body';
+import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
 import SafeArea from '../../_commons/safe-area';
 import SectionEstimator from '../screen-front/sections/section-estimator';
@@ -24,6 +27,7 @@ const ScreenPage = () => {
   // The calculator and the contact form use the sector list from the
   // homepage data.
   const vmScreenFront = useVmScreenFront();
+  const { projects = [] } = vmScreenFront;
   useEffect(() => {
     if (!vmScreenFront.bind) return;
     vmScreenFront.bind();
@@ -34,6 +38,10 @@ const ScreenPage = () => {
   const meta = siteMeta(locale);
   const text = meta.pages[page];
   const draft = isDraftPage(page);
+  const body = pageBody(locale, page);
+  const related = body?.sector
+    ? projects.filter((project) => project.sector === body.sector)
+    : [];
 
   return (
     <LayoutStandard>
@@ -57,6 +65,39 @@ const ScreenPage = () => {
 
       {page === 'savings-calculator' && <SectionEstimator />}
       {page === 'contact' && <SectionContact />}
+
+      {body && <PageBodyView body={body} faqTitle={meta.faqTitle} />}
+
+      {related.length > 0 && (
+        <section className="py-12 lg:py-16 bg-bg-soft flex flex-col justify-start items-stretch">
+          <SafeArea>
+            <div className="gap-y-8 flex flex-col">
+              <h2 className="text-2xl lg:text-3hxl font-semibold tracking-tight text-text-main">
+                {meta.relatedCaseStudies}
+              </h2>
+              <ProjectGrid locale={locale} projects={related} />
+            </div>
+          </SafeArea>
+        </section>
+      )}
+
+      {body && page !== 'contact' && (
+        <section className="py-12 lg:py-16 flex flex-col justify-start items-stretch">
+          <SafeArea>
+            <div className="mx-auto w-full max-w-[960px] card-premium bg-gradient-caas-soft p-7 lg:p-10 gap-6 flex flex-col lg:flex-row justify-between items-start lg:items-center">
+              <p className="text-xl lg:text-2xl font-semibold text-text-main">
+                {meta.pages.contact.intro}
+              </p>
+              <Link
+                className="btn-caas flex-shrink-0"
+                to={paths.contact(locale)}
+              >
+                {meta.ctaAudit}
+              </Link>
+            </div>
+          </SafeArea>
+        </section>
+      )}
 
       {draft && (
         <section className="py-12 lg:py-16 flex flex-col justify-start items-stretch">

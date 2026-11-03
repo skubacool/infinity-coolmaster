@@ -53,6 +53,11 @@ const meta: SiteMeta = {
     'TODO: FAQ — 4 to 6 questions buyers in this sector ask, answered in full.',
   ],
   ctaAudit: 'Request a free cooling audit',
+  faqTitle: 'Frequently asked questions',
+  relatedCaseStudies: 'Related case studies',
+  resourcesTitle: 'Resources',
+  sectorsTitle: 'Sectors',
+  sectorLinkLabel: 'How it works for this sector',
   calculatorTeaserTitle: 'Estimate your savings',
   calculatorTeaserText:
     'Enter your monthly electricity bill and facility type to see an estimated annual savings range.',
@@ -64,7 +69,8 @@ const meta: SiteMeta = {
       description:
         'Chiller-as-a-service for hotels and resorts in Thailand: a new, efficient cooling plant with zero CapEx, paid per unit of cooling. Request a free audit today.',
       h1: 'Chiller as a service for hotels and resorts',
-      intro: 'TODO: write the hotel page introduction.',
+      intro:
+        'Infinity CoolMaster, a chiller-as-a-service provider in Bangkok, installs and operates a high-efficiency chiller plant at your hotel or resort with no upfront cost. You pay for efficient cooling out of the savings, with a minimum 10% energy saving guaranteed in writing and verified every month.',
     },
     hospitals: {
       label: 'Hospitals',
@@ -72,7 +78,8 @@ const meta: SiteMeta = {
       description:
         'Mission-critical chiller plants for Thai hospitals, financed, installed and run by us with zero CapEx and verified savings. Request a free cooling audit today.',
       h1: 'Chiller as a service for hospitals',
-      intro: 'TODO: write the hospital page introduction.',
+      intro:
+        'We design, finance, install and run a redundant, high-efficiency chiller plant at your hospital with no upfront cost. Cooling stays on 24/7, the capital budget stays free for medical equipment, and a minimum 10% energy saving is guaranteed in writing.',
     },
     'shopping-malls': {
       label: 'Shopping Malls',
@@ -80,7 +87,8 @@ const meta: SiteMeta = {
       description:
         'Cooling-as-a-service for shopping malls and retail centres in Thailand: an efficient chiller plant with zero CapEx and IPMVP-verified savings. Book an audit.',
       h1: 'Cooling as a service for shopping malls',
-      intro: 'TODO: write the shopping mall page introduction.',
+      intro:
+        'We cut a shopping mall’s cooling cost without capital spending: either by optimising the existing chiller plant or by funding and installing a new one. A minimum 10% energy saving is guaranteed in the contract and verified every month to IPMVP.',
     },
     factories: {
       label: 'Factories',
@@ -88,7 +96,8 @@ const meta: SiteMeta = {
       description:
         'Process and comfort cooling for Thai factories as a service: we fund, install and operate the chiller plant, you pay per unit of cooling. Request an audit.',
       h1: 'Cooling as a service for factories',
-      intro: 'TODO: write the factory page introduction.',
+      intro:
+        'We fund, install and operate the chiller plant for your factory or cold-chain facility, and you pay for efficient cooling out of the savings. Reliability comes first, and a minimum 10% energy saving is guaranteed in writing.',
     },
     'office-buildings': {
       label: 'Office Buildings',
@@ -96,7 +105,8 @@ const meta: SiteMeta = {
       description:
         'Replace an ageing office-tower chiller plant with zero CapEx. We own and run the new plant, you pay per unit of cooling with savings verified to IPMVP.',
       h1: 'Chiller as a service for office buildings',
-      intro: 'TODO: write the office building page introduction.',
+      intro:
+        'Replace an ageing office-building chiller plant without capital spending. Infinity CoolMaster funds, owns and operates the new plant for a 5–10 year contract, you pay for cooling out of the savings, and a minimum 10% saving is guaranteed in writing.',
     },
     'data-centers': {
       label: 'Data Centers',
@@ -104,7 +114,8 @@ const meta: SiteMeta = {
       description:
         'Efficient, redundant cooling for data centers in Thailand, delivered as a service with zero CapEx and measured savings that support PUE reporting. Book an audit.',
       h1: 'Cooling as a service for data centers',
-      intro: 'TODO: write the data center page introduction.',
+      intro:
+        'We deliver efficient, redundant data-center cooling as a service, with no upfront cost. Optimisation starts in shadow mode so operators approve every change, and verified monthly energy data supports your PUE reporting.',
     },
     'pricing-model': {
       label: 'How Pricing Works',
@@ -113,7 +124,7 @@ const meta: SiteMeta = {
         'How chiller-as-a-service pricing works: no upfront cost, a rate per unit of cooling, and a worked example in Thai baht. See what a contract looks like.',
       h1: 'How cooling-as-a-service pricing works',
       intro:
-        'TODO: explain the pay-per-unit model with a worked THB example (use our real contract terms).',
+        'Cooling-as-a-Service has no upfront cost. Infinity CoolMaster funds, owns and operates the chiller plant; you pay a service fee for efficient cooling that is covered by the energy savings, with a minimum 10% saving guaranteed in writing.',
     },
     'caas-vs-buying-chiller': {
       label: 'CaaS vs Buying',
@@ -121,7 +132,8 @@ const meta: SiteMeta = {
       description:
         'Cooling as a service compared with buying, leasing or an ESCO contract: upfront cost, risk, maintenance and savings guarantees side by side. Read the comparison.',
       h1: 'Cooling as a service vs buying, leasing or ESCO',
-      intro: 'TODO: write the comparison introduction and table.',
+      intro:
+        'Buying a chiller means paying the full cost upfront and carrying the performance risk yourself. With Cooling-as-a-Service the provider funds, owns and runs the plant and guarantees the saving. This page compares buying, leasing, ESCO contracts and CaaS side by side.',
     },
     'chiller-replacement': {
       label: 'Chiller Replacement',
@@ -129,7 +141,8 @@ const meta: SiteMeta = {
       description:
         'Replace an old, inefficient chiller plant without capital spending. We fund, install and operate the new plant and guarantee the savings. Request an audit.',
       h1: 'Chiller replacement with no capital outlay',
-      intro: 'TODO: write the chiller replacement page introduction.',
+      intro:
+        'You can replace an old, inefficient chiller plant without spending capital. Infinity CoolMaster funds, installs and operates the new plant, you pay for cooling out of the savings, and a minimum 10% energy saving is guaranteed in writing.',
     },
     'savings-calculator': {
       label: 'Savings Calculator',
@@ -147,7 +160,7 @@ const meta: SiteMeta = {
         'How Infinity CoolMaster measures and verifies energy savings under IPMVP: baseline, metering, monthly reports and independent checks. See how savings are proven.',
       h1: 'How we measure and verify savings (IPMVP)',
       intro:
-        'TODO: write the M&V page introduction; link a sample anonymised M&V report.',
+        'Every saving we guarantee is measured, not estimated. We agree an IPMVP-aligned baseline with you before work starts, meter the plant continuously and report the verified saving every month; you or a third party can audit the numbers.',
     },
     contact: {
       label: 'Contact',

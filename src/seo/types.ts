@@ -34,6 +34,11 @@ export interface SiteMeta {
   draftNotice: string;
   draftSections: string[];
   ctaAudit: string;
+  faqTitle: string;
+  relatedCaseStudies: string;
+  resourcesTitle: string;
+  sectorsTitle: string;
+  sectorLinkLabel: string;
   calculatorTeaserTitle: string;
   calculatorTeaserText: string;
   calculatorTeaserLink: string;

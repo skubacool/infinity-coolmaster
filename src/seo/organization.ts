@@ -6,10 +6,10 @@ import { SITE_ORIGIN } from '../config/routes';
  */
 export const ORGANIZATION = {
   name: 'Infinity CoolMaster',
-  /** TODO: registered company name exactly as on the DBD certificate. */
-  legalName: null as string | null,
-  /** TODO: year the company was founded. */
-  foundingDate: null as string | null,
+  /** As in the site footer; confirm it matches the DBD certificate. */
+  legalName: 'Infinity CoolMaster Co., Ltd.' as string | null,
+  /** "Established 2018" on the About page. */
+  foundingDate: '2018' as string | null,
   url: `${SITE_ORIGIN}/`,
   logo: `${SITE_ORIGIN}/assets/brand/logo-official.png`,
   telephone: '+66 2 026 3344',

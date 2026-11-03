@@ -34,6 +34,7 @@ import { resolveProject } from '../stores/vm-screen-project';
 import { resolveActivity } from '../stores/vm-screen-activity';
 import { Head, absoluteUrl } from './head';
 import { siteMeta, isDraftPage, SECTOR_PAGES } from './pages';
+import { pageBody } from '../content';
 import { ORGANIZATION, DEFAULT_SHARE_IMAGE } from './organization';
 
 export type RouteMatch =
@@ -530,6 +531,18 @@ export const resolvePage = async (
         }
       );
       if (match.page === 'contact') head.jsonLd.push(localBusinessLd());
+      const body = pageBody(locale, match.page);
+      if (body?.faqs?.length) {
+        head.jsonLd.push({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: body.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+          })),
+        });
+      }
       if (SECTOR_PAGES.includes(match.page)) {
         head.jsonLd.push(
           serviceLd(locale, match.page, text.h1, text.description)

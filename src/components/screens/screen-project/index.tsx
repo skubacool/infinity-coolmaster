@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 
 import { l } from '../../../utils/localization-utils';
 import { paths, projectSlug } from '../../../config/routes';
@@ -10,6 +10,8 @@ import SectionBanner from './sections/section-banner';
 import SectionDetails from './sections/section-details';
 import SectionNext from '../../sections/section-next';
 import ScreenNotFound from '../screen-not-found';
+import SafeArea from '../../_commons/safe-area';
+import { SECTOR_PAGE_BY_KEY, siteMeta } from '../../../seo/pages';
 
 const ScreenProject = () => {
   const { slug = '' } = useParams();
@@ -35,6 +37,22 @@ const ScreenProject = () => {
       <div className="flex flex-col justify-start items-stretch">
         <SectionBanner />
         <SectionDetails />
+        {project && SECTOR_PAGE_BY_KEY[project.sector] && (
+          <div className="pb-10 flex flex-col">
+            <SafeArea>
+              <Link
+                className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                to={paths.page(locale, SECTOR_PAGE_BY_KEY[project.sector])}
+              >
+                {siteMeta(locale).sectorLinkLabel}:{' '}
+                {
+                  siteMeta(locale).pages[SECTOR_PAGE_BY_KEY[project.sector]]
+                    .label
+                }
+              </Link>
+            </SafeArea>
+          </div>
+        )}
         {nextProject && (
           <SectionNext
             url={paths.caseStudy(locale, nextProject)}

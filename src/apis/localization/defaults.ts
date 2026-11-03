@@ -94,7 +94,7 @@ const localizations: LocalizedKeyText[] = [
     key: 'front.excerpt-cta',
     text: {
       th: 'เราออกแบบ ลงทุน ติดตั้ง และดูแลระบบทำความเย็นประสิทธิภาพสูงให้คุณภายใต้สัญญาเดียว — คุณจ่ายเฉพาะความเย็นที่ใช้ และประหยัดมากขึ้นทุกวัน',
-      en: 'We design, finance, install and operate high-efficiency cooling systems under one performance contract — so you save more, every day.',
+      en: 'We design, finance, install, own and operate a high-efficiency chiller plant at your building. You pay nothing upfront — only for the cooling you use — with a minimum 10% energy saving guaranteed in writing.',
     },
   },
   {
