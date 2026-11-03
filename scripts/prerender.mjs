@@ -127,7 +127,7 @@ for (const { path: urlPath, lastmod } of pages) {
 }
 
 // 404 page: GitHub Pages serves it, with status 404, for any unknown path.
-const notFound = await server.renderPage('/en/404/');
+const notFound = await server.renderPage('/th/404/');
 await write(
   '404.html',
   fill({
@@ -142,14 +142,15 @@ await write(
 const admin = await server.renderHeadOnly('/admin/');
 await write('admin', fill({ lang: admin.lang, head: admin.head }));
 
-// Bare domain: the inline script redirects to /en/; meta refresh as fallback.
+// Bare domain: the inline script redirects to /th/ (or the visitor's saved
+// language); meta refresh to /th/ as a fallback without JavaScript.
 const rootHead = await server.renderHeadOnly('/');
 await write(
   'index.html',
   fill({
     lang: rootHead.lang,
-    head: `${rootHead.head}\n    <meta http-equiv="refresh" content="0; url=/en/" />`,
-    html: '<p style="font-family:sans-serif;padding:24px"><a href="/en/">Infinity CoolMaster</a></p>',
+    head: `${rootHead.head}\n    <meta http-equiv="refresh" content="0; url=/th/" />`,
+    html: '<p style="font-family:sans-serif;padding:24px"><a href="/th/">Infinity CoolMaster (ไทย)</a> · <a href="/en/">English</a></p>',
   })
 );
 

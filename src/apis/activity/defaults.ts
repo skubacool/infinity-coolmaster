@@ -13,7 +13,7 @@ export const tagTech: ActivityTag = {
   title: { en: 'Technology', th: 'เทคโนโลยี' },
 };
 
-const tagNews: ActivityTag = {
+export const tagNews: ActivityTag = {
   id: 3,
   color: '#0F172A',
   title: { en: 'News', th: 'ข่าวสาร' },
@@ -31,7 +31,7 @@ export const typeTechnical: ActivityType = {
   title: { en: 'Technical', th: 'เชิงเทคนิค' },
 };
 
-const typeNews: ActivityType = {
+export const typeNews: ActivityType = {
   id: 3,
   color: '#475569',
   title: { en: 'Company News', th: 'ข่าวบริษัท' },

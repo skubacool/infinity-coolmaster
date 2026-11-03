@@ -4,6 +4,7 @@ import { Locale } from '../../../models/_commons/localized';
 import { paths } from '../../../config/routes';
 import { siteMeta } from '../../../seo/pages';
 import Icon from '../icon';
+import { firstProjectClient } from '../../../content/first-project';
 
 export interface FirstProjectNoticeProps {
   locale: Locale;
@@ -28,14 +29,22 @@ const FirstProjectNotice = (props: FirstProjectNoticeProps) => {
         {meta.firstProjectTitle}
       </h3>
       <p className="text-base lg:text-lg text-text-muted">
-        {meta.firstProjectText}
+        {meta.firstProjectText.replace('{client}', firstProjectClient(locale))}
       </p>
-      <Link
-        className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
-        to={paths.page(locale, 'measurement-verification')}
-      >
-        {meta.firstProjectLink}
-      </Link>
+      <div className="gap-x-6 gap-y-2 flex flex-col sm:flex-row">
+        <Link
+          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+          to={`/${locale}/insights/first-cooling-as-a-service-project-commissioning/`}
+        >
+          {meta.firstProjectUpdateLink}
+        </Link>
+        <Link
+          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+          to={paths.page(locale, 'measurement-verification')}
+        >
+          {meta.firstProjectLink}
+        </Link>
+      </div>
     </div>
   );
 };

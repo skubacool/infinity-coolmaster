@@ -339,13 +339,14 @@ export const resolvePage = async (
       status: 200,
       seed: {},
       head: {
-        ...notFoundHead('en'),
+        ...notFoundHead(match.kind === 'root' ? 'th' : 'en'),
         title:
           match.kind === 'admin'
             ? 'Admin | Infinity CoolMaster'
-            : siteMeta('en').home.title,
-        description: siteMeta('en').home.description,
-        canonical: match.kind === 'root' ? paths.home('en') : null,
+            : siteMeta('th').home.title,
+        description: siteMeta(match.kind === 'root' ? 'th' : 'en').home
+          .description,
+        canonical: match.kind === 'root' ? paths.home('th') : null,
         alternates: {},
         noindex: true,
       },

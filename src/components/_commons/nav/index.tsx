@@ -51,6 +51,12 @@ const Nav = (props: PropsWithChildren) => {
 
   const onClickLocale = useCallback(() => {
     const nextLocale = locale === 'th' ? 'en' : 'th';
+    // Remember the choice: the bare domain opens this language next time.
+    try {
+      window.localStorage.setItem('icm_locale', nextLocale);
+    } catch {
+      // Private mode or blocked storage: the switch still works this visit.
+    }
     navigate(switchLocalePath(pathname, nextLocale));
   }, [locale, pathname, navigate]);
 

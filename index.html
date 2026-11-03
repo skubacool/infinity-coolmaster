@@ -5,7 +5,7 @@
     <!--
       Old links used hash routes (/#/en/about). Send them to the real URL
       (/en/about/) before anything else loads, and send the bare domain to
-      /en/. The build fills in the id -> slug map for old case-study and
+      /th/ (or /en/ for visitors who chose English). The build fills in the id -> slug map for old case-study and
       article links (scripts/prerender.mjs).
     -->
     <script>
@@ -34,7 +34,13 @@
             out += 'insights/' + (id ? (map.a[id] || id) + '/' : '');
           l.replace(out + anchor);
         } else if (l.pathname === '/') {
-          l.replace('/en/' + l.search + h);
+          // Thai first: most clients are Thai companies. A visitor who chose
+          // English before (saved by the language switch) gets English.
+          var saved = null;
+          try {
+            saved = window.localStorage.getItem('icm_locale');
+          } catch (e) {}
+          l.replace('/' + (saved === 'en' ? 'en' : 'th') + '/' + l.search + h);
         }
       })();
     </script>

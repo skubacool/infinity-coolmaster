@@ -39,6 +39,7 @@ export interface SiteMeta {
   firstProjectTitle: string;
   firstProjectText: string;
   firstProjectLink: string;
+  firstProjectUpdateLink: string;
   faqTitle: string;
   lastUpdated: string;
   furtherReading: string;
