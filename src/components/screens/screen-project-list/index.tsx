@@ -9,6 +9,7 @@ import SafeArea from '../../_commons/safe-area';
 import ProjectGrid from '../../_commons/project-grid';
 import TextLines from '../../_commons/text-lines';
 import Loading from '../../_commons/loading';
+import FirstProjectNotice from '../../_commons/first-project-notice';
 
 const ScreenProjectList = () => {
   const { locale = 'en', localizations = [], media } = useVmScreen();
@@ -61,21 +62,23 @@ const ScreenProjectList = () => {
                   {l(locale, localizations, 'project-list.excerpt-projects')}
                 </p>
               </div>
-              <div className="gap-y-12 lg:gap-y-0 lg:gap-x-16 flex flex-col lg:flex-row justify-center items-center">
-                <ProjectBannerRow
-                  title={l(locale, localizations, 'project-list.no-of-sites')}
-                  value={`${projectSummary.totalProjects}`}
-                />
-                <div className="hidden lg:block w-px h-full max-h-16 bg-sep-smoke" />
-                <ProjectBannerRow
-                  title={l(
-                    locale,
-                    localizations,
-                    'project-list.total-capacities'
-                  )}
-                  value={`${projectSummary.totalCapacityTr.toLocaleString()} ${l(locale, localizations, 'general.tr')}`}
-                />
-              </div>
+              {projectSummary.totalProjects > 0 && (
+                <div className="gap-y-12 lg:gap-y-0 lg:gap-x-16 flex flex-col lg:flex-row justify-center items-center">
+                  <ProjectBannerRow
+                    title={l(locale, localizations, 'project-list.no-of-sites')}
+                    value={`${projectSummary.totalProjects}`}
+                  />
+                  <div className="hidden lg:block w-px h-full max-h-16 bg-sep-smoke" />
+                  <ProjectBannerRow
+                    title={l(
+                      locale,
+                      localizations,
+                      'project-list.total-capacities'
+                    )}
+                    value={`${projectSummary.totalCapacityTr.toLocaleString()} ${l(locale, localizations, 'general.tr')}`}
+                  />
+                </div>
+              )}
             </div>
           </div>
         ) : (
@@ -92,7 +95,9 @@ const ScreenProjectList = () => {
       <div className="py-12 lg:py-20 bg-bg-soft flex flex-col justify-start items-stretch">
         <SafeArea>
           <div className="gap-y-10 lg:gap-y-14 flex flex-col justify-start items-stretch">
-            {!loading ? (
+            {!loading && projects.length === 0 ? (
+              <FirstProjectNotice locale={locale} />
+            ) : !loading ? (
               <ProjectGrid locale={locale} projects={projects} />
             ) : (
               <Loading />

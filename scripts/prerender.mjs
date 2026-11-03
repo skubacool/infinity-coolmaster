@@ -217,7 +217,7 @@ const llms = [
   '',
   "> Infinity CoolMaster is a chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. We design, finance, install and operate the chiller plant at a client's building with zero upfront investment; the client pays for the cooling it uses, with energy savings measured and verified to IPMVP.",
   '',
-  'Office: 128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.',
+  'Infinity CoolMaster Co., Ltd. (DBD registration no. 0105566016285, registered January 2023). Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.',
   '',
   '## Key pages',
   '',

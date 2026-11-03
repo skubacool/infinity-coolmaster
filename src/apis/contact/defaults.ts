@@ -6,8 +6,8 @@ const contacts: Contact[] = [
     type: 'address',
     icon: 'pin',
     text: {
-      en: '128 Phayathai Plaza, 23rd Floor, Phayathai Road, Ratchathewi, Bangkok 10400, Thailand',
-      th: '128 อาคารพญาไทพลาซ่า ชั้น 23 ถนนพญาไท แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400',
+      en: '157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand',
+      th: '157/9 ซอยอารีย์สัมพันธ์ 2 ถนนพหลโยธิน แขวงพญาไท เขตพญาไท กรุงเทพมหานคร 10400',
     },
     url: null,
   },
@@ -33,7 +33,7 @@ const contacts: Contact[] = [
     type: 'maps',
     icon: 'map',
     text: { en: 'Open in Google Maps', th: 'เปิดใน Google Maps' },
-    url: 'https://maps.google.com/?q=Phayathai+Plaza+Bangkok',
+    url: 'https://maps.google.com/?q=157%2F9+Soi+Ari+Samphan+2+Phahonyothin+Road+Phaya+Thai+Bangkok',
   },
   {
     id: 5,

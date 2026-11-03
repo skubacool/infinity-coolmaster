@@ -74,6 +74,12 @@ Texts you have changed show a green **customized** badge. Click
 
 ## 4. Case studies (projects)
 
+> **Only real, verified projects.** The website ships with no sample case
+> studies. Until the first one is added, the site shows a "first project in
+> testing and commissioning" notice and hides the portfolio statistics. Add a
+> case study only when its numbers are measured, and only name a client who
+> has agreed in writing.
+
 ### First time only
 Open the **Case Studies** tab. If you see a blue box saying the list shows
 "built-in defaults", click **"Enable editing (copy defaults)"** once.

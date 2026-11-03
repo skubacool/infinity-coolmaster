@@ -53,6 +53,11 @@ const meta: SiteMeta = {
     'TODO: FAQ — 4 to 6 questions buyers in this sector ask, answered in full.',
   ],
   ctaAudit: 'Request a free cooling audit',
+  firstProjectKicker: 'Project status',
+  firstProjectTitle: 'Our first project is in testing and commissioning',
+  firstProjectText:
+    'Infinity CoolMaster’s first Cooling-as-a-Service plant is being tested and commissioned in November 2026. Once it is running, its savings will be measured every month against an IPMVP-aligned baseline, and we will publish the verified results here.',
+  firstProjectLink: 'How we measure and verify savings',
   faqTitle: 'Frequently asked questions',
   lastUpdated: 'Last updated',
   furtherReading: 'Further reading',

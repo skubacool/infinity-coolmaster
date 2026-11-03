@@ -33,8 +33,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'general.copyrights',
     text: {
-      th: '© Infinity CoolMaster Co., Ltd. สงวนลิขสิทธิ์',
-      en: '© Infinity CoolMaster Co., Ltd. All rights reserved.',
+      th: '© บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด · ทะเบียนนิติบุคคลเลขที่ 0105566016285 · สงวนลิขสิทธิ์',
+      en: '© Infinity CoolMaster Co., Ltd. · Registration No. 0105566016285 · All rights reserved.',
     },
   },
   {
@@ -492,7 +492,7 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'about.text-established',
-    text: { th: 'พ.ศ. 2561', en: '2018' },
+    text: { th: 'พ.ศ. 2566', en: '2023' },
   },
   {
     key: 'about.caption-capital',
@@ -500,7 +500,7 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'about.text-capital',
-    text: { th: '100 ล้านบาท', en: 'THB 100,000,000' },
+    text: { th: '3 ล้านบาท', en: 'THB 3,000,000' },
   },
   {
     key: 'about.caption-headquarter',

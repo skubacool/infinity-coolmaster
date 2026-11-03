@@ -135,6 +135,13 @@ const organizationLd = (contacts: Contact[]) => {
     ...(ORGANIZATION.foundingDate
       ? { foundingDate: ORGANIZATION.foundingDate }
       : {}),
+    alternateName: ORGANIZATION.legalNameTh,
+    taxID: ORGANIZATION.registrationNumber,
+    identifier: {
+      '@type': 'PropertyValue',
+      propertyID: 'DBD juristic person registration number',
+      value: ORGANIZATION.registrationNumber,
+    },
     url: ORGANIZATION.url,
     logo: ORGANIZATION.logo,
     email: ORGANIZATION.email,
@@ -412,7 +419,12 @@ export const resolvePage = async (
         seed['projectList.projects'] = projects;
         seed['projectList.projectSummary'] = projectSummary;
       }
-      const head = base(meta.caseStudies, bothLocales(paths.caseStudies));
+      // Until the first verified case study exists the page holds only a
+      // status notice: keep it out of search results (thin content).
+      const hasProjects = (await listProjects()).length > 0;
+      const head = base(meta.caseStudies, bothLocales(paths.caseStudies), {
+        noindex: !hasProjects,
+      });
       head.jsonLd.push(
         breadcrumbLd([
           home,
