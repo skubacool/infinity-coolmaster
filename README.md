@@ -74,6 +74,7 @@ Where to edit SEO text:
 | --- | --- |
 | Page titles, meta descriptions, standalone page copy | [`src/seo/meta.en.ts`](src/seo/meta.en.ts), [`src/seo/meta.th.ts`](src/seo/meta.th.ts) |
 | Body copy of sector and explainer pages (sections, tables, FAQs) | [`src/content/pages.en.ts`](src/content/pages.en.ts), [`src/content/pages.th.ts`](src/content/pages.th.ts) |
+| Built-in guides (always on the Insights page; a CMS article with the same slug replaces one) | [`src/content/articles/`](src/content/articles) |
 | Which standalone pages are live (others are `noindex` TODO scaffolds) | `PUBLISHED_PAGES` in [`src/seo/pages.ts`](src/seo/pages.ts) |
 | Company facts in structured data (JSON-LD) | [`src/seo/organization.ts`](src/seo/organization.ts) |
 | URL structure | [`src/config/routes.ts`](src/config/routes.ts) |

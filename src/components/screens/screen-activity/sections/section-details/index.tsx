@@ -8,7 +8,11 @@ import ActivityBoxDetails, {
 } from '../../../../_commons/activity-box-details';
 import SafeArea from '../../../../_commons/safe-area';
 import MiniActivityBox from '../../../../_commons/mini-activity-box';
-import TextLines from '../../../../_commons/text-lines';
+import { Link } from 'react-router-dom';
+import RichText from '../../../../_commons/rich-text';
+import { isPageKey, PageKey, paths } from '../../../../../config/routes';
+import { isDraftPage, siteMeta } from '../../../../../seo/pages';
+import { localizedDate } from '../../../../../utils/date-utils';
 
 const SectionDetails = () => {
   const { locale = 'en', localizations = [] } = useVmScreen();
@@ -23,6 +27,15 @@ const SectionDetails = () => {
     if (!details) return '';
     return details[locale];
   }, [locale, details]);
+
+  const meta = siteMeta(locale);
+  // Every article ends with a route to the contact page.
+  const linked: PageKey[] = (activity?.relatedPages ?? []).filter(
+    (key): key is PageKey => isPageKey(key) && !isDraftPage(key)
+  );
+  const relatedPages: PageKey[] = [...linked, 'contact' as PageKey].filter(
+    (key, index, all) => all.indexOf(key) === index
+  );
 
   if (!activity) return null;
   return (
@@ -52,9 +65,35 @@ const SectionDetails = () => {
           </div>
           <div className="gap-y-16 lg:gap-y-0 lg:gap-x-16 flex flex-col lg:flex-row justify-start items-start">
             <div className="flex-1 flex flex-col justify-start items-stretch">
-              <p className="text-text-muted text-base lg:text-lg leading-relaxed">
-                <TextLines text={localizedDetails} />
-              </p>
+              <div className="text-text-muted text-base lg:text-lg leading-relaxed">
+                <RichText text={localizedDetails} />
+              </div>
+              {activity.updatedAt &&
+                activity.updatedAt !== activity.publishedAt && (
+                  <p className="mt-8 text-sm text-text-muted">
+                    {meta.lastUpdated}:{' '}
+                    {localizedDate(locale, activity.updatedAt)}
+                  </p>
+                )}
+              {relatedPages.length > 0 && (
+                <div className="mt-10 rounded-2xl border border-sep-pale bg-bg-soft p-6 gap-y-3 flex flex-col">
+                  <span className="text-sm uppercase tracking-wider text-title-light">
+                    {meta.relatedPages}
+                  </span>
+                  <ul className="gap-y-2 flex flex-col">
+                    {relatedPages.map((key) => (
+                      <li key={key}>
+                        <Link
+                          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                          to={paths.page(locale, key)}
+                        >
+                          {meta.pages[key].h1}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
             <div className="gap-y-6 flex-1 lg:max-w-80 flex flex-col justify-start items-stretch">
               <h3 className="text-title-light text-base lg:text-xl uppercase tracking-wider">

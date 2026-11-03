@@ -35,6 +35,9 @@ export interface SiteMeta {
   draftSections: string[];
   ctaAudit: string;
   faqTitle: string;
+  lastUpdated: string;
+  furtherReading: string;
+  relatedPages: string;
   relatedCaseStudies: string;
   resourcesTitle: string;
   sectorsTitle: string;

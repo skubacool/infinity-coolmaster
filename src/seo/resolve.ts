@@ -193,6 +193,7 @@ const articleLd = (args: {
   description: string;
   image: string;
   datePublished?: string;
+  dateModified?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -202,7 +203,10 @@ const articleLd = (args: {
   inLanguage: args.locale,
   mainEntityOfPage: absoluteUrl(args.path),
   ...(args.datePublished
-    ? { datePublished: args.datePublished, dateModified: args.datePublished }
+    ? {
+        datePublished: args.datePublished,
+        dateModified: args.dateModified || args.datePublished,
+      }
     : {}),
   // TODO: name a real expert author (Person with jobTitle) per article once
   // the team page exists; until then the company is credited.
@@ -506,6 +510,7 @@ export const resolvePage = async (
           description,
           image: head.ogImage,
           datePublished: activity.publishedAt || undefined,
+          dateModified: activity.updatedAt || undefined,
         }),
         breadcrumbLd([
           home,
@@ -582,7 +587,7 @@ export const listSitePaths = async (): Promise<
     for (const activity of activities as Activity[]) {
       out.push({
         path: paths.insight(locale, activity),
-        lastmod: activity.publishedAt || undefined,
+        lastmod: activity.updatedAt || activity.publishedAt || undefined,
       });
     }
     for (const page of PAGE_KEYS) out.push({ path: paths.page(locale, page) });

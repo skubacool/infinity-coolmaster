@@ -1,13 +1,13 @@
 import { Activity, ActivityTag, ActivityType } from '../../models/activity';
 import { p } from '../../utils/path-utils';
 
-const tagCaas: ActivityTag = {
+export const tagCaas: ActivityTag = {
   id: 1,
   color: '#10B981',
   title: { en: 'CaaS', th: 'CaaS' },
 };
 
-const tagTech: ActivityTag = {
+export const tagTech: ActivityTag = {
   id: 2,
   color: '#38BDF8',
   title: { en: 'Technology', th: 'เทคโนโลยี' },
@@ -19,13 +19,13 @@ const tagNews: ActivityTag = {
   title: { en: 'News', th: 'ข่าวสาร' },
 };
 
-const typeGuide: ActivityType = {
+export const typeGuide: ActivityType = {
   id: 1,
   color: '#10B981',
   title: { en: 'Guide', th: 'คู่มือ' },
 };
 
-const typeTechnical: ActivityType = {
+export const typeTechnical: ActivityType = {
   id: 2,
   color: '#38BDF8',
   title: { en: 'Technical', th: 'เชิงเทคนิค' },

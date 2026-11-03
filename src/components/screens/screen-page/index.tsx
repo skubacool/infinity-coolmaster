@@ -7,6 +7,7 @@ import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import { isDraftPage, siteMeta } from '../../../seo/pages';
 import { pageBody } from '../../../content';
 import PageBodyView from './sections/page-body';
+import { builtInGuides, GUIDES_BY_PAGE } from '../../../content/articles';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
 import SafeArea from '../../_commons/safe-area';
@@ -42,6 +43,9 @@ const ScreenPage = () => {
   const related = body?.sector
     ? projects.filter((project) => project.sector === body.sector)
     : [];
+  const guides = (GUIDES_BY_PAGE[page] ?? [])
+    .map((slug) => builtInGuides.find((guide) => guide.slug === slug))
+    .filter((guide): guide is NonNullable<typeof guide> => !!guide);
 
   return (
     <LayoutStandard>
@@ -67,6 +71,30 @@ const ScreenPage = () => {
       {page === 'contact' && <SectionContact />}
 
       {body && <PageBodyView body={body} faqTitle={meta.faqTitle} />}
+
+      {guides.length > 0 && (
+        <section className="pb-12 lg:pb-16 flex flex-col justify-start items-stretch">
+          <SafeArea>
+            <div className="max-w-[880px] gap-y-4 flex flex-col">
+              <h2 className="text-2xl lg:text-3hxl font-semibold tracking-tight text-text-main">
+                {meta.furtherReading}
+              </h2>
+              <ul className="gap-y-3 flex flex-col">
+                {guides.map((guide) => (
+                  <li key={guide.id}>
+                    <Link
+                      className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                      to={paths.insight(locale, guide)}
+                    >
+                      {guide.title[locale]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </SafeArea>
+        </section>
+      )}
 
       {related.length > 0 && (
         <section className="py-12 lg:py-16 bg-bg-soft flex flex-col justify-start items-stretch">

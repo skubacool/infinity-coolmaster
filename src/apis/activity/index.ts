@@ -1,10 +1,33 @@
 import { Activity } from '../../models/activity';
 import { fetchCollection } from '../_commons/cms';
-import { findBySlug } from '../../config/routes';
+import { activitySlug, findBySlug } from '../../config/routes';
+import { builtInGuides } from '../../content/articles';
 import defaultActivities from './defaults';
 
-const listAll = async (): Promise<Activity[]> =>
-  fetchCollection<Activity>('activities', defaultActivities);
+/**
+ * CMS (or default) articles plus the built-in guides, newest first. A CMS
+ * article whose slug matches a guide replaces it.
+ */
+const listAll = async (): Promise<Activity[]> => {
+  const articles = await fetchCollection<Activity>(
+    'activities',
+    defaultActivities
+  );
+  const taken = new Set(articles.map((a) => activitySlug(a)));
+  const merged = [
+    ...articles,
+    ...builtInGuides.filter((g) => !taken.has(activitySlug(g))),
+  ];
+  // Stable sort: newest publish date first; undated items keep their order.
+  return merged
+    .map((item, index) => ({ item, index }))
+    .sort(
+      (a, b) =>
+        (b.item.publishedAt ?? '').localeCompare(a.item.publishedAt ?? '') ||
+        a.index - b.index
+    )
+    .map(({ item }) => item);
+};
 
 export const listActivities = async (): Promise<Activity[]> => {
   return listAll();

@@ -123,6 +123,17 @@ Works exactly like case studies: enable editing once, then Edit / Add /
 Delete. Extra fields:
 - **Publish date** — shown on the article card.
 - **Tag badge / Article type** — pick from the dropdown lists.
+- **Article body** formatting: start a line with `## ` for a heading,
+  `### ` for a sub-heading and `- ` for each bullet point; leave an empty
+  line between paragraphs.
+- **Last updated** — set it when you change an article substantially; it is
+  shown on the page and to search engines.
+
+Five in-depth guides (what Cooling-as-a-Service is, chiller replacement cost,
+kW/TR, contract length, CFO questions) are built into the website itself and
+always appear in the list. To edit one, ask the website administrator, or
+create an article here with the same web address (slug) — yours then
+replaces the built-in one.
 
 ---
 

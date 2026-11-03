@@ -9,6 +9,7 @@ import ContentItem from '../../../../_commons/content-item';
 import PhotoGallery from '../../../../_commons/photo-gallery';
 import TextLines from '../../../../_commons/text-lines';
 import Icon from '../../../../_commons/icon';
+import RichText from '../../../../_commons/rich-text';
 
 const SectionDetails = () => {
   const vmScreen = useVmScreen();
@@ -157,9 +158,9 @@ const SectionDetails = () => {
     <div className="pt-20 pb-16 flex flex-col justify-start items-stretch">
       <SectionTwoCols title={screenTitle} colEnd={colEnd}>
         <div className="gap-y-16 flex flex-col justify-start items-stretch">
-          <p className="text-text-muted text-base lg:text-lg leading-relaxed">
-            <TextLines text={localizedDetails} />
-          </p>
+          <div className="text-text-muted text-base lg:text-lg leading-relaxed">
+            <RichText text={localizedDetails} />
+          </div>
           <PhotoGallery locale={locale} photos={photos} />
         </div>
       </SectionTwoCols>
