@@ -1,8 +1,8 @@
 /**
- * Kept apart from the guides' text so pages can list related guides without
- * loading every article into the main bundle.
+ * Guides listed as "Further reading" on each standalone page. Kept apart from
+ * the guides' text so pages can list them without loading every article into
+ * the main bundle.
  */
-/** Guides listed as "Further reading" on each standalone page. */
 export const GUIDES_BY_PAGE: Record<string, string[]> = {
   hotels: [
     'hotel-resort-cooling-cost-reduction',

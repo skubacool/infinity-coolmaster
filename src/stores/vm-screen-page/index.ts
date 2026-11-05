@@ -43,6 +43,9 @@ export interface IVmScreenPage {
 
 const store: IVmScreenPage = {};
 
+/** The page most recently asked for; older, slower loads are discarded. */
+let latestWanted: string | null = null;
+
 export const useVmScreenPage = (): IVmScreenPage => {
   const [pageFor, setPageFor] = useAtom(forState);
   const [body, setBody] = useAtom(bodyState);
@@ -52,10 +55,13 @@ export const useVmScreenPage = (): IVmScreenPage => {
     (locale: Locale, key: PageKey) => {
       const wanted = `${locale}/${key}`;
       // Pre-rendered pages arrive with their content already in place.
+      latestWanted = wanted;
       if (pageFor === wanted) return;
       (async () => {
         try {
           const result = await resolvePageContent(locale, key);
+          // The visitor moved on to another page while this one loaded.
+          if (latestWanted !== wanted) return;
           setBody(result.body);
           setGuides(result.guides);
           setPageFor(wanted);
