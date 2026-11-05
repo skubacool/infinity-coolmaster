@@ -140,6 +140,8 @@ npm run deploy
 ```
 This runs the production build (with your `.env.local` baked in) and pushes
 `dist/` to a `gh-pages` branch.
+Each deploy replaces everything on that branch, hidden files included, so
+files removed from the site (old pages, stray config files) disappear too.
 
 ### 2.5 Enable Pages
 GitHub repo → **Settings → Pages** → Source: **Deploy from a branch** →

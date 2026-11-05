@@ -5,9 +5,8 @@ import { isPageKey, paths } from '../../../config/routes';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import { isDraftPage, siteMeta } from '../../../seo/pages';
-import { pageBody } from '../../../content';
 import PageBodyView from './sections/page-body';
-import { builtInGuides, GUIDES_BY_PAGE } from '../../../content/articles';
+import { useVmScreenPage } from '../../../stores/vm-screen-page';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
 import SafeArea from '../../_commons/safe-area';
@@ -34,18 +33,24 @@ const ScreenPage = () => {
     vmScreenFront.bind();
   }, [vmScreenFront]);
 
+  const vmScreenPage = useVmScreenPage();
+  useEffect(() => {
+    if (!vmScreenPage.bind || !isPageKey(page)) return;
+    vmScreenPage.bind(locale, page);
+  }, [locale, page, vmScreenPage]);
+
   if (!isPageKey(page)) return <ScreenNotFound />;
 
   const meta = siteMeta(locale);
   const text = meta.pages[page];
   const draft = isDraftPage(page);
-  const body = pageBody(locale, page);
+  // Content loaded for another page is never shown on this one.
+  const current = vmScreenPage.isFor?.(locale, page) ?? false;
+  const body = current ? (vmScreenPage.body ?? null) : null;
   const related = body?.sector
     ? projects.filter((project) => project.sector === body.sector)
     : [];
-  const guides = (GUIDES_BY_PAGE[page] ?? [])
-    .map((slug) => builtInGuides.find((guide) => guide.slug === slug))
-    .filter((guide): guide is NonNullable<typeof guide> => !!guide);
+  const guides = current ? (vmScreenPage.guides ?? []) : [];
 
   return (
     <LayoutStandard>

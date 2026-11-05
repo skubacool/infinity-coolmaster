@@ -34,7 +34,7 @@ import { resolveProject } from '../stores/vm-screen-project';
 import { resolveActivity } from '../stores/vm-screen-activity';
 import { Head, absoluteUrl } from './head';
 import { siteMeta, isDraftPage, SECTOR_PAGES } from './pages';
-import { pageBody } from '../content';
+import { resolvePageContent } from '../stores/vm-screen-page';
 import { ORGANIZATION, DEFAULT_SHARE_IMAGE } from './organization';
 
 export type RouteMatch =
@@ -549,7 +549,12 @@ export const resolvePage = async (
         }
       );
       if (match.page === 'contact') head.jsonLd.push(localBusinessLd());
-      const body = pageBody(locale, match.page);
+      const { body, guides } = await resolvePageContent(locale, match.page);
+      if (withSeed) {
+        seed['page.for'] = `${locale}/${match.page}`;
+        seed['page.body'] = body;
+        seed['page.guides'] = guides;
+      }
       if (body?.faqs?.length) {
         head.jsonLd.push({
           '@context': 'https://schema.org',

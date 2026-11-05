@@ -8,7 +8,7 @@
     "build": "tsc && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --cname infinitycoolmaster.com",
+    "deploy": "gh-pages -d dist --cname infinitycoolmaster.com --remove \"{**/*,.*,.claude/**}\"",
     "format": "prettier . --write",
     "indexnow": "node scripts/indexnow.mjs"
   },
