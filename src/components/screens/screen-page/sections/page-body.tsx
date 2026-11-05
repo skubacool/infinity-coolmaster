@@ -92,6 +92,27 @@ const PageBodyView = (props: PageBodyViewProps) => {
             </div>
           ))}
 
+          {body.terms && body.terms.length > 0 && (
+            <dl className="gap-y-6 flex flex-col">
+              {body.terms.map((entry) => (
+                <div
+                  key={entry.id}
+                  id={entry.id}
+                  className="scroll-mt-24 border-b border-sep-pale pb-6"
+                >
+                  <dt className="text-lg lg:text-xl font-semibold text-text-main">
+                    <a className="hover:text-brand-blue" href={`#${entry.id}`}>
+                      {entry.term}
+                    </a>
+                  </dt>
+                  <dd className="mt-2 text-base lg:text-lg leading-relaxed text-text-muted">
+                    {entry.definition}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
           {body.faqs && body.faqs.length > 0 && (
             <div className="gap-y-4 flex flex-col">
               <h2 className="text-2xl lg:text-3hxl font-semibold tracking-tight text-text-main">

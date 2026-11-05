@@ -21,8 +21,8 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
   ],
   factories: [
     'plastics-factory-process-cooling',
-    'first-cooling-as-a-service-project-commissioning',
-    'chiller-plant-maintenance-checklist',
+    'designated-factory-building-energy-law-thailand',
+    'food-beverage-factory-cooling',
   ],
   'office-buildings': [
     'signs-chiller-plant-needs-replacing',
@@ -40,14 +40,14 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'what-is-cooling-as-a-service',
   ],
   'caas-vs-buying-chiller': [
-    'what-is-cooling-as-a-service',
+    'cooling-as-a-service-vs-esco-thailand',
     'cooling-as-a-service-cfo-questions',
     'chiller-replacement-cost-factors',
   ],
   'chiller-replacement': [
     'signs-chiller-plant-needs-replacing',
     'chiller-replacement-cost-factors',
-    'water-cooled-vs-air-cooled-chillers',
+    'refrigerant-phase-down-r22-kigali-thailand',
   ],
   'measurement-verification': [
     'ipmvp-options-a-b-c-d-explained',
@@ -58,5 +58,20 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'reduce-chiller-plant-energy-use',
     'kw-per-tr-chiller-plant-efficiency',
     'chiller-replacement-cost-factors',
+  ],
+  glossary: [
+    'what-is-cooling-as-a-service',
+    'kw-per-tr-chiller-plant-efficiency',
+    'ipmvp-options-a-b-c-d-explained',
+  ],
+  'chiller-efficiency-check': [
+    'kw-per-tr-chiller-plant-efficiency',
+    'reduce-chiller-plant-energy-use',
+    'thailand-tou-ft-electricity-chiller-cost',
+  ],
+  'eastern-economic-corridor': [
+    'first-cooling-as-a-service-project-commissioning',
+    'plastics-factory-process-cooling',
+    'designated-factory-building-energy-law-thailand',
   ],
 };

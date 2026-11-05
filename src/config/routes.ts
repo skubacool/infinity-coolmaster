@@ -31,6 +31,9 @@ export const PAGE_KEYS = [
   'measurement-verification',
   'contact',
   'team',
+  'glossary',
+  'chiller-efficiency-check',
+  'eastern-economic-corridor',
 ] as const;
 
 export type PageKey = (typeof PAGE_KEYS)[number];

@@ -15,9 +15,34 @@ export interface RichTextProps {
  * Text without these markers renders exactly as before (paragraphs with line
  * breaks). As before, editors may embed simple HTML.
  */
+const splitBlocks = (text: string): string[] =>
+  (text ?? '').replace(/\r\n/g, '\n').split(/\n\s*\n/);
+
+/** Anchor id of the n-th "## " heading (0-based), shared with the contents list. */
+export const sectionId = (index: number): string => `section-${index + 1}`;
+
+/** The "## " headings of a text, in order, for a table of contents. */
+export const extractHeadings = (text: string): string[] =>
+  splitBlocks(text)
+    .map((block) => block.trim())
+    .filter((block) => block.startsWith('## '))
+    .map((block) => block.slice(3).trim());
+
+/** Rough reading time: ~220 English words or ~900 Thai characters a minute. */
+export const readingMinutes = (text: string): number => {
+  const plain = (text ?? '').replace(/<[^>]+>/g, ' ');
+  const thaiChars = (plain.match(/[\u0E00-\u0E7F]/g) ?? []).length;
+  const words = plain
+    .replace(/[\u0E00-\u0E7F]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(1, Math.round(words / 220 + thaiChars / 900));
+};
+
 const RichText = (props: RichTextProps) => {
   const { text, className = '' } = props;
-  const blocks = (text ?? '').replace(/\r\n/g, '\n').split(/\n\s*\n/);
+  const blocks = splitBlocks(text);
+  let headingIndex = 0;
 
   return (
     <div className="gap-y-5 flex flex-col">
@@ -35,10 +60,12 @@ const RichText = (props: RichTextProps) => {
           );
         }
         if (block.startsWith('## ')) {
+          const id = sectionId(headingIndex++);
           return (
             <h2
+              id={id}
               key={index}
-              className="mt-4 text-2xl lg:text-3xl font-semibold tracking-tight text-text-main"
+              className="mt-4 scroll-mt-24 text-2xl lg:text-3xl font-semibold tracking-tight text-text-main"
             >
               {block.slice(3)}
             </h2>

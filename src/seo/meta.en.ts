@@ -61,6 +61,13 @@ const meta: SiteMeta = {
   firstProjectUpdateLink: 'Read the project update',
   faqTitle: 'Frequently asked questions',
   lastUpdated: 'Last updated',
+  keyPointsTitle: 'Key points',
+  tocTitle: 'In this article',
+  readingTime: (minutes) => `${minutes} min read`,
+  shareTitle: 'Share',
+  copyLink: 'Copy link',
+  linkCopied: 'Link copied',
+  sourcesTitle: 'Sources',
   furtherReading: 'Further reading',
   relatedPages: 'Read next',
   relatedCaseStudies: 'Related case studies',
@@ -179,6 +186,33 @@ const meta: SiteMeta = {
       h1: 'Request a free cooling audit',
       intro:
         'Our engineers will analyse your plant and quantify your guaranteed savings potential, at no cost and with no obligation.',
+    },
+    glossary: {
+      label: 'Glossary',
+      title: 'Chiller & Cooling Glossary | Infinity CoolMaster',
+      description:
+        'Plain-English definitions of chiller and cooling terms: TR, kW/TR, COP, delta-T, VSD, IPMVP, ESCO, PUE, TOU and more, for building owners and engineers in Thailand.',
+      h1: 'Chiller and cooling glossary',
+      intro:
+        'Short definitions of the terms used in chiller plants, energy savings and Cooling-as-a-Service contracts. Each term has its own link, so you can share a single definition.',
+    },
+    'chiller-efficiency-check': {
+      label: 'Chiller Efficiency Check',
+      title: 'Chiller Efficiency (kW/TR) Check | Infinity CoolMaster',
+      description:
+        'Check your chiller plant’s efficiency in one minute: enter its electrical power and cooling output to get kW/TR, COP and a rating. Free tool for Thai buildings.',
+      h1: 'How efficient is your chiller plant?',
+      intro:
+        'Enter your plant’s electrical power and cooling output to calculate its kW/TR and COP and see how it compares with rough industry bands. Use readings taken at the same moment, under normal load.',
+    },
+    'eastern-economic-corridor': {
+      label: 'EEC Factories',
+      title: 'EEC Factory Cooling as a Service | Infinity CoolMaster',
+      description:
+        'Chiller-as-a-service for factories in Rayong, Chonburi and Chachoengsao: we fund, install and run the plant, you pay from the savings. First project in Rayong.',
+      h1: 'Cooling as a service for factories in the Eastern Economic Corridor',
+      intro:
+        'Infinity CoolMaster designs, funds, installs and operates chiller plants for factories in Rayong, Chonburi and Chachoengsao, with no upfront investment and a minimum 10% energy saving guaranteed in writing. Our first plant, for Platinum Pro Plastic in Nikhom Phatthana, Rayong, is in testing and commissioning in November 2026.',
     },
     team: {
       label: 'Our Team',

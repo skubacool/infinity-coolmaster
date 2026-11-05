@@ -6,6 +6,7 @@ import { useVmScreen } from '../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import { isDraftPage, siteMeta } from '../../../seo/pages';
 import PageBodyView from './sections/page-body';
+import EfficiencyCheck from './sections/efficiency-check';
 import { useVmScreenPage } from '../../../stores/vm-screen-page';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
@@ -73,6 +74,9 @@ const ScreenPage = () => {
       </section>
 
       {page === 'savings-calculator' && <SectionEstimator />}
+      {page === 'chiller-efficiency-check' && (
+        <EfficiencyCheck locale={locale} />
+      )}
       {page === 'contact' && <SectionContact />}
 
       {body && <PageBodyView body={body} faqTitle={meta.faqTitle} />}

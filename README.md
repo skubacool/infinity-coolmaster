@@ -83,6 +83,20 @@ Where to edit SEO text:
 Old hash links (`/#/en/about`, `/#/en/project/1`) are redirected to the new
 URLs by a small script at the top of [`index.html`](index.html).
 
+**Share images for built-in guides** (`public/assets/og/`) are drawn by
+`scripts/og-images.py` (Python 3 + Pillow with libraqm). After adding or
+renaming a built-in guide:
+
+```bash
+OG_EXPORT=og-titles.json npm run build
+python3 scripts/og-images.py og-titles.json
+```
+
+Guides without an image fall back to the default share image.
+
+The build also writes `llms.txt` (an index for AI assistants) and
+`llms-full.txt` (every published page and article as plain text).
+
 After each deploy, wait a few minutes for GitHub Pages to publish, then run
 `npm run indexnow` to ask Bing (which also feeds ChatGPT search and Copilot)
 to recrawl every page in the sitemap.

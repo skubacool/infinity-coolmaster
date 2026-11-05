@@ -18,6 +18,14 @@ export interface PageBody {
   faqs?: PageFaq[];
   /** Case-study sector key whose projects are listed as related proof. */
   sector?: string;
+  /** Glossary entries (glossary page only); `id` is the anchor and must stay stable. */
+  terms?: GlossaryTerm[];
+}
+
+export interface GlossaryTerm {
+  id: string;
+  term: string;
+  definition: string;
 }
 
 export type PageBodies = Partial<Record<PageKey, PageBody>>;

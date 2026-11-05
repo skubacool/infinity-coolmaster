@@ -9,7 +9,16 @@ import ActivityBoxDetails, {
 import SafeArea from '../../../../_commons/safe-area';
 import MiniActivityBox from '../../../../_commons/mini-activity-box';
 import { Link } from 'react-router-dom';
-import RichText from '../../../../_commons/rich-text';
+import RichText, {
+  extractHeadings,
+  readingMinutes,
+} from '../../../../_commons/rich-text';
+import {
+  KeyPointsBox,
+  ShareBar,
+  TableOfContents,
+} from '../../../../_commons/article-extras';
+import { SITE_ORIGIN } from '../../../../../config/routes';
 import { isPageKey, PageKey, paths } from '../../../../../config/routes';
 import { isDraftPage, siteMeta } from '../../../../../seo/pages';
 import { localizedDate } from '../../../../../utils/date-utils';
@@ -65,9 +74,25 @@ const SectionDetails = () => {
           </div>
           <div className="gap-y-16 lg:gap-y-0 lg:gap-x-16 flex flex-col lg:flex-row justify-start items-start">
             <div className="flex-1 flex flex-col justify-start items-stretch">
+              <p className="mb-6 text-sm text-text-muted">
+                {meta.readingTime(readingMinutes(localizedDetails))}
+              </p>
+              <KeyPointsBox
+                locale={locale}
+                text={activity.keyPoints?.[locale]}
+              />
+              <TableOfContents
+                locale={locale}
+                headings={extractHeadings(localizedDetails)}
+              />
               <div className="text-text-muted text-base lg:text-lg leading-relaxed">
                 <RichText text={localizedDetails} />
               </div>
+              <ShareBar
+                locale={locale}
+                url={`${SITE_ORIGIN}${paths.insight(locale, activity)}`}
+                title={activity.title[locale]}
+              />
               {activity.updatedAt &&
                 activity.updatedAt !== activity.publishedAt && (
                   <p className="mt-8 text-sm text-text-muted">

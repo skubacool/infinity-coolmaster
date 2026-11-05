@@ -25,6 +25,8 @@ export interface Activity {
   excerpt: LocalizedText;
   details: LocalizedText;
   publishedAt: string;
+  /** Three or four self-contained summary sentences, one per line. */
+  keyPoints?: LocalizedText;
   /** Date of the last substantive edit (YYYY-MM-DD); shown as "Last updated". */
   updatedAt?: string;
   /** Standalone page keys (e.g. 'hotels', 'pricing-model') linked under the article. */

@@ -8,8 +8,11 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 import App from './App';
 import { applySeed } from './lib/seed';
+import { installContactTracking } from './utils/analytics';
 
 const container = document.getElementById('root') as HTMLElement;
+
+installContactTracking();
 
 // Pre-rendered pages carry the state they were rendered with. Apply it before
 // the first render so React can hydrate the existing HTML instead of
