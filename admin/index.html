@@ -45,10 +45,6 @@
       })();
     </script>
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-K5VY9GKJYV"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -59,7 +55,31 @@
       // send_page_view: false — the app sends a page_view per route instead
       // (client-side navigation; see src/utils/analytics.ts).
       gtag('config', 'G-K5VY9GKJYV', { send_page_view: false });
+
+      // Load gtag.js only after the page has rendered and gone idle: it is
+      // ~175 KB and was the biggest main-thread blocker on mobile. Events
+      // queued in dataLayer before then are sent when it arrives.
+      (function () {
+        function load() {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-K5VY9GKJYV';
+          document.head.appendChild(s);
+        }
+        function whenIdle() {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(load, { timeout: 4000 });
+          } else {
+            setTimeout(load, 1500);
+          }
+        }
+        if (document.readyState === 'complete') whenIdle();
+        else window.addEventListener('load', whenIdle);
+      })();
     </script>
+    <!-- The API serves the content and the hero photo: connect early. -->
+    <link rel="preconnect" href="https://icm-api.skubacool.workers.dev" crossorigin />
+    <link rel="preconnect" href="https://icm-api.skubacool.workers.dev" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#FFFFFF" />
@@ -80,11 +100,11 @@
     <meta data-seo name="twitter:title" content="Admin | Infinity CoolMaster" />
     <meta data-seo name="twitter:description" content="We install and own a high-efficiency chiller plant at your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Book a free audit." />
     <meta data-seo name="twitter:image" content="https://infinitycoolmaster.com/assets/brand/og-image.png" />
-    <script type="module" crossorigin src="/assets/index-C2FTbVjY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkUciJhN.css">
+    <script type="module" crossorigin src="/assets/index-B7ahBwNo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D9UkB_Up.css">
   </head>
   <body>
     <div id="root"></div>
-    
+    
   </body>
 </html>
