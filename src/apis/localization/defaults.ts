@@ -117,7 +117,7 @@ const localizations: LocalizedKeyText[] = [
   },
   {
     key: 'front.cta-secondary',
-    text: { th: 'ดูผลงานของเรา', en: 'Explore Case Studies' },
+    text: { th: 'ประเมินผลประหยัดของคุณ', en: 'Estimate Your Savings' },
   },
   {
     key: 'front.proof-1',

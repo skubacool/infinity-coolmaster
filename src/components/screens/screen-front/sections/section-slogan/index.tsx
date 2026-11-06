@@ -83,7 +83,7 @@ const SectionSlogan = () => {
                   {l(locale, localizations, 'front.cta-primary')}
                   <Icon name="arrow-right" size={18} />
                 </button>
-                <Link className="btn-outline" to={paths.caseStudies(locale)}>
+                <Link className="btn-outline" to={paths.page(locale, 'savings-calculator')}>
                   {l(locale, localizations, 'front.cta-secondary')}
                 </Link>
               </div>
