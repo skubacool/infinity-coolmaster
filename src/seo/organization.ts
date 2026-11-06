@@ -15,7 +15,7 @@ export const ORGANIZATION = {
   foundingDate: '2023-01-24' as string | null,
   url: `${SITE_ORIGIN}/`,
   logo: `${SITE_ORIGIN}/assets/brand/logo-official.png`,
-  telephone: '+66 2 026 3344',
+  telephone: '+66 82 096 6595',
   email: 'sales@infinitycoolmaster.com',
   address: {
     streetAddress: '157/9 Soi Ari Samphan 2, Phahonyothin Road',

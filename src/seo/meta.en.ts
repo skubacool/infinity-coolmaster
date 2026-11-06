@@ -184,7 +184,7 @@ const meta: SiteMeta = {
       label: 'Contact',
       title: 'Book a Free Chiller Plant Audit | Infinity CoolMaster',
       description:
-        'Request a free cooling audit. Our engineers analyse your chiller plant and quantify your guaranteed savings, free and with no obligation. Call +66 2 026 3344.',
+        'Request a free cooling audit. Our engineers analyse your chiller plant and quantify your guaranteed savings, free and with no obligation. Call +66 82 096 6595.',
       h1: 'Request a free cooling audit',
       intro:
         'Our engineers will analyse your plant and quantify your guaranteed savings potential, at no cost and with no obligation.',

@@ -15,8 +15,8 @@ const contacts: Contact[] = [
     id: 2,
     type: 'tel',
     icon: 'tel',
-    text: { en: '+66 (0)2 026 3344', th: '02-026-3344' },
-    url: 'tel:+6620263344',
+    text: { en: '+66 (0)82 096 6595', th: '082-096-6595' },
+    url: 'tel:+66820966595',
   },
   {
     id: 3,
