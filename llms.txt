@@ -3,7 +3,7 @@
 > Chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. Website in Thai (default) and English.
 
 Infinity CoolMaster Co., Ltd. (บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด), DBD registration no. 0105566016285, registered January 2023, Bangkok, Thailand.
-Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
+Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 82 096 6595. Email: sales@infinitycoolmaster.com.
 Business: Cooling-as-a-Service (chiller-as-a-service). Infinity CoolMaster designs, finances, installs, owns and operates chiller plants; clients pay for efficient cooling from the savings, with a minimum 10% energy saving guaranteed in writing and measured monthly to IPMVP. Contracts typically run 5–10 years.
 First project: Platinum Pro Plastic, Nikhom Phatthana, Rayong; in testing and commissioning in November 2026.
 
@@ -24,7 +24,7 @@ Full text of every page and article: https://infinitycoolmaster.com/llms-full.tx
 - [Chiller replacement with no capital outlay](https://infinitycoolmaster.com/en/chiller-replacement/): Replace an old, inefficient chiller plant without capital spending. We fund, install and operate the new plant and guarantee the savings. Request an audit.
 - [Chiller energy savings calculator](https://infinitycoolmaster.com/en/savings-calculator/): Estimate how much your building could save on electricity with chiller-as-a-service. Enter your monthly bill and facility type to see an annual savings range.
 - [How we measure and verify savings (IPMVP)](https://infinitycoolmaster.com/en/measurement-verification/): How Infinity CoolMaster measures and verifies energy savings under IPMVP: baseline, metering, monthly reports and independent checks. See how savings are proven.
-- [Request a free cooling audit](https://infinitycoolmaster.com/en/contact/): Request a free cooling audit. Our engineers analyse your chiller plant and quantify your guaranteed savings, free and with no obligation. Call +66 2 026 3344.
+- [Request a free cooling audit](https://infinitycoolmaster.com/en/contact/): Request a free cooling audit. Our engineers analyse your chiller plant and quantify your guaranteed savings, free and with no obligation. Call +66 82 096 6595.
 - [Chiller and cooling glossary](https://infinitycoolmaster.com/en/glossary/): Plain-English definitions of chiller and cooling terms: TR, kW/TR, COP, delta-T, VSD, IPMVP, ESCO, PUE, TOU and more, for building owners and engineers in Thailand.
 - [How efficient is your chiller plant?](https://infinitycoolmaster.com/en/chiller-efficiency-check/): Check your chiller plant’s efficiency in one minute: enter its electrical power and cooling output to get kW/TR, COP and a rating. Free tool for Thai buildings.
 - [Cooling as a service for factories in the Eastern Economic Corridor](https://infinitycoolmaster.com/en/eastern-economic-corridor/): Chiller-as-a-service for factories in Rayong, Chonburi and Chachoengsao: we fund, install and run the plant, you pay from the savings. First project in Rayong.
@@ -70,7 +70,7 @@ Full text of every page and article: https://infinitycoolmaster.com/llms-full.tx
 - [เปลี่ยนชิลเลอร์โดยไม่ต้องลงทุน](https://infinitycoolmaster.com/th/chiller-replacement/): เปลี่ยนชิลเลอร์เก่าที่กินไฟโดยไม่ต้องใช้งบลงทุน เราลงทุน ติดตั้ง และดูแลระบบใหม่ พร้อมรับประกันผลประหยัดเป็นลายลักษณ์อักษร ขอรับการประเมินระบบฟรี
 - [เครื่องคำนวณผลประหยัดค่าไฟชิลเลอร์](https://infinitycoolmaster.com/th/savings-calculator/): ประเมินว่าอาคารของคุณจะประหยัดค่าไฟได้เท่าไรด้วยบริการชิลเลอร์แบบไม่ต้องลงทุน กรอกค่าไฟต่อเดือนและประเภทอาคาร เพื่อดูช่วงผลประหยัดโดยประมาณต่อปี
 - [การตรวจวัดและพิสูจน์ผลประหยัดตาม IPMVP](https://infinitycoolmaster.com/th/measurement-verification/): วิธีที่ Infinity CoolMaster ตรวจวัดและพิสูจน์ผลประหยัดพลังงานตามมาตรฐาน IPMVP ตั้งแต่ Baseline การติดตั้งมิเตอร์ จนถึงรายงานรายเดือน ดูวิธีพิสูจน์ผลประหยัด
-- [ขอรับการประเมินระบบทำความเย็นฟรี](https://infinitycoolmaster.com/th/contact/): ขอรับการประเมินระบบทำความเย็นฟรี วิศวกรของเราจะวิเคราะห์ระบบชิลเลอร์และประเมินผลประหยัดที่รับประกันได้ ไม่มีค่าใช้จ่ายและไม่มีข้อผูกมัด โทร 02-026-3344
+- [ขอรับการประเมินระบบทำความเย็นฟรี](https://infinitycoolmaster.com/th/contact/): ขอรับการประเมินระบบทำความเย็นฟรี วิศวกรของเราจะวิเคราะห์ระบบชิลเลอร์และประเมินผลประหยัดที่รับประกันได้ ไม่มีค่าใช้จ่ายและไม่มีข้อผูกมัด โทร 082-096-6595
 - [อภิธานศัพท์ชิลเลอร์และระบบทำความเย็น](https://infinitycoolmaster.com/th/glossary/): คำอธิบายศัพท์ชิลเลอร์และระบบทำความเย็นแบบเข้าใจง่าย ทั้ง TR, kW/TR, COP, Delta-T, VSD, IPMVP, ESCO, PUE และค่าไฟ TOU สำหรับเจ้าของอาคารและวิศวกรในไทย
 - [ระบบชิลเลอร์ของคุณมีประสิทธิภาพแค่ไหน](https://infinitycoolmaster.com/th/chiller-efficiency-check/): ตรวจประสิทธิภาพระบบชิลเลอร์ใน 1 นาที กรอกกำลังไฟฟ้าและความเย็นที่ผลิตได้ เพื่อดูค่า kW/TR, COP และระดับประสิทธิภาพ เครื่องมือฟรีสำหรับอาคารในไทย
 - [ระบบทำความเย็นแบบไม่ต้องลงทุนสำหรับโรงงานในเขตระเบียงเศรษฐกิจพิเศษภาคตะวันออก (EEC)](https://infinitycoolmaster.com/th/eastern-economic-corridor/): บริการชิลเลอร์แบบไม่ต้องลงทุนสำหรับโรงงานในระยอง ชลบุรี และฉะเชิงเทรา เราลงทุน ติดตั้ง และดูแลระบบ คุณจ่ายจากผลประหยัด โครงการแรกอยู่ที่จังหวัดระยอง
