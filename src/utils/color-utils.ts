@@ -1,7 +1,7 @@
 /**
  * Tag and type colours come from the content manager, where staff usually pick
  * the bright brand green/blue. As small text (or behind white text) those fail
- * WCAG AA, so darken the colour just enough to reach 4.5:1 against white.
+ * WCAG AA, so darken the colour just enough to pass AA on white and off-white.
  */
 const luminance = (rgb: number[]): number => {
   const [r, g, b] = rgb.map((v) => {
@@ -27,7 +27,8 @@ const parseHex = (hex: string): number[] | null => {
 const toHex = (rgb: number[]): string =>
   `#${rgb.map((v) => Math.round(v).toString(16).padStart(2, '0')).join('')}`;
 
-export const readableOnWhite = (hex?: string, minRatio = 4.5): string => {
+// 4.8 against white leaves headroom for the off-white (#F8FAFC) sections.
+export const readableOnWhite = (hex?: string, minRatio = 4.8): string => {
   const rgb = hex ? parseHex(hex) : null;
   if (!rgb) return hex ?? '';
   let current = rgb;
