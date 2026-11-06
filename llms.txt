@@ -1,42 +1,102 @@
 # Infinity CoolMaster
 
-> Infinity CoolMaster is a chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. We design, finance, install and operate the chiller plant at a client's building with zero upfront investment; the client pays for the cooling it uses, with energy savings measured and verified to IPMVP.
+> Chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. Website in Thai (default) and English.
 
-Infinity CoolMaster Co., Ltd. (DBD registration no. 0105566016285, registered January 2023). Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
+Infinity CoolMaster Co., Ltd. (บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด), DBD registration no. 0105566016285, registered January 2023, Bangkok, Thailand.
+Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.
+Business: Cooling-as-a-Service (chiller-as-a-service). Infinity CoolMaster designs, finances, installs, owns and operates chiller plants; clients pay for efficient cooling from the savings, with a minimum 10% energy saving guaranteed in writing and measured monthly to IPMVP. Contracts typically run 5–10 years.
+First project: Platinum Pro Plastic, Nikhom Phatthana, Rayong; in testing and commissioning in November 2026.
 
-## Key pages
+Full text of every page and article: https://infinitycoolmaster.com/llms-full.txt
 
-- https://infinitycoolmaster.com/en/
-- https://infinitycoolmaster.com/en/about/
-- https://infinitycoolmaster.com/en/insights/
-- https://infinitycoolmaster.com/en/insights/what-is-cooling-as-a-service/
-- https://infinitycoolmaster.com/en/insights/chiller-replacement-cost-factors/
-- https://infinitycoolmaster.com/en/insights/kw-per-tr-chiller-plant-efficiency/
-- https://infinitycoolmaster.com/en/insights/cooling-as-a-service-contract-length-end-of-term/
-- https://infinitycoolmaster.com/en/insights/cooling-as-a-service-cfo-questions/
-- https://infinitycoolmaster.com/en/insights/reduce-chiller-plant-energy-use/
-- https://infinitycoolmaster.com/en/insights/signs-chiller-plant-needs-replacing/
-- https://infinitycoolmaster.com/en/insights/water-cooled-vs-air-cooled-chillers/
-- https://infinitycoolmaster.com/en/insights/chiller-plant-maintenance-checklist/
-- https://infinitycoolmaster.com/en/insights/ipmvp-options-a-b-c-d-explained/
-- https://infinitycoolmaster.com/en/insights/data-center-cooling-pue/
-- https://infinitycoolmaster.com/en/insights/hotel-resort-cooling-cost-reduction/
-- https://infinitycoolmaster.com/en/insights/hospital-cooling-redundancy-n-plus-1-2n/
-- https://infinitycoolmaster.com/en/insights/first-cooling-as-a-service-project-commissioning/
-- https://infinitycoolmaster.com/en/insights/plastics-factory-process-cooling/
-- https://infinitycoolmaster.com/en/insights/cfo-guide-cooling-as-a-service/
-- https://infinitycoolmaster.com/en/insights/ipmvp-explained-how-savings-are-measured/
-- https://infinitycoolmaster.com/en/hotels/
-- https://infinitycoolmaster.com/en/hospitals/
-- https://infinitycoolmaster.com/en/shopping-malls/
-- https://infinitycoolmaster.com/en/factories/
-- https://infinitycoolmaster.com/en/office-buildings/
-- https://infinitycoolmaster.com/en/data-centers/
-- https://infinitycoolmaster.com/en/pricing-model/
-- https://infinitycoolmaster.com/en/caas-vs-buying-chiller/
-- https://infinitycoolmaster.com/en/chiller-replacement/
-- https://infinitycoolmaster.com/en/savings-calculator/
-- https://infinitycoolmaster.com/en/measurement-verification/
-- https://infinitycoolmaster.com/en/contact/
+## English pages
 
-Thai versions of every page are under /th/.
+- [Chiller as a Service in Thailand | Infinity CoolMaster](https://infinitycoolmaster.com/en/)
+- [About Our Cooling-as-a-Service Team | Infinity CoolMaster](https://infinitycoolmaster.com/en/about/)
+- [Chiller as a service for hotels and resorts](https://infinitycoolmaster.com/en/hotels/): Chiller-as-a-service for hotels and resorts in Thailand: a new, efficient cooling plant with zero CapEx, paid per unit of cooling. Request a free audit today.
+- [Chiller as a service for hospitals](https://infinitycoolmaster.com/en/hospitals/): Mission-critical chiller plants for Thai hospitals, financed, installed and run by us with zero CapEx and verified savings. Request a free cooling audit today.
+- [Cooling as a service for shopping malls](https://infinitycoolmaster.com/en/shopping-malls/): Cooling-as-a-service for shopping malls and retail centres in Thailand: an efficient chiller plant with zero CapEx and IPMVP-verified savings. Book an audit.
+- [Cooling as a service for factories](https://infinitycoolmaster.com/en/factories/): Process and comfort cooling for Thai factories as a service: we fund, install and operate the chiller plant, you pay per unit of cooling. Request an audit.
+- [Chiller as a service for office buildings](https://infinitycoolmaster.com/en/office-buildings/): Replace an ageing office-tower chiller plant with zero CapEx. We own and run the new plant, you pay per unit of cooling with savings verified to IPMVP.
+- [Cooling as a service for data centers](https://infinitycoolmaster.com/en/data-centers/): Efficient, redundant cooling for data centers in Thailand, delivered as a service with zero CapEx and measured savings that support PUE reporting. Book an audit.
+- [How cooling-as-a-service pricing works](https://infinitycoolmaster.com/en/pricing-model/): How chiller-as-a-service pricing works: no upfront cost, a rate per unit of cooling, and a worked example in Thai baht. See what a contract looks like.
+- [Cooling as a service vs buying, leasing or ESCO](https://infinitycoolmaster.com/en/caas-vs-buying-chiller/): Cooling as a service compared with buying, leasing or an ESCO contract: upfront cost, risk, maintenance and savings guarantees side by side. Read the comparison.
+- [Chiller replacement with no capital outlay](https://infinitycoolmaster.com/en/chiller-replacement/): Replace an old, inefficient chiller plant without capital spending. We fund, install and operate the new plant and guarantee the savings. Request an audit.
+- [Chiller energy savings calculator](https://infinitycoolmaster.com/en/savings-calculator/): Estimate how much your building could save on electricity with chiller-as-a-service. Enter your monthly bill and facility type to see an annual savings range.
+- [How we measure and verify savings (IPMVP)](https://infinitycoolmaster.com/en/measurement-verification/): How Infinity CoolMaster measures and verifies energy savings under IPMVP: baseline, metering, monthly reports and independent checks. See how savings are proven.
+- [Request a free cooling audit](https://infinitycoolmaster.com/en/contact/): Request a free cooling audit. Our engineers analyse your chiller plant and quantify your guaranteed savings, free and with no obligation. Call +66 2 026 3344.
+- [Chiller and cooling glossary](https://infinitycoolmaster.com/en/glossary/): Plain-English definitions of chiller and cooling terms: TR, kW/TR, COP, delta-T, VSD, IPMVP, ESCO, PUE, TOU and more, for building owners and engineers in Thailand.
+- [How efficient is your chiller plant?](https://infinitycoolmaster.com/en/chiller-efficiency-check/): Check your chiller plant’s efficiency in one minute: enter its electrical power and cooling output to get kW/TR, COP and a rating. Free tool for Thai buildings.
+- [Cooling as a service for factories in the Eastern Economic Corridor](https://infinitycoolmaster.com/en/eastern-economic-corridor/): Chiller-as-a-service for factories in Rayong, Chonburi and Chachoengsao: we fund, install and run the plant, you pay from the savings. First project in Rayong.
+
+## English articles
+
+- [How TOU tariffs and the Ft charge affect your chiller’s electricity cost](https://infinitycoolmaster.com/en/insights/thailand-tou-ft-electricity-chiller-cost/): Thai TOU tariffs price peak-hour electricity higher and the Ft charge moves every four months. How that shapes chiller plant costs, and what lowers them.
+- [Designated factories and buildings: what Thailand’s energy law means for your chillers](https://infinitycoolmaster.com/en/insights/designated-factory-building-energy-law-thailand/): Thailand’s Energy Conservation Promotion Act sets duties for large factories and buildings. Who is covered, what is required, and where the chiller plant fits.
+- [Cooling for food and beverage factories: process, hygiene and energy](https://infinitycoolmaster.com/en/insights/food-beverage-factory-cooling/): Food and beverage plants depend on reliable cooling for product safety and quality. Where chilled water is used, where energy is lost, and how to improve without risk.
+- [Cooling for pharmaceutical and cleanroom production](https://infinitycoolmaster.com/en/insights/pharmaceutical-cleanroom-cooling/): Cleanrooms rely on chilled water to control temperature and humidity around the clock. How to make the cooling plant efficient while protecting GMP compliance.
+- [Cooling-as-a-Service vs an ESCO contract in Thailand](https://infinitycoolmaster.com/en/insights/cooling-as-a-service-vs-esco-thailand/): Both promise energy savings, but they differ in who funds, owns and runs the plant. A clear comparison for Thai building owners and factory managers.
+- [Refrigerant phase-down: what it means for older chillers in Thailand](https://infinitycoolmaster.com/en/insights/refrigerant-phase-down-r22-kigali-thailand/): R-22 is being phased out and HFCs are being phased down under the Kigali Amendment, which Thailand ratified in 2024. What that means for your chiller plant.
+- [What is Cooling-as-a-Service (CaaS)? A plain-English guide](https://infinitycoolmaster.com/en/insights/what-is-cooling-as-a-service/): Cooling-as-a-Service means a provider funds, owns and runs your chiller plant and you pay for the cooling. How it works, who it suits and what to check in a contract.
+- [What does a chiller replacement cost? The factors that set the price](https://infinitycoolmaster.com/en/insights/chiller-replacement-cost-factors/): Chiller replacement prices vary widely. These are the factors that decide the cost of a new plant in Thailand, and how to replace one without capital spending.
+- [kW/TR explained: how to benchmark your chiller plant’s efficiency](https://infinitycoolmaster.com/en/insights/kw-per-tr-chiller-plant-efficiency/): kW/TR is the simplest way to see how efficiently a chiller plant turns electricity into cooling. How to calculate it, what to include, and how to use it to find savings.
+- [How long is a Cooling-as-a-Service contract, and what happens at the end?](https://infinitycoolmaster.com/en/insights/cooling-as-a-service-contract-length-end-of-term/): Cooling-as-a-Service contracts typically run 5–10 years. What decides the length, what happens to the equipment at the end of the term, and the questions to settle before you sign.
+- [Cooling-as-a-Service for CFOs: 8 questions to ask before you sign](https://infinitycoolmaster.com/en/insights/cooling-as-a-service-cfo-questions/): A finance-side checklist for Cooling-as-a-Service: cash flow, balance-sheet treatment, guarantees, measurement and end-of-term options, with the questions to ask a provider.
+- [10 ways to cut your chiller plant’s energy use](https://infinitycoolmaster.com/en/insights/reduce-chiller-plant-energy-use/): Practical ways to reduce chiller plant electricity: sequencing, setpoints, variable speed, condenser care and controls. What each one does and where to start.
+- [7 signs your chiller plant needs replacing](https://infinitycoolmaster.com/en/insights/signs-chiller-plant-needs-replacing/): Rising energy use, frequent breakdowns, phased-out refrigerant and comfort complaints: the signs that a chiller plant is reaching the end of its life, and what to do next.
+- [Water-cooled vs air-cooled chillers: which suits your building?](https://infinitycoolmaster.com/en/insights/water-cooled-vs-air-cooled-chillers/): How water-cooled and air-cooled chillers differ in efficiency, space, water use, maintenance and cost, and how to choose for a Thai building.
+- [Chiller plant maintenance checklist: daily to annual tasks](https://infinitycoolmaster.com/en/insights/chiller-plant-maintenance-checklist/): A practical maintenance checklist for chilled-water plants: what to check daily, monthly and every year to keep chillers efficient and reliable.
+- [IPMVP options A, B, C and D explained](https://infinitycoolmaster.com/en/insights/ipmvp-options-a-b-c-d-explained/): The International Performance Measurement and Verification Protocol offers four options for proving energy savings. What each one measures and when it is used.
+- [Data center cooling and PUE: how cooling efficiency drives the number](https://infinitycoolmaster.com/en/insights/data-center-cooling-pue/): What Power Usage Effectiveness (PUE) measures, why cooling is the biggest lever, and how to improve it without putting uptime at risk.
+- [How hotels and resorts can cut cooling costs without hurting guest comfort](https://infinitycoolmaster.com/en/insights/hotel-resort-cooling-cost-reduction/): Cooling is often a hotel’s largest electricity load. Practical ways for Thai hotels and resorts to reduce chiller energy while keeping guests comfortable.
+- [Hospital cooling redundancy explained: N, N+1 and 2N](https://infinitycoolmaster.com/en/insights/hospital-cooling-redundancy-n-plus-1-2n/): What N, N+1 and 2N mean for hospital chiller plants, which areas need which level of redundancy, and how to stay efficient while protecting uptime.
+- [Our first Cooling-as-a-Service plant enters commissioning](https://infinitycoolmaster.com/en/insights/first-cooling-as-a-service-project-commissioning/): Infinity CoolMaster’s first chiller-as-a-service plant, for Platinum Pro Plastic, is in testing and commissioning in November 2026. What is being installed, how savings will be measured, and what comes next.
+- [Process cooling for plastics factories: chillers, moulds and energy](https://infinitycoolmaster.com/en/insights/plastics-factory-process-cooling/): How chilled water is used in plastic injection moulding, blow moulding and extrusion, why it drives cycle time and quality, and where plastics plants lose cooling energy.
+- [The CFO’s guide to Cooling-as-a-Service](https://infinitycoolmaster.com/en/insights/cfo-guide-cooling-as-a-service/): How Cooling-as-a-Service changes capital, risk and reporting for the finance team — and what a performance contract really covers.
+- [IPMVP explained: how guaranteed savings are actually measured](https://infinitycoolmaster.com/en/insights/ipmvp-explained-how-savings-are-measured/): No savings claim is credible without a baseline. Here’s how Option C whole-facility measurement works in practice.
+
+## Thai pages
+
+- [ชิลเลอร์ไม่ต้องลงทุน จ่ายตามการใช้งาน | Infinity CoolMaster](https://infinitycoolmaster.com/th/)
+- [เกี่ยวกับเรา บริการชิลเลอร์ | Infinity CoolMaster](https://infinitycoolmaster.com/th/about/)
+- [ระบบชิลเลอร์สำหรับโรงแรมและรีสอร์ต แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/hotels/): บริการชิลเลอร์แบบไม่ต้องลงทุนสำหรับโรงแรมและรีสอร์ตในไทย ระบบทำความเย็นใหม่ประสิทธิภาพสูง จ่ายตามการใช้งานจริง ลดค่าไฟโรงแรม ขอรับการประเมินฟรี
+- [ระบบชิลเลอร์สำหรับโรงพยาบาล แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/hospitals/): ระบบชิลเลอร์สำหรับโรงพยาบาลที่ต้องทำงานตลอด 24 ชั่วโมง เราลงทุน ติดตั้ง และดูแลให้ทั้งหมด พร้อมผลประหยัดที่ตรวจวัดได้ ขอรับการประเมินระบบทำความเย็นฟรี
+- [ระบบทำความเย็นสำหรับห้างสรรพสินค้า แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/shopping-malls/): บริการระบบทำความเย็นสำหรับห้างสรรพสินค้าและศูนย์การค้าในไทย ชิลเลอร์ประสิทธิภาพสูงโดยไม่ต้องลงทุน ผลประหยัดตรวจวัดตาม IPMVP ขอรับการประเมินฟรี
+- [ระบบทำความเย็นสำหรับโรงงาน แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/factories/): ระบบทำความเย็นสำหรับโรงงานอุตสาหกรรมในไทยแบบบริการ เราลงทุน ติดตั้ง และดูแลระบบชิลเลอร์ คุณจ่ายตามปริมาณความเย็นที่ใช้จริง ขอรับการประเมินระบบฟรี
+- [ระบบชิลเลอร์สำหรับอาคารสำนักงาน แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/office-buildings/): เปลี่ยนระบบชิลเลอร์เก่าของอาคารสำนักงานโดยไม่ต้องลงทุน เราเป็นเจ้าของและดูแลระบบใหม่ คุณจ่ายตามการใช้งาน พร้อมผลประหยัดที่ตรวจวัดตาม IPMVP
+- [ระบบทำความเย็นสำหรับดาต้าเซ็นเตอร์ แบบไม่ต้องลงทุน](https://infinitycoolmaster.com/th/data-centers/): ระบบทำความเย็นประสิทธิภาพสูงพร้อมระบบสำรองสำหรับดาต้าเซ็นเตอร์ในไทย ให้บริการแบบไม่ต้องลงทุน พร้อมข้อมูลผลประหยัดที่ใช้รายงานค่า PUE ได้ ขอรับการประเมินฟรี
+- [วิธีคิดค่าบริการ Cooling-as-a-Service](https://infinitycoolmaster.com/th/pricing-model/): วิธีคิดค่าบริการชิลเลอร์แบบไม่ต้องลงทุน ไม่มีค่าใช้จ่ายล่วงหน้า จ่ายตามหน่วยความเย็นที่ใช้จริง พร้อมตัวอย่างการคำนวณเป็นเงินบาท ดูรายละเอียดสัญญา
+- [เปรียบเทียบ CaaS กับการซื้อ เช่า หรือ ESCO](https://infinitycoolmaster.com/th/caas-vs-buying-chiller/): เปรียบเทียบ Cooling-as-a-Service กับการซื้อ เช่า หรือสัญญา ESCO ทั้งเงินลงทุน ความเสี่ยง การบำรุงรักษา และการรับประกันผลประหยัด อ่านตารางเปรียบเทียบ
+- [เปลี่ยนชิลเลอร์โดยไม่ต้องลงทุน](https://infinitycoolmaster.com/th/chiller-replacement/): เปลี่ยนชิลเลอร์เก่าที่กินไฟโดยไม่ต้องใช้งบลงทุน เราลงทุน ติดตั้ง และดูแลระบบใหม่ พร้อมรับประกันผลประหยัดเป็นลายลักษณ์อักษร ขอรับการประเมินระบบฟรี
+- [เครื่องคำนวณผลประหยัดค่าไฟชิลเลอร์](https://infinitycoolmaster.com/th/savings-calculator/): ประเมินว่าอาคารของคุณจะประหยัดค่าไฟได้เท่าไรด้วยบริการชิลเลอร์แบบไม่ต้องลงทุน กรอกค่าไฟต่อเดือนและประเภทอาคาร เพื่อดูช่วงผลประหยัดโดยประมาณต่อปี
+- [การตรวจวัดและพิสูจน์ผลประหยัดตาม IPMVP](https://infinitycoolmaster.com/th/measurement-verification/): วิธีที่ Infinity CoolMaster ตรวจวัดและพิสูจน์ผลประหยัดพลังงานตามมาตรฐาน IPMVP ตั้งแต่ Baseline การติดตั้งมิเตอร์ จนถึงรายงานรายเดือน ดูวิธีพิสูจน์ผลประหยัด
+- [ขอรับการประเมินระบบทำความเย็นฟรี](https://infinitycoolmaster.com/th/contact/): ขอรับการประเมินระบบทำความเย็นฟรี วิศวกรของเราจะวิเคราะห์ระบบชิลเลอร์และประเมินผลประหยัดที่รับประกันได้ ไม่มีค่าใช้จ่ายและไม่มีข้อผูกมัด โทร 02-026-3344
+- [อภิธานศัพท์ชิลเลอร์และระบบทำความเย็น](https://infinitycoolmaster.com/th/glossary/): คำอธิบายศัพท์ชิลเลอร์และระบบทำความเย็นแบบเข้าใจง่าย ทั้ง TR, kW/TR, COP, Delta-T, VSD, IPMVP, ESCO, PUE และค่าไฟ TOU สำหรับเจ้าของอาคารและวิศวกรในไทย
+- [ระบบชิลเลอร์ของคุณมีประสิทธิภาพแค่ไหน](https://infinitycoolmaster.com/th/chiller-efficiency-check/): ตรวจประสิทธิภาพระบบชิลเลอร์ใน 1 นาที กรอกกำลังไฟฟ้าและความเย็นที่ผลิตได้ เพื่อดูค่า kW/TR, COP และระดับประสิทธิภาพ เครื่องมือฟรีสำหรับอาคารในไทย
+- [ระบบทำความเย็นแบบไม่ต้องลงทุนสำหรับโรงงานในเขตระเบียงเศรษฐกิจพิเศษภาคตะวันออก (EEC)](https://infinitycoolmaster.com/th/eastern-economic-corridor/): บริการชิลเลอร์แบบไม่ต้องลงทุนสำหรับโรงงานในระยอง ชลบุรี และฉะเชิงเทรา เราลงทุน ติดตั้ง และดูแลระบบ คุณจ่ายจากผลประหยัด โครงการแรกอยู่ที่จังหวัดระยอง
+
+## Thai articles
+
+- [ค่าไฟ TOU และค่า Ft มีผลต่อค่าไฟระบบชิลเลอร์อย่างไร](https://infinitycoolmaster.com/th/insights/thailand-tou-ft-electricity-chiller-cost/): อัตรา TOU ของไทยคิดค่าไฟช่วง Peak สูงกว่า และค่า Ft ปรับทุก 4 เดือน สิ่งเหล่านี้กำหนดต้นทุนระบบชิลเลอร์อย่างไร และอะไรช่วยลดได้
+- [โรงงานควบคุมและอาคารควบคุม: กฎหมายอนุรักษ์พลังงานกับระบบชิลเลอร์](https://infinitycoolmaster.com/th/insights/designated-factory-building-energy-law-thailand/): พระราชบัญญัติการส่งเสริมการอนุรักษ์พลังงานกำหนดหน้าที่ให้โรงงานและอาคารขนาดใหญ่ ใครเข้าข่าย ต้องทำอะไร และระบบชิลเลอร์เกี่ยวข้องอย่างไร
+- [ระบบทำความเย็นสำหรับโรงงานอาหารและเครื่องดื่ม](https://infinitycoolmaster.com/th/insights/food-beverage-factory-cooling/): โรงงานอาหารและเครื่องดื่มต้องการความเย็นที่เชื่อถือได้เพื่อความปลอดภัยและคุณภาพของสินค้า น้ำเย็นใช้ที่ไหน พลังงานสูญเสียตรงไหน และปรับปรุงอย่างไรโดยไม่เสี่ยง
+- [ระบบทำความเย็นสำหรับโรงงานยาและห้องสะอาด](https://infinitycoolmaster.com/th/insights/pharmaceutical-cleanroom-cooling/): ห้องสะอาดใช้น้ำเย็นควบคุมอุณหภูมิและความชื้นตลอด 24 ชั่วโมง วิธีทำให้ระบบทำความเย็นมีประสิทธิภาพ โดยยังรักษาการปฏิบัติตาม GMP
+- [Cooling-as-a-Service กับสัญญา ESCO ในประเทศไทย ต่างกันอย่างไร](https://infinitycoolmaster.com/th/insights/cooling-as-a-service-vs-esco-thailand/): ทั้งสองแบบสัญญาผลประหยัดพลังงาน แต่ต่างกันที่ใครลงทุน ใครเป็นเจ้าของ และใครดูแลระบบ เปรียบเทียบให้ชัดสำหรับเจ้าของอาคารและผู้จัดการโรงงานในไทย
+- [การลดใช้สารทำความเย็น: ผลต่อชิลเลอร์รุ่นเก่าในประเทศไทย](https://infinitycoolmaster.com/th/insights/refrigerant-phase-down-r22-kigali-thailand/): R-22 กำลังถูกยกเลิก และ HFC กำลังถูกลดการใช้ตามการแก้ไขคิกาลี ซึ่งไทยให้สัตยาบันในปี 2567 สิ่งนี้มีความหมายอย่างไรต่อระบบชิลเลอร์ของคุณ
+- [Cooling-as-a-Service (CaaS) คืออะไร? อธิบายแบบเข้าใจง่าย](https://infinitycoolmaster.com/th/insights/what-is-cooling-as-a-service/): Cooling-as-a-Service คือบริการที่ผู้ให้บริการลงทุน เป็นเจ้าของ และดูแลระบบชิลเลอร์ให้ คุณจ่ายค่าความเย็น ทำงานอย่างไร เหมาะกับใคร และควรตรวจอะไรในสัญญา
+- [เปลี่ยนชิลเลอร์ราคาเท่าไร? ปัจจัยที่กำหนดราคา](https://infinitycoolmaster.com/th/insights/chiller-replacement-cost-factors/): ราคาเปลี่ยนชิลเลอร์แตกต่างกันมาก นี่คือปัจจัยที่กำหนดต้นทุนระบบใหม่ในประเทศไทย และวิธีเปลี่ยนระบบโดยไม่ต้องใช้งบลงทุน
+- [ค่า kW/TR คืออะไร? วิธีวัดประสิทธิภาพระบบชิลเลอร์](https://infinitycoolmaster.com/th/insights/kw-per-tr-chiller-plant-efficiency/): kW/TR คือวิธีที่ง่ายที่สุดในการดูว่าระบบชิลเลอร์เปลี่ยนไฟฟ้าเป็นความเย็นได้มีประสิทธิภาพแค่ไหน วิธีคำนวณ สิ่งที่ต้องนับรวม และการใช้หาโอกาสประหยัด
+- [สัญญา Cooling-as-a-Service นานแค่ไหน และเมื่อครบสัญญาจะเป็นอย่างไร?](https://infinitycoolmaster.com/th/insights/cooling-as-a-service-contract-length-end-of-term/): สัญญา Cooling-as-a-Service โดยทั่วไปมีอายุ 5–10 ปี อะไรกำหนดระยะเวลา อุปกรณ์จะเป็นอย่างไรเมื่อครบสัญญา และคำถามที่ควรตกลงก่อนเซ็น
+- [Cooling-as-a-Service สำหรับ CFO: 8 คำถามที่ควรถามก่อนเซ็นสัญญา](https://infinitycoolmaster.com/th/insights/cooling-as-a-service-cfo-questions/): เช็กลิสต์ฝั่งการเงินสำหรับ Cooling-as-a-Service: กระแสเงินสด การบันทึกบัญชี การรับประกัน การตรวจวัด และทางเลือกเมื่อครบสัญญา พร้อมคำถามที่ควรถามผู้ให้บริการ
+- [10 วิธีลดการใช้พลังงานของระบบชิลเลอร์](https://infinitycoolmaster.com/th/insights/reduce-chiller-plant-energy-use/): วิธีลดค่าไฟระบบชิลเลอร์ที่ทำได้จริง: การจัดลำดับเครื่อง ค่าที่ตั้ง ระบบปรับรอบ การดูแลคอนเดนเซอร์ และระบบควบคุม แต่ละวิธีช่วยอย่างไร และควรเริ่มจากตรงไหน
+- [7 สัญญาณว่าระบบชิลเลอร์ถึงเวลาต้องเปลี่ยน](https://infinitycoolmaster.com/th/insights/signs-chiller-plant-needs-replacing/): การใช้พลังงานที่เพิ่มขึ้น เครื่องเสียบ่อย สารทำความเย็นที่ถูกยกเลิก และข้อร้องเรียนเรื่องความเย็น สัญญาณที่บอกว่าระบบชิลเลอร์ใกล้หมดอายุ และควรทำอะไรต่อ
+- [ชิลเลอร์ระบายความร้อนด้วยน้ำกับอากาศ แบบไหนเหมาะกับอาคารของคุณ](https://infinitycoolmaster.com/th/insights/water-cooled-vs-air-cooled-chillers/): ชิลเลอร์ระบายความร้อนด้วยน้ำและด้วยอากาศต่างกันอย่างไร ทั้งประสิทธิภาพ พื้นที่ การใช้น้ำ การบำรุงรักษา และต้นทุน และวิธีเลือกสำหรับอาคารในไทย
+- [เช็กลิสต์บำรุงรักษาระบบชิลเลอร์ ตั้งแต่รายวันถึงรายปี](https://infinitycoolmaster.com/th/insights/chiller-plant-maintenance-checklist/): เช็กลิสต์บำรุงรักษาระบบน้ำเย็นที่ใช้ได้จริง ควรตรวจอะไรรายวัน รายเดือน และรายปี เพื่อให้ชิลเลอร์มีประสิทธิภาพและเชื่อถือได้
+- [IPMVP ทางเลือก A, B, C และ D คืออะไร](https://infinitycoolmaster.com/th/insights/ipmvp-options-a-b-c-d-explained/): มาตรฐาน International Performance Measurement and Verification Protocol มีสี่ทางเลือกในการพิสูจน์ผลประหยัดพลังงาน แต่ละแบบวัดอะไร และใช้เมื่อไร
+- [ระบบทำความเย็นดาต้าเซ็นเตอร์กับค่า PUE](https://infinitycoolmaster.com/th/insights/data-center-cooling-pue/): ค่า Power Usage Effectiveness (PUE) วัดอะไร ทำไมระบบทำความเย็นจึงเป็นตัวแปรสำคัญที่สุด และวิธีปรับปรุงโดยไม่เสี่ยงต่อความพร้อมใช้งาน
+- [โรงแรมและรีสอร์ตลดค่าไฟระบบทำความเย็นได้อย่างไร โดยแขกยังสบาย](https://infinitycoolmaster.com/th/insights/hotel-resort-cooling-cost-reduction/): ระบบทำความเย็นมักเป็นภาระไฟฟ้าที่ใหญ่ที่สุดของโรงแรม วิธีที่โรงแรมและรีสอร์ตในไทยลดพลังงานชิลเลอร์ได้จริง โดยยังรักษาความสบายของแขก
+- [ระบบสำรองความเย็นของโรงพยาบาล: N, N+1 และ 2N คืออะไร](https://infinitycoolmaster.com/th/insights/hospital-cooling-redundancy-n-plus-1-2n/): N, N+1 และ 2N หมายถึงอะไรสำหรับระบบชิลเลอร์ของโรงพยาบาล พื้นที่ใดต้องการระบบสำรองระดับไหน และวิธีรักษาประสิทธิภาพพร้อมความพร้อมใช้งาน
+- [โครงการแรกของเราเข้าสู่ขั้นทดสอบและเดินระบบ](https://infinitycoolmaster.com/th/insights/first-cooling-as-a-service-project-commissioning/): ระบบชิลเลอร์แบบไม่ต้องลงทุนแห่งแรกของ Infinity CoolMaster สำหรับ แพลตตินั่ม โปร พลาสติก อยู่ระหว่างทดสอบและเดินระบบในเดือนพฤศจิกายน 2569 ติดตั้งอะไร วัดผลประหยัดอย่างไร และขั้นตอนต่อไป
+- [ระบบทำความเย็นสำหรับโรงงานพลาสติก: ชิลเลอร์ แม่พิมพ์ และพลังงาน](https://infinitycoolmaster.com/th/insights/plastics-factory-process-cooling/): น้ำเย็นถูกใช้อย่างไรในงานฉีดพลาสติก เป่าขึ้นรูป และอัดรีด ทำไมจึงกำหนดรอบการผลิตและคุณภาพ และโรงงานพลาสติกสูญเสียพลังงานความเย็นตรงไหน
+- [คู่มือ Cooling-as-a-Service สำหรับ CFO](https://infinitycoolmaster.com/th/insights/cfo-guide-cooling-as-a-service/): Cooling-as-a-Service เปลี่ยนเรื่องเงินลงทุน ความเสี่ยง และการรายงานสำหรับฝ่ายการเงินอย่างไร และสัญญาแบบรับประกันผลครอบคลุมอะไรบ้าง
+- [มาตรฐาน IPMVP: การวัดผลประหยัดแบบการันตีทำอย่างไร](https://infinitycoolmaster.com/th/insights/ipmvp-explained-how-savings-are-measured/): คำกล่าวอ้างเรื่องผลประหยัดไม่มีความหมายหากไร้ Baseline — มาดูวิธีการวัดแบบ Option C ในทางปฏิบัติ
