@@ -18,7 +18,7 @@ export const KeyPointsBox = (props: { locale: Locale; text?: string }) => {
       aria-label={siteMeta(locale).keyPointsTitle}
       className="mb-10 rounded-2xl border border-sep-pale bg-gradient-caas-soft p-6 lg:p-7 gap-y-3 flex flex-col"
     >
-      <span className="text-sm font-semibold uppercase tracking-wider text-brand-green">
+      <span className="text-sm font-semibold uppercase tracking-wider text-brand-green-ink">
         {siteMeta(locale).keyPointsTitle}
       </span>
       <ul className="gap-y-2 flex flex-col pl-5 list-disc text-base lg:text-lg text-text-main">
@@ -49,7 +49,7 @@ export const TableOfContents = (props: {
         {headings.map((heading, index) => (
           <li key={heading}>
             <a
-              className="hover:text-brand-blue underline-offset-4 hover:underline"
+              className="hover:text-brand-blue-ink underline-offset-4 hover:underline"
               href={`#${sectionId(index)}`}
             >
               {heading}
@@ -89,7 +89,7 @@ export const ShareBar = (props: {
     },
   ];
   const buttonClass =
-    'rounded-full border border-sep-light px-4 py-2 text-sm font-medium text-text-main hover:border-brand-blue hover:text-brand-blue transition-colors';
+    'rounded-full border border-sep-light px-4 py-2 text-sm font-medium text-text-main hover:border-brand-blue hover:text-brand-blue-ink transition-colors';
   return (
     <div className="mt-10 gap-3 flex flex-row flex-wrap items-center">
       <span className="text-sm font-semibold uppercase tracking-wider text-title-light mr-1">

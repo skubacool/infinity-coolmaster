@@ -33,13 +33,13 @@ const FirstProjectNotice = (props: FirstProjectNoticeProps) => {
       </p>
       <div className="gap-x-6 gap-y-2 flex flex-col sm:flex-row">
         <Link
-          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+          className="text-base lg:text-lg font-medium text-brand-blue-ink underline underline-offset-4"
           to={`/${locale}/insights/first-cooling-as-a-service-project-commissioning/`}
         >
           {meta.firstProjectUpdateLink}
         </Link>
         <Link
-          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+          className="text-base lg:text-lg font-medium text-brand-blue-ink underline underline-offset-4"
           to={paths.page(locale, 'measurement-verification')}
         >
           {meta.firstProjectLink}

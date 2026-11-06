@@ -22,7 +22,7 @@ const SAVINGS_LOW = 0.08;
 const SAVINGS_HIGH = 0.18;
 
 const inputClass =
-  'w-full rounded-xl border border-sep-light bg-white px-4 py-3 text-base text-text-main placeholder:text-title-pale focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue';
+  'w-full rounded-xl border border-sep-light bg-white px-4 py-3 text-base text-text-main placeholder:text-placeholder focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue';
 
 const formatThb = (value: number): string =>
   '฿' + Math.round(value).toLocaleString('en-US');

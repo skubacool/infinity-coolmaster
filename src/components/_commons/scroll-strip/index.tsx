@@ -25,7 +25,7 @@ const ScrollStrip = (props: PropsWithChildren<ScrollStripProps>) => {
 
   return (
     <button
-      className="absolute left-0 bottom-6 lg:bottom-12 w-full h-[88px] flex flex-col justify-start items-center"
+      className="relative z-[1] mb-8 mx-auto h-[88px] hidden lg:flex flex-col justify-start items-center"
       onClick={onClick}
       aria-label={text}
     >

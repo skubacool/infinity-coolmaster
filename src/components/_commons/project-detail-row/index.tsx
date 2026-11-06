@@ -16,7 +16,7 @@ const ProjectDetailRow = (props: PropsWithChildren<ProjectDetailRowProps>) => {
       </h6>
       <p
         className={`line-clamp-2 text-sm ${
-          !isCta ? 'text-text-main' : 'text-brand-green font-semibold'
+          !isCta ? 'text-text-main' : 'text-brand-green-ink font-semibold'
         } ${!isLongText ? '' : 'min-h-10'}`}
       >
         {text}

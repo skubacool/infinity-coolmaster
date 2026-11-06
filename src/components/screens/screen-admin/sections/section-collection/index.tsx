@@ -47,7 +47,9 @@ const SectionCollection = (props: SectionCollectionProps) => {
 
   const nextId = useMemo(() => {
     if (!rows) return 1;
-    const ids = rows.map((row) => Number((row.data as { id?: number }).id ?? 0));
+    const ids = rows.map((row) =>
+      Number((row.data as { id?: number }).id ?? 0)
+    );
     return (ids.length ? Math.max(...ids) : 0) + 1;
   }, [rows]);
 
@@ -157,8 +159,8 @@ const SectionCollection = (props: SectionCollectionProps) => {
       <div className="gap-y-5 flex flex-col justify-start items-stretch">
         <div className="card-premium p-5 gap-y-3 flex flex-col border-l-4 border-l-brand-blue">
           <p className="text-sm text-text-main font-medium">
-            This list currently shows the built-in defaults. Click below to
-            copy them into the CMS — then you can edit, add and delete items.
+            This list currently shows the built-in defaults. Click below to copy
+            them into the CMS — then you can edit, add and delete items.
           </p>
           <button
             type="button"
@@ -256,7 +258,7 @@ const SectionCollection = (props: SectionCollectionProps) => {
     <div className="gap-y-5 flex flex-col justify-start items-stretch">
       <p className="text-sm text-text-muted">{schema.description}</p>
       {message && (
-        <p className="text-sm font-medium text-brand-green">{message}</p>
+        <p className="text-sm font-medium text-brand-green-ink">{message}</p>
       )}
       <button
         type="button"
@@ -279,7 +281,7 @@ const SectionCollection = (props: SectionCollectionProps) => {
             </span>
             <button
               type="button"
-              className="text-sm font-semibold text-brand-blue"
+              className="text-sm font-semibold text-brand-blue-ink"
               onClick={() => onEdit(row)}
             >
               Edit

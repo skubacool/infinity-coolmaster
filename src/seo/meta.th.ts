@@ -72,6 +72,8 @@ const meta: SiteMeta = {
   relatedPages: 'อ่านต่อ',
   relatedCaseStudies: 'กรณีศึกษาที่เกี่ยวข้อง',
   resourcesTitle: 'ข้อมูลเพิ่มเติม',
+  resourcesTools: 'เครื่องมือ',
+  resourcesGuides: 'คู่มือ',
   sectorsTitle: 'กลุ่มธุรกิจ',
   sectorLinkLabel: 'ดูบริการสำหรับธุรกิจกลุ่มนี้',
   calculatorTeaserTitle: 'ประเมินผลประหยัดของคุณ',

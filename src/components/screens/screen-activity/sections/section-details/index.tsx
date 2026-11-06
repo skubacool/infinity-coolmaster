@@ -109,7 +109,7 @@ const SectionDetails = () => {
                     {relatedPages.map((key) => (
                       <li key={key}>
                         <Link
-                          className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                          className="text-base lg:text-lg font-medium text-brand-blue-ink underline underline-offset-4"
                           to={paths.page(locale, key)}
                         >
                           {meta.pages[key].h1}

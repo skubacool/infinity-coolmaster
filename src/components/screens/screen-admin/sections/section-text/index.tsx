@@ -144,7 +144,7 @@ const SectionText = () => {
         onChange={(e) => setSearch(e.target.value)}
       />
       {message && (
-        <p className="text-sm font-medium text-brand-green">{message}</p>
+        <p className="text-sm font-medium text-brand-green-ink">{message}</p>
       )}
       {grouped.map((group) => (
         <details
@@ -170,7 +170,7 @@ const SectionText = () => {
                   <div className="gap-x-2 flex flex-row items-center">
                     <code className="text-2xs text-title-pale">{item.key}</code>
                     {item.override && (
-                      <span className="text-2xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-green-soft text-brand-green">
+                      <span className="text-2xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-green-soft text-brand-green-ink">
                         customized
                       </span>
                     )}

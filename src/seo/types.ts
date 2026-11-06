@@ -53,6 +53,9 @@ export interface SiteMeta {
   relatedPages: string;
   relatedCaseStudies: string;
   resourcesTitle: string;
+  /** Nav dropdown group headings. */
+  resourcesTools: string;
+  resourcesGuides: string;
   sectorsTitle: string;
   sectorLinkLabel: string;
   calculatorTeaserTitle: string;

@@ -121,7 +121,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="p-4 flex flex-col justify-start items-stretch border-t border-t-white-a10">
+          <div className="p-4 gap-y-3 flex flex-col justify-start items-stretch border-t border-t-white-a10">
+            <span className="block mx-auto max-w-[880px] text-white-a70 text-2xs lg:text-xs text-center leading-relaxed">
+              {l(locale, localizations, 'general.disclaimer')}
+            </span>
             <span className="block text-white-a70 text-2xs lg:text-sm text-center">
               {l(locale, localizations, 'general.copyrights')}
             </span>

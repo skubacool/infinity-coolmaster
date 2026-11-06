@@ -94,7 +94,7 @@ const ScreenAdmin = () => {
           </span>
           <span className="flex-1" />
           <a
-            className="text-sm text-brand-blue underline underline-offset-4"
+            className="text-sm text-brand-blue-ink underline underline-offset-4"
             href="/en/"
             target="_blank"
             rel="noreferrer"
@@ -106,7 +106,7 @@ const ScreenAdmin = () => {
           </span>
           <button
             type="button"
-            className="rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue"
+            className="rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue-ink"
             onClick={() => signOut()}
           >
             Sign out

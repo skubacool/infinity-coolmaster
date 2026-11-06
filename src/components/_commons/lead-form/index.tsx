@@ -29,7 +29,7 @@ const BILL_RANGES = [
 ];
 
 const inputClass =
-  'w-full rounded-xl border border-sep-light bg-white px-4 py-3 text-base text-text-main placeholder:text-title-pale focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue transition-shadow';
+  'w-full rounded-xl border border-sep-light bg-white px-4 py-3 text-base text-text-main placeholder:text-placeholder focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue transition-shadow';
 
 const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
   const { locale = 'en', sectors = [] } = props;
@@ -56,9 +56,9 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
   const isValid = useMemo(() => {
     return Boolean(
       companyName.trim() &&
-        contactPerson.trim() &&
-        /^\S+@\S+\.\S+$/.test(email) &&
-        industry
+      contactPerson.trim() &&
+      /^\S+@\S+\.\S+$/.test(email) &&
+      industry
     );
   }, [companyName, contactPerson, email, industry]);
 

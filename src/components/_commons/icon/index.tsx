@@ -142,6 +142,8 @@ const paths: Record<string, ReactElement> = {
   'arrow-down': <path d="M12 5v14M6 13l6 6 6-6" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
+  check: <path d="M5 12.5l4.5 4.5L19 7.5" />,
+  'chevron-down': <path d="M6 9l6 6 6-6" />,
   chart: (
     <>
       <path d="M4 20V4" />

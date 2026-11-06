@@ -7,6 +7,7 @@ import { localizedDate } from '../../../utils/date-utils';
 import { useVmScreen } from '../../../stores/vm-screen';
 import ActivityTag from '../activity-tag';
 import Icon from '../icon';
+import { readableOnWhite } from '../../../utils/color-utils';
 
 export enum ActivityBoxDetailsMode {
   full = 'full',
@@ -50,20 +51,23 @@ const ActivityBoxDetails = (
   const TitleTag = mode === ActivityBoxDetailsMode.title ? 'h1' : 'h2';
 
   const titleLineClamp = useMemo(
-    () => (mode === ActivityBoxDetailsMode.full ? 'line-clamp-2' : ''),
+    () => (mode === ActivityBoxDetailsMode.full ? 'line-clamp-3' : ''),
     [mode]
   );
 
   const dateAndType = useMemo(() => {
     return (
-      <div className="mt-5 gap-x-3 flex flex-row justify-start items-center text-xs lg:text-base uppercase tracking-wide">
+      <div className="mt-4 gap-x-3 flex flex-row justify-start items-center text-xs lg:text-sm uppercase tracking-wide">
         <span className="block text-date-light">
           {localizedDate(locale, publishedAt)}
         </span>
         {type && (
           <>
             <div className="self-stretch w-px bg-sep-smoke" />
-            <span className="block" style={{ color: type.color }}>
+            <span
+              className="block"
+              style={{ color: readableOnWhite(type.color) }}
+            >
               {localizedType}
             </span>
           </>
@@ -84,7 +88,11 @@ const ActivityBoxDetails = (
       {mode === ActivityBoxDetailsMode.full ? dateAndType : null}
       {/* On the article page the title is the page's H1; on cards an H2. */}
       <TitleTag
-        className={`mt-6 text-2xl lg:text-3hxl font-semibold leading-[1.2] text-text-main ${titleLineClamp}`}
+        className={`${
+          mode === ActivityBoxDetailsMode.full
+            ? 'mt-4 text-xl lg:text-2xl'
+            : 'mt-6 text-2xl lg:text-3hxl'
+        } font-semibold leading-[1.25] text-text-main ${titleLineClamp}`}
       >
         {localizedTitle}
       </TitleTag>
@@ -95,7 +103,7 @@ const ActivityBoxDetails = (
         </span>
       )}
       {mode !== ActivityBoxDetailsMode.full ? null : (
-        <div className="mt-5 gap-x-2 flex flex-row justify-start items-center text-brand-blue">
+        <div className="mt-5 gap-x-2 flex flex-row justify-start items-center text-brand-blue-ink">
           <span className="text-sm lg:text-base font-medium underline underline-offset-4">
             {l(locale, localizations, 'general.read-more')}
           </span>

@@ -13,11 +13,11 @@ const STATUSES = ['new', 'contacted', 'qualified', 'won', 'lost'];
 const statusColor = (status: string): string => {
   switch (status) {
     case 'new':
-      return 'bg-brand-blue-soft text-brand-blue';
+      return 'bg-brand-blue-soft text-brand-blue-ink';
     case 'contacted':
       return 'bg-pale text-title-light';
     case 'qualified':
-      return 'bg-brand-green-soft text-brand-green';
+      return 'bg-brand-green-soft text-brand-green-ink';
     case 'won':
       return 'bg-brand-green text-white';
     case 'lost':
@@ -46,20 +46,17 @@ const SectionLeads = () => {
     load();
   }, [load]);
 
-  const onStatus = useCallback(
-    async (id: number, status: string) => {
-      setMessage('');
-      try {
-        await updateLeadStatus(id, status);
-        setLeads((prev) =>
-          prev ? prev.map((l) => (l.id === id ? { ...l, status } : l)) : prev
-        );
-      } catch (e) {
-        setMessage(e instanceof Error ? e.message : 'Update failed');
-      }
-    },
-    []
-  );
+  const onStatus = useCallback(async (id: number, status: string) => {
+    setMessage('');
+    try {
+      await updateLeadStatus(id, status);
+      setLeads((prev) =>
+        prev ? prev.map((l) => (l.id === id ? { ...l, status } : l)) : prev
+      );
+    } catch (e) {
+      setMessage(e instanceof Error ? e.message : 'Update failed');
+    }
+  }, []);
 
   if (!leads) return <Loading />;
   return (
@@ -70,7 +67,7 @@ const SectionLeads = () => {
         </p>
         <button
           type="button"
-          className="rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue"
+          className="rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue-ink"
           onClick={load}
         >
           Refresh

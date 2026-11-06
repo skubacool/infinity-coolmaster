@@ -36,7 +36,7 @@ const TEXT = {
       fair: 'About 0.8–1.0 kW/TR: reasonable, usually with room to improve.',
       poor: 'Above 1.0 kW/TR: typical of older or poorly controlled plants, often with large savings potential.',
     },
-    note: 'A single reading is a snapshot. Rough bands for water-cooled plants, not a standard.',
+    note: 'Estimate only. A single reading is a snapshot, and the bands are rough guides for water-cooled plants, not a standard. Actual figures must be measured and verified on site and agreed by both parties.',
     cta: 'Request a free cooling audit',
   },
   th: {
@@ -63,7 +63,7 @@ const TEXT = {
       fair: 'ประมาณ 0.8–1.0 kW/TR: พอใช้ มักยังปรับปรุงได้',
       poor: 'สูงกว่า 1.0 kW/TR: พบบ่อยในระบบเก่าหรือควบคุมไม่ดี มักมีศักยภาพประหยัดสูง',
     },
-    note: 'ค่าที่อ่านครั้งเดียวคือภาพ ณ ขณะนั้น เกณฑ์เป็นช่วงคร่าว ๆ สำหรับระบบระบายความร้อนด้วยน้ำ ไม่ใช่มาตรฐาน',
+    note: 'เป็นเพียงค่าประมาณการ ค่าที่อ่านครั้งเดียวคือภาพ ณ ขณะนั้น เกณฑ์เป็นช่วงคร่าว ๆ สำหรับระบบระบายความร้อนด้วยน้ำ ไม่ใช่มาตรฐาน ตัวเลขจริงต้องผ่านการตรวจวัดและตรวจสอบที่หน้างาน และตกลงร่วมกันของทั้งสองฝ่าย',
     cta: 'ขอรับการตรวจประเมินระบบทำความเย็นฟรี',
   },
 };
@@ -139,9 +139,9 @@ const EfficiencyCheck = (props: { locale: Locale }) => {
 
   const bandColor =
     result?.band === 'good'
-      ? 'text-brand-green'
+      ? 'text-brand-green-ink'
       : result?.band === 'fair'
-        ? 'text-brand-blue'
+        ? 'text-brand-blue-ink'
         : 'text-text-main';
 
   return (
@@ -167,7 +167,7 @@ const EfficiencyCheck = (props: { locale: Locale }) => {
                   onClick={() => setMode(option)}
                   className={`rounded-full border px-4 py-2 text-sm ${
                     mode === option
-                      ? 'border-brand-blue text-brand-blue font-semibold'
+                      ? 'border-brand-blue text-brand-blue-ink font-semibold'
                       : 'border-sep-light text-text-muted'
                   }`}
                 >

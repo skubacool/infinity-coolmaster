@@ -10,7 +10,7 @@ const ContentItem = (props: PropsWithChildren<ContentItemProps>) => {
   const { title, text, isCta } = props;
 
   const textColor = useMemo(() => {
-    return !isCta ? 'text-text-main' : 'text-brand-green font-semibold';
+    return !isCta ? 'text-text-main' : 'text-brand-green-ink font-semibold';
   }, [isCta]);
 
   return (

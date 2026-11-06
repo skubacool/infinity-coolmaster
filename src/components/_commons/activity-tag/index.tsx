@@ -2,6 +2,7 @@ import { PropsWithChildren, useMemo } from 'react';
 
 import { ActivityTag as ActivityTagModel } from '../../../models/activity';
 import { Locale } from '../../../models/_commons/localized';
+import { readableOnWhite } from '../../../utils/color-utils';
 
 export enum ActivityTagSize {
   normal = 'normal',
@@ -35,7 +36,7 @@ const ActivityTag = (props: PropsWithChildren<ActivityTagProps>) => {
   return (
     <div
       className="py-1 px-3 rounded-full"
-      style={{ backgroundColor: tag.color }}
+      style={{ backgroundColor: readableOnWhite(tag.color) }}
     >
       <span className={`block text-white uppercase tracking-wider ${fontSize}`}>
         {localizedTag}

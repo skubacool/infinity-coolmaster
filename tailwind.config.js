@@ -12,6 +12,10 @@ export default {
         'brand-green': '#10B981', // energy savings / sustainability
         'brand-blue': '#38BDF8', // chilled water / cooling dynamics
         'brand-green-soft': '#ECFDF5',
+        // Darker text shades of the brand colours: they pass WCAG AA (4.5:1)
+        // on white and the soft section backgrounds. Use them for any text.
+        'brand-green-ink': '#047F5C',
+        'brand-blue-ink': '#0275B3',
         'brand-blue-soft': '#F0F9FF',
         navy: '#0F172A',
         'navy-800': '#1E293B',
@@ -32,10 +36,11 @@ export default {
         'sep-pale': '#F1F5F9',
         'sep-light': '#E2E8F0',
         'sep-smoke': '#CBD5E1',
-        'title-pale': '#94A3B8',
+        'title-pale': '#64748B',
+        placeholder: '#94A3B8',
         'title-light': '#64748B',
         pale: '#F8FAFC',
-        'date-light': '#94A3B8',
+        'date-light': '#64748B',
       },
       backgroundImage: {
         // Signature gradient mirroring the infinity-loop logo (green -> blue)
@@ -46,7 +51,8 @@ export default {
           'linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 45%, #ECFDF5 100%)',
       },
       boxShadow: {
-        premium: '0 1px 2px rgba(15, 23, 42, .04), 0 8px 24px rgba(15, 23, 42, .06)',
+        premium:
+          '0 1px 2px rgba(15, 23, 42, .04), 0 8px 24px rgba(15, 23, 42, .06)',
         'premium-md':
           '0 2px 4px rgba(15, 23, 42, .04), 0 12px 32px rgba(15, 23, 42, .08)',
       },

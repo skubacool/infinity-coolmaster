@@ -59,7 +59,10 @@ const ScreenPage = () => {
         <SafeArea>
           <div className="max-w-[880px] gap-y-5 flex flex-col justify-start items-start">
             <nav aria-label="Breadcrumb" className="text-sm text-text-muted">
-              <Link className="hover:text-brand-blue" to={paths.home(locale)}>
+              <Link
+                className="hover:text-brand-blue-ink"
+                to={paths.home(locale)}
+              >
                 {meta.homeLabel}
               </Link>
               <span className="mx-2">/</span>
@@ -92,7 +95,7 @@ const ScreenPage = () => {
                 {guides.map((guide) => (
                   <li key={guide.id}>
                     <Link
-                      className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                      className="text-base lg:text-lg font-medium text-brand-blue-ink underline underline-offset-4"
                       to={paths.insight(locale, guide)}
                     >
                       {guide.title[locale]}

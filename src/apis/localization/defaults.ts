@@ -41,6 +41,13 @@ const localizations: LocalizedKeyText[] = [
     },
   },
   {
+    key: 'general.disclaimer',
+    text: {
+      th: 'ตัวเลขการประหยัด ผลการคำนวณ และตัวอย่างโครงการบนเว็บไซต์นี้เป็นเพียงค่าประมาณการเพื่อประกอบการพิจารณาเท่านั้น ข้อมูลจริงต้องผ่านการตรวจวัดและตรวจสอบหน้างาน และได้รับความเห็นชอบร่วมกันระหว่างคู่สัญญาก่อนนำไปใช้ในข้อเสนอหรือสัญญา',
+      en: 'Savings figures, calculator results and project examples on this website are estimates for general guidance only. Actual data must be measured and verified on site, and agreed by both parties before it is used in any proposal or contract.',
+    },
+  },
+  {
     key: 'general.tagline',
     text: {
       th: 'Smart Cooling. Zero Hassle.',
@@ -77,6 +84,10 @@ const localizations: LocalizedKeyText[] = [
     key: 'menu.contact',
     text: { th: 'ขอรับการประเมินฟรี', en: 'Request a Free Audit' },
   },
+  {
+    key: 'menu.contact-short',
+    text: { th: 'ประเมินฟรี', en: 'Free Audit' },
+  },
 
   // ---------- Front: hero ----------
   {
@@ -107,6 +118,24 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'front.cta-secondary',
     text: { th: 'ดูผลงานของเรา', en: 'Explore Case Studies' },
+  },
+  {
+    key: 'front.proof-1',
+    text: { th: 'ไม่ต้องลงทุน 0 บาท', en: '฿0 upfront investment' },
+  },
+  {
+    key: 'front.proof-2',
+    text: {
+      th: 'การันตีประหยัดขั้นต่ำ 10% ในสัญญา',
+      en: 'Minimum 10% saving, written into the contract',
+    },
+  },
+  {
+    key: 'front.proof-3',
+    text: {
+      th: 'ตรวจวัดผลตาม IPMVP ทุกเดือน',
+      en: 'Savings verified monthly to IPMVP',
+    },
   },
 
   // ---------- Front: benefits ----------
@@ -239,8 +268,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'estimator.result-note',
     text: {
-      th: 'เป็นเพียงค่าประมาณการเบื้องต้นจากค่าไฟรวม ตัวเลขจริงยืนยันได้จากการตรวจประเมินฟรีที่หน้างาน',
-      en: 'A rough estimate based on your total bill. Your exact figure is confirmed by a free on-site audit.',
+      th: 'เป็นเพียงค่าประมาณการเบื้องต้นจากค่าไฟรวม ไม่ใช่การรับประกัน ตัวเลขจริงต้องผ่านการตรวจวัดและตรวจสอบที่หน้างาน และตกลงร่วมกันก่อนจัดทำข้อเสนอ',
+      en: 'A rough estimate based on your total bill, not a guarantee. Your actual figure must be measured and verified on site, and agreed by both parties, before any proposal.',
     },
   },
   {

@@ -6,9 +6,10 @@ import { LocalizedText } from '../../../models/_commons/localized';
 import Icon, { iconNames } from '../icon';
 
 const inputClass =
-  'w-full rounded-lg border border-sep-light bg-white px-3 py-2 text-sm text-text-main placeholder:text-title-pale focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue';
+  'w-full rounded-lg border border-sep-light bg-white px-3 py-2 text-sm text-text-main placeholder:text-placeholder focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue';
 
-const labelClass = 'text-xs font-semibold text-text-muted uppercase tracking-wider';
+const labelClass =
+  'text-xs font-semibold text-text-muted uppercase tracking-wider';
 
 // ------------------------------------------------------------------------
 // Image input: URL box + preview + "Upload" button (R2 image storage)
@@ -284,7 +285,7 @@ const AdminField = (props: AdminFieldProps) => {
             ))}
             <button
               type="button"
-              className="self-start rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue"
+              className="self-start rounded-lg border border-sep-light text-xs font-semibold text-text-muted px-3 py-1.5 hover:border-brand-blue hover:text-brand-blue-ink"
               onClick={() => onChange([...photos, ''])}
             >
               + Add photo

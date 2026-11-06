@@ -41,7 +41,7 @@ const ScreenProject = () => {
           <div className="pb-10 flex flex-col">
             <SafeArea>
               <Link
-                className="text-base lg:text-lg font-medium text-brand-blue underline underline-offset-4"
+                className="text-base lg:text-lg font-medium text-brand-blue-ink underline underline-offset-4"
                 to={paths.page(locale, SECTOR_PAGE_BY_KEY[project.sector])}
               >
                 {siteMeta(locale).sectorLinkLabel}:{' '}

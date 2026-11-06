@@ -33,6 +33,19 @@ export const PUBLISHED_PAGES: PageKey[] = [
 ];
 
 /** Explainer pages linked from the footer's resources column. */
+/** Nav "Resources" dropdown: interactive tools first, then explainers. */
+export const RESOURCE_TOOL_PAGES: PageKey[] = [
+  'savings-calculator',
+  'chiller-efficiency-check',
+];
+export const RESOURCE_GUIDE_PAGES: PageKey[] = [
+  'pricing-model',
+  'caas-vs-buying-chiller',
+  'chiller-replacement',
+  'measurement-verification',
+  'glossary',
+];
+
 export const RESOURCE_PAGES: PageKey[] = [
   'chiller-efficiency-check',
   'glossary',

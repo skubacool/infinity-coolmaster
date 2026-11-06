@@ -38,7 +38,7 @@ const PageBodyView = (props: PageBodyViewProps) => {
                       key={item}
                       className="gap-x-3 flex flex-row items-start text-base lg:text-lg text-text-muted"
                     >
-                      <span className="mt-1 flex-shrink-0 text-brand-green">
+                      <span className="mt-1 flex-shrink-0 text-brand-green-ink">
                         <Icon name="guaranteed" size={18} />
                       </span>
                       <span>{item}</span>
@@ -101,7 +101,10 @@ const PageBodyView = (props: PageBodyViewProps) => {
                   className="scroll-mt-24 border-b border-sep-pale pb-6"
                 >
                   <dt className="text-lg lg:text-xl font-semibold text-text-main">
-                    <a className="hover:text-brand-blue" href={`#${entry.id}`}>
+                    <a
+                      className="hover:text-brand-blue-ink"
+                      href={`#${entry.id}`}
+                    >
                       {entry.term}
                     </a>
                   </dt>
@@ -128,7 +131,7 @@ const PageBodyView = (props: PageBodyViewProps) => {
                       <h3 className="flex-1 text-base lg:text-lg font-semibold text-text-main">
                         {faq.question}
                       </h3>
-                      <span className="flex-shrink-0 text-brand-blue transition-transform duration-200 group-open:rotate-180">
+                      <span className="flex-shrink-0 text-brand-blue-ink transition-transform duration-200 group-open:rotate-180">
                         <Icon name="arrow-down" size={18} />
                       </span>
                     </summary>

@@ -60,7 +60,7 @@ const ProjectBox = (props: PropsWithChildren<ProjectBoxProps>) => {
           />
           {/* Verified-savings badge — the headline number, front and center */}
           {savingsPct > 0 && (
-            <span className="absolute top-3 right-3 rounded-full bg-white/95 shadow-premium px-3.5 py-1.5 text-brand-green font-bold text-base leading-none">
+            <span className="absolute top-3 right-3 rounded-full bg-white/95 shadow-premium px-3.5 py-1.5 text-brand-green-ink font-bold text-base leading-none">
               −{savingsPct}%
             </span>
           )}

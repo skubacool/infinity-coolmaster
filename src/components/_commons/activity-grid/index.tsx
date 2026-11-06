@@ -12,7 +12,7 @@ export interface ActivityGridProps {
 const ActivityGrid = (props: PropsWithChildren<ActivityGridProps>) => {
   const { locale = 'en', activities } = props;
   return (
-    <ul className="lg:gap-x-8 gap-y-16 lg:gap-y-20 grid grid-cols-1 lg:grid-cols-3">
+    <ul className="sm:gap-x-6 lg:gap-x-8 gap-y-12 lg:gap-y-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {activities.map((activity: Activity) => {
         const { id } = activity;
         return (

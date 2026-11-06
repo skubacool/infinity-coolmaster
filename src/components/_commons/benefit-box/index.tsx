@@ -19,7 +19,7 @@ const BenefitBox = (props: PropsWithChildren<BenefitBoxProps>) => {
 
   return (
     <div className="h-full pt-4 flex flex-col justify-start items-stretch">
-      <div className="relative self-center mb-6 rounded-full w-[104px] h-[104px] box-border flex flex-col justify-center items-center bg-white border border-sep-pale shadow-premium text-brand-blue">
+      <div className="relative self-center mb-6 rounded-full w-[104px] h-[104px] box-border flex flex-col justify-center items-center bg-white border border-sep-pale shadow-premium text-brand-blue-ink">
         <Icon name={icon} size={42} />
         <div className="z-[1] absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-8 h-8 flex flex-col justify-center items-center bg-gradient-caas shadow-premium">
           <span className="text-white text-sm font-semibold">{seq}</span>

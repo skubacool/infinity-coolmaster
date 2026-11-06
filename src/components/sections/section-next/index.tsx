@@ -17,7 +17,7 @@ const SectionNext = (props: PropsWithChildren<SectionNextProps>) => {
       <SafeArea>
         <div className="mt-4 lg:mt-0 pt-16 flex flex-row justify-start items-center border-t border-t-sep-pale">
           <Link to={url}>
-            <span className="gap-x-3 inline-flex flex-row items-center text-title-light hover:text-brand-blue transition-colors text-base uppercase tracking-wider">
+            <span className="gap-x-3 inline-flex flex-row items-center text-title-light hover:text-brand-blue-ink transition-colors text-base uppercase tracking-wider">
               {text}
               <Icon name="arrow-right" size={20} />
             </span>

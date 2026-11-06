@@ -29,7 +29,7 @@ body {
 
   /* Tertiary CTA — crisp outline on white */
   .btn-outline {
-    @apply inline-flex flex-row justify-center items-center gap-x-2 rounded-full bg-white border border-sep-light px-7 py-3.5 text-text-main text-base font-semibold transition-all duration-200 hover:border-brand-blue hover:text-brand-blue;
+    @apply inline-flex flex-row justify-center items-center gap-x-2 rounded-full bg-white border border-sep-light px-7 py-3.5 text-text-main text-base font-semibold transition-all duration-200 hover:border-brand-blue hover:text-brand-blue-ink;
   }
 
   /* Headline accent matching the logo gradient */
@@ -42,7 +42,7 @@ body {
 
   /* Small uppercase section kicker */
   .kicker {
-    @apply inline-flex items-center gap-x-2 text-xs lg:text-sm font-semibold tracking-[0.2em] uppercase text-brand-green;
+    @apply inline-flex items-center gap-x-2 text-xs lg:text-sm font-semibold tracking-[0.2em] uppercase text-brand-green-ink;
   }
 
   /* Premium bright card */

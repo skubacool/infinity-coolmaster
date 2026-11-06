@@ -5,7 +5,6 @@ import { useVmScreen } from '../../../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../../../stores/vm-screen-front';
 import SafeArea from '../../../../_commons/safe-area';
 import ContactRow from '../../../../_commons/contact-row';
-import TextLines from '../../../../_commons/text-lines';
 import LeadForm from '../../../../_commons/lead-form';
 import Icon from '../../../../_commons/icon';
 
@@ -35,6 +34,16 @@ const SectionContact = () => {
   }, [contacts]);
 
   const mapUrl = useMemo(() => mapsContact?.url ?? null, [mapsContact]);
+
+  // The first line is the headline; the rest is supporting copy. One giant
+  // four-line heading was hard to scan.
+  const [pitchTitle, ...pitchRest] = l(
+    locale,
+    localizations,
+    'front.cta-contact'
+  ).split('\n');
+  const pitchBody = pitchRest.join(' ').trim();
+
   const mapText = useMemo(
     () => (mapsContact?.text ? mapsContact.text[locale] : null),
     [locale, mapsContact]
@@ -51,9 +60,14 @@ const SectionContact = () => {
             <span className="kicker">
               {l(locale, localizations, 'front.title-contact')}
             </span>
-            <p className="mt-4 lg:mt-6 text-text-main text-2xl lg:text-4hxl font-semibold !leading-[1.25]">
-              <TextLines text={l(locale, localizations, 'front.cta-contact')} />
-            </p>
+            <h2 className="mt-4 lg:mt-6 text-text-main text-2xl lg:text-4hxl font-semibold !leading-[1.2]">
+              {pitchTitle}
+            </h2>
+            {pitchBody && (
+              <p className="mt-4 max-w-[560px] text-base lg:text-lg text-text-muted">
+                {pitchBody}
+              </p>
+            )}
             <ul className="mt-8 gap-y-4 flex flex-col justify-start items-start">
               {addressContact && (
                 <li>
@@ -84,7 +98,7 @@ const SectionContact = () => {
             </ul>
             {mapUrl && (
               <a
-                className="mt-8 gap-x-2 inline-flex flex-row justify-start items-center text-brand-blue"
+                className="mt-8 gap-x-2 inline-flex flex-row justify-start items-center text-brand-blue-ink"
                 target="_blank"
                 href={mapUrl}
                 rel="noreferrer"

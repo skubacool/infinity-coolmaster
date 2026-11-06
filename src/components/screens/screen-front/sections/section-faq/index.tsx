@@ -27,12 +27,15 @@ const SectionFaq = () => {
             {faqs.map((faq) => {
               const { id, question, answer } = faq;
               return (
-                <details key={id} className="card-premium group overflow-hidden">
+                <details
+                  key={id}
+                  className="card-premium group overflow-hidden"
+                >
                   <summary className="cursor-pointer select-none list-none px-6 py-5 gap-x-4 flex flex-row justify-start items-center">
                     <span className="flex-1 text-base lg:text-lg font-semibold text-text-main">
                       {question[locale]}
                     </span>
-                    <span className="flex-shrink-0 text-brand-blue transition-transform duration-200 group-open:rotate-180">
+                    <span className="flex-shrink-0 text-brand-blue-ink transition-transform duration-200 group-open:rotate-180">
                       <Icon name="arrow-down" size={18} />
                     </span>
                   </summary>

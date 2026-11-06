@@ -72,6 +72,8 @@ const meta: SiteMeta = {
   relatedPages: 'Read next',
   relatedCaseStudies: 'Related case studies',
   resourcesTitle: 'Resources',
+  resourcesTools: 'Tools',
+  resourcesGuides: 'Guides',
   sectorsTitle: 'Sectors',
   sectorLinkLabel: 'How it works for this sector',
   calculatorTeaserTitle: 'Estimate your savings',

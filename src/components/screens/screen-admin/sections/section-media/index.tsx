@@ -1,11 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { mediaSlots } from '../../../../../config/cms-schema';
-import {
-  deleteRow,
-  listRows,
-  upsertRow,
-} from '../../../../../apis/admin';
+import { deleteRow, listRows, upsertRow } from '../../../../../apis/admin';
 import defaultMedia from '../../../../../apis/media/defaults';
 import { ImageInput } from '../../../../_commons/admin-field';
 import Loading from '../../../../_commons/loading';
@@ -32,7 +28,9 @@ const SectionMedia = () => {
       const next: Record<string, SlotState> = {};
       for (const slot of mediaSlots) {
         const row = rows.find((r) => r.key === slot.key);
-        const url = row ? String((row.data as { url?: string }).url ?? '') : null;
+        const url = row
+          ? String((row.data as { url?: string }).url ?? '')
+          : null;
         next[slot.key] = { draft: url ?? defaultUrl(slot.key), saved: url };
       }
       setSlots(next);
@@ -95,7 +93,7 @@ const SectionMedia = () => {
         Changes appear on the website immediately — no redeploy needed.
       </p>
       {message && (
-        <p className="text-sm font-medium text-brand-green">{message}</p>
+        <p className="text-sm font-medium text-brand-green-ink">{message}</p>
       )}
       {mediaSlots.map((slot) => {
         const state = slots[slot.key];
@@ -114,7 +112,7 @@ const SectionMedia = () => {
               <span
                 className={`text-2xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                   overridden
-                    ? 'bg-brand-green-soft text-brand-green'
+                    ? 'bg-brand-green-soft text-brand-green-ink'
                     : 'bg-pale text-title-pale'
                 }`}
               >
@@ -127,7 +125,9 @@ const SectionMedia = () => {
               folder="banners"
               onChange={(url) =>
                 setSlots((prev) =>
-                  prev ? { ...prev, [slot.key]: { ...prev[slot.key], draft: url } } : prev
+                  prev
+                    ? { ...prev, [slot.key]: { ...prev[slot.key], draft: url } }
+                    : prev
                 )
               }
             />
