@@ -62,6 +62,15 @@ if (
   );
 }
 
+// OG_EXPORT=<file>: write guide titles for scripts/og-images.py, then stop.
+if (process.env.OG_EXPORT) {
+  await fs.writeFile(
+    process.env.OG_EXPORT,
+    JSON.stringify(await server.guideTitles(), null, 2)
+  );
+  console.log(`guide titles written to ${process.env.OG_EXPORT}`);
+}
+
 const legacy = await server.legacyIdMap();
 const baseTemplate = template.replace(
   /\/\*ICM_LEGACY\*\/\s*\{\s*p:\s*\{\},\s*a:\s*\{\}\s*\}/,
@@ -212,24 +221,10 @@ const robots = [
 ].join('\n');
 await fs.writeFile(path.join(dist, 'robots.txt'), robots);
 
-// llms.txt: plain-text summary for AI assistants (optional, cheap).
-const llms = [
-  '# Infinity CoolMaster',
-  '',
-  "> Infinity CoolMaster is a chiller-as-a-service (Cooling-as-a-Service) provider in Bangkok, Thailand. We design, finance, install and operate the chiller plant at a client's building with zero upfront investment; the client pays for the cooling it uses, with energy savings measured and verified to IPMVP.",
-  '',
-  'Infinity CoolMaster Co., Ltd. (DBD registration no. 0105566016285, registered January 2023). Office: 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Phone: +66 2 026 3344. Email: sales@infinitycoolmaster.com.',
-  '',
-  '## Key pages',
-  '',
-  ...sitemapEntries
-    .filter((e) => e.loc.includes('/en/'))
-    .map((e) => `- ${e.loc}`),
-  '',
-  'Thai versions of every page are under /th/.',
-  '',
-].join('\n');
-await fs.writeFile(path.join(dist, 'llms.txt'), llms);
+// llms.txt (index) and llms-full.txt (all text) for AI assistants.
+const llms = await server.buildLlmsFiles();
+await fs.writeFile(path.join(dist, 'llms.txt'), llms.short);
+await fs.writeFile(path.join(dist, 'llms-full.txt'), llms.full);
 
 await fs.rm(ssrDir, { recursive: true, force: true });
 console.log(

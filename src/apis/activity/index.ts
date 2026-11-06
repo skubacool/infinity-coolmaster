@@ -1,7 +1,7 @@
 import { Activity } from '../../models/activity';
 import { fetchCollection } from '../_commons/cms';
 import { activitySlug, findBySlug } from '../../config/routes';
-import { builtInGuides } from '../../content/articles';
+import { loadBuiltInGuides } from '../../content/articles/load';
 import defaultActivities from './defaults';
 
 /**
@@ -13,6 +13,7 @@ const listAll = async (): Promise<Activity[]> => {
     'activities',
     defaultActivities
   );
+  const builtInGuides = await loadBuiltInGuides();
   const taken = new Set(articles.map((a) => activitySlug(a)));
   const merged = [
     ...articles,

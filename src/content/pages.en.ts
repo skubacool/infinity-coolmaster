@@ -490,6 +490,279 @@ const pages: PageBodies = {
       COMMON_FAQS.shortfall,
     ],
   },
+  glossary: {
+    sections: [],
+    terms: [
+      {
+        id: 'tr',
+        term: 'Ton of refrigeration (TR)',
+        definition:
+          'A rate of cooling equal to 12,000 BTU per hour, or about 3.517 kW of heat removed. Chiller and plant sizes in Thailand are usually stated in TR.',
+      },
+      {
+        id: 'kw-per-tr',
+        term: 'kW/TR',
+        definition:
+          'The electrical power a chiller or a whole chiller plant uses for each ton of cooling it delivers. Lower is better; whole-plant kW/TR includes chillers, pumps and cooling-tower fans.',
+      },
+      {
+        id: 'cop',
+        term: 'Coefficient of performance (COP)',
+        definition:
+          'Cooling delivered divided by electrical power used, both in kW. COP = 3.517 ÷ kW/TR, so a plant at 0.80 kW/TR has a COP of about 4.4. Higher is better.',
+      },
+      {
+        id: 'iplv',
+        term: 'IPLV / NPLV',
+        definition:
+          'Integrated (or non-standard) part load value: a single efficiency figure that weights a chiller’s performance at 100%, 75%, 50% and 25% load. It reflects real operation better than full-load efficiency, because chillers spend most hours at part load.',
+      },
+      {
+        id: 'chiller',
+        term: 'Chiller',
+        definition:
+          'A machine that produces chilled water by removing heat with a refrigeration cycle. The chilled water is pumped to air-handling units and process equipment.',
+      },
+      {
+        id: 'water-cooled-chiller',
+        term: 'Water-cooled chiller',
+        definition:
+          'A chiller that rejects heat into condenser water, which is cooled in cooling towers. Usually the most efficient choice for large plants in hot climates.',
+      },
+      {
+        id: 'air-cooled-chiller',
+        term: 'Air-cooled chiller',
+        definition:
+          'A chiller that rejects heat directly to outdoor air through fans and coils. It needs no cooling towers or water treatment but loses efficiency as outdoor temperature rises.',
+      },
+      {
+        id: 'cooling-tower',
+        term: 'Cooling tower',
+        definition:
+          'Equipment that cools condenser water by evaporating a small part of it into the air. It needs water treatment to prevent scale, corrosion and biological growth.',
+      },
+      {
+        id: 'chilled-water',
+        term: 'Chilled water',
+        definition:
+          'The cold water a chiller produces and pumps around the building or process to absorb heat; it returns warmer and is cooled again.',
+      },
+      {
+        id: 'condenser-water',
+        term: 'Condenser water',
+        definition:
+          'The water loop that carries heat from a water-cooled chiller to the cooling towers.',
+      },
+      {
+        id: 'delta-t',
+        term: 'Delta-T (ΔT)',
+        definition:
+          'The temperature difference between chilled water leaving and returning to the plant. A low delta-T means more water must be pumped and more chillers run for the same cooling.',
+      },
+      {
+        id: 'vsd',
+        term: 'Variable-speed drive (VSD)',
+        definition:
+          'An electronic drive that changes a motor’s speed to match the load. Because pump and fan power rises steeply with speed, slowing them at part load saves a lot of energy.',
+      },
+      {
+        id: 'variable-primary-flow',
+        term: 'Variable primary flow',
+        definition:
+          'A chilled-water system design in which the chiller pumps vary their flow with the load, instead of running at constant flow with separate secondary pumps.',
+      },
+      {
+        id: 'magnetic-bearing-chiller',
+        term: 'Magnetic-bearing chiller',
+        definition:
+          'A centrifugal chiller whose compressor shaft floats on magnetic bearings, with no oil and very low friction. Typically very efficient at part load.',
+      },
+      {
+        id: 'part-load',
+        term: 'Part load',
+        definition:
+          'Operation below a plant’s full design capacity. Most chiller plants spend most of the year at part load, so part-load efficiency matters most.',
+      },
+      {
+        id: 'baseline',
+        term: 'Baseline (energy baseline)',
+        definition:
+          'A model of how much energy a facility would use without an improvement, built from data measured before the project and adjusted for weather, occupancy or production. Savings are measured against it.',
+      },
+      {
+        id: 'ipmvp',
+        term: 'IPMVP',
+        definition:
+          'The International Performance Measurement and Verification Protocol: the international standard for proving energy savings by comparing actual energy use with an adjusted baseline. It offers Options A, B, C and D.',
+      },
+      {
+        id: 'm-and-v',
+        term: 'Measurement and verification (M&V)',
+        definition:
+          'The process of metering, calculating and reporting energy savings, usually following IPMVP, so both parties can check a savings guarantee.',
+      },
+      {
+        id: 'cmvp',
+        term: 'CMVP',
+        definition:
+          'Certified Measurement and Verification Professional: a certification for engineers who plan and review M&V, issued under the organisation behind IPMVP.',
+      },
+      {
+        id: 'esco',
+        term: 'ESCO',
+        definition:
+          'Energy service company: a company that delivers energy-saving projects, often under an energy-performance contract that guarantees savings. The client often funds or owns the equipment.',
+      },
+      {
+        id: 'caas',
+        term: 'Cooling-as-a-Service (CaaS)',
+        definition:
+          'A model in which a provider designs, finances, installs, owns and operates a cooling plant, and the client pays for the cooling instead of buying equipment. Also called chiller-as-a-service.',
+      },
+      {
+        id: 'pue',
+        term: 'Power usage effectiveness (PUE)',
+        definition:
+          'A data center’s total energy divided by the energy used by its IT equipment. A PUE of 1.0 would mean no overhead; cooling is usually the largest part of the overhead.',
+      },
+      {
+        id: 'redundancy',
+        term: 'N, N+1 and 2N',
+        definition:
+          'Levels of redundancy. N is just enough capacity for the load; N+1 adds one spare unit; 2N means two complete independent systems, each able to carry the full load.',
+      },
+      {
+        id: 'tou',
+        term: 'TOU tariff',
+        definition:
+          'A time-of-use electricity tariff with a higher price in peak hours (in Thailand, generally 09:00–22:00 on weekdays) and a lower price off-peak, nights, weekends and holidays.',
+      },
+      {
+        id: 'ft',
+        term: 'Ft charge',
+        definition:
+          'Thailand’s automatic tariff adjustment for fuel and power-purchase costs, added to each unit of electricity and reviewed by the Energy Regulatory Commission every four months.',
+      },
+      {
+        id: 'designated-facility',
+        term: 'Designated factory or building',
+        definition:
+          'Under Thailand’s Energy Conservation Promotion Act, a factory or building with an electricity meter of 1,000 kW or more, transformers of 1,175 kVA or more, or energy use of 20 million MJ a year or more. It must appoint a person responsible for energy and manage its energy use.',
+      },
+      {
+        id: 'hfc',
+        term: 'HFC refrigerants and the Kigali Amendment',
+        definition:
+          'Hydrofluorocarbons are refrigerants with high global-warming potential. The Kigali Amendment to the Montreal Protocol phases them down; Thailand ratified it in April 2024.',
+      },
+      {
+        id: 'thermal-energy-storage',
+        term: 'Thermal energy storage',
+        definition:
+          'Storing cooling as chilled water or ice, usually made off-peak at night, and using it during peak hours to cut peak electricity demand and cost.',
+      },
+      {
+        id: 'cpms',
+        term: 'Chiller plant management system (CPMS)',
+        definition:
+          'Software that monitors and controls a chiller plant as one system. Infinity CoolMaster’s CPMS uses machine learning to set chillers, pumps and cooling towers for the lowest total power.',
+      },
+    ],
+  },
+  'chiller-efficiency-check': {
+    sections: [
+      {
+        heading: 'What to measure',
+        bullets: [
+          'Electrical power (kW) of the chillers, chilled-water pumps, condenser-water pumps and cooling-tower fans, from meters or a power logger.',
+          'Cooling output: either the TR reading from a BTU or energy meter, or chilled-water flow (m³/h) with supply and return temperatures.',
+          'Take all readings at the same time, under normal operation, and repeat at different loads and times of day.',
+        ],
+      },
+      {
+        heading: 'How to read the result',
+        paragraphs: [
+          'A single reading is a snapshot. Plants spend most hours at part load, so the number that matters for cost is the average over a full year. Use this check to see roughly where your plant stands, then measure properly.',
+        ],
+        table: {
+          headers: ['Whole-plant kW/TR', 'Rough reading (water-cooled plants)'],
+          rows: [
+            ['About 0.6–0.8', 'A well-designed, well-controlled modern plant'],
+            ['About 0.8–1.0', 'Reasonable, usually with room to improve'],
+            [
+              'Above 1.0',
+              'Typical of older or poorly controlled plants, often with large savings potential',
+            ],
+          ],
+        },
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why include pumps and cooling towers?',
+        answer:
+          'Your electricity bill pays for the whole plant. A very efficient chiller with oversized constant-speed pumps can still make an inefficient plant, so whole-plant kW/TR is the figure that matters for cost.',
+      },
+      {
+        question: 'Are these bands a standard?',
+        answer:
+          'No. They are rough bands often quoted in engineering literature for water-cooled plants. Climate, load profile and plant type all shift them; a proper audit compares your plant with what a redesign could achieve.',
+      },
+      {
+        question: 'What if my plant scores poorly?',
+        answer:
+          'Request a free cooling audit. We analyse 12 months of bills and survey the plant; under Cooling-as-a-Service we can fund the improvement and guarantee a minimum 10% saving in writing.',
+      },
+    ],
+  },
+  'eastern-economic-corridor': {
+    sector: 'industrial',
+    sections: [
+      {
+        heading: 'Why the EEC',
+        paragraphs: [
+          'Rayong, Chonburi and Chachoengsao host a large share of Thailand’s manufacturing: plastics, automotive, electronics, petrochemicals and food. Many of these factories depend on chilled water for their processes, and many run plants that are oversized, ageing or controlled at fixed settings.',
+          'Our first Cooling-as-a-Service plant is in Nikhom Phatthana, Rayong, for Platinum Pro Plastic, an injection-moulding manufacturer of plastic pallets, crates and bins.',
+        ],
+      },
+      {
+        heading: 'How it works for a factory',
+        bullets: [
+          'Free audit: 12 months of electricity bills, production data and a survey of the plant.',
+          'Written proposal with the guaranteed saving, contract terms and an IPMVP-aligned baseline adjusted for production and weather.',
+          'We fund and install the plant around your production schedule, keeping cooling running throughout.',
+          'We own, operate and maintain the plant for a typical 5–10 year term, with 24/7 monitoring.',
+          'Monthly savings reports; if the saving falls below the guarantee, we pay the difference.',
+        ],
+      },
+      {
+        heading: 'What we look at in a factory plant',
+        bullets: [
+          'Which loads truly need chilled water and which can run on warmer cooling-tower water.',
+          'Stable supply temperature for moulds and processes, at the flow each machine needs.',
+          'Plant output that follows production across shifts, weekends and holidays.',
+          'Peak-hour electricity under TOU tariffs, and whether the site is a designated factory under the energy conservation law.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you only work in the EEC?',
+        answer:
+          'No. We serve buildings and factories across Thailand; this page covers the eastern industrial provinces, where our first project is.',
+      },
+      {
+        question: 'Will installation stop production?',
+        answer:
+          'No. Work is planned around your production schedule, switchovers happen outside production hours where possible, and redundancy is kept in place throughout.',
+      },
+      {
+        question: 'Do we need to invest anything?',
+        answer:
+          'No. Infinity CoolMaster funds the plant and you pay for cooling from the savings, with a minimum 10% energy saving guaranteed in writing.',
+      },
+    ],
+  },
 };
 
 export default pages;

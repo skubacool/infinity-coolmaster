@@ -14,6 +14,9 @@ import { en2 } from './en2';
 import { th2 } from './th2';
 import { en3 } from './en3';
 import { th3 } from './th3';
+import { en4 } from './en4';
+import { th4 } from './th4';
+import { KEY_POINTS } from './keypoints';
 
 /**
  * Evergreen guides kept in code (not in the CMS), so they are always on the
@@ -23,11 +26,13 @@ import { th3 } from './th3';
  *
  * Ids start at 1001 to stay clear of CMS item numbers.
  */
-const EN = { ...en, ...en2, ...en3 };
-const TH = { ...th, ...th2, ...th3 };
+const EN = { ...en, ...en2, ...en3, ...en4 };
+const TH = { ...th, ...th2, ...th3, ...th4 };
 type Key = keyof typeof EN;
 
 const PUBLISHED = '2026-11-03';
+/** Published with the second content release. */
+const PUBLISHED_2 = '2026-11-05';
 
 const guide = (
   id: number,
@@ -45,71 +50,18 @@ const guide = (
   tag: extra.tag,
   type: extra.type,
   title: { en: EN[key].title, th: TH[key].title },
+  keyPoints: KEY_POINTS[key]
+    ? {
+        en: KEY_POINTS[key].en.join('\n'),
+        th: KEY_POINTS[key].th.join('\n'),
+      }
+    : undefined,
   excerpt: { en: EN[key].excerpt, th: TH[key].excerpt },
   details: { en: EN[key].body, th: TH[key].body },
-  publishedAt: PUBLISHED,
+  publishedAt: id >= 1016 ? PUBLISHED_2 : PUBLISHED,
   nextActivityId: extra.nextActivityId,
   relatedPages: extra.relatedPages,
 });
-
-/** Guides listed as "Further reading" on each standalone page. */
-export const GUIDES_BY_PAGE: Record<string, string[]> = {
-  hotels: [
-    'hotel-resort-cooling-cost-reduction',
-    'what-is-cooling-as-a-service',
-    'reduce-chiller-plant-energy-use',
-  ],
-  hospitals: [
-    'hospital-cooling-redundancy-n-plus-1-2n',
-    'what-is-cooling-as-a-service',
-    'signs-chiller-plant-needs-replacing',
-  ],
-  'shopping-malls': [
-    'reduce-chiller-plant-energy-use',
-    'water-cooled-vs-air-cooled-chillers',
-    'kw-per-tr-chiller-plant-efficiency',
-  ],
-  factories: [
-    'plastics-factory-process-cooling',
-    'first-cooling-as-a-service-project-commissioning',
-    'chiller-plant-maintenance-checklist',
-  ],
-  'office-buildings': [
-    'signs-chiller-plant-needs-replacing',
-    'chiller-replacement-cost-factors',
-    'cooling-as-a-service-cfo-questions',
-  ],
-  'data-centers': [
-    'data-center-cooling-pue',
-    'kw-per-tr-chiller-plant-efficiency',
-    'ipmvp-options-a-b-c-d-explained',
-  ],
-  'pricing-model': [
-    'cooling-as-a-service-cfo-questions',
-    'cooling-as-a-service-contract-length-end-of-term',
-    'what-is-cooling-as-a-service',
-  ],
-  'caas-vs-buying-chiller': [
-    'what-is-cooling-as-a-service',
-    'cooling-as-a-service-cfo-questions',
-    'chiller-replacement-cost-factors',
-  ],
-  'chiller-replacement': [
-    'signs-chiller-plant-needs-replacing',
-    'chiller-replacement-cost-factors',
-    'water-cooled-vs-air-cooled-chillers',
-  ],
-  'measurement-verification': [
-    'ipmvp-options-a-b-c-d-explained',
-    'kw-per-tr-chiller-plant-efficiency',
-    'cooling-as-a-service-cfo-questions',
-  ],
-  'savings-calculator': [
-    'reduce-chiller-plant-energy-use',
-    'kw-per-tr-chiller-plant-efficiency',
-    'chiller-replacement-cost-factors',
-  ],
-};
 
 export const builtInGuides: Activity[] = [
   guide(1001, 'whatIsCaas', 'what-is-cooling-as-a-service', {
@@ -223,8 +175,50 @@ export const builtInGuides: Activity[] = [
   guide(1015, 'plasticsCooling', 'plastics-factory-process-cooling', {
     tag: tagTech,
     type: typeTechnical,
-    nextActivityId: 1001,
+    nextActivityId: 1016,
     thumbnail: 'assets/placeholders/facility-industrial.svg',
     relatedPages: ['factories', 'chiller-replacement'],
+  }),
+  guide(1016, 'touFt', 'thailand-tou-ft-electricity-chiller-cost', {
+    tag: tagTech,
+    type: typeGuide,
+    nextActivityId: 1017,
+    thumbnail: 'assets/placeholders/facility-commercial.svg',
+    relatedPages: ['savings-calculator', 'chiller-efficiency-check'],
+  }),
+  guide(1017, 'energyLaw', 'designated-factory-building-energy-law-thailand', {
+    tag: tagCaas,
+    type: typeGuide,
+    nextActivityId: 1018,
+    thumbnail: 'assets/placeholders/facility-industrial.svg',
+    relatedPages: ['factories', 'measurement-verification'],
+  }),
+  guide(1018, 'foodCold', 'food-beverage-factory-cooling', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1019,
+    thumbnail: 'assets/placeholders/facility-retail.svg',
+    relatedPages: ['factories', 'eastern-economic-corridor'],
+  }),
+  guide(1019, 'pharmaCleanroom', 'pharmaceutical-cleanroom-cooling', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1020,
+    thumbnail: 'assets/placeholders/facility-healthcare.svg',
+    relatedPages: ['factories', 'hospitals'],
+  }),
+  guide(1020, 'caasVsEsco', 'cooling-as-a-service-vs-esco-thailand', {
+    tag: tagCaas,
+    type: typeGuide,
+    nextActivityId: 1021,
+    thumbnail: 'assets/placeholders/facility-commercial.svg',
+    relatedPages: ['caas-vs-buying-chiller', 'pricing-model'],
+  }),
+  guide(1021, 'refrigerants', 'refrigerant-phase-down-r22-kigali-thailand', {
+    tag: tagTech,
+    type: typeTechnical,
+    nextActivityId: 1001,
+    thumbnail: 'assets/placeholders/facility-industrial.svg',
+    relatedPages: ['chiller-replacement', 'glossary'],
   }),
 ];

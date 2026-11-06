@@ -26,11 +26,16 @@ export const PUBLISHED_PAGES: PageKey[] = [
   'savings-calculator',
   'measurement-verification',
   'contact',
+  'glossary',
+  'chiller-efficiency-check',
+  'eastern-economic-corridor',
   // 'team' — needs real names, photos, licences and LinkedIn profiles.
 ];
 
 /** Explainer pages linked from the footer's resources column. */
 export const RESOURCE_PAGES: PageKey[] = [
+  'chiller-efficiency-check',
+  'glossary',
   'pricing-model',
   'caas-vs-buying-chiller',
   'chiller-replacement',
@@ -59,4 +64,5 @@ export const SECTOR_PAGES: PageKey[] = [
   'factories',
   'office-buildings',
   'data-centers',
+  'eastern-economic-corridor',
 ];

@@ -49,3 +49,43 @@ export const trackPageView = (path: string): void => {
     send_to: GA_MEASUREMENT_ID,
   });
 };
+
+/** Sends a named GA4 event; no-op without gtag (local dev, blockers). */
+export const trackEvent = (
+  name: string,
+  params: Record<string, unknown> = {}
+): void => {
+  const gtag = getGtag();
+  if (!gtag) return;
+  gtag('event', name, { ...params, send_to: GA_MEASUREMENT_ID });
+};
+
+/**
+ * Records clicks on phone, email and LINE links anywhere on the site as GA4
+ * events (contact_click with method tel / email / line), so reports show
+ * which pages lead to direct contact. Call once in the browser.
+ */
+export const installContactTracking = (): void => {
+  if (typeof document === 'undefined') return;
+  document.addEventListener(
+    'click',
+    (event) => {
+      const link = (event.target as HTMLElement | null)?.closest?.('a');
+      const href = link?.getAttribute('href') ?? '';
+      const method = href.startsWith('tel:')
+        ? 'tel'
+        : href.startsWith('mailto:')
+          ? 'email'
+          : /(^|\/\/)(line\.me|lin\.ee)\//.test(href)
+            ? 'line'
+            : null;
+      if (!method) return;
+      trackEvent('contact_click', {
+        method,
+        link_url: href,
+        page_location: window.location.origin + window.location.pathname,
+      });
+    },
+    { capture: true }
+  );
+};

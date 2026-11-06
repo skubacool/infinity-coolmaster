@@ -42,6 +42,13 @@ export interface SiteMeta {
   firstProjectUpdateLink: string;
   faqTitle: string;
   lastUpdated: string;
+  keyPointsTitle: string;
+  tocTitle: string;
+  readingTime: (minutes: number) => string;
+  shareTitle: string;
+  copyLink: string;
+  linkCopied: string;
+  sourcesTitle: string;
   furtherReading: string;
   relatedPages: string;
   relatedCaseStudies: string;

@@ -148,6 +148,7 @@ export const listCollections: CmsListCollection[] = [
       { name: 'title', label: 'Headline', type: 'localized' },
       { name: 'slug', label: 'Web address (slug)', type: 'text', help: 'Lower-case words joined by hyphens, e.g. cfo-guide-cooling-as-a-service. Leave empty to use the English title. Changing it later breaks links already shared — redeploy the site after adding or renaming.' },
       { name: 'excerpt', label: 'Short teaser', type: 'localized-multiline' },
+      { name: 'keyPoints', label: 'Key points (optional)', type: 'localized-multiline', help: 'Three or four short sentences, one per line, that answer the article on their own. Shown in a box at the top; search engines and AI assistants quote them.' },
       { name: 'details', label: 'Article body', type: 'localized-multiline', help: 'Leave a blank line between paragraphs. Start a line with "## " for a heading, "### " for a sub-heading, and "- " for each bullet point.' },
       { name: 'publishedAt', label: 'Publish date', type: 'date' },
       { name: 'updatedAt', label: 'Last updated (optional)', type: 'date', help: 'Set when you make a substantive change; shown on the article and to search engines.' },

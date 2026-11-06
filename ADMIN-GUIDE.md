@@ -132,6 +132,9 @@ Delete. Extra fields:
 - **Article body** formatting: start a line with `## ` for a heading,
   `### ` for a sub-heading and `- ` for each bullet point; leave an empty
   line between paragraphs.
+- **Key points** — three or four short sentences, one per line, that answer
+  the article on their own. They appear in a box at the top of the article,
+  and search engines and AI assistants quote them first.
 - **Last updated** — set it when you change an article substantially; it is
   shown on the page and to search engines.
 

@@ -34,7 +34,8 @@ import { resolveProject } from '../stores/vm-screen-project';
 import { resolveActivity } from '../stores/vm-screen-activity';
 import { Head, absoluteUrl } from './head';
 import { siteMeta, isDraftPage, SECTOR_PAGES } from './pages';
-import { pageBody } from '../content';
+import { resolvePageContent } from '../stores/vm-screen-page';
+import { OG_IMAGE_SLUGS } from '../content/articles/og';
 import { ORGANIZATION, DEFAULT_SHARE_IMAGE } from './organization';
 
 export type RouteMatch =
@@ -201,11 +202,13 @@ const articleLd = (args: {
   image: string;
   datePublished?: string;
   dateModified?: string;
+  abstract?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: truncate(args.headline, 110),
   description: args.description,
+  ...(args.abstract ? { abstract: args.abstract } : {}),
   image: [args.image],
   inLanguage: args.locale,
   mainEntityOfPage: absoluteUrl(args.path),
@@ -512,7 +515,9 @@ export const resolvePage = async (
         bothLocales((l) => paths.insight(l, activity)),
         {
           ogType: 'article',
-          ogImage: shareImage(activity.banner || activity.thumbnail),
+          ogImage: OG_IMAGE_SLUGS.includes(activitySlug(activity))
+            ? `${SITE_ORIGIN}/assets/og/${activitySlug(activity)}-${locale}.jpg`
+            : shareImage(activity.banner || activity.thumbnail),
         }
       );
       head.jsonLd.push(
@@ -524,6 +529,10 @@ export const resolvePage = async (
           image: head.ogImage,
           datePublished: activity.publishedAt || undefined,
           dateModified: activity.updatedAt || undefined,
+          abstract: activity.keyPoints?.[locale]
+            ?.split('\n')
+            .filter(Boolean)
+            .join(' '),
         }),
         breadcrumbLd([
           home,
@@ -549,7 +558,12 @@ export const resolvePage = async (
         }
       );
       if (match.page === 'contact') head.jsonLd.push(localBusinessLd());
-      const body = pageBody(locale, match.page);
+      const { body, guides } = await resolvePageContent(locale, match.page);
+      if (withSeed) {
+        seed['page.for'] = `${locale}/${match.page}`;
+        seed['page.body'] = body;
+        seed['page.guides'] = guides;
+      }
       if (body?.faqs?.length) {
         head.jsonLd.push({
           '@context': 'https://schema.org',
@@ -558,6 +572,24 @@ export const resolvePage = async (
             '@type': 'Question',
             name: faq.question,
             acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+          })),
+        });
+      }
+      if (body?.terms?.length) {
+        const setUrl = absoluteUrl(paths.page(locale, match.page));
+        head.jsonLd.push({
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          '@id': `${setUrl}#terms`,
+          name: text.h1,
+          url: setUrl,
+          inLanguage: locale,
+          hasDefinedTerm: body.terms.map((entry) => ({
+            '@type': 'DefinedTerm',
+            name: entry.term,
+            description: entry.definition,
+            url: `${setUrl}#${entry.id}`,
+            inDefinedTermSet: `${setUrl}#terms`,
           })),
         });
       }
