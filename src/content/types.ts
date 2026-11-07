@@ -5,6 +5,8 @@ export interface PageSection {
   paragraphs?: string[];
   bullets?: string[];
   table?: { headers: string[]; rows: string[][] };
+  /** External source cited under the section, rendered as a link. */
+  source?: { label: string; url: string };
 }
 
 export interface PageFaq {

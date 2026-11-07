@@ -29,6 +29,10 @@ export const PUBLISHED_PAGES: PageKey[] = [
   'glossary',
   'chiller-efficiency-check',
   'eastern-economic-corridor',
+  'cooling-contract-calculator',
+  'cost-of-waiting-calculator',
+  'carbon-calculator',
+  'engineer-downloads',
   // 'team' — needs real names, photos, licences and LinkedIn profiles.
 ];
 
@@ -36,7 +40,10 @@ export const PUBLISHED_PAGES: PageKey[] = [
 /** Nav "Resources" dropdown: interactive tools first, then explainers. */
 export const RESOURCE_TOOL_PAGES: PageKey[] = [
   'savings-calculator',
+  'cooling-contract-calculator',
   'chiller-efficiency-check',
+  'cost-of-waiting-calculator',
+  'carbon-calculator',
 ];
 export const RESOURCE_GUIDE_PAGES: PageKey[] = [
   'pricing-model',
@@ -44,9 +51,14 @@ export const RESOURCE_GUIDE_PAGES: PageKey[] = [
   'chiller-replacement',
   'measurement-verification',
   'glossary',
+  'engineer-downloads',
 ];
 
 export const RESOURCE_PAGES: PageKey[] = [
+  'cooling-contract-calculator',
+  'cost-of-waiting-calculator',
+  'carbon-calculator',
+  'engineer-downloads',
   'chiller-efficiency-check',
   'glossary',
   'pricing-model',

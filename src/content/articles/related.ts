@@ -35,11 +35,13 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'ipmvp-options-a-b-c-d-explained',
   ],
   'pricing-model': [
+    'cooling-as-a-service-vs-leasing-chiller',
     'cooling-as-a-service-cfo-questions',
     'cooling-as-a-service-contract-length-end-of-term',
     'what-is-cooling-as-a-service',
   ],
   'caas-vs-buying-chiller': [
+    'cooling-as-a-service-vs-leasing-chiller',
     'cooling-as-a-service-vs-esco-thailand',
     'cooling-as-a-service-cfo-questions',
     'chiller-replacement-cost-factors',
@@ -73,5 +75,26 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'first-cooling-as-a-service-project-commissioning',
     'plastics-factory-process-cooling',
     'designated-factory-building-energy-law-thailand',
+  ],
+  'cooling-contract-calculator': [
+    'cooling-as-a-service-vs-leasing-chiller',
+    'cooling-as-a-service-vs-esco-thailand',
+    'cooling-as-a-service-contract-length-end-of-term',
+    'cooling-as-a-service-cfo-questions',
+  ],
+  'cost-of-waiting-calculator': [
+    'signs-chiller-plant-needs-replacing',
+    'refrigerant-phase-down-r22-kigali-thailand',
+    'thailand-tou-ft-electricity-chiller-cost',
+  ],
+  'carbon-calculator': [
+    'designated-factory-building-energy-law-thailand',
+    'ipmvp-options-a-b-c-d-explained',
+    'kw-per-tr-chiller-plant-efficiency',
+  ],
+  'engineer-downloads': [
+    'chiller-plant-maintenance-checklist',
+    'ipmvp-options-a-b-c-d-explained',
+    'kw-per-tr-chiller-plant-efficiency',
   ],
 };

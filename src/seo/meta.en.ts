@@ -68,6 +68,7 @@ const meta: SiteMeta = {
   copyLink: 'Copy link',
   linkCopied: 'Link copied',
   sourcesTitle: 'Sources',
+  moreTools: 'More free tools',
   furtherReading: 'Further reading',
   relatedPages: 'Read next',
   relatedCaseStudies: 'Related case studies',
@@ -215,6 +216,42 @@ const meta: SiteMeta = {
       h1: 'Cooling as a service for factories in the Eastern Economic Corridor',
       intro:
         'Infinity CoolMaster designs, funds, installs and operates chiller plants for factories in Rayong, Chonburi and Chachoengsao, with no upfront investment and a minimum 10% energy saving guaranteed in writing. Our first plant, for Platinum Pro Plastic in Nikhom Phatthana, Rayong, is in testing and commissioning in November 2026.',
+    },
+    'cooling-contract-calculator': {
+      label: 'CaaS or Lease Calculator',
+      title: 'CaaS or Lease Cost Calculator | Infinity CoolMaster',
+      description:
+        'Compare our two contracts for a new chiller plant: Cooling-as-a-Service paid from shared savings, or a lease with our maintenance. See the benefit year by year.',
+      h1: 'Cooling-as-a-Service or lease: which contract suits you?',
+      intro:
+        'Infinity CoolMaster offers two ways to get a new chiller plant without buying it: Cooling-as-a-Service, where you pay a share of the measured savings, and an equipment lease with our maintenance, where you pay a fixed monthly amount and keep all the savings. Enter your figures to compare them over the contract term.',
+    },
+    'cost-of-waiting-calculator': {
+      label: 'Cost of Waiting Calculator',
+      title: 'Cost of Delaying Chiller Replacement | Infinity CoolMaster',
+      description:
+        'How much does an inefficient chiller plant cost you every month you wait? Enter its kW/TR, load, hours and tariff to see the extra electricity cost per month and year.',
+      h1: 'What does waiting cost you?',
+      intro:
+        'An inefficient chiller plant costs more every month it keeps running. Enter its current efficiency, average load, operating hours and electricity price to see how much extra you pay compared with a well-run modern plant.',
+    },
+    'carbon-calculator': {
+      label: 'CO₂ Savings Calculator',
+      title: 'Chiller CO₂ Savings Calculator | Infinity CoolMaster',
+      description:
+        'Convert chiller plant energy savings into tonnes of CO₂ avoided, using Thailand’s TGO grid emission factor, for ESG and sustainability reporting. Free calculator.',
+      h1: 'How much CO₂ would better cooling save?',
+      intro:
+        'Enter your chiller plant’s annual electricity use and the expected saving to see the energy saved and the CO₂ emissions avoided, using a Thai grid emission factor you can adjust to match your report.',
+    },
+    'engineer-downloads': {
+      label: 'Free Downloads',
+      title: 'Free Chiller Log Sheets & Checklists | Infinity CoolMaster',
+      description:
+        'Free Excel templates for chiller plant teams in Thai and English: a daily log sheet, a monthly maintenance checklist and an M&V data checklist. Download and use.',
+      h1: 'Free templates for chiller plant teams',
+      intro:
+        'Practical Excel templates, in Thai and English, for the people who run chiller plants every day. Free to download, use and share.',
     },
     team: {
       label: 'Our Team',

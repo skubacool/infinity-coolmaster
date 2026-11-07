@@ -299,4 +299,18 @@ export const KEY_POINTS: Record<string, { en: string[]; th: string[] }> = {
       'เมื่อเปลี่ยนชิลเลอร์ ต้องเก็บกลับและกำจัดสารทำความเย็นเดิมอย่างถูกต้อง',
     ],
   },
+  caasVsLease: {
+    en: [
+      'Leasing and Cooling-as-a-Service both avoid an upfront investment and can include maintenance.',
+      'A lease payment is fixed, so if the plant saves less than expected you still pay in full.',
+      'Under Cooling-as-a-Service the fee follows measured savings, with a minimum 10% saving guaranteed in writing.',
+      'Compare both with your own figures, and ask your auditor how each is treated under TFRS 16.',
+    ],
+    th: [
+      'การเช่าและ Cooling-as-a-Service ไม่ต้องลงทุนก้อนแรกทั้งคู่ และรวมการบำรุงรักษาได้',
+      'ค่าเช่าคงที่ หากระบบประหยัดได้น้อยกว่าที่คาด คุณยังต้องจ่ายเต็มจำนวน',
+      'Cooling-as-a-Service คิดค่าบริการตามผลประหยัดที่วัดได้จริง พร้อมรับประกันผลประหยัดขั้นต่ำ 10% เป็นลายลักษณ์อักษร',
+      'เปรียบเทียบด้วยตัวเลขของคุณเอง และสอบถามผู้สอบบัญชีเรื่องการบันทึกตาม TFRS 16',
+    ],
+  },
 };

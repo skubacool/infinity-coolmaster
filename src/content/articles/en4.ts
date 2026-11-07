@@ -260,4 +260,49 @@ ${src([
   ],
 ])}`,
   },
+  caasVsLease: {
+    title: 'Cooling-as-a-Service vs leasing a chiller: which costs you less?',
+    excerpt:
+      'Both avoid an upfront investment. The difference is who carries the risk if the plant saves less than expected. A side-by-side comparison for Thai factories and buildings.',
+    body: `When a chiller plant needs replacing and the capital budget is tight, two offers usually come up: lease a new plant, or sign a Cooling-as-a-Service (CaaS) contract. Neither needs an upfront investment, and both can include maintenance. They differ in one important way: what happens to your payment when the plant does not perform as promised.
+
+## How a chiller lease works
+
+- A new plant is installed and you pay a fixed monthly lease payment for an agreed term.
+- The payment is set by the plant cost, the interest rate and the term, much like a loan.
+- The energy saving is yours in full, but so is the risk: the payment stays the same whether the plant saves 25% or 5%.
+- Maintenance, end-of-term options and any performance commitment depend on the lease terms.
+
+## How Cooling-as-a-Service works
+
+- The provider designs, finances, installs, owns, operates and maintains the plant.
+- You pay a fee linked to the measured energy saving, so the payment follows results.
+- At Infinity CoolMaster, a minimum 10% energy saving is guaranteed in writing, savings are verified monthly against an IPMVP-aligned baseline, and the plant is monitored 24/7 and optimised by our CPMS.
+- Contracts typically run 5–10 years; at the end you renew or take ownership on terms agreed at the start.
+
+## Side by side
+
+- Upfront investment: lease none; CaaS none.
+- Monthly payment: lease fixed; CaaS linked to measured savings.
+- If savings fall short: lease you still pay in full; CaaS our fee falls with the savings, and the minimum saving is guaranteed.
+- Who runs the plant: lease usually you; CaaS us, with 24/7 monitoring.
+- Proof of savings: lease depends on the contract; CaaS monthly measurement and verification.
+
+## A simple example
+
+Take a plant whose electricity costs ฿500,000 a month, and an expected saving of 20%, or ฿1.2 million a year.
+
+- Under a shared-savings CaaS fee of 50%, you keep ฿600,000 a year and pay nothing upfront.
+- Under a lease of a ฿9 million plant at 6% over 7 years, the payment is about ฿1.6 million a year, more than the saving, so the lease costs you money every year.
+- If savings come in at only 10%, the CaaS benefit is ฿300,000 a year, while the lease loss grows, because its payment does not change.
+
+These figures are illustrative only. Try your own numbers in our cooling contract calculator.
+
+## Which suits you
+
+- A lease can suit an owner with a strong in-house engineering team, confidence in the expected saving and a wish to keep all of it.
+- Cooling-as-a-Service suits owners who want payments to follow results, one partner responsible for performance and operation, and no exposure if the saving falls short.
+
+Whichever you choose, ask how each contract is treated under TFRS 16 with your auditor, and insist on a written baseline and a clear measurement method.`,
+  },
 };

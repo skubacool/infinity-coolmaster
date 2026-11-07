@@ -763,6 +763,178 @@ const pages: PageBodies = {
       },
     ],
   },
+  'cooling-contract-calculator': {
+    sections: [
+      {
+        heading: 'The two contracts',
+        table: {
+          headers: ['', 'Cooling-as-a-Service', 'Lease with our maintenance'],
+          rows: [
+            ['Upfront investment', 'None', 'None'],
+            [
+              'What you pay',
+              'A share of the measured energy savings',
+              'A fixed monthly lease payment',
+            ],
+            [
+              'Energy savings',
+              'Shared; a minimum 10% saving is guaranteed in writing',
+              'Yours in full',
+            ],
+            [
+              'Maintenance',
+              'Included: we operate and maintain the plant',
+              'Included: we maintain the plant',
+            ],
+            [
+              'Who owns the plant',
+              'Infinity CoolMaster, during the contract',
+              'Set in the lease terms',
+            ],
+            [
+              'Measurement',
+              'Monthly, against an IPMVP-aligned baseline',
+              'Monthly energy reports',
+            ],
+            [
+              'If savings fall short',
+              'Our fee falls with them; the minimum saving is guaranteed',
+              'The lease payment stays the same',
+            ],
+            [
+              'Performance risk',
+              'Carried by Infinity CoolMaster',
+              'Carried by you',
+            ],
+            [
+              'Best when',
+              'You want payments to follow results and no performance risk (our recommendation for most sites)',
+              'You have a strong in-house team and want a fixed payment',
+            ],
+          ],
+        },
+      },
+      {
+        heading: 'How the calculator works',
+        bullets: [
+          'Cooling-as-a-Service: your yearly benefit is the energy saving minus our share of it. If savings are lower, our fee is lower too.',
+          'Lease: your yearly benefit is the full energy saving minus the fixed lease payment, calculated like a loan from the plant cost, the interest rate and the term.',
+          'All figures are estimates. Your actual fee, lease payment and guaranteed saving are set in a written proposal after a free audit, and savings are measured and verified monthly.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which contract do you recommend?',
+        answer:
+          'For most factories and buildings we recommend Cooling-as-a-Service: you pay nothing upfront, our fee follows the measured savings, and a minimum 10% saving is guaranteed in writing. A lease suits owners who want to keep the full saving and are comfortable carrying the risk of a fixed payment.',
+      },
+      {
+        question: 'Can I switch between the two models?',
+        answer:
+          'Both are discussed in the same audit and proposal, so you can compare real numbers for your plant before choosing.',
+      },
+      {
+        question: 'Is the 10% minimum saving guaranteed under both?',
+        answer:
+          'Under Cooling-as-a-Service a minimum 10% energy saving is guaranteed in writing. For a lease, the terms, including any performance commitment, are set in the lease proposal.',
+      },
+      {
+        question: 'What happens at the end of the contract?',
+        answer:
+          'Under Cooling-as-a-Service you renew or take ownership of the plant on terms agreed at the start. Lease end-of-term options are set in the lease agreement.',
+      },
+    ],
+  },
+  'cost-of-waiting-calculator': {
+    sections: [
+      {
+        heading: 'How it is calculated',
+        bullets: [
+          'Extra power = (current kW/TR − target kW/TR) × average cooling load (TR).',
+          'Extra energy per year = extra power × operating hours per year.',
+          'Extra cost = extra energy × your average electricity price per kWh (including Ft).',
+          'The default target of 0.75 kW/TR sits inside the rough 0.6–0.8 band for a well-run modern water-cooled plant; change it if you have a design figure.',
+        ],
+      },
+      {
+        heading: 'Making the number real',
+        paragraphs: [
+          'The result is only as good as the inputs. Measure your plant’s kW/TR over a full range of loads with our efficiency check, then ask for a free audit: we analyse 12 months of bills and survey the plant to confirm the figure.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Where do I find my current kW/TR?',
+        answer:
+          'Use our chiller efficiency check with readings of plant power and cooling output, or ask us to measure it during a free audit.',
+      },
+      {
+        question: 'Do I have to pay for a new plant to stop this cost?',
+        answer:
+          'No. Under Cooling-as-a-Service or a lease with our maintenance there is no upfront investment.',
+      },
+    ],
+  },
+  'carbon-calculator': {
+    sections: [
+      {
+        heading: 'How it is calculated',
+        bullets: [
+          'Energy saved per year (kWh) = annual chiller plant electricity × expected saving.',
+          'CO₂ avoided (tonnes) = energy saved (MWh) × grid emission factor (tCO₂/MWh).',
+          'The default factor is 0.4857 tCO₂/MWh, the Thailand Greenhouse Gas Management Organization (TGO) grid emission factor for electricity consumption for 2021, announced in 2022. Replace it with the factor your report or verifier requires.',
+        ],
+      },
+      {
+        heading: 'Using it in ESG reporting',
+        paragraphs: [
+          'Reported savings should come from measured data. Under our contracts the plant is metered continuously and savings are verified monthly against an IPMVP-aligned baseline, which gives your sustainability report an auditable kWh figure to convert.',
+        ],
+        source: {
+          label: 'TGO grid emission factor announcement',
+          url: 'https://ghgreduction.tgo.or.th/en/download/download/7878/3377/32.html',
+        },
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which emission factor should I use?',
+        answer:
+          'Use the factor your reporting framework or verifier specifies. The default here is TGO’s 2021 grid factor for electricity consumption; TGO updates its factors, so check for the latest one.',
+      },
+      {
+        question: 'Is this a verified carbon figure?',
+        answer:
+          'No. It is an estimate for planning. Verified figures come from measured energy savings and the factor your verifier accepts.',
+      },
+    ],
+  },
+  'engineer-downloads': {
+    sections: [
+      {
+        heading: 'How to use the templates',
+        bullets: [
+          'Print the daily log sheet or keep it on a tablet in the plant room; one row per reading.',
+          'Use the monthly checklist to plan and record maintenance, with a column for who did each task and when.',
+          'Use the M&V checklist before any efficiency project, so the baseline data is collected before the old plant changes.',
+          'Every template has Thai and English labels side by side.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Are the templates free?',
+        answer: 'Yes. Download, change and share them as you like.',
+      },
+      {
+        question: 'Can you help us analyse the data we collect?',
+        answer:
+          'Yes. Send us a few months of log sheets with a free audit request and our engineers will review them.',
+      },
+    ],
+  },
 };
 
 export default pages;

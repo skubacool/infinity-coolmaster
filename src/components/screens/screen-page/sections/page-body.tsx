@@ -89,6 +89,18 @@ const PageBodyView = (props: PageBodyViewProps) => {
                   </table>
                 </div>
               )}
+              {section.source && (
+                <p className="text-sm text-text-muted">
+                  <a
+                    className="underline underline-offset-2 hover:text-brand-green-ink break-words"
+                    href={section.source.url}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {section.source.label} ↗
+                  </a>
+                </p>
+              )}
             </div>
           ))}
 

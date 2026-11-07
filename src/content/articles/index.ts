@@ -33,6 +33,8 @@ type Key = keyof typeof EN;
 const PUBLISHED = '2026-11-03';
 /** Published with the second content release. */
 const PUBLISHED_2 = '2026-11-05';
+/** Published with the third content release. */
+const PUBLISHED_3 = '2026-11-07';
 
 const guide = (
   id: number,
@@ -58,7 +60,7 @@ const guide = (
     : undefined,
   excerpt: { en: EN[key].excerpt, th: TH[key].excerpt },
   details: { en: EN[key].body, th: TH[key].body },
-  publishedAt: id >= 1016 ? PUBLISHED_2 : PUBLISHED,
+  publishedAt: id >= 1022 ? PUBLISHED_3 : id >= 1016 ? PUBLISHED_2 : PUBLISHED,
   nextActivityId: extra.nextActivityId,
   relatedPages: extra.relatedPages,
 });
@@ -217,8 +219,15 @@ export const builtInGuides: Activity[] = [
   guide(1021, 'refrigerants', 'refrigerant-phase-down-r22-kigali-thailand', {
     tag: tagTech,
     type: typeTechnical,
-    nextActivityId: 1001,
+    nextActivityId: 1022,
     thumbnail: 'assets/placeholders/facility-industrial.svg',
     relatedPages: ['chiller-replacement', 'glossary'],
+  }),
+  guide(1022, 'caasVsLease', 'cooling-as-a-service-vs-leasing-chiller', {
+    tag: tagCaas,
+    type: typeGuide,
+    nextActivityId: 1001,
+    thumbnail: 'assets/placeholders/facility-commercial.svg',
+    relatedPages: ['cooling-contract-calculator', 'caas-vs-buying-chiller'],
   }),
 ];
