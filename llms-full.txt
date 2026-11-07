@@ -505,6 +505,153 @@ A: No. Work is planned around your production schedule, switchovers happen outsi
 Q: Do we need to invest anything?
 A: No. Infinity CoolMaster funds the plant and you pay for cooling from the savings, with a minimum 10% energy saving guaranteed in writing.
 
+## Cooling-as-a-Service or lease: which contract suits you?
+URL: https://infinitycoolmaster.com/en/cooling-contract-calculator/
+
+Infinity CoolMaster offers two ways to get a new chiller plant without buying it: Cooling-as-a-Service, where you pay a share of the measured savings, and an equipment lease with our maintenance, where you pay a fixed monthly amount and keep all the savings. Enter your figures to compare them over the contract term.
+
+### The two contracts
+
+|  | Cooling-as-a-Service | Lease with our maintenance |
+| Upfront investment | None | None |
+| What you pay | A share of the measured energy savings | A fixed monthly lease payment |
+| Energy savings | Shared; a minimum 10% saving is guaranteed in writing | Yours in full |
+| Maintenance | Included: we operate and maintain the plant | Included: we maintain the plant |
+| Who owns the plant | Infinity CoolMaster, during the contract | Set in the lease terms |
+| Measurement | Monthly, against an IPMVP-aligned baseline | Monthly energy reports |
+| If savings fall short | Our fee falls with them; the minimum saving is guaranteed | The lease payment stays the same |
+| Performance risk | Carried by Infinity CoolMaster | Carried by you |
+| Best when | You want payments to follow results and no performance risk (our recommendation for most sites) | You have a strong in-house team and want a fixed payment |
+
+### How the calculator works
+
+- Cooling-as-a-Service: your yearly benefit is the energy saving minus our share of it. If savings are lower, our fee is lower too.
+- Lease: your yearly benefit is the full energy saving minus the fixed lease payment, calculated like a loan from the plant cost, the interest rate and the term.
+- All figures are estimates. Your actual fee, lease payment and guaranteed saving are set in a written proposal after a free audit, and savings are measured and verified monthly.
+
+Q: Which contract do you recommend?
+A: For most factories and buildings we recommend Cooling-as-a-Service: you pay nothing upfront, our fee follows the measured savings, and a minimum 10% saving is guaranteed in writing. A lease suits owners who want to keep the full saving and are comfortable carrying the risk of a fixed payment.
+
+Q: Can I switch between the two models?
+A: Both are discussed in the same audit and proposal, so you can compare real numbers for your plant before choosing.
+
+Q: Is the 10% minimum saving guaranteed under both?
+A: Under Cooling-as-a-Service a minimum 10% energy saving is guaranteed in writing. For a lease, the terms, including any performance commitment, are set in the lease proposal.
+
+Q: What happens at the end of the contract?
+A: Under Cooling-as-a-Service you renew or take ownership of the plant on terms agreed at the start. Lease end-of-term options are set in the lease agreement.
+
+## What does waiting cost you?
+URL: https://infinitycoolmaster.com/en/cost-of-waiting-calculator/
+
+An inefficient chiller plant costs more every month it keeps running. Enter its current efficiency, average load, operating hours and electricity price to see how much extra you pay compared with a well-run modern plant.
+
+### How it is calculated
+
+- Extra power = (current kW/TR − target kW/TR) × average cooling load (TR).
+- Extra energy per year = extra power × operating hours per year.
+- Extra cost = extra energy × your average electricity price per kWh (including Ft).
+- The default target of 0.75 kW/TR sits inside the rough 0.6–0.8 band for a well-run modern water-cooled plant; change it if you have a design figure.
+
+### Making the number real
+
+The result is only as good as the inputs. Measure your plant’s kW/TR over a full range of loads with our efficiency check, then ask for a free audit: we analyse 12 months of bills and survey the plant to confirm the figure.
+
+Q: Where do I find my current kW/TR?
+A: Use our chiller efficiency check with readings of plant power and cooling output, or ask us to measure it during a free audit.
+
+Q: Do I have to pay for a new plant to stop this cost?
+A: No. Under Cooling-as-a-Service or a lease with our maintenance there is no upfront investment.
+
+## How much CO₂ would better cooling save?
+URL: https://infinitycoolmaster.com/en/carbon-calculator/
+
+Enter your chiller plant’s annual electricity use and the expected saving to see the energy saved and the CO₂ emissions avoided, using a Thai grid emission factor you can adjust to match your report.
+
+### How it is calculated
+
+- Energy saved per year (kWh) = annual chiller plant electricity × expected saving.
+- CO₂ avoided (tonnes) = energy saved (MWh) × grid emission factor (tCO₂/MWh).
+- The default factor is 0.4857 tCO₂/MWh, the Thailand Greenhouse Gas Management Organization (TGO) grid emission factor for electricity consumption for 2021, announced in 2022. Replace it with the factor your report or verifier requires.
+
+### Using it in ESG reporting
+
+Reported savings should come from measured data. Under our contracts the plant is metered continuously and savings are verified monthly against an IPMVP-aligned baseline, which gives your sustainability report an auditable kWh figure to convert.
+
+Q: Which emission factor should I use?
+A: Use the factor your reporting framework or verifier specifies. The default here is TGO’s 2021 grid factor for electricity consumption; TGO updates its factors, so check for the latest one.
+
+Q: Is this a verified carbon figure?
+A: No. It is an estimate for planning. Verified figures come from measured energy savings and the factor your verifier accepts.
+
+## Free templates for chiller plant teams
+URL: https://infinitycoolmaster.com/en/engineer-downloads/
+
+Practical Excel templates, in Thai and English, for the people who run chiller plants every day. Free to download, use and share.
+
+### How to use the templates
+
+- Print the daily log sheet or keep it on a tablet in the plant room; one row per reading.
+- Use the monthly checklist to plan and record maintenance, with a column for who did each task and when.
+- Use the M&V checklist before any efficiency project, so the baseline data is collected before the old plant changes.
+- Every template has Thai and English labels side by side.
+
+Q: Are the templates free?
+A: Yes. Download, change and share them as you like.
+
+Q: Can you help us analyse the data we collect?
+A: Yes. Send us a few months of log sheets with a free audit request and our engineers will review them.
+
+## Cooling-as-a-Service vs leasing a chiller: which costs you less?
+URL: https://infinitycoolmaster.com/en/insights/cooling-as-a-service-vs-leasing-chiller/
+Published: 2026-11-07
+
+- Leasing and Cooling-as-a-Service both avoid an upfront investment and can include maintenance.
+- A lease payment is fixed, so if the plant saves less than expected you still pay in full.
+- Under Cooling-as-a-Service the fee follows measured savings, with a minimum 10% saving guaranteed in writing.
+- Compare both with your own figures, and ask your auditor how each is treated under TFRS 16.
+
+When a chiller plant needs replacing and the capital budget is tight, two offers usually come up: lease a new plant, or sign a Cooling-as-a-Service (CaaS) contract. Neither needs an upfront investment, and both can include maintenance. They differ in one important way: what happens to your payment when the plant does not perform as promised.
+
+## How a chiller lease works
+
+- A new plant is installed and you pay a fixed monthly lease payment for an agreed term.
+- The payment is set by the plant cost, the interest rate and the term, much like a loan.
+- The energy saving is yours in full, but so is the risk: the payment stays the same whether the plant saves 25% or 5%.
+- Maintenance, end-of-term options and any performance commitment depend on the lease terms.
+
+## How Cooling-as-a-Service works
+
+- The provider designs, finances, installs, owns, operates and maintains the plant.
+- You pay a fee linked to the measured energy saving, so the payment follows results.
+- At Infinity CoolMaster, a minimum 10% energy saving is guaranteed in writing, savings are verified monthly against an IPMVP-aligned baseline, and the plant is monitored 24/7 and optimised by our CPMS.
+- Contracts typically run 5–10 years; at the end you renew or take ownership on terms agreed at the start.
+
+## Side by side
+
+- Upfront investment: lease none; CaaS none.
+- Monthly payment: lease fixed; CaaS linked to measured savings.
+- If savings fall short: lease you still pay in full; CaaS our fee falls with the savings, and the minimum saving is guaranteed.
+- Who runs the plant: lease usually you; CaaS us, with 24/7 monitoring.
+- Proof of savings: lease depends on the contract; CaaS monthly measurement and verification.
+
+## A simple example
+
+Take a plant whose electricity costs ฿500,000 a month, and an expected saving of 20%, or ฿1.2 million a year.
+
+- Under a shared-savings CaaS fee of 50%, you keep ฿600,000 a year and pay nothing upfront.
+- Under a lease of a ฿9 million plant at 6% over 7 years, the payment is about ฿1.6 million a year, more than the saving, so the lease costs you money every year.
+- If savings come in at only 10%, the CaaS benefit is ฿300,000 a year, while the lease loss grows, because its payment does not change.
+
+These figures are illustrative only. Try your own numbers in our cooling contract calculator.
+
+## Which suits you
+
+- A lease can suit an owner with a strong in-house engineering team, confidence in the expected saving and a wish to keep all of it.
+- Cooling-as-a-Service suits owners who want payments to follow results, one partner responsible for performance and operation, and no exposure if the saving falls short.
+
+Whichever you choose, ask how each contract is treated under TFRS 16 with your auditor, and insist on a written baseline and a clear measurement method.
+
 ## How TOU tariffs and the Ft charge affect your chiller’s electricity cost
 URL: https://infinitycoolmaster.com/en/insights/thailand-tou-ft-electricity-chiller-cost/
 Published: 2026-11-05
@@ -2041,6 +2188,153 @@ A: ไม่ งานติดตั้งวางแผนตามตาร�
 
 Q: เราต้องลงทุนอะไรบ้าง
 A: ไม่ต้อง Infinity CoolMaster เป็นผู้ลงทุนระบบ คุณจ่ายค่าความเย็นจากผลประหยัด พร้อมรับประกันผลประหยัดพลังงานขั้นต่ำ 10% เป็นลายลักษณ์อักษร
+
+## Cooling-as-a-Service หรือเช่า: สัญญาแบบไหนเหมาะกับคุณ
+URL: https://infinitycoolmaster.com/th/cooling-contract-calculator/
+
+Infinity CoolMaster มีสองทางเลือกในการได้ระบบชิลเลอร์ใหม่โดยไม่ต้องซื้อ คือ Cooling-as-a-Service ที่คุณจ่ายเป็นส่วนแบ่งจากผลประหยัดที่ตรวจวัดได้ และการเช่าอุปกรณ์พร้อมบริการบำรุงรักษาจากเรา ที่คุณจ่ายค่าเช่าคงที่รายเดือนและได้ผลประหยัดทั้งหมด กรอกตัวเลขเพื่อเปรียบเทียบตลอดอายุสัญญา
+
+### สองรูปแบบสัญญา
+
+|  | Cooling-as-a-Service | เช่าพร้อมบริการบำรุงรักษา |
+| เงินลงทุนล่วงหน้า | ไม่มี | ไม่มี |
+| คุณจ่ายอะไร | ส่วนแบ่งจากผลประหยัดพลังงานที่ตรวจวัดได้ | ค่าเช่าคงที่รายเดือน |
+| ผลประหยัดพลังงาน | แบ่งกัน พร้อมรับประกันผลประหยัดขั้นต่ำ 10% เป็นลายลักษณ์อักษร | เป็นของคุณทั้งหมด |
+| การบำรุงรักษา | รวมในบริการ เราดูแลและบำรุงรักษาระบบ | รวมในบริการ เราบำรุงรักษาระบบ |
+| กรรมสิทธิ์ระบบ | Infinity CoolMaster ตลอดอายุสัญญา | ตามเงื่อนไขสัญญาเช่า |
+| การตรวจวัด | ทุกเดือน เทียบกับ Baseline ตามแนวทาง IPMVP | รายงานพลังงานรายเดือน |
+| หากประหยัดได้น้อยกว่าที่คาด | ค่าบริการของเราลดลงตาม และมีการรับประกันผลประหยัดขั้นต่ำ | ค่าเช่ายังเท่าเดิม |
+| ความเสี่ยงด้านผลประหยัด | Infinity CoolMaster รับไว้ | คุณรับไว้ |
+| เหมาะเมื่อ | ต้องการให้ค่าใช้จ่ายเป็นไปตามผลลัพธ์และไม่ต้องรับความเสี่ยง (ทางเลือกที่เราแนะนำสำหรับสถานที่ส่วนใหญ่) | มีทีมวิศวกรรมภายในที่แข็งแรงและต้องการค่าเช่าคงที่ |
+
+### เครื่องคำนวณทำงานอย่างไร
+
+- Cooling-as-a-Service: ผลตอบแทนต่อปีของคุณคือผลประหยัดพลังงานหักส่วนแบ่งของเรา หากประหยัดได้น้อยลง ค่าบริการของเราก็ลดลงด้วย
+- เช่า: ผลตอบแทนต่อปีของคุณคือผลประหยัดพลังงานทั้งหมดหักค่าเช่าคงที่ ซึ่งคำนวณแบบเงินกู้จากมูลค่าระบบ อัตราดอกเบี้ย และระยะเวลา
+- ตัวเลขทั้งหมดเป็นการประมาณการ ค่าบริการ ค่าเช่า และผลประหยัดที่รับประกันจริง จะกำหนดในข้อเสนอเป็นลายลักษณ์อักษรหลังการตรวจประเมินฟรี และผลประหยัดจะถูกตรวจวัดและพิสูจน์ทุกเดือน
+
+Q: แนะนำสัญญาแบบไหน
+A: สำหรับโรงงานและอาคารส่วนใหญ่ เราแนะนำ Cooling-as-a-Service เพราะไม่ต้องลงทุนก้อนแรก ค่าบริการเป็นไปตามผลประหยัดที่วัดได้จริง และรับประกันผลประหยัดขั้นต่ำ 10% เป็นลายลักษณ์อักษร การเช่าเหมาะกับเจ้าของที่ต้องการเก็บผลประหยัดไว้ทั้งหมดและรับความเสี่ยงจากค่าเช่าคงที่ได้
+
+Q: เลือกระหว่างสองแบบได้อย่างไร
+A: ทั้งสองแบบพิจารณาในการตรวจประเมินและข้อเสนอเดียวกัน คุณจึงเปรียบเทียบตัวเลขจริงของระบบคุณได้ก่อนตัดสินใจ
+
+Q: ทั้งสองแบบรับประกันผลประหยัดขั้นต่ำ 10% หรือไม่
+A: Cooling-as-a-Service รับประกันผลประหยัดพลังงานขั้นต่ำ 10% เป็นลายลักษณ์อักษร ส่วนการเช่า เงื่อนไขรวมถึงข้อผูกพันด้านประสิทธิภาพ จะกำหนดในข้อเสนอสัญญาเช่า
+
+Q: เมื่อครบสัญญาจะเป็นอย่างไร
+A: สำหรับ Cooling-as-a-Service คุณต่อสัญญาหรือรับโอนกรรมสิทธิ์ระบบตามเงื่อนไขที่ตกลงไว้ตั้งแต่ต้น ส่วนการเช่า ทางเลือกเมื่อครบสัญญากำหนดในสัญญาเช่า
+
+## การรอทำให้คุณเสียเงินเท่าไร
+URL: https://infinitycoolmaster.com/th/cost-of-waiting-calculator/
+
+ระบบชิลเลอร์ที่ไม่มีประสิทธิภาพเสียค่าไฟมากขึ้นทุกเดือนที่ยังเดินอยู่ กรอกประสิทธิภาพปัจจุบัน ภาระเฉลี่ย ชั่วโมงทำงาน และค่าไฟ เพื่อดูว่าคุณจ่ายส่วนเกินเท่าไรเมื่อเทียบกับระบบสมัยใหม่ที่ดูแลดี
+
+### คำนวณอย่างไร
+
+- กำลังไฟฟ้าส่วนเกิน = (kW/TR ปัจจุบัน − kW/TR เป้าหมาย) × ภาระความเย็นเฉลี่ย (TR)
+- พลังงานส่วนเกินต่อปี = กำลังไฟฟ้าส่วนเกิน × ชั่วโมงทำงานต่อปี
+- ค่าใช้จ่ายส่วนเกิน = พลังงานส่วนเกิน × ค่าไฟเฉลี่ยต่อหน่วย (รวมค่า Ft)
+- ค่าเป้าหมายเริ่มต้น 0.75 kW/TR อยู่ในช่วงคร่าว ๆ 0.6–0.8 ของระบบระบายความร้อนด้วยน้ำสมัยใหม่ที่ดูแลดี ปรับได้หากมีค่าตามแบบ
+
+### ทำให้ตัวเลขเป็นจริง
+
+ผลลัพธ์แม่นยำเท่ากับข้อมูลที่กรอก วัดค่า kW/TR ของระบบในหลายช่วงภาระด้วยเครื่องมือตรวจประสิทธิภาพของเรา แล้วขอรับการตรวจประเมินฟรี เราวิเคราะห์ค่าไฟย้อนหลัง 12 เดือนและสำรวจระบบเพื่อยืนยันตัวเลข
+
+Q: หาค่า kW/TR ปัจจุบันได้จากไหน
+A: ใช้เครื่องมือตรวจประสิทธิภาพชิลเลอร์ของเรากับค่ากำลังไฟฟ้าและความเย็นที่ผลิตได้ หรือให้เราวัดระหว่างการตรวจประเมินฟรี
+
+Q: ต้องจ่ายค่าระบบใหม่เพื่อหยุดค่าใช้จ่ายนี้หรือไม่
+A: ไม่ต้อง ทั้ง Cooling-as-a-Service และการเช่าพร้อมบริการบำรุงรักษาของเราไม่มีเงินลงทุนล่วงหน้า
+
+## ระบบทำความเย็นที่ดีขึ้นลด CO₂ ได้เท่าไร
+URL: https://infinitycoolmaster.com/th/carbon-calculator/
+
+กรอกการใช้ไฟฟ้าต่อปีของระบบชิลเลอร์และผลประหยัดที่คาด เพื่อดูพลังงานที่ประหยัดได้และปริมาณ CO₂ ที่ลดได้ โดยใช้ค่าการปล่อยก๊าซเรือนกระจกของระบบไฟฟ้าไทยที่ปรับให้ตรงกับรายงานของคุณได้
+
+### คำนวณอย่างไร
+
+- พลังงานที่ประหยัดต่อปี (kWh) = การใช้ไฟฟ้าต่อปีของระบบชิลเลอร์ × ผลประหยัดที่คาด
+- CO₂ ที่ลดได้ (ตัน) = พลังงานที่ประหยัด (MWh) × ค่าการปล่อยก๊าซเรือนกระจกของระบบไฟฟ้า (tCO₂/MWh)
+- ค่าเริ่มต้น 0.4857 tCO₂/MWh คือค่าการปล่อยก๊าซเรือนกระจกจากการใช้ไฟฟ้าของระบบไฟฟ้าไทยปี 2564 ที่องค์การบริหารจัดการก๊าซเรือนกระจก (อบก.) ประกาศในปี 2565 ควรใช้ค่าที่รายงานหรือผู้ทวนสอบของคุณกำหนด
+
+### ใช้ในรายงาน ESG
+
+ผลประหยัดที่รายงานควรมาจากข้อมูลที่ตรวจวัดจริง ภายใต้สัญญาของเรา ระบบติดมิเตอร์ต่อเนื่องและพิสูจน์ผลประหยัดทุกเดือนเทียบกับ Baseline ตามแนวทาง IPMVP รายงานความยั่งยืนของคุณจึงมีตัวเลข kWh ที่ตรวจสอบได้สำหรับแปลงเป็นคาร์บอน
+
+Q: ควรใช้ค่าการปล่อยก๊าซเรือนกระจกค่าใด
+A: ใช้ค่าที่กรอบการรายงานหรือผู้ทวนสอบของคุณกำหนด ค่าเริ่มต้นในที่นี้คือค่าปี 2564 ของ อบก. สำหรับการใช้ไฟฟ้า อบก. มีการปรับปรุงค่าเป็นระยะ ควรตรวจสอบค่าล่าสุด
+
+Q: ตัวเลขนี้เป็นปริมาณคาร์บอนที่ทวนสอบแล้วหรือไม่
+A: ไม่ใช่ เป็นการประมาณการเพื่อวางแผน ตัวเลขที่ทวนสอบแล้วต้องมาจากผลประหยัดพลังงานที่ตรวจวัดจริงและค่าที่ผู้ทวนสอบยอมรับ
+
+## แบบฟอร์มฟรีสำหรับทีมดูแลระบบชิลเลอร์
+URL: https://infinitycoolmaster.com/th/engineer-downloads/
+
+แบบฟอร์ม Excel ที่ใช้งานได้จริง ภาษาไทยและอังกฤษ สำหรับผู้ที่ดูแลระบบชิลเลอร์ทุกวัน ดาวน์โหลด ใช้ และแชร์ได้ฟรี
+
+### วิธีใช้แบบฟอร์ม
+
+- พิมพ์ใบบันทึกประจำวัน หรือเปิดบนแท็บเล็ตในห้องเครื่อง บันทึกหนึ่งแถวต่อการอ่านค่าหนึ่งครั้ง
+- ใช้เช็กลิสต์รายเดือนวางแผนและบันทึกงานบำรุงรักษา พร้อมช่องผู้ปฏิบัติงานและวันที่
+- ใช้เช็กลิสต์ M&V ก่อนเริ่มโครงการประหยัดพลังงานทุกครั้ง เพื่อเก็บข้อมูล Baseline ก่อนระบบเดิมเปลี่ยนแปลง
+- ทุกแบบฟอร์มมีหัวข้อภาษาไทยและอังกฤษคู่กัน
+
+Q: แบบฟอร์มใช้ฟรีหรือไม่
+A: ใช้ฟรี ดาวน์โหลด ปรับแก้ และแชร์ได้ตามต้องการ
+
+Q: ช่วยวิเคราะห์ข้อมูลที่เราเก็บได้หรือไม่
+A: ได้ ส่งใบบันทึกย้อนหลังสักสองสามเดือนมาพร้อมคำขอตรวจประเมินฟรี วิศวกรของเราจะช่วยทบทวนให้
+
+## Cooling-as-a-Service กับการเช่าชิลเลอร์ แบบไหนคุ้มกว่า
+URL: https://infinitycoolmaster.com/th/insights/cooling-as-a-service-vs-leasing-chiller/
+Published: 2026-11-07
+
+- การเช่าและ Cooling-as-a-Service ไม่ต้องลงทุนก้อนแรกทั้งคู่ และรวมการบำรุงรักษาได้
+- ค่าเช่าคงที่ หากระบบประหยัดได้น้อยกว่าที่คาด คุณยังต้องจ่ายเต็มจำนวน
+- Cooling-as-a-Service คิดค่าบริการตามผลประหยัดที่วัดได้จริง พร้อมรับประกันผลประหยัดขั้นต่ำ 10% เป็นลายลักษณ์อักษร
+- เปรียบเทียบด้วยตัวเลขของคุณเอง และสอบถามผู้สอบบัญชีเรื่องการบันทึกตาม TFRS 16
+
+เมื่อระบบชิลเลอร์ถึงเวลาต้องเปลี่ยนแต่มีงบลงทุนจำกัด มักมีสองข้อเสนอให้เลือก คือ เช่าระบบใหม่ หรือทำสัญญา Cooling-as-a-Service (CaaS) ทั้งสองแบบไม่ต้องลงทุนก้อนแรกและรวมการบำรุงรักษาได้ แต่ต่างกันในเรื่องสำคัญข้อเดียว คือ ค่าใช้จ่ายของคุณจะเป็นอย่างไรเมื่อระบบไม่ได้ผลตามที่สัญญา
+
+## การเช่าชิลเลอร์ทำงานอย่างไร
+
+- ติดตั้งระบบใหม่ และคุณจ่ายค่าเช่ารายเดือนคงที่ตลอดระยะเวลาที่ตกลง
+- ค่าเช่าคำนวณจากมูลค่าระบบ อัตราดอกเบี้ย และระยะเวลา คล้ายเงินกู้
+- ผลประหยัดเป็นของคุณทั้งหมด แต่ความเสี่ยงก็เป็นของคุณด้วย ค่าเช่าเท่าเดิมไม่ว่าระบบจะประหยัดได้ 25% หรือ 5%
+- การบำรุงรักษา ทางเลือกเมื่อสิ้นสุดสัญญา และการรับประกันผลงาน ขึ้นกับเงื่อนไขการเช่า
+
+## Cooling-as-a-Service ทำงานอย่างไร
+
+- ผู้ให้บริการออกแบบ ลงทุน ติดตั้ง เป็นเจ้าของ ดำเนินการ และบำรุงรักษาระบบ
+- คุณจ่ายค่าบริการที่ผูกกับผลประหยัดพลังงานที่วัดได้จริง ค่าใช้จ่ายจึงเป็นไปตามผลลัพธ์
+- ที่ Infinity CoolMaster รับประกันผลประหยัดพลังงานขั้นต่ำ 10% เป็นลายลักษณ์อักษร ตรวจวัดและพิสูจน์ผลทุกเดือนเทียบกับค่าฐานตามแนวทาง IPMVP และเฝ้าติดตามระบบตลอด 24 ชั่วโมงพร้อมปรับการทำงานด้วยระบบ CPMS
+- สัญญาโดยทั่วไป 5–10 ปี เมื่อสิ้นสุดสัญญาสามารถต่อสัญญาหรือรับโอนกรรมสิทธิ์ตามเงื่อนไขที่ตกลงไว้ตั้งแต่ต้น
+
+## เปรียบเทียบกันชัด ๆ
+
+- เงินลงทุนก้อนแรก: เช่า ไม่มี / CaaS ไม่มี
+- ค่าใช้จ่ายรายเดือน: เช่า คงที่ / CaaS ผูกกับผลประหยัดที่วัดได้
+- หากประหยัดได้น้อยกว่าที่คาด: เช่า ยังต้องจ่ายเต็มจำนวน / CaaS ค่าบริการลดลงตามผลประหยัด และมีการรับประกันผลประหยัดขั้นต่ำ
+- ผู้ดูแลระบบ: เช่า ส่วนใหญ่เป็นคุณ / CaaS เป็นเรา พร้อมเฝ้าติดตาม 24 ชั่วโมง
+- การพิสูจน์ผลประหยัด: เช่า ขึ้นกับสัญญา / CaaS ตรวจวัดและพิสูจน์ผลทุกเดือน
+
+## ตัวอย่างง่าย ๆ
+
+สมมติระบบมีค่าไฟเดือนละ 500,000 บาท และคาดว่าจะประหยัดได้ 20% หรือปีละ 1.2 ล้านบาท
+
+- หาก CaaS แบ่งผลประหยัดฝ่ายละ 50% คุณได้ผลประหยัดปีละ 600,000 บาท โดยไม่ต้องลงทุน
+- หากเช่าระบบมูลค่า 9 ล้านบาท ดอกเบี้ย 6% ระยะ 7 ปี ค่าเช่าประมาณปีละ 1.6 ล้านบาท สูงกว่าผลประหยัด การเช่าจึงทำให้ขาดทุนทุกปี
+- หากประหยัดได้เพียง 10% CaaS ยังให้ผลประหยัดปีละ 300,000 บาท ขณะที่การเช่าขาดทุนมากขึ้น เพราะค่าเช่าไม่เปลี่ยน
+
+ตัวเลขนี้เป็นเพียงตัวอย่างประกอบ ลองใส่ตัวเลขของคุณเองในเครื่องคำนวณสัญญาระบบทำความเย็นของเรา
+
+## แบบไหนเหมาะกับคุณ
+
+- การเช่าอาจเหมาะกับเจ้าของที่มีทีมวิศวกรรมภายในที่แข็งแรง มั่นใจในผลประหยัดที่คาดไว้ และต้องการเก็บผลประหยัดไว้ทั้งหมด
+- Cooling-as-a-Service เหมาะกับเจ้าของที่ต้องการให้ค่าใช้จ่ายเป็นไปตามผลลัพธ์ มีพันธมิตรรายเดียวรับผิดชอบทั้งผลงานและการดูแลระบบ และไม่ต้องรับความเสี่ยงหากประหยัดได้น้อยกว่าที่คาด
+
+ไม่ว่าเลือกแบบไหน ควรสอบถามผู้สอบบัญชีว่าสัญญาแต่ละแบบต้องบันทึกตาม TFRS 16 อย่างไร และยืนยันให้มีค่าฐานเป็นลายลักษณ์อักษรและวิธีตรวจวัดที่ชัดเจน
 
 ## ค่าไฟ TOU และค่า Ft มีผลต่อค่าไฟระบบชิลเลอร์อย่างไร
 URL: https://infinitycoolmaster.com/th/insights/thailand-tou-ft-electricity-chiller-cost/
