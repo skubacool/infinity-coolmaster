@@ -35,11 +35,13 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'ipmvp-options-a-b-c-d-explained',
   ],
   'pricing-model': [
+    'cooling-as-a-service-vs-leasing-chiller',
     'cooling-as-a-service-cfo-questions',
     'cooling-as-a-service-contract-length-end-of-term',
     'what-is-cooling-as-a-service',
   ],
   'caas-vs-buying-chiller': [
+    'cooling-as-a-service-vs-leasing-chiller',
     'cooling-as-a-service-vs-esco-thailand',
     'cooling-as-a-service-cfo-questions',
     'chiller-replacement-cost-factors',
@@ -75,6 +77,7 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'designated-factory-building-energy-law-thailand',
   ],
   'cooling-contract-calculator': [
+    'cooling-as-a-service-vs-leasing-chiller',
     'cooling-as-a-service-vs-esco-thailand',
     'cooling-as-a-service-contract-length-end-of-term',
     'cooling-as-a-service-cfo-questions',

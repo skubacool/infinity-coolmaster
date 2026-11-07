@@ -36,7 +36,13 @@ const TEXT = {
     negative:
       'With these figures the lease payment is higher than the saving. A smaller plant, a longer term or Cooling-as-a-Service may suit you better.',
     note: 'Estimate only, for comparison. Our fee, the lease payment and the guaranteed saving are set in a written proposal after a free audit; savings must be measured and verified on site and agreed by both parties.',
-    cta: 'Discuss both options in a free audit',
+    cta: 'Get a Cooling-as-a-Service proposal',
+    recommended: 'Recommended',
+    atMinimum: `If savings are only the guaranteed ${MIN_GUARANTEE}%`,
+    caasBetter: (gap: string) =>
+      `Cooling-as-a-Service leaves you ${gap} more per year than the lease, with no fixed payment and the performance risk on us.`,
+    leaseBetter: (gap: string, caasMin: string, leaseMin: string) =>
+      `If the expected saving is fully achieved, the lease returns ${gap} more per year. But the lease payment is fixed: if savings come in at the guaranteed ${MIN_GUARANTEE}%, you keep ${caasMin} a year under Cooling-as-a-Service and ${leaseMin} under the lease.`,
   },
   th: {
     inputs: 'ตัวเลขของคุณ',
@@ -63,7 +69,13 @@ const TEXT = {
     negative:
       'ด้วยตัวเลขนี้ ค่าเช่าสูงกว่าผลประหยัด ระบบที่เล็กลง สัญญาที่ยาวขึ้น หรือ Cooling-as-a-Service อาจเหมาะกว่า',
     note: 'เป็นเพียงค่าประมาณการเพื่อเปรียบเทียบ ค่าบริการ ค่าเช่า และผลประหยัดที่รับประกัน จะกำหนดในข้อเสนอเป็นลายลักษณ์อักษรหลังการตรวจประเมินฟรี ผลประหยัดต้องผ่านการตรวจวัดและตรวจสอบที่หน้างาน และตกลงร่วมกันของทั้งสองฝ่าย',
-    cta: 'หารือทั้งสองทางเลือกในการตรวจประเมินฟรี',
+    cta: 'ขอข้อเสนอ Cooling-as-a-Service',
+    recommended: 'แนะนำ',
+    atMinimum: `หากประหยัดได้เพียง ${MIN_GUARANTEE}% ตามที่รับประกัน`,
+    caasBetter: (gap: string) =>
+      `Cooling-as-a-Service ให้ผลตอบแทนมากกว่าการเช่า ${gap} ต่อปี โดยไม่มีค่าใช้จ่ายคงที่ และเรารับความเสี่ยงด้านผลประหยัด`,
+    leaseBetter: (gap: string, caasMin: string, leaseMin: string) =>
+      `หากประหยัดได้ตามที่คาดทั้งหมด การเช่าให้ผลตอบแทนมากกว่า ${gap} ต่อปี แต่ค่าเช่าคงที่ หากประหยัดได้เพียง ${MIN_GUARANTEE}% ตามที่รับประกัน คุณจะได้ ${caasMin} ต่อปีกับ Cooling-as-a-Service และ ${leaseMin} ต่อปีกับการเช่า`,
   },
 };
 
@@ -216,9 +228,12 @@ const ContractCalculator = (props: { locale: Locale }) => {
     const leaseYear = leasePay ? energySaved - leasePay : null;
     const cumulative = (perYear: number) =>
       Array.from({ length: years }, (_, i) => perYear * (i + 1));
+    const minSaved = annualCost * (MIN_GUARANTEE / 100);
     return {
       years,
       energySaved,
+      caasMin: minSaved * (1 - share),
+      leaseMin: leasePay ? minSaved - leasePay : null,
       fee: energySaved * share,
       caasYear,
       leasePay,
@@ -277,9 +292,12 @@ const ContractCalculator = (props: { locale: Locale }) => {
             {result ? (
               <>
                 <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-                  <div className="rounded-xl bg-white p-4 gap-y-1 flex flex-col">
-                    <span className="text-sm font-semibold text-brand-green">
+                  <div className="rounded-xl bg-white p-4 gap-y-1 flex flex-col ring-2 ring-brand-green">
+                    <span className="gap-x-2 flex flex-row flex-wrap items-center text-sm font-semibold text-brand-green">
                       {t.caas}
+                      <span className="rounded-full bg-brand-green px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-white">
+                        {t.recommended}
+                      </span>
                     </span>
                     <span className="text-2xl font-semibold text-text-main">
                       {baht(result.caasYear)}
@@ -293,6 +311,9 @@ const ContractCalculator = (props: { locale: Locale }) => {
                     </span>
                     <span className="text-xs text-text-muted">
                       {t.fee}: {baht(result.fee)} / {t.perYear}
+                    </span>
+                    <span className="text-xs text-text-muted">
+                      {t.atMinimum}: {baht(result.caasMin)} / {t.perYear}
                     </span>
                   </div>
                   <div className="rounded-xl bg-white p-4 gap-y-1 flex flex-col">
@@ -320,6 +341,10 @@ const ContractCalculator = (props: { locale: Locale }) => {
                           {t.payment}: {baht(result.leasePay / 12)} /{' '}
                           {t.perMonth}
                         </span>
+                        <span className="text-xs text-text-muted">
+                          {t.atMinimum}: {baht(result.leaseMin ?? 0)} /{' '}
+                          {t.perYear}
+                        </span>
                       </>
                     )}
                   </div>
@@ -333,6 +358,17 @@ const ContractCalculator = (props: { locale: Locale }) => {
                   lease={result.leaseSeries}
                   labels={[t.caas, t.lease]}
                 />
+                {result.leaseYear !== null && (
+                  <p className="rounded-xl bg-white p-4 text-sm font-medium text-text-main">
+                    {result.caasYear >= result.leaseYear
+                      ? t.caasBetter(baht(result.caasYear - result.leaseYear))
+                      : t.leaseBetter(
+                          baht(result.leaseYear - result.caasYear),
+                          baht(result.caasMin),
+                          baht(result.leaseMin ?? 0)
+                        )}
+                  </p>
+                )}
                 {result.leaseYear !== null && result.leaseYear < 0 && (
                   <p className="text-sm text-text-main">{t.negative}</p>
                 )}

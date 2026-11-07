@@ -797,9 +797,19 @@ const pages: PageBodies = {
               'Monthly energy reports',
             ],
             [
+              'If savings fall short',
+              'Our fee falls with them; the minimum saving is guaranteed',
+              'The lease payment stays the same',
+            ],
+            [
+              'Performance risk',
+              'Carried by Infinity CoolMaster',
+              'Carried by you',
+            ],
+            [
               'Best when',
-              'You want payments to follow results',
-              'You want a fixed, predictable monthly cost',
+              'You want payments to follow results and no performance risk (our recommendation for most sites)',
+              'You have a strong in-house team and want a fixed payment',
             ],
           ],
         },
@@ -814,6 +824,11 @@ const pages: PageBodies = {
       },
     ],
     faqs: [
+      {
+        question: 'Which contract do you recommend?',
+        answer:
+          'For most factories and buildings we recommend Cooling-as-a-Service: you pay nothing upfront, our fee follows the measured savings, and a minimum 10% saving is guaranteed in writing. A lease suits owners who want to keep the full saving and are comfortable carrying the risk of a fixed payment.',
+      },
       {
         question: 'Can I switch between the two models?',
         answer:

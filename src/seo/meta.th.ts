@@ -68,6 +68,7 @@ const meta: SiteMeta = {
   copyLink: 'คัดลอกลิงก์',
   linkCopied: 'คัดลอกแล้ว',
   sourcesTitle: 'แหล่งข้อมูล',
+  moreTools: 'เครื่องมือฟรีอื่น ๆ',
   furtherReading: 'บทความแนะนำ',
   relatedPages: 'อ่านต่อ',
   relatedCaseStudies: 'กรณีศึกษาที่เกี่ยวข้อง',

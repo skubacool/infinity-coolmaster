@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { isPageKey, paths } from '../../../config/routes';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
-import { isDraftPage, siteMeta } from '../../../seo/pages';
+import { isDraftPage, RESOURCE_TOOL_PAGES, siteMeta } from '../../../seo/pages';
 import PageBodyView from './sections/page-body';
 import EfficiencyCheck from './sections/efficiency-check';
 import ContractCalculator from './sections/contract-calculator';
@@ -92,6 +92,30 @@ const ScreenPage = () => {
         <EfficiencyCheck locale={locale} />
       )}
       {page === 'contact' && <SectionContact />}
+
+      {RESOURCE_TOOL_PAGES.includes(page) && (
+        <nav
+          aria-label={meta.moreTools}
+          className="pb-4 flex flex-col justify-start items-stretch"
+        >
+          <SafeArea>
+            <div className="max-w-[880px] gap-3 flex flex-row flex-wrap items-center">
+              <span className="text-sm font-semibold text-text-main">
+                {meta.moreTools}:
+              </span>
+              {RESOURCE_TOOL_PAGES.filter((key) => key !== page).map((key) => (
+                <Link
+                  key={key}
+                  className="rounded-full border border-sep-light bg-white px-4 py-2 text-sm font-medium text-brand-blue-ink hover:border-brand-blue"
+                  to={paths.page(locale, key)}
+                >
+                  {meta.pages[key].label}
+                </Link>
+              ))}
+            </div>
+          </SafeArea>
+        </nav>
+      )}
 
       {body && <PageBodyView body={body} faqTitle={meta.faqTitle} />}
 

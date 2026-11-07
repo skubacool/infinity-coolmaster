@@ -50,6 +50,8 @@ export interface SiteMeta {
   linkCopied: string;
   sourcesTitle: string;
   furtherReading: string;
+  /** Label of the strip linking the free tools to each other. */
+  moreTools: string;
   relatedPages: string;
   relatedCaseStudies: string;
   resourcesTitle: string;

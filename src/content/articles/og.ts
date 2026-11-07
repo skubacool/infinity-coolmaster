@@ -5,6 +5,7 @@ export const OG_IMAGE_SLUGS: string[] = [
   'cooling-as-a-service-cfo-questions',
   'cooling-as-a-service-contract-length-end-of-term',
   'cooling-as-a-service-vs-esco-thailand',
+  'cooling-as-a-service-vs-leasing-chiller',
   'data-center-cooling-pue',
   'designated-factory-building-energy-law-thailand',
   'first-cooling-as-a-service-project-commissioning',

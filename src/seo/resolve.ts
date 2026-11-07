@@ -33,7 +33,12 @@ import { listFaqs } from '../apis/faq';
 import { resolveProject } from '../stores/vm-screen-project';
 import { resolveActivity } from '../stores/vm-screen-activity';
 import { Head, absoluteUrl } from './head';
-import { siteMeta, isDraftPage, SECTOR_PAGES } from './pages';
+import {
+  siteMeta,
+  isDraftPage,
+  SECTOR_PAGES,
+  RESOURCE_TOOL_PAGES,
+} from './pages';
 import { resolvePageContent } from '../stores/vm-screen-page';
 import { OG_IMAGE_SLUGS } from '../content/articles/og';
 import { ORGANIZATION, DEFAULT_SHARE_IMAGE } from './organization';
@@ -243,6 +248,26 @@ const serviceLd = (
   areaServed: { '@type': 'Country', name: 'Thailand' },
   provider: { '@id': ORG_ID },
   url: absoluteUrl(paths.page(locale, page)),
+});
+
+/** A free calculator page, described as a web application. */
+const toolLd = (
+  locale: Locale,
+  page: PageKey,
+  name: string,
+  description: string
+) => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name,
+  description,
+  url: absoluteUrl(paths.page(locale, page)),
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Any (runs in the browser)',
+  inLanguage: locale,
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'THB' },
+  provider: { '@id': ORG_ID },
 });
 
 // ---------------------------------------------------------- resolution ----
@@ -592,6 +617,9 @@ export const resolvePage = async (
             inDefinedTermSet: `${setUrl}#terms`,
           })),
         });
+      }
+      if (RESOURCE_TOOL_PAGES.includes(match.page)) {
+        head.jsonLd.push(toolLd(locale, match.page, text.h1, text.description));
       }
       if (SECTOR_PAGES.includes(match.page)) {
         head.jsonLd.push(

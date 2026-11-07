@@ -68,6 +68,7 @@ const meta: SiteMeta = {
   copyLink: 'Copy link',
   linkCopied: 'Link copied',
   sourcesTitle: 'Sources',
+  moreTools: 'More free tools',
   furtherReading: 'Further reading',
   relatedPages: 'Read next',
   relatedCaseStudies: 'Related case studies',
