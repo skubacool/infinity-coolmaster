@@ -74,4 +74,24 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'plastics-factory-process-cooling',
     'designated-factory-building-energy-law-thailand',
   ],
+  'cooling-contract-calculator': [
+    'cooling-as-a-service-vs-esco-thailand',
+    'cooling-as-a-service-contract-length-end-of-term',
+    'cooling-as-a-service-cfo-questions',
+  ],
+  'cost-of-waiting-calculator': [
+    'signs-chiller-plant-needs-replacing',
+    'refrigerant-phase-down-r22-kigali-thailand',
+    'thailand-tou-ft-electricity-chiller-cost',
+  ],
+  'carbon-calculator': [
+    'designated-factory-building-energy-law-thailand',
+    'ipmvp-options-a-b-c-d-explained',
+    'kw-per-tr-chiller-plant-efficiency',
+  ],
+  'engineer-downloads': [
+    'chiller-plant-maintenance-checklist',
+    'ipmvp-options-a-b-c-d-explained',
+    'kw-per-tr-chiller-plant-efficiency',
+  ],
 };

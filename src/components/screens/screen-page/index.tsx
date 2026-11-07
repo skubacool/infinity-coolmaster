@@ -7,6 +7,9 @@ import { useVmScreenFront } from '../../../stores/vm-screen-front';
 import { isDraftPage, siteMeta } from '../../../seo/pages';
 import PageBodyView from './sections/page-body';
 import EfficiencyCheck from './sections/efficiency-check';
+import ContractCalculator from './sections/contract-calculator';
+import { CarbonCalculator, CostOfWaiting } from './sections/quick-calculators';
+import EngineerDownloads from './sections/engineer-downloads';
 import { useVmScreenPage } from '../../../stores/vm-screen-page';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
@@ -77,6 +80,14 @@ const ScreenPage = () => {
       </section>
 
       {page === 'savings-calculator' && <SectionEstimator />}
+      {page === 'cooling-contract-calculator' && (
+        <ContractCalculator locale={locale} />
+      )}
+      {page === 'cost-of-waiting-calculator' && (
+        <CostOfWaiting locale={locale} />
+      )}
+      {page === 'carbon-calculator' && <CarbonCalculator locale={locale} />}
+      {page === 'engineer-downloads' && <EngineerDownloads locale={locale} />}
       {page === 'chiller-efficiency-check' && (
         <EfficiencyCheck locale={locale} />
       )}

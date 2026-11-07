@@ -79,6 +79,14 @@ export const installContactTracking = (): void => {
           : /(^|\/\/)(line\.me|lin\.ee)\//.test(href)
             ? 'line'
             : null;
+      if (/\/downloads\/[^/]+\.xlsx$/.test(href)) {
+        trackEvent('file_download', {
+          file_name: href.split('/').pop(),
+          link_url: href,
+          page_location: window.location.origin + window.location.pathname,
+        });
+        return;
+      }
       if (!method) return;
       trackEvent('contact_click', {
         method,

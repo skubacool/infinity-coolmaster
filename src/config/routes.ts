@@ -34,6 +34,10 @@ export const PAGE_KEYS = [
   'glossary',
   'chiller-efficiency-check',
   'eastern-economic-corridor',
+  'cooling-contract-calculator',
+  'cost-of-waiting-calculator',
+  'carbon-calculator',
+  'engineer-downloads',
 ] as const;
 
 export type PageKey = (typeof PAGE_KEYS)[number];
