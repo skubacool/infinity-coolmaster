@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import { l } from '../../../../../utils/localization-utils';
 import { useVmScreen } from '../../../../../stores/vm-screen';
-import { useVmScreenFront } from '../../../../../stores/vm-screen-front';
 import SafeArea from '../../../../_commons/safe-area';
 import Icon from '../../../../_commons/icon';
 import { paths } from '../../../../../config/routes';
@@ -14,7 +13,7 @@ import { TGO_GRID_FACTOR } from '../../../screen-page/sections/quick-calculators
 /**
  * Savings estimator — a lightweight lead magnet.
  *
- * The visitor enters their monthly electricity bill and facility type and sees
+ * The visitor enters their monthly electricity bill and sees
  * an estimated annual-savings RANGE. The percentages are deliberately
  * conservative and expressed as a share of the TOTAL electricity bill:
  * cooling is typically ~40–55% of a facility's electricity, and we save
@@ -39,10 +38,8 @@ const formatT = (value: number): string =>
 
 const SectionEstimator = () => {
   const { locale = 'en', localizations = [] } = useVmScreen();
-  const { sectors = [] } = useVmScreenFront();
 
   const [bill, setBill] = useState('');
-  const [industry, setIndustry] = useState('');
 
   const t = (key: string) => l(locale, localizations, key);
 
@@ -72,8 +69,8 @@ const SectionEstimator = () => {
   /** Hands the inputs to the audit form (on this page, or on the contact page). */
   const requestAudit = () => {
     if (!result) return;
-    setLeadPrefill({ bill: result.monthly, industry });
-    trackEvent('estimator_cta', { industry, bill: Math.round(result.monthly) });
+    setLeadPrefill({ bill: result.monthly });
+    trackEvent('estimator_cta', { bill: Math.round(result.monthly) });
     const contact = document.getElementById('contact');
     if (contact) {
       contact.scrollIntoView({ behavior: 'smooth' });
@@ -112,23 +109,6 @@ const SectionEstimator = () => {
                 value={bill}
                 onChange={(e) => setBill(e.target.value)}
               />
-            </label>
-            <label className="gap-y-1.5 flex flex-col">
-              <span className="text-sm font-medium text-text-muted">
-                {t('estimator.sector-label')}
-              </span>
-              <select
-                className={inputClass}
-                value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
-              >
-                <option value="">{t('form.select-placeholder')}</option>
-                {sectors.map((sector) => (
-                  <option key={sector.key} value={sector.key}>
-                    {sector.title[locale]}
-                  </option>
-                ))}
-              </select>
             </label>
           </div>
 

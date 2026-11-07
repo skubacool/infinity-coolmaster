@@ -268,8 +268,8 @@ const localizations: LocalizedKeyText[] = [
   {
     key: 'estimator.result-note',
     text: {
-      th: 'เป็นเพียงค่าประมาณการเบื้องต้นจากค่าไฟรวม ไม่ใช่การรับประกัน ตัวเลขจริงต้องผ่านการตรวจวัดและตรวจสอบที่หน้างาน และตกลงร่วมกันก่อนจัดทำข้อเสนอ',
-      en: 'A rough estimate based on your total bill, not a guarantee. Your actual figure must be measured and verified on site, and agreed by both parties, before any proposal.',
+      th: 'เป็นเพียงค่าประมาณการเบื้องต้นจากค่าไฟรวมและผลลัพธ์โดยทั่วไปของอาคารพาณิชย์และโรงงานที่ใช้ระบบปรับอากาศ ไม่ใช่การรับประกัน ตัวเลขจริงต้องผ่านการตรวจวัดและตรวจสอบที่หน้างาน และตกลงร่วมกันก่อนจัดทำข้อเสนอ',
+      en: 'A rough estimate based on your total bill and typical results for air-conditioned commercial and industrial sites, not a guarantee. Your actual figure must be measured and verified on site, and agreed by both parties, before any proposal.',
     },
   },
   {

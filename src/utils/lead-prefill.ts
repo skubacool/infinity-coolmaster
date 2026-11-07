@@ -6,8 +6,8 @@
 export interface LeadPrefill {
   /** Monthly electricity bill in THB. */
   bill: number;
-  /** Sector key chosen in the estimator. */
-  industry: string;
+  /** Sector key, if known. */
+  industry?: string;
 }
 
 const KEY = 'icm_lead_prefill';
