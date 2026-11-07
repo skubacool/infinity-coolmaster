@@ -283,6 +283,46 @@ const localizations: LocalizedKeyText[] = [
       en: 'Enter your monthly bill to see your estimated savings.',
     },
   },
+  {
+    key: 'estimator.wait-label',
+    text: { th: 'ต้นทุนของการรอ', en: 'The cost of waiting' },
+  },
+  {
+    key: 'estimator.wait-text',
+    text: {
+      th: 'ทุกเดือนที่ยังไม่เริ่ม คุณเสียโอกาสประหยัดประมาณ',
+      en: 'Every month you wait, you forgo roughly',
+    },
+  },
+  {
+    key: 'estimator.per-month',
+    text: { th: 'ต่อเดือน', en: 'per month' },
+  },
+  {
+    key: 'estimator.carbon-text',
+    text: {
+      th: 'ลดการปล่อยก๊าซคาร์บอนไดออกไซด์ได้ประมาณ',
+      en: 'Could avoid roughly',
+    },
+  },
+  {
+    key: 'estimator.carbon-unit',
+    text: { th: 'ตัน CO₂ ต่อปี', en: 'tonnes of CO₂ per year' },
+  },
+  {
+    key: 'estimator.zero-capex',
+    text: {
+      th: 'ไม่ต้องลงทุนล่วงหน้า ภายใต้สัญญา Cooling-as-a-Service',
+      en: 'No upfront investment under Cooling-as-a-Service.',
+    },
+  },
+  {
+    key: 'estimator.assumption',
+    text: {
+      th: 'CO₂ คำนวณจากค่าไฟเฉลี่ยประมาณ 4.5 บาทต่อหน่วย และค่าการปล่อยของไฟฟ้าไทย 0.4857 kgCO₂/kWh',
+      en: 'CO₂ assumes an average tariff of about THB 4.5/kWh and the Thai grid factor of 0.4857 kgCO₂/kWh.',
+    },
+  },
 
   // ---------- Front: FAQ ----------
   {

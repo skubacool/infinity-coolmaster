@@ -93,7 +93,8 @@ const ScreenPage = () => {
       )}
       {page === 'contact' && <SectionContact />}
 
-      {RESOURCE_TOOL_PAGES.includes(page) && (
+      {/* The savings calculator is the single entry point: no competing tool chips. */}
+      {RESOURCE_TOOL_PAGES.includes(page) && page !== 'savings-calculator' && (
         <nav
           aria-label={meta.moreTools}
           className="pb-4 flex flex-col justify-start items-stretch"

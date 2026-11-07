@@ -13,6 +13,7 @@ import { useVmScreen } from '../../../stores/vm-screen';
 import { insertLead } from '../../../apis/lead';
 import Icon from '../icon';
 import { trackLead } from '../../../utils/analytics';
+import { billToRange, getLeadPrefill } from '../../../utils/lead-prefill';
 
 export interface LeadFormProps {
   locale?: Locale;
@@ -40,8 +41,12 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
   const [contactPerson, setContactPerson] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [currentBill, setCurrentBill] = useState('');
-  const [industry, setIndustry] = useState('');
+  // Pre-filled when the visitor came from the savings estimator.
+  const prefill = getLeadPrefill();
+  const [currentBill, setCurrentBill] = useState(() =>
+    prefill ? billToRange(prefill.bill) : ''
+  );
+  const [industry, setIndustry] = useState(prefill?.industry ?? '');
   const [website, setWebsite] = useState(''); // honeypot — people never see it
   const [state, setState] = useState<SubmitState>('idle');
   const [validationError, setValidationError] = useState(false);
