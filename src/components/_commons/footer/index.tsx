@@ -136,6 +136,16 @@ const Footer = () => {
               >
                 {meta.pages['privacy-policy'].label}
               </Link>
+              <a
+                className="text-white-a70 underline underline-offset-2 hover:text-white"
+                href="https://powerexpress1980.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                {locale === 'th'
+                  ? 'บริษัทในเครือ: Power Express'
+                  : 'Sister company: Power Express'}
+              </a>
               <button
                 type="button"
                 className="text-white-a70 underline underline-offset-2 hover:text-white"
