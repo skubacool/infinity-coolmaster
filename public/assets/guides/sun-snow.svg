@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 483">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0FDF9"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="ln" x1="0" y1="0" x2="400" y2="483" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="483" fill="url(#bg)"/>
+  <g stroke="#0F172A" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 120 H400 M0 240 H400 M0 360 H400 M100 0 V483 M200 0 V483 M300 0 V483"/>
+  </g>
+  <circle cx="200" cy="241" r="112" fill="#FFFFFF" fill-opacity="0.55"/>
+  <!-- Scaled around the canvas centre so wide (cropped) cards still show the whole icon. -->
+  <g transform="translate(200 241) scale(0.78) translate(-200 -225)">
+    <path d="M160 180 m-30 0 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0 M160 124 v13 M160 223 v13 M104 180 h13 M203 180 h13 M120 140 l9 9 M191 211 l9 9 M200 140 l-9 9 M129 211 l-9 9 M250 228 v96 M208 252 l84 48 M208 300 l84 -48" fill="none" stroke="url(#ln)" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

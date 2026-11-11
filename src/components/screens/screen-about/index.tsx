@@ -10,6 +10,7 @@ import SectionPartners, {
 } from '../../sections/section-partners';
 import SectionDetails from './sections/section-details';
 import SectionGrowth from './sections/section-growth';
+import SectionApproach from './sections/section-approach';
 import TextLines from '../../_commons/text-lines';
 
 const ScreenAbout = () => {
@@ -45,7 +46,7 @@ const ScreenAbout = () => {
             <div className="flex-1 gap-y-5 flex flex-col justify-center items-start">
               {/* One H1; the wording differs by screen size. */}
               <h1 className="text-text-main font-semibold">
-                <span className="hidden lg:block text-8xl">
+                <span className="hidden lg:block text-7xl">
                   {l(locale, localizations, 'about.title-company')}
                 </span>
                 <span className="lg:hidden block text-6xl !leading-[1.1]">
@@ -69,6 +70,7 @@ const ScreenAbout = () => {
     <LayoutBanner isFilled banner={banner}>
       <div className="flex flex-col justify-start items-stretch">
         <SectionDetails />
+        <SectionApproach />
         <SectionGrowth />
         <SectionPartners
           theme={SectionPartnersTheme.light}

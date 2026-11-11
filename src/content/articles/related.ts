@@ -67,6 +67,8 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'ipmvp-options-a-b-c-d-explained',
   ],
   'chiller-efficiency-check': [
+    'low-delta-t-syndrome-chilled-water',
+    'chiller-staging-part-load-iplv',
     'kw-per-tr-chiller-plant-efficiency',
     'reduce-chiller-plant-energy-use',
     'thailand-tou-ft-electricity-chiller-cost',
@@ -75,6 +77,11 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'first-cooling-as-a-service-project-commissioning',
     'plastics-factory-process-cooling',
     'designated-factory-building-energy-law-thailand',
+  ],
+  'caas-fit-check': [
+    'what-is-cooling-as-a-service',
+    'signs-chiller-plant-needs-replacing',
+    'prepare-chiller-plant-energy-audit',
   ],
   'cooling-contract-calculator': [
     'cooling-as-a-service-vs-leasing-chiller',
@@ -88,11 +95,13 @@ export const GUIDES_BY_PAGE: Record<string, string[]> = {
     'thailand-tou-ft-electricity-chiller-cost',
   ],
   'carbon-calculator': [
+    'rooftop-solar-and-efficient-cooling',
     'designated-factory-building-energy-law-thailand',
     'ipmvp-options-a-b-c-d-explained',
     'kw-per-tr-chiller-plant-efficiency',
   ],
   'engineer-downloads': [
+    'prepare-chiller-plant-energy-audit',
     'chiller-plant-maintenance-checklist',
     'ipmvp-options-a-b-c-d-explained',
     'kw-per-tr-chiller-plant-efficiency',

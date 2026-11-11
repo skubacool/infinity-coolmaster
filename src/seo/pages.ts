@@ -33,12 +33,15 @@ export const PUBLISHED_PAGES: PageKey[] = [
   'cost-of-waiting-calculator',
   'carbon-calculator',
   'engineer-downloads',
+  'privacy-policy',
+  'caas-fit-check',
   // 'team' — needs real names, photos, licences and LinkedIn profiles.
 ];
 
 /** Explainer pages linked from the footer's resources column. */
 /** Nav "Resources" dropdown: interactive tools first, then explainers. */
 export const RESOURCE_TOOL_PAGES: PageKey[] = [
+  'caas-fit-check',
   'savings-calculator',
   'cooling-contract-calculator',
   'chiller-efficiency-check',

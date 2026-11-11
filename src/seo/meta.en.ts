@@ -69,6 +69,8 @@ const meta: SiteMeta = {
   linkCopied: 'Link copied',
   sourcesTitle: 'Sources',
   moreTools: 'More free tools',
+  cookieSettings: 'Cookie settings',
+  privacyLink: 'Privacy notice',
   furtherReading: 'Further reading',
   relatedPages: 'Read next',
   relatedCaseStudies: 'Related case studies',
@@ -252,6 +254,24 @@ const meta: SiteMeta = {
       h1: 'Free templates for chiller plant teams',
       intro:
         'Practical Excel templates, in Thai and English, for the people who run chiller plants every day. Free to download, use and share.',
+    },
+    'privacy-policy': {
+      label: 'Privacy Notice',
+      title: 'Privacy Notice | Infinity CoolMaster',
+      description:
+        'How Infinity CoolMaster Co., Ltd. collects, uses and protects personal data from this website under Thailand’s Personal Data Protection Act (PDPA).',
+      h1: 'Privacy notice',
+      intro:
+        'This notice explains what personal data Infinity CoolMaster Co., Ltd. collects through this website, why we collect it, and your rights under Thailand’s Personal Data Protection Act B.E. 2562 (PDPA). Last updated: 11 November 2026.',
+    },
+    'caas-fit-check': {
+      label: 'Is CaaS Right for You?',
+      title: 'Is Cooling-as-a-Service Right for You? | Infinity CoolMaster',
+      description:
+        'Answer six quick questions about your bill, chiller plant age, operating hours, budget and team to see whether Cooling-as-a-Service is likely to suit your site.',
+      h1: 'Is Cooling-as-a-Service right for your site?',
+      intro:
+        'Six questions, about one minute. You get an honest indication of whether Cooling-as-a-Service is likely to suit your factory or building, or whether another step makes more sense first.',
     },
     team: {
       label: 'Our Team',

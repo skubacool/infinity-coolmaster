@@ -102,6 +102,18 @@ Guides without an image fall back to the default share image.
 python3 scripts/make-downloads.py
 ```
 
+The one-page **company brochure** PDFs in the same folder are built by
+`scripts/make-brochure.cjs` (Node + Playwright), and the **guide thumbnails**
+in `public/assets/guides/` by `scripts/make-thumbnails.py`:
+
+```bash
+node scripts/make-brochure.cjs
+```
+
+```bash
+python3 scripts/make-thumbnails.py
+```
+
 If a file's size changes noticeably, update the size shown in
 `src/components/screens/screen-page/sections/engineer-downloads.tsx`.
 

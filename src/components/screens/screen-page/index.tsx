@@ -1,15 +1,21 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import { isPageKey, paths } from '../../../config/routes';
+import { isPageKey, PageKey, paths } from '../../../config/routes';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { useVmScreenFront } from '../../../stores/vm-screen-front';
-import { isDraftPage, RESOURCE_TOOL_PAGES, siteMeta } from '../../../seo/pages';
+import {
+  isDraftPage,
+  RESOURCE_TOOL_PAGES,
+  SECTOR_PAGES,
+  siteMeta,
+} from '../../../seo/pages';
 import PageBodyView from './sections/page-body';
 import EfficiencyCheck from './sections/efficiency-check';
 import ContractCalculator from './sections/contract-calculator';
 import { CarbonCalculator, CostOfWaiting } from './sections/quick-calculators';
 import EngineerDownloads from './sections/engineer-downloads';
+import FitCheck from './sections/fit-check';
 import { useVmScreenPage } from '../../../stores/vm-screen-page';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
@@ -17,6 +23,15 @@ import SafeArea from '../../_commons/safe-area';
 import SectionEstimator from '../screen-front/sections/section-estimator';
 import SectionContact from '../screen-front/sections/section-contact';
 import ScreenNotFound from '../screen-not-found';
+import ContractGlance from '../../_commons/contract-glance';
+
+/** Pages that show the contract summary card beside their text. */
+const GLANCE_PAGES: PageKey[] = [
+  ...SECTOR_PAGES,
+  'caas-vs-buying-chiller',
+  'chiller-replacement',
+  'measurement-verification',
+];
 
 /**
  * Standalone pages (/en/<key>/): sector pages, explainers, the savings
@@ -87,6 +102,7 @@ const ScreenPage = () => {
         <CostOfWaiting locale={locale} />
       )}
       {page === 'carbon-calculator' && <CarbonCalculator locale={locale} />}
+      {page === 'caas-fit-check' && <FitCheck locale={locale} />}
       {page === 'engineer-downloads' && <EngineerDownloads locale={locale} />}
       {page === 'chiller-efficiency-check' && (
         <EfficiencyCheck locale={locale} />
@@ -118,7 +134,17 @@ const ScreenPage = () => {
         </nav>
       )}
 
-      {body && <PageBodyView body={body} faqTitle={meta.faqTitle} />}
+      {body && (
+        <PageBodyView
+          body={body}
+          faqTitle={meta.faqTitle}
+          aside={
+            GLANCE_PAGES.includes(page) ? (
+              <ContractGlance locale={locale} withCta />
+            ) : undefined
+          }
+        />
+      )}
 
       {guides.length > 0 && (
         <section className="pb-12 lg:pb-16 flex flex-col justify-start items-stretch">
