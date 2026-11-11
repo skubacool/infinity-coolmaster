@@ -44,6 +44,20 @@ const FILES = [
 ];
 
 const LABEL = { en: 'Download Excel', th: 'ดาวน์โหลด Excel' };
+const LABEL_PDF = { en: 'Download PDF', th: 'ดาวน์โหลด PDF' };
+
+/** One-page company brochure, built by scripts/make-brochure.cjs. */
+const BROCHURE = {
+  size: { en: '164 KB', th: '295 KB' },
+  en: {
+    title: 'Company brochure',
+    text: 'One page on Cooling-as-a-Service: the contract terms, how it works and how to reach us. Useful to share with your management or finance team.',
+  },
+  th: {
+    title: 'โบรชัวร์บริษัท',
+    text: 'สรุปหนึ่งหน้าเรื่อง Cooling-as-a-Service: เงื่อนไขสัญญา ขั้นตอนการทำงาน และช่องทางติดต่อ เหมาะสำหรับส่งต่อให้ผู้บริหารหรือฝ่ายการเงิน',
+  },
+};
 
 /** Download cards for the engineer-downloads page. */
 const EngineerDownloads = (props: { locale: Locale }) => {
@@ -76,6 +90,23 @@ const EngineerDownloads = (props: { locale: Locale }) => {
             </li>
           ))}
         </ul>
+        <div className="mx-auto mt-5 w-full max-w-[960px] rounded-2xl bg-gradient-caas-soft border border-sep-pale p-6 gap-4 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="gap-y-1 flex flex-col">
+            <h2 className="text-lg font-semibold text-text-main">
+              {BROCHURE[locale].title}
+            </h2>
+            <p className="max-w-[620px] text-sm text-text-muted">
+              {BROCHURE[locale].text}
+            </p>
+          </div>
+          <a
+            className="btn-caas flex-shrink-0 self-start md:self-center"
+            href={p(`downloads/infinity-coolmaster-brochure-${locale}.pdf`)}
+            download
+          >
+            {LABEL_PDF[locale]} · {BROCHURE.size[locale]}
+          </a>
+        </div>
       </SafeArea>
     </section>
   );

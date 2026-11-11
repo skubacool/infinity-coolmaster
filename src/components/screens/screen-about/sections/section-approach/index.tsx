@@ -7,6 +7,7 @@ import {
   firstProjectClient,
 } from '../../../../../content/first-project';
 import Icon from '../../../../_commons/icon';
+import { p } from '../../../../../utils/path-utils';
 import SafeArea from '../../../../_commons/safe-area';
 
 /**
@@ -56,6 +57,7 @@ const TEXT = {
       ],
     ],
     cta: 'Request a free audit',
+    brochure: 'Download our brochure (PDF)',
   },
   th: {
     title: 'สิ่งที่เรารับผิดชอบ',
@@ -98,6 +100,7 @@ const TEXT = {
       ],
     ],
     cta: 'ขอรับการประเมินฟรี',
+    brochure: 'ดาวน์โหลดโบรชัวร์ (PDF)',
   },
 };
 
@@ -177,10 +180,19 @@ const SectionApproach = () => {
               </dl>
             </div>
           </div>
-          <Link className="btn-caas self-start" to={paths.contact(locale)}>
-            {t.cta}
-            <Icon name="arrow-right" size={18} />
-          </Link>
+          <div className="gap-4 flex flex-col sm:flex-row sm:items-center">
+            <Link className="btn-caas" to={paths.contact(locale)}>
+              {t.cta}
+              <Icon name="arrow-right" size={18} />
+            </Link>
+            <a
+              className="btn-outline"
+              href={p(`downloads/infinity-coolmaster-brochure-${locale}.pdf`)}
+              download
+            >
+              {t.brochure}
+            </a>
+          </div>
         </div>
       </SafeArea>
     </section>

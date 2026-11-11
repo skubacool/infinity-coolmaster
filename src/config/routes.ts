@@ -39,6 +39,7 @@ export const PAGE_KEYS = [
   'carbon-calculator',
   'engineer-downloads',
   'privacy-policy',
+  'caas-fit-check',
 ] as const;
 
 export type PageKey = (typeof PAGE_KEYS)[number];

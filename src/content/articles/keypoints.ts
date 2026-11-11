@@ -313,4 +313,88 @@ export const KEY_POINTS: Record<string, { en: string[]; th: string[] }> = {
       'เปรียบเทียบด้วยตัวเลขของคุณเอง และสอบถามผู้สอบบัญชีเรื่องการบันทึกตาม TFRS 16',
     ],
   },
+  deltaT: {
+    en: [
+      'Delta-T is the difference between chilled water supply and return; most plants are designed for about 5–6 °C.',
+      'Low delta-T forces more flow and extra chillers for the same cooling, raising pump and chiller energy.',
+      'The usual causes are on the building side: dirty coils, bypasses, three-way valves and wrong setpoints.',
+      'Start with cleaning and setpoints, then valves, then variable flow.',
+    ],
+    th: [
+      'Delta-T คือผลต่างอุณหภูมิน้ำเย็นจ่ายและน้ำกลับ ระบบส่วนใหญ่ออกแบบไว้ประมาณ 5–6 °C',
+      'Delta-T ต่ำทำให้ต้องใช้อัตราการไหลมากขึ้นและเดินชิลเลอร์เพิ่มเพื่อความเย็นเท่าเดิม พลังงานปั๊มและชิลเลอร์จึงสูงขึ้น',
+      'สาเหตุส่วนใหญ่อยู่ฝั่งอาคาร: คอยล์สกปรก บายพาส วาล์วสามทาง และค่าที่ตั้งไว้ไม่ถูกต้อง',
+      'เริ่มจากการล้างและปรับค่าที่ตั้งไว้ ตามด้วยวาล์ว แล้วจึงเปลี่ยนเป็นระบบอัตราการไหลแปรผัน',
+    ],
+  },
+  coolingTower: {
+    en: [
+      'Range is how much the tower cools the water; approach is how close the leaving water gets to wet-bulb temperature.',
+      'Each 1 °C lower condenser water temperature cuts chiller energy by roughly 2–3%, within manufacturer limits.',
+      'Scale, corrosion and biological growth all reduce efficiency, so water treatment is an energy measure.',
+      'Variable-speed fans and wet-bulb-based reset balance tower energy against chiller energy.',
+    ],
+    th: [
+      'Range คือปริมาณที่ทาวเวอร์ลดอุณหภูมิน้ำได้ ส่วน Approach คือผลต่างระหว่างน้ำออกกับอุณหภูมิกระเปาะเปียก',
+      'อุณหภูมิน้ำคอนเดนเซอร์ที่ลดลงทุก 1 °C ลดพลังงานชิลเลอร์ได้ราว 2–3% ภายในขอบเขตของผู้ผลิต',
+      'ตะกรัน การกัดกร่อน และจุลชีพ ล้วนลดประสิทธิภาพ การบำบัดน้ำจึงเป็นมาตรการด้านพลังงาน',
+      'พัดลมปรับความเร็วรอบและการปรับค่าตามอุณหภูมิกระเปาะเปียก ช่วยสมดุลพลังงานทาวเวอร์กับชิลเลอร์',
+    ],
+  },
+  vsd: {
+    en: [
+      'For pumps and fans, power falls with the cube of speed: about half the power at 80% speed in an ideal system.',
+      'Drives pay best on chilled water pumps, condenser pumps, tower fans and part-loaded chillers.',
+      'A drive left at fixed speed saves nothing; the control strategy creates the saving.',
+      'Speeds must be optimised together, because slowing one component can raise the energy of another.',
+    ],
+    th: [
+      'สำหรับปั๊มและพัดลม กำลังไฟฟ้าลดลงตามความเร็วยกกำลังสาม ที่ความเร็ว 80% ใช้กำลังประมาณครึ่งหนึ่งในระบบอุดมคติ',
+      'VSD คุ้มค่าที่สุดกับปั๊มน้ำเย็น ปั๊มคอนเดนเซอร์ พัดลมทาวเวอร์ และชิลเลอร์ที่ทำงานภาระบางส่วน',
+      'VSD ที่ตั้งความเร็วคงที่ไม่ช่วยประหยัด ผลประหยัดมาจากกลยุทธ์การควบคุม',
+      'ต้องปรับความเร็วร่วมกันทั้งระบบ เพราะการลดความเร็วอุปกรณ์หนึ่งอาจทำให้อีกอุปกรณ์กินไฟเพิ่ม',
+    ],
+  },
+  staging: {
+    en: [
+      'Chillers run at part load almost all year; IPLV under AHRI 550/590 gives only 1% weight to full load.',
+      'Constant-speed chillers are usually best at high load, variable-speed chillers at mid load.',
+      'Good staging picks the combination with the lowest total plant power, including pumps and towers.',
+      'The best combination changes hourly, which is why automated plant optimisation outperforms fixed schedules.',
+    ],
+    th: [
+      'ชิลเลอร์ทำงานที่ภาระบางส่วนเกือบทั้งปี ค่า IPLV ตาม AHRI 550/590 ให้น้ำหนักภาระเต็มเพียง 1%',
+      'ชิลเลอร์ความเร็วคงที่มักดีที่สุดที่ภาระสูง ส่วนชิลเลอร์ปรับความเร็วรอบดีที่สุดที่ภาระปานกลาง',
+      'การจัดลำดับที่ดีเลือกชุดเครื่องที่ใช้กำลังไฟฟ้ารวมของระบบต่ำที่สุด รวมปั๊มและทาวเวอร์',
+      'ชุดเครื่องที่ดีที่สุดเปลี่ยนทุกชั่วโมง ระบบปรับการทำงานอัตโนมัติจึงให้ผลดีกว่าตารางเวลาตายตัว',
+    ],
+  },
+  solarCooling: {
+    en: [
+      'Cooling demand and rooftop solar output both peak on hot, sunny days.',
+      'Improve cooling efficiency first, then size solar against the lower demand.',
+      'Under time-of-use tariffs, daytime savings and self-generation are worth more.',
+      'Both can be delivered without upfront investment: solar under a PPA, cooling under Cooling-as-a-Service.',
+    ],
+    th: [
+      'ความต้องการความเย็นและกำลังผลิตโซลาร์รูฟท็อปสูงสุดในวันที่ร้อนและแดดจัดเหมือนกัน',
+      'ควรเพิ่มประสิทธิภาพระบบทำความเย็นก่อน แล้วจึงออกแบบขนาดโซลาร์ตามความต้องการที่ลดลง',
+      'ภายใต้อัตรา TOU การประหยัดและการผลิตไฟใช้เองในช่วงกลางวันมีมูลค่ามากกว่า',
+      'ทั้งสองอย่างทำได้โดยไม่ต้องลงทุนก้อนแรก: โซลาร์แบบ PPA และระบบทำความเย็นแบบ Cooling-as-a-Service',
+    ],
+  },
+  auditPrep: {
+    en: [
+      'Collect 12 months of electricity bills, an equipment list, schematics and operating logs before the audit.',
+      'Tell the auditor about operating hours, critical areas and planned changes.',
+      'On site, expect a walk-through, spot measurements and several days of logging.',
+      'You should receive a baseline, a list of measures and a proposal with a measured, guaranteed saving.',
+    ],
+    th: [
+      'เตรียมบิลค่าไฟ 12 เดือน รายการอุปกรณ์ แผนผังระบบ และบันทึกการเดินเครื่องก่อนการตรวจประเมิน',
+      'แจ้งชั่วโมงทำงาน พื้นที่สำคัญ และแผนการเปลี่ยนแปลงให้ผู้ตรวจประเมินทราบ',
+      'ที่หน้างานจะมีการเดินสำรวจ ตรวจวัด ณ จุดต่าง ๆ และบันทึกข้อมูลต่อเนื่องหลายวัน',
+      'คุณควรได้รับค่าฐาน รายการมาตรการ และข้อเสนอที่ระบุผลประหยัดที่รับประกันพร้อมวิธีตรวจวัด',
+    ],
+  },
 };

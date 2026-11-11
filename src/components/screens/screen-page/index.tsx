@@ -15,6 +15,7 @@ import EfficiencyCheck from './sections/efficiency-check';
 import ContractCalculator from './sections/contract-calculator';
 import { CarbonCalculator, CostOfWaiting } from './sections/quick-calculators';
 import EngineerDownloads from './sections/engineer-downloads';
+import FitCheck from './sections/fit-check';
 import { useVmScreenPage } from '../../../stores/vm-screen-page';
 import ProjectGrid from '../../_commons/project-grid';
 import LayoutStandard from '../../layouts/layout-standard';
@@ -101,6 +102,7 @@ const ScreenPage = () => {
         <CostOfWaiting locale={locale} />
       )}
       {page === 'carbon-calculator' && <CarbonCalculator locale={locale} />}
+      {page === 'caas-fit-check' && <FitCheck locale={locale} />}
       {page === 'engineer-downloads' && <EngineerDownloads locale={locale} />}
       {page === 'chiller-efficiency-check' && (
         <EfficiencyCheck locale={locale} />

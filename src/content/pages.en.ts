@@ -997,6 +997,39 @@ const pages: PageBodies = {
       },
     ],
   },
+  'caas-fit-check': {
+    sections: [
+      {
+        heading: 'What the check looks at',
+        bullets: [
+          'Size of the electricity bill: larger cooling loads produce savings big enough to fund a new plant.',
+          'Age of the chiller plant: older plants usually have more to gain and are closer to replacement.',
+          'Operating hours: the longer cooling runs, the faster efficiency pays back.',
+          'Budget: Cooling-as-a-Service matters most when capital is limited or needed elsewhere.',
+          'People: it suits sites that would rather not operate and optimise a plant themselves.',
+          'Refrigerant and reliability: R-22 plants and frequent breakdowns bring replacement forward.',
+        ],
+      },
+      {
+        heading: 'What happens next',
+        paragraphs: [
+          'The result is an indication, not a proposal. If it looks like a fit, a free audit measures your plant, sets a baseline and gives you a written proposal with a guaranteed minimum saving of 10%.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Are my answers stored?',
+        answer:
+          'No. The check runs in your browser and your answers are not sent to us. We only record, anonymously, which result was shown.',
+      },
+      {
+        question: 'What if the result says "probably not yet"?',
+        answer:
+          'Then optimising your existing plant is likely the better first step. Our free efficiency check, guides and downloads are there to help, with no obligation.',
+      },
+    ],
+  },
 };
 
 export default pages;

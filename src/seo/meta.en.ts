@@ -264,6 +264,15 @@ const meta: SiteMeta = {
       intro:
         'This notice explains what personal data Infinity CoolMaster Co., Ltd. collects through this website, why we collect it, and your rights under Thailand’s Personal Data Protection Act B.E. 2562 (PDPA). Last updated: 11 November 2026.',
     },
+    'caas-fit-check': {
+      label: 'Is CaaS Right for You?',
+      title: 'Is Cooling-as-a-Service Right for You? | Infinity CoolMaster',
+      description:
+        'Answer six quick questions about your bill, chiller plant age, operating hours, budget and team to see whether Cooling-as-a-Service is likely to suit your site.',
+      h1: 'Is Cooling-as-a-Service right for your site?',
+      intro:
+        'Six questions, about one minute. You get an honest indication of whether Cooling-as-a-Service is likely to suit your factory or building, or whether another step makes more sense first.',
+    },
     team: {
       label: 'Our Team',
       title: 'Our Team & Engineers | Infinity CoolMaster',
