@@ -58,11 +58,6 @@ const TEXT = {
     ],
     cta: 'Request a free audit',
     brochure: 'Download our brochure (PDF)',
-    sisterKicker: 'Sister company',
-    sisterTitle: 'Power Express',
-    sisterText:
-      'Infinity CoolMaster is a sister company of Power Express (Powerexpress1980 Co., Ltd.), which provides rooftop solar on a power purchase agreement (PPA) to factories and businesses in Thailand. According to its website, Power Express has delivered 22 projects in 8 provinces since 2023. Solar and efficient cooling work well together, and both can be delivered without upfront investment.',
-    sisterLink: 'Visit powerexpress1980.com',
   },
   th: {
     title: 'สิ่งที่เรารับผิดชอบ',
@@ -106,11 +101,6 @@ const TEXT = {
     ],
     cta: 'ขอรับการประเมินฟรี',
     brochure: 'ดาวน์โหลดโบรชัวร์ (PDF)',
-    sisterKicker: 'บริษัทในเครือ',
-    sisterTitle: 'Power Express',
-    sisterText:
-      'Infinity CoolMaster เป็นบริษัทพี่น้องกับ Power Express (บริษัท เพาวเวอร์เอ็กซ์เพรส1980 จำกัด) ผู้ให้บริการโซลาร์รูฟท็อปแบบสัญญาซื้อขายไฟฟ้า (PPA) สำหรับโรงงานและธุรกิจในประเทศไทย ตามข้อมูลบนเว็บไซต์ของ Power Express ส่งมอบแล้ว 22 โครงการ ใน 8 จังหวัด ตั้งแต่ปี 2566 โซลาร์และระบบทำความเย็นประสิทธิภาพสูงทำงานเสริมกันได้ดี และทำได้ทั้งสองอย่างโดยไม่ต้องลงทุนก้อนแรก',
-    sisterLink: 'เยี่ยมชม powerexpress1980.com',
   },
 };
 
@@ -189,23 +179,6 @@ const SectionApproach = () => {
                 ))}
               </dl>
             </div>
-          </div>
-          <div className="rounded-2xl bg-white border border-sep-pale p-6 lg:p-8 gap-y-3 flex flex-col justify-start items-start">
-            <span className="kicker">{t.sisterKicker}</span>
-            <h3 className="text-xl lg:text-2xl font-semibold text-text-main">
-              {t.sisterTitle}
-            </h3>
-            <p className="max-w-[860px] text-base leading-relaxed text-text-muted">
-              {t.sisterText}
-            </p>
-            <a
-              className="text-base font-medium text-brand-blue-ink underline underline-offset-4"
-              href="https://powerexpress1980.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              {t.sisterLink} ↗
-            </a>
           </div>
           <div className="gap-4 flex flex-col sm:flex-row sm:items-center">
             <Link className="btn-caas" to={paths.contact(locale)}>
