@@ -14,6 +14,7 @@ import { useVmScreen } from '../../../stores/vm-screen';
 import SafeArea from '../safe-area';
 import BrandLogo, { BrandLogoTone } from '../brand-logo';
 import Icon from '../icon';
+import CookieConsent, { OPEN_EVENT } from '../cookie-consent';
 
 const Footer = () => {
   const {
@@ -128,9 +129,25 @@ const Footer = () => {
             <span className="block text-white-a70 text-2xs lg:text-sm text-center">
               {l(locale, localizations, 'general.copyrights')}
             </span>
+            <span className="gap-x-5 flex flex-row justify-center items-center text-2xs lg:text-sm">
+              <Link
+                className="text-white-a70 underline underline-offset-2 hover:text-white"
+                to={paths.page(locale, 'privacy-policy')}
+              >
+                {meta.pages['privacy-policy'].label}
+              </Link>
+              <button
+                type="button"
+                className="text-white-a70 underline underline-offset-2 hover:text-white"
+                onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}
+              >
+                {meta.cookieSettings}
+              </button>
+            </span>
           </div>
         </div>
       </SafeArea>
+      <CookieConsent locale={locale} />
     </footer>
   );
 };

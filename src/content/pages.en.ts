@@ -935,6 +935,68 @@ const pages: PageBodies = {
       },
     ],
   },
+  'privacy-policy': {
+    sections: [
+      {
+        heading: 'Who we are',
+        paragraphs: [
+          'The data controller is Infinity CoolMaster Co., Ltd. (company registration no. 0105566016285), 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Contact: sales@infinitycoolmaster.com.',
+        ],
+      },
+      {
+        heading: 'What we collect',
+        bullets: [
+          'Audit request form: company name, contact person, email address, phone number (optional), approximate monthly electricity bill (optional) and industry.',
+          'Messages you send us by email, phone or social media.',
+          'Website usage data through Google Analytics 4: pages viewed, approximate location (country or city), device and browser type, and how you reached the site. Unless you accept analytics cookies, Google Analytics receives only anonymous, cookieless signals that do not identify you or follow you between visits.',
+          'The calculators on this site run in your browser. The figures you type are not sent to us unless you choose to include them in an audit request.',
+        ],
+      },
+      {
+        heading: 'Why we use it',
+        bullets: [
+          'To reply to your request and prepare an assessment or proposal (steps taken at your request before entering into a contract, and our legitimate interest in responding to business enquiries).',
+          'To understand which pages are useful and improve the website (with your consent to analytics cookies).',
+          'To meet legal obligations that apply to us.',
+          'We do not sell personal data and we do not use it for automated decisions about you.',
+        ],
+      },
+      {
+        heading: 'Cookies',
+        paragraphs: [
+          'The website works without cookies. Analytics cookies are set only after you choose "Accept" in the cookie notice. You can change your choice at any time with the "Cookie settings" link at the bottom of every page.',
+        ],
+      },
+      {
+        heading: 'Who receives it',
+        bullets: [
+          'Our own staff who handle enquiries and proposals.',
+          'Service providers that host and operate the website and its forms: GitHub (website hosting), Cloudflare (form handling and storage) and Google (analytics, if you consent). Their servers may be outside Thailand; we rely on these providers’ contractual safeguards for such transfers.',
+          'Authorities, where the law requires it.',
+        ],
+      },
+      {
+        heading: 'How long we keep it',
+        paragraphs: [
+          'We keep enquiry data for as long as needed to handle your request and any resulting business relationship, and then delete or anonymise it unless the law requires us to keep it longer.',
+        ],
+      },
+      {
+        heading: 'Your rights',
+        bullets: [
+          'You may ask to access, receive a copy of, correct, delete or restrict the use of your personal data, to object to its use, and to withdraw consent at any time.',
+          'To exercise these rights, email sales@infinitycoolmaster.com. We will respond within the period required by law.',
+          'You may also lodge a complaint with Thailand’s Personal Data Protection Committee (PDPC).',
+        ],
+      },
+      {
+        heading: 'Changes to this notice',
+        paragraphs: [
+          'We will post any changes on this page and update the date above.',
+        ],
+      },
+    ],
+  },
 };
 
 export default pages;

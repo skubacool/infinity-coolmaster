@@ -38,6 +38,7 @@ export const PAGE_KEYS = [
   'cost-of-waiting-calculator',
   'carbon-calculator',
   'engineer-downloads',
+  'privacy-policy',
 ] as const;
 
 export type PageKey = (typeof PAGE_KEYS)[number];

@@ -33,11 +33,11 @@ const SectionBenefits = () => {
             <TextLines text={localizedTitleBenefits} />
           </h2>
           <div className="self-center mb-12 lg:mb-16 rounded-full bg-gradient-caas w-12 h-1" />
-          <ul className="gap-y-10 gap-x-4 lg:gap-x-6 flex flex-col lg:flex-row justify-center items-center lg:items-stretch">
+          <ul className="gap-y-7 lg:gap-y-10 gap-x-4 lg:gap-x-6 flex flex-col lg:flex-row justify-center items-stretch">
             {benefits.map((benefit) => {
               const { id } = benefit;
               return (
-                <li key={id} className="flex-1 max-w-[320px]">
+                <li key={id} className="flex-1 lg:max-w-[320px]">
                   <BenefitBox locale={locale} benefit={benefit} />
                 </li>
               );

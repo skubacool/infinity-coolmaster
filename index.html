@@ -50,6 +50,19 @@
       function gtag() {
         dataLayer.push(arguments);
       }
+      // PDPA: analytics cookies stay off until the visitor accepts the cookie
+      // notice (src/components/_commons/cookie-consent). Without consent
+      // Google Analytics receives only cookieless, anonymous signals.
+      var icmConsent = null;
+      try {
+        icmConsent = localStorage.getItem('icm-consent');
+      } catch (e) {}
+      gtag('consent', 'default', {
+        analytics_storage: icmConsent === 'granted' ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
       gtag('js', new Date());
 
       // send_page_view: false — the app sends a page_view per route instead

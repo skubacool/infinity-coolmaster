@@ -12,6 +12,9 @@ import { l } from '../../../utils/localization-utils';
 import { useVmScreen } from '../../../stores/vm-screen';
 import { insertLead } from '../../../apis/lead';
 import Icon from '../icon';
+import { Link } from 'react-router-dom';
+import { paths } from '../../../config/routes';
+import { siteMeta } from '../../../seo/pages';
 import { trackLead } from '../../../utils/analytics';
 import { billToRange, getLeadPrefill } from '../../../utils/lead-prefill';
 
@@ -250,7 +253,13 @@ const LeadForm = (props: PropsWithChildren<LeadFormProps>) => {
         <Icon name="arrow-right" size={18} />
       </button>
       <p className="text-xs text-title-pale text-center">
-        {t('form.privacy-note')}
+        {t('form.privacy-note')}{' '}
+        <Link
+          className="underline underline-offset-2 hover:text-brand-blue-ink"
+          to={paths.page(locale, 'privacy-policy')}
+        >
+          {siteMeta(locale).privacyLink}
+        </Link>
       </p>
     </form>
   );

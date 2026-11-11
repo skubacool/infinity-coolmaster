@@ -52,6 +52,10 @@ export interface SiteMeta {
   furtherReading: string;
   /** Label of the strip linking the free tools to each other. */
   moreTools: string;
+  /** Footer link that reopens the cookie notice. */
+  cookieSettings: string;
+  /** Link text to the privacy notice under forms. */
+  privacyLink: string;
   relatedPages: string;
   relatedCaseStudies: string;
   resourcesTitle: string;

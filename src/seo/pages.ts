@@ -33,6 +33,7 @@ export const PUBLISHED_PAGES: PageKey[] = [
   'cost-of-waiting-calculator',
   'carbon-calculator',
   'engineer-downloads',
+  'privacy-policy',
   // 'team' — needs real names, photos, licences and LinkedIn profiles.
 ];
 
