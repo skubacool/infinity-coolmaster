@@ -602,6 +602,322 @@ A: Yes. Download, change and share them as you like.
 Q: Can you help us analyse the data we collect?
 A: Yes. Send us a few months of log sheets with a free audit request and our engineers will review them.
 
+## Privacy notice
+URL: https://infinitycoolmaster.com/en/privacy-policy/
+
+This notice explains what personal data Infinity CoolMaster Co., Ltd. collects through this website, why we collect it, and your rights under Thailand’s Personal Data Protection Act B.E. 2562 (PDPA). Last updated: 11 November 2026.
+
+### Who we are
+
+The data controller is Infinity CoolMaster Co., Ltd. (company registration no. 0105566016285), 157/9 Soi Ari Samphan 2, Phahonyothin Road, Phaya Thai, Bangkok 10400, Thailand. Contact: sales@infinitycoolmaster.com.
+
+### What we collect
+
+- Audit request form: company name, contact person, email address, phone number (optional), approximate monthly electricity bill (optional) and industry.
+- Messages you send us by email, phone or social media.
+- Website usage data through Google Analytics 4: pages viewed, approximate location (country or city), device and browser type, and how you reached the site. Unless you accept analytics cookies, Google Analytics receives only anonymous, cookieless signals that do not identify you or follow you between visits.
+- The calculators on this site run in your browser. The figures you type are not sent to us unless you choose to include them in an audit request.
+
+### Why we use it
+
+- To reply to your request and prepare an assessment or proposal (steps taken at your request before entering into a contract, and our legitimate interest in responding to business enquiries).
+- To understand which pages are useful and improve the website (with your consent to analytics cookies).
+- To meet legal obligations that apply to us.
+- We do not sell personal data and we do not use it for automated decisions about you.
+
+### Cookies
+
+The website works without cookies. Analytics cookies are set only after you choose "Accept" in the cookie notice. You can change your choice at any time with the "Cookie settings" link at the bottom of every page.
+
+### Who receives it
+
+- Our own staff who handle enquiries and proposals.
+- Service providers that host and operate the website and its forms: GitHub (website hosting), Cloudflare (form handling and storage) and Google (analytics, if you consent). Their servers may be outside Thailand; we rely on these providers’ contractual safeguards for such transfers.
+- Authorities, where the law requires it.
+
+### How long we keep it
+
+We keep enquiry data for as long as needed to handle your request and any resulting business relationship, and then delete or anonymise it unless the law requires us to keep it longer.
+
+### Your rights
+
+- You may ask to access, receive a copy of, correct, delete or restrict the use of your personal data, to object to its use, and to withdraw consent at any time.
+- To exercise these rights, email sales@infinitycoolmaster.com. We will respond within the period required by law.
+- You may also lodge a complaint with Thailand’s Personal Data Protection Committee (PDPC).
+
+### Changes to this notice
+
+We will post any changes on this page and update the date above.
+
+## Is Cooling-as-a-Service right for your site?
+URL: https://infinitycoolmaster.com/en/caas-fit-check/
+
+Six questions, about one minute. You get an honest indication of whether Cooling-as-a-Service is likely to suit your factory or building, or whether another step makes more sense first.
+
+### What the check looks at
+
+- Size of the electricity bill: larger cooling loads produce savings big enough to fund a new plant.
+- Age of the chiller plant: older plants usually have more to gain and are closer to replacement.
+- Operating hours: the longer cooling runs, the faster efficiency pays back.
+- Budget: Cooling-as-a-Service matters most when capital is limited or needed elsewhere.
+- People: it suits sites that would rather not operate and optimise a plant themselves.
+- Refrigerant and reliability: R-22 plants and frequent breakdowns bring replacement forward.
+
+### What happens next
+
+The result is an indication, not a proposal. If it looks like a fit, a free audit measures your plant, sets a baseline and gives you a written proposal with a guaranteed minimum saving of 10%.
+
+Q: Are my answers stored?
+A: No. The check runs in your browser and your answers are not sent to us. We only record, anonymously, which result was shown.
+
+Q: What if the result says "probably not yet"?
+A: Then optimising your existing plant is likely the better first step. Our free efficiency check, guides and downloads are there to help, with no obligation.
+
+## Low delta-T syndrome: why chilled water comes back too cold
+URL: https://infinitycoolmaster.com/en/insights/low-delta-t-syndrome-chilled-water/
+Published: 2026-11-11
+
+- Delta-T is the difference between chilled water supply and return; most plants are designed for about 5–6 °C.
+- Low delta-T forces more flow and extra chillers for the same cooling, raising pump and chiller energy.
+- The usual causes are on the building side: dirty coils, bypasses, three-way valves and wrong setpoints.
+- Start with cleaning and setpoints, then valves, then variable flow.
+
+Delta-T is the difference between the chilled water leaving the plant and the water coming back from the building. Most plants are designed for around 5–6 °C. When the real figure is 2–3 °C, the plant has "low delta-T syndrome", one of the most common and most expensive problems in chilled water systems.
+
+## Why low delta-T costs money
+
+- The same cooling load needs more water. Halving delta-T doubles the flow, and pump power rises steeply with flow.
+- Extra chillers are started to supply flow, not cooling, so every chiller runs lightly loaded and inefficiently.
+- The plant looks short of capacity even though the chillers are far from full load.
+
+## How to measure it
+
+Read the supply and return temperatures at the plant header at different times of day. Cooling in tons equals flow (L/s) × delta-T (°C) × 4.19 ÷ 3.517. Log it for a week: a delta-T that collapses at part load is the classic sign.
+
+## Common causes
+
+- Dirty or fouled cooling coils and clogged air filters.
+- Three-way valves or open bypasses that send cold water straight back.
+- Oversized, leaking or failed control valves.
+- Supply air or room setpoints set lower than the coils were designed for.
+- Chilled water supply temperature set higher than design without checking the coils.
+- Coils piped in parallel flow instead of counterflow.
+
+## Fixes, cheapest first
+
+- Clean coils and replace filters; check that valves close fully.
+- Correct setpoints at air handlers and fan coils.
+- Close unnecessary bypasses; convert three-way valves to two-way where the pumping system allows.
+- Fit pressure-independent control valves on the worst air handlers.
+- Move to variable flow with pump speed control once the building side is fixed.
+
+Fixing delta-T on the building side is often the cheapest saving in the whole plant, and it is the first thing we check in an audit.
+
+## Cooling towers: range, approach and why they decide chiller efficiency
+URL: https://infinitycoolmaster.com/en/insights/cooling-tower-range-approach-efficiency/
+Published: 2026-11-11
+
+- Range is how much the tower cools the water; approach is how close the leaving water gets to wet-bulb temperature.
+- Each 1 °C lower condenser water temperature cuts chiller energy by roughly 2–3%, within manufacturer limits.
+- Scale, corrosion and biological growth all reduce efficiency, so water treatment is an energy measure.
+- Variable-speed fans and wet-bulb-based reset balance tower energy against chiller energy.
+
+A water-cooled chiller is only as efficient as the water its cooling tower sends back. Colder condenser water means less work for the compressor, so the tower quietly controls a large share of the plant's electricity use.
+
+## Range and approach
+
+- Range is how much the tower cools the water: water in minus water out.
+- Approach is how close the leaving water gets to the outdoor wet-bulb temperature. A tower can never cool water below wet-bulb, and a smaller approach needs a bigger tower.
+- In Thailand's hot, humid climate the wet-bulb temperature is high for much of the year, so every degree of approach matters.
+
+## Why it matters for the chiller
+
+As a rule of thumb, each 1 °C reduction in condenser water temperature cuts chiller energy by roughly 2–3%, within the limits the chiller manufacturer allows. A tower with scaled fill or poor airflow can easily lose several degrees.
+
+## Water treatment is an efficiency issue
+
+- Scale on condenser tubes acts as insulation; even a thin layer raises compressor power noticeably.
+- Corrosion shortens the life of tubes, basins and pipework.
+- Biological growth fouls the fill and is a health risk, including Legionella.
+- Good treatment controls all three while limiting the water lost to blowdown.
+
+## What to check
+
+- Fill, nozzles and drift eliminators: clean, intact and evenly wetted.
+- Fans and drives: belts, gearboxes, vibration, and speed control.
+- Basin level, make-up valve and blowdown rate.
+- Approach at a known load, compared with the tower's design figure.
+- Condenser tube cleanliness, by the chiller's condenser approach temperature.
+
+## Controls that save energy
+
+- Variable-speed tower fans instead of on/off cycling.
+- Running more cells at lower fan speed rather than fewer at full speed.
+- Resetting condenser water temperature with wet-bulb, balancing tower fan energy against chiller energy.
+
+Our CPMS optimises towers, pumps and chillers together, because the lowest plant kW/TR is rarely the point where any one of them is at its own best.
+
+## Variable speed drives in chiller plants: where they save and where they do not
+URL: https://infinitycoolmaster.com/en/insights/variable-speed-drives-chiller-plant/
+Published: 2026-11-11
+
+- For pumps and fans, power falls with the cube of speed: about half the power at 80% speed in an ideal system.
+- Drives pay best on chilled water pumps, condenser pumps, tower fans and part-loaded chillers.
+- A drive left at fixed speed saves nothing; the control strategy creates the saving.
+- Speeds must be optimised together, because slowing one component can raise the energy of another.
+
+A variable speed drive (VSD) changes motor speed to match the load instead of running flat out and throttling. Because most chiller plants spend most of the year at part load, drives are one of the most effective efficiency measures, when they are applied and controlled properly.
+
+## The physics in one line
+
+For pumps and fans, flow is proportional to speed, but power is proportional to speed cubed. In an ideal system, running at 80% speed needs about half the power, and 50% speed needs about one eighth.
+
+## Where drives pay
+
+- Chilled water pumps: slow down as valves close and the building needs less flow.
+- Condenser water pumps: reduce flow at low load, within the chiller's minimum.
+- Cooling tower fans: modulate instead of cycling on and off.
+- Chillers: variable-speed compressors are much more efficient at part load and when condenser water is cool.
+
+## Where savings are smaller than expected
+
+- Systems with high static head, where the cube law does not fully apply.
+- Pumps that are already correctly sized and run near full flow all year.
+- Plants where a drive is installed but left at a fixed speed. A drive saves nothing without a control strategy.
+
+## Things to get right
+
+- Minimum flow through each chiller's evaporator and condenser must always be protected.
+- Differential pressure setpoints should be reset to the lowest value that satisfies the building, not fixed at commissioning values.
+- Harmonics, motor suitability and cable lengths need checking on retrofits.
+- Drives interact: slowing condenser pumps or tower fans saves their energy but raises chiller energy. The right balance changes with load and weather.
+
+That interaction is why plant-level optimisation matters. Our CPMS adjusts speeds across chillers, pumps and towers together to minimise total plant kW/TR.
+
+## Chiller staging and part-load efficiency: running the right machines
+URL: https://infinitycoolmaster.com/en/insights/chiller-staging-part-load-iplv/
+Published: 2026-11-11
+
+- Chillers run at part load almost all year; IPLV under AHRI 550/590 gives only 1% weight to full load.
+- Constant-speed chillers are usually best at high load, variable-speed chillers at mid load.
+- Good staging picks the combination with the lowest total plant power, including pumps and towers.
+- The best combination changes hourly, which is why automated plant optimisation outperforms fixed schedules.
+
+A chiller's nameplate efficiency is measured at full load, but a real plant is at full load for only a few hours a year. What you pay for is part-load performance, and that depends heavily on which machines are running together.
+
+## Part-load efficiency and IPLV
+
+IPLV (integrated part-load value) is a single efficiency figure that weights four load points. Under AHRI Standard 550/590 the weights are 1% at 100% load, 42% at 75%, 45% at 50% and 12% at 25%. In other words, the standard itself assumes a chiller spends almost all of its life below full load.
+
+## Each chiller has a sweet spot
+
+- Constant-speed chillers are usually most efficient at high load.
+- Variable-speed chillers are usually most efficient at mid load, especially with cool condenser water.
+- Below about 30% load, most chillers become inefficient and less stable.
+
+## What good staging looks like
+
+- Start and stop chillers based on load and efficiency, not only on supply temperature alarms.
+- Run the combination that meets the load with the lowest total plant power, including pumps and tower fans.
+- Avoid running two chillers lightly loaded when one would carry the load comfortably, unless they are variable-speed machines that are better at mid load.
+- Use delays and minimum run times to prevent short cycling.
+- Rotate duty to balance run hours, without overriding efficiency.
+
+## Common staging mistakes
+
+- An extra chiller started for flow because of low delta-T, not for load.
+- Fixed schedules that ignore weather and occupancy.
+- Operators keeping a "safety" chiller on all day.
+- Mixed old and new chillers staged as if they were identical.
+
+## Why automation helps
+
+The best combination changes hour by hour with load, wet-bulb temperature and each machine's condition. A plant management system that models every chiller can make that decision continuously. This is the core job of our CPMS, and its results are verified monthly against the agreed baseline.
+
+## Rooftop solar and efficient cooling: why they work better together
+URL: https://infinitycoolmaster.com/en/insights/rooftop-solar-and-efficient-cooling/
+Published: 2026-11-11
+
+- Cooling demand and rooftop solar output both peak on hot, sunny days.
+- Improve cooling efficiency first, then size solar against the lower demand.
+- Under time-of-use tariffs, daytime savings and self-generation are worth more.
+- Both can be delivered without upfront investment: solar under a PPA, cooling under Cooling-as-a-Service.
+
+For most Thai factories and commercial buildings, cooling is one of the largest electricity loads, and it is highest on hot, sunny afternoons, exactly when rooftop solar produces the most. The two measures fit together naturally, but the order in which you do them matters.
+
+## Efficiency first, then generation
+
+- A more efficient chiller plant lowers the load permanently, day and night, in every season.
+- Solar then covers a larger share of what remains, and the system can be sized against the real, lower demand.
+- Sizing solar against an inefficient plant risks paying to generate electricity that an upgrade would have removed.
+
+## Why the timing fits
+
+- Cooling load follows outdoor heat and working hours.
+- Solar output follows the sun, with its peak around midday.
+- Under time-of-use tariffs, weekday daytime hours are on-peak, so every unit saved or self-generated then is worth more.
+
+## What each one cannot do
+
+- Solar does not reduce cooling demand at night or in cloudy weather, and it does not fix an inefficient plant.
+- Efficiency does not remove the remaining demand; it only makes it smaller.
+- Together they cut both the amount of electricity bought and the peak demand.
+
+## Both are available without upfront investment
+
+- Rooftop solar can be delivered under a power purchase agreement (PPA): the provider funds and owns the system and you buy the electricity it generates.
+- Chiller plants can be delivered under Cooling-as-a-Service: the provider funds, owns, operates and maintains the plant, with savings measured monthly.
+
+## Reporting the result
+
+Energy saved and solar energy generated can both be converted to avoided CO₂ with the grid emission factor, which supports ESG reporting. Keep the two figures separate and base them on metered data.
+
+## How to prepare for a chiller plant energy audit
+URL: https://infinitycoolmaster.com/en/insights/prepare-chiller-plant-energy-audit/
+Published: 2026-11-11
+
+- Collect 12 months of electricity bills, an equipment list, schematics and operating logs before the audit.
+- Tell the auditor about operating hours, critical areas and planned changes.
+- On site, expect a walk-through, spot measurements and several days of logging.
+- You should receive a baseline, a list of measures and a proposal with a measured, guaranteed saving.
+
+An energy audit of a chiller plant is quick when the right information is ready, and vague when it is not. This checklist covers what to prepare so the audit produces numbers you can act on.
+
+## Documents to collect
+
+- Electricity bills for the last 12 months, and 15-minute interval data if your utility or meters provide it.
+- An equipment list: chillers, pumps, cooling towers and air handlers, with capacity, rated power, age and refrigerant.
+- Chilled water and condenser water schematics, and the electrical single-line diagram.
+- Operating logs: supply and return temperatures, pressures, currents and run hours.
+- Maintenance records and a list of known problems.
+
+## Information about how the site runs
+
+- Operating hours and production or occupancy schedules.
+- Critical areas that cannot lose cooling, and required temperatures.
+- Planned expansions, shutdown windows and space available for new equipment.
+
+## Access the auditor needs
+
+- The plant room, roof, electrical rooms and main air handlers.
+- Trend data from the building management system, if there is one.
+- Permission to install temporary power and temperature loggers.
+- A contact from engineering and one from finance.
+
+## What happens on site
+
+- A walk-through of the plant and the main cooling loads.
+- Spot measurements of power, flow and temperatures.
+- Logging over several days to capture how load changes.
+
+## What you should receive
+
+- A baseline: how much energy the plant uses now and its kW/TR.
+- A list of measures with expected savings and what each depends on.
+- A proposal with the guaranteed saving and how it will be measured.
+
+Infinity CoolMaster's audit is free and carries no obligation. Our free daily log sheet and M&V data checklist, on the downloads page, are a good way to start collecting data before we visit.
+
 ## Cooling-as-a-Service vs leasing a chiller: which costs you less?
 URL: https://infinitycoolmaster.com/en/insights/cooling-as-a-service-vs-leasing-chiller/
 Published: 2026-11-07
@@ -2285,6 +2601,322 @@ A: ใช้ฟรี ดาวน์โหลด ปรับแก้ แล�
 
 Q: ช่วยวิเคราะห์ข้อมูลที่เราเก็บได้หรือไม่
 A: ได้ ส่งใบบันทึกย้อนหลังสักสองสามเดือนมาพร้อมคำขอตรวจประเมินฟรี วิศวกรของเราจะช่วยทบทวนให้
+
+## นโยบายความเป็นส่วนตัว
+URL: https://infinitycoolmaster.com/th/privacy-policy/
+
+ประกาศนี้อธิบายว่า บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด เก็บข้อมูลส่วนบุคคลใดผ่านเว็บไซต์นี้ เก็บเพื่ออะไร และคุณมีสิทธิอะไรบ้างตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) ปรับปรุงล่าสุด: 11 พฤศจิกายน 2569
+
+### เราคือใคร
+
+ผู้ควบคุมข้อมูลส่วนบุคคลคือ บริษัท อินฟินิตี คูลมาสเตอร์ จำกัด (เลขทะเบียนนิติบุคคล 0105566016285) ที่อยู่ 157/9 ซอยอารีย์สัมพันธ์ 2 ถนนพหลโยธิน แขวงพญาไท เขตพญาไท กรุงเทพมหานคร 10400 ติดต่อ: sales@infinitycoolmaster.com
+
+### ข้อมูลที่เราเก็บ
+
+- แบบฟอร์มขอรับการประเมิน: ชื่อบริษัท ชื่อผู้ติดต่อ อีเมล เบอร์โทรศัพท์ (ไม่บังคับ) ค่าไฟฟ้าต่อเดือนโดยประมาณ (ไม่บังคับ) และกลุ่มอุตสาหกรรม
+- ข้อความที่คุณส่งถึงเราทางอีเมล โทรศัพท์ หรือโซเชียลมีเดีย
+- ข้อมูลการใช้งานเว็บไซต์ผ่าน Google Analytics 4: หน้าที่เข้าชม ตำแหน่งโดยประมาณ (ประเทศหรือเมือง) ประเภทอุปกรณ์และเบราว์เซอร์ และช่องทางที่เข้ามายังเว็บไซต์ หากคุณไม่ยอมรับคุกกี้เพื่อการวิเคราะห์ Google Analytics จะได้รับเพียงสัญญาณแบบไม่ระบุตัวตนและไม่ใช้คุกกี้ ซึ่งไม่สามารถระบุตัวคุณหรือติดตามคุณระหว่างการเข้าชมแต่ละครั้งได้
+- เครื่องคำนวณบนเว็บไซต์ทำงานในเบราว์เซอร์ของคุณ ตัวเลขที่กรอกจะไม่ถูกส่งถึงเรา เว้นแต่คุณเลือกแนบไปกับคำขอรับการประเมิน
+
+### วัตถุประสงค์ในการใช้ข้อมูล
+
+- เพื่อตอบกลับคำขอของคุณและจัดทำการประเมินหรือข้อเสนอ (การดำเนินการตามคำขอของคุณก่อนเข้าทำสัญญา และประโยชน์โดยชอบด้วยกฎหมายของเราในการตอบข้อสอบถามทางธุรกิจ)
+- เพื่อทำความเข้าใจว่าหน้าใดเป็นประโยชน์และปรับปรุงเว็บไซต์ (โดยความยินยอมของคุณต่อคุกกี้เพื่อการวิเคราะห์)
+- เพื่อปฏิบัติตามกฎหมายที่เกี่ยวข้อง
+- เราไม่ขายข้อมูลส่วนบุคคล และไม่ใช้ข้อมูลเพื่อการตัดสินใจโดยอัตโนมัติเกี่ยวกับตัวคุณ
+
+### คุกกี้
+
+เว็บไซต์ใช้งานได้โดยไม่ต้องใช้คุกกี้ คุกกี้เพื่อการวิเคราะห์จะถูกใช้งานหลังจากคุณเลือก "ยอมรับ" ในแถบแจ้งเตือนคุกกี้เท่านั้น คุณเปลี่ยนการตั้งค่าได้ทุกเมื่อที่ลิงก์ "ตั้งค่าคุกกี้" ด้านล่างของทุกหน้า
+
+### ผู้ที่ได้รับข้อมูล
+
+- พนักงานของเราที่ดูแลข้อสอบถามและข้อเสนอ
+- ผู้ให้บริการที่ดูแลเว็บไซต์และแบบฟอร์ม ได้แก่ GitHub (โฮสต์เว็บไซต์) Cloudflare (ระบบแบบฟอร์มและการจัดเก็บ) และ Google (การวิเคราะห์ หากคุณยินยอม) ซึ่งเซิร์ฟเวอร์อาจอยู่นอกประเทศไทย โดยเราอาศัยมาตรการคุ้มครองตามสัญญาของผู้ให้บริการเหล่านี้
+- หน่วยงานรัฐ ในกรณีที่กฎหมายกำหนด
+
+### ระยะเวลาในการเก็บรักษา
+
+เราเก็บข้อมูลข้อสอบถามไว้เท่าที่จำเป็นต่อการดำเนินการตามคำขอและความสัมพันธ์ทางธุรกิจที่เกิดขึ้น จากนั้นจะลบหรือทำให้ไม่สามารถระบุตัวบุคคลได้ เว้นแต่กฎหมายกำหนดให้เก็บนานกว่านั้น
+
+### สิทธิของคุณ
+
+- คุณมีสิทธิขอเข้าถึง ขอรับสำเนา ขอแก้ไข ขอลบ หรือขอระงับการใช้ข้อมูลส่วนบุคคลของคุณ คัดค้านการใช้ข้อมูล และถอนความยินยอมได้ทุกเมื่อ
+- หากต้องการใช้สิทธิ กรุณาอีเมลถึง sales@infinitycoolmaster.com เราจะตอบกลับภายในระยะเวลาที่กฎหมายกำหนด
+- คุณมีสิทธิร้องเรียนต่อคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส.)
+
+### การเปลี่ยนแปลงประกาศนี้
+
+หากมีการเปลี่ยนแปลง เราจะเผยแพร่บนหน้านี้และปรับวันที่ด้านบน
+
+## Cooling-as-a-Service เหมาะกับสถานที่ของคุณหรือไม่
+URL: https://infinitycoolmaster.com/th/caas-fit-check/
+
+ตอบ 6 คำถาม ใช้เวลาประมาณ 1 นาที คุณจะได้ผลประเมินเบื้องต้นอย่างตรงไปตรงมาว่า Cooling-as-a-Service น่าจะเหมาะกับโรงงานหรืออาคารของคุณหรือไม่ หรือควรเริ่มจากขั้นตอนอื่นก่อน
+
+### แบบประเมินนี้พิจารณาอะไร
+
+- ขนาดค่าไฟฟ้า: ภาระความเย็นที่มากให้ผลประหยัดมากพอสำหรับลงทุนระบบใหม่
+- อายุระบบชิลเลอร์: ระบบเก่ามักประหยัดได้มากกว่าและใกล้ถึงเวลาเปลี่ยน
+- ชั่วโมงทำงาน: ยิ่งระบบทำความเย็นทำงานนาน ยิ่งคืนทุนเร็ว
+- งบประมาณ: Cooling-as-a-Service มีประโยชน์ที่สุดเมื่องบลงทุนจำกัดหรือต้องใช้กับส่วนอื่น
+- บุคลากร: เหมาะกับสถานที่ที่ไม่ต้องการเดินระบบและปรับจูนเอง
+- สารทำความเย็นและความน่าเชื่อถือ: ระบบที่ใช้ R-22 หรือเสียบ่อย ทำให้ต้องเปลี่ยนเร็วขึ้น
+
+### ขั้นตอนต่อไป
+
+ผลที่ได้เป็นเพียงการประเมินเบื้องต้น ไม่ใช่ข้อเสนอ หากมีแนวโน้มเหมาะสม การตรวจประเมินฟรีจะตรวจวัดระบบของคุณ กำหนดค่าฐาน และจัดทำข้อเสนอเป็นลายลักษณ์อักษรพร้อมรับประกันผลประหยัดขั้นต่ำ 10%
+
+Q: คำตอบของฉันถูกเก็บไว้หรือไม่
+A: ไม่ แบบประเมินทำงานในเบราว์เซอร์ของคุณ และคำตอบไม่ถูกส่งถึงเรา เราบันทึกเพียงว่าแสดงผลแบบใด โดยไม่ระบุตัวตน
+
+Q: หากผลบอกว่า "อาจยังไม่ถึงเวลา" ควรทำอย่างไร
+A: การปรับปรุงระบบเดิมน่าจะเป็นขั้นตอนแรกที่ดีกว่า เครื่องมือตรวจประสิทธิภาพ คู่มือ และไฟล์ดาวน์โหลดฟรีของเราพร้อมช่วย โดยไม่มีข้อผูกมัด
+
+## Low Delta-T Syndrome: ทำไมน้ำเย็นไหลกลับมาเย็นเกินไป
+URL: https://infinitycoolmaster.com/th/insights/low-delta-t-syndrome-chilled-water/
+Published: 2026-11-11
+
+- Delta-T คือผลต่างอุณหภูมิน้ำเย็นจ่ายและน้ำกลับ ระบบส่วนใหญ่ออกแบบไว้ประมาณ 5–6 °C
+- Delta-T ต่ำทำให้ต้องใช้อัตราการไหลมากขึ้นและเดินชิลเลอร์เพิ่มเพื่อความเย็นเท่าเดิม พลังงานปั๊มและชิลเลอร์จึงสูงขึ้น
+- สาเหตุส่วนใหญ่อยู่ฝั่งอาคาร: คอยล์สกปรก บายพาส วาล์วสามทาง และค่าที่ตั้งไว้ไม่ถูกต้อง
+- เริ่มจากการล้างและปรับค่าที่ตั้งไว้ ตามด้วยวาล์ว แล้วจึงเปลี่ยนเป็นระบบอัตราการไหลแปรผัน
+
+Delta-T คือผลต่างระหว่างอุณหภูมิน้ำเย็นที่จ่ายออกจากระบบกับน้ำที่ไหลกลับจากอาคาร ระบบส่วนใหญ่ออกแบบไว้ที่ประมาณ 5–6 °C หากค่าจริงเหลือเพียง 2–3 °C แสดงว่าระบบมีปัญหา "Low Delta-T Syndrome" ซึ่งเป็นปัญหาที่พบบ่อยและสิ้นเปลืองที่สุดอย่างหนึ่งของระบบน้ำเย็น
+
+## ทำไม Delta-T ต่ำจึงเปลืองเงิน
+
+- ภาระความเย็นเท่าเดิมแต่ต้องใช้น้ำมากขึ้น Delta-T ลดลงครึ่งหนึ่ง อัตราการไหลต้องเพิ่มเป็นสองเท่า และกำลังปั๊มเพิ่มขึ้นมากตามอัตราการไหล
+- ต้องเดินชิลเลอร์เพิ่มเพื่อให้ได้อัตราการไหล ไม่ใช่เพื่อความเย็น ชิลเลอร์ทุกเครื่องจึงทำงานที่ภาระต่ำและประสิทธิภาพต่ำ
+- ระบบดูเหมือนกำลังไม่พอ ทั้งที่ชิลเลอร์ยังไม่ถึงภาระเต็มพิกัด
+
+## วิธีตรวจวัด
+
+อ่านอุณหภูมิน้ำจ่ายและน้ำกลับที่ท่อเมนของห้องเครื่องในช่วงเวลาต่าง ๆ ของวัน ความเย็นเป็นตันเท่ากับ อัตราการไหล (ลิตร/วินาที) × Delta-T (°C) × 4.19 ÷ 3.517 บันทึกต่อเนื่องหนึ่งสัปดาห์ หาก Delta-T ลดลงมากในช่วงภาระต่ำ ถือเป็นอาการที่ชัดเจน
+
+## สาเหตุที่พบบ่อย
+
+- คอยล์เย็นสกปรกหรือมีตะกรัน และแผ่นกรองอากาศอุดตัน
+- วาล์วสามทางหรือท่อบายพาสที่เปิดอยู่ ทำให้น้ำเย็นไหลกลับโดยตรง
+- วาล์วควบคุมขนาดใหญ่เกินไป รั่ว หรือชำรุด
+- ตั้งอุณหภูมิลมจ่ายหรืออุณหภูมิห้องต่ำกว่าที่คอยล์ออกแบบไว้
+- ตั้งอุณหภูมิน้ำเย็นจ่ายสูงกว่าค่าออกแบบโดยไม่ได้ตรวจสอบคอยล์
+- ต่อท่อคอยล์แบบไหลขนาน แทนที่จะเป็นแบบไหลสวนทาง
+
+## วิธีแก้ เรียงจากต้นทุนต่ำสุด
+
+- ล้างคอยล์และเปลี่ยนแผ่นกรอง ตรวจว่าวาล์วปิดสนิท
+- ปรับค่าที่ตั้งไว้ของเครื่องส่งลมเย็นและแฟนคอยล์ให้ถูกต้อง
+- ปิดบายพาสที่ไม่จำเป็น เปลี่ยนวาล์วสามทางเป็นสองทางเมื่อระบบปั๊มรองรับ
+- ติดตั้งวาล์วควบคุมแบบ Pressure-Independent ที่เครื่องส่งลมเย็นที่มีปัญหามากที่สุด
+- เปลี่ยนเป็นระบบอัตราการไหลแปรผันพร้อมควบคุมความเร็วปั๊ม หลังแก้ปัญหาฝั่งอาคารแล้ว
+
+การแก้ Delta-T ที่ฝั่งอาคารมักเป็นการประหยัดที่ต้นทุนต่ำที่สุดของทั้งระบบ และเป็นสิ่งแรกที่เราตรวจสอบในการตรวจประเมิน
+
+## คูลลิ่งทาวเวอร์: Range, Approach และผลต่อประสิทธิภาพชิลเลอร์
+URL: https://infinitycoolmaster.com/th/insights/cooling-tower-range-approach-efficiency/
+Published: 2026-11-11
+
+- Range คือปริมาณที่ทาวเวอร์ลดอุณหภูมิน้ำได้ ส่วน Approach คือผลต่างระหว่างน้ำออกกับอุณหภูมิกระเปาะเปียก
+- อุณหภูมิน้ำคอนเดนเซอร์ที่ลดลงทุก 1 °C ลดพลังงานชิลเลอร์ได้ราว 2–3% ภายในขอบเขตของผู้ผลิต
+- ตะกรัน การกัดกร่อน และจุลชีพ ล้วนลดประสิทธิภาพ การบำบัดน้ำจึงเป็นมาตรการด้านพลังงาน
+- พัดลมปรับความเร็วรอบและการปรับค่าตามอุณหภูมิกระเปาะเปียก ช่วยสมดุลพลังงานทาวเวอร์กับชิลเลอร์
+
+ชิลเลอร์แบบระบายความร้อนด้วยน้ำจะมีประสิทธิภาพได้เท่ากับคุณภาพของน้ำที่คูลลิ่งทาวเวอร์ส่งกลับมา น้ำคอนเดนเซอร์ที่เย็นกว่าทำให้คอมเพรสเซอร์ทำงานน้อยลง คูลลิ่งทาวเวอร์จึงเป็นตัวกำหนดการใช้ไฟฟ้าส่วนใหญ่ของระบบโดยที่หลายคนมองข้าม
+
+## Range และ Approach
+
+- Range คือปริมาณที่ทาวเวอร์ลดอุณหภูมิน้ำได้ เท่ากับอุณหภูมิน้ำเข้าลบน้ำออก
+- Approach คือผลต่างระหว่างอุณหภูมิน้ำออกกับอุณหภูมิกระเปาะเปียกของอากาศภายนอก ทาวเวอร์ไม่สามารถทำน้ำให้เย็นกว่าอุณหภูมิกระเปาะเปียกได้ และ Approach ที่แคบลงต้องใช้ทาวเวอร์ขนาดใหญ่ขึ้น
+- ในสภาพอากาศร้อนชื้นของไทย อุณหภูมิกระเปาะเปียกสูงเกือบตลอดปี ทุกองศาของ Approach จึงมีความหมาย
+
+## ผลต่อชิลเลอร์
+
+โดยประมาณ อุณหภูมิน้ำคอนเดนเซอร์ที่ลดลงทุก 1 °C ช่วยลดพลังงานของชิลเลอร์ได้ราว 2–3% ภายในขอบเขตที่ผู้ผลิตชิลเลอร์กำหนด ทาวเวอร์ที่ฟิลล์มีตะกรันหรือลมไหลผ่านไม่ดี อาจเสียประสิทธิภาพไปได้หลายองศา
+
+## การบำบัดน้ำคือเรื่องของประสิทธิภาพ
+
+- ตะกรันบนท่อคอนเดนเซอร์ทำหน้าที่เหมือนฉนวน แม้ชั้นบาง ๆ ก็ทำให้คอมเพรสเซอร์กินไฟเพิ่มขึ้นอย่างเห็นได้ชัด
+- การกัดกร่อนทำให้อายุของท่อ อ่างน้ำ และระบบท่อสั้นลง
+- จุลชีพทำให้ฟิลล์อุดตันและเป็นความเสี่ยงต่อสุขภาพ รวมถึงเชื้อลีจิโอเนลลา
+- การบำบัดน้ำที่ดีควบคุมได้ทั้งสามอย่าง พร้อมจำกัดปริมาณน้ำที่ต้องระบายทิ้ง
+
+## สิ่งที่ควรตรวจ
+
+- ฟิลล์ หัวฉีด และแผ่นดักละอองน้ำ: สะอาด ไม่ชำรุด และน้ำกระจายทั่วถึง
+- พัดลมและชุดขับ: สายพาน เกียร์ การสั่นสะเทือน และการควบคุมความเร็ว
+- ระดับน้ำในอ่าง วาล์วเติมน้ำ และอัตราการระบายน้ำทิ้ง
+- ค่า Approach ที่ภาระที่ทราบ เทียบกับค่าออกแบบของทาวเวอร์
+- ความสะอาดของท่อคอนเดนเซอร์ โดยดูจากค่า Condenser Approach ของชิลเลอร์
+
+## การควบคุมที่ช่วยประหยัดพลังงาน
+
+- ใช้พัดลมทาวเวอร์แบบปรับความเร็วรอบ แทนการเปิด-ปิดเป็นรอบ
+- เดินหลายเซลล์ที่ความเร็วพัดลมต่ำ แทนการเดินน้อยเซลล์ที่ความเร็วเต็ม
+- ปรับอุณหภูมิน้ำคอนเดนเซอร์ตามอุณหภูมิกระเปาะเปียก โดยสมดุลระหว่างพลังงานพัดลมกับพลังงานชิลเลอร์
+
+ระบบ CPMS ของเราปรับการทำงานของทาวเวอร์ ปั๊ม และชิลเลอร์ร่วมกัน เพราะค่า kW/TR ต่ำสุดของทั้งระบบ มักไม่ใช่จุดที่อุปกรณ์ตัวใดตัวหนึ่งทำงานดีที่สุดของตัวเอง
+
+## VSD ในระบบชิลเลอร์: ประหยัดได้ที่ไหน และที่ไหนไม่คุ้ม
+URL: https://infinitycoolmaster.com/th/insights/variable-speed-drives-chiller-plant/
+Published: 2026-11-11
+
+- สำหรับปั๊มและพัดลม กำลังไฟฟ้าลดลงตามความเร็วยกกำลังสาม ที่ความเร็ว 80% ใช้กำลังประมาณครึ่งหนึ่งในระบบอุดมคติ
+- VSD คุ้มค่าที่สุดกับปั๊มน้ำเย็น ปั๊มคอนเดนเซอร์ พัดลมทาวเวอร์ และชิลเลอร์ที่ทำงานภาระบางส่วน
+- VSD ที่ตั้งความเร็วคงที่ไม่ช่วยประหยัด ผลประหยัดมาจากกลยุทธ์การควบคุม
+- ต้องปรับความเร็วร่วมกันทั้งระบบ เพราะการลดความเร็วอุปกรณ์หนึ่งอาจทำให้อีกอุปกรณ์กินไฟเพิ่ม
+
+อุปกรณ์ปรับความเร็วรอบ (Variable Speed Drive: VSD) ปรับความเร็วมอเตอร์ให้ตรงกับภาระ แทนการเดินเต็มกำลังแล้วหรี่วาล์ว เนื่องจากระบบชิลเลอร์ส่วนใหญ่ทำงานที่ภาระบางส่วนเกือบทั้งปี VSD จึงเป็นมาตรการประหยัดพลังงานที่ได้ผลมากที่สุดอย่างหนึ่ง หากติดตั้งและควบคุมอย่างถูกต้อง
+
+## หลักฟิสิกส์ในบรรทัดเดียว
+
+สำหรับปั๊มและพัดลม อัตราการไหลแปรผันตามความเร็ว แต่กำลังไฟฟ้าแปรผันตามความเร็วยกกำลังสาม ในระบบอุดมคติ การเดินที่ความเร็ว 80% ใช้กำลังประมาณครึ่งหนึ่ง และที่ความเร็ว 50% ใช้ประมาณหนึ่งในแปด
+
+## จุดที่ VSD คุ้มค่า
+
+- ปั๊มน้ำเย็น: ลดความเร็วเมื่อวาล์วหรี่และอาคารต้องการน้ำน้อยลง
+- ปั๊มน้ำคอนเดนเซอร์: ลดอัตราการไหลที่ภาระต่ำ โดยไม่ต่ำกว่าค่าขั้นต่ำของชิลเลอร์
+- พัดลมคูลลิ่งทาวเวอร์: ปรับความเร็วแทนการเปิด-ปิดเป็นรอบ
+- ชิลเลอร์: คอมเพรสเซอร์แบบปรับความเร็วรอบมีประสิทธิภาพสูงกว่ามากที่ภาระบางส่วนและเมื่อน้ำคอนเดนเซอร์เย็น
+
+## จุดที่ประหยัดได้น้อยกว่าที่คาด
+
+- ระบบที่มี Static Head สูง ซึ่งกฎกำลังสามใช้ได้ไม่เต็มที่
+- ปั๊มที่ขนาดเหมาะสมอยู่แล้วและเดินใกล้อัตราการไหลเต็มตลอดปี
+- ระบบที่ติดตั้ง VSD แต่ตั้งความเร็วคงที่ VSD ไม่ประหยัดอะไรเลยหากไม่มีกลยุทธ์การควบคุม
+
+## สิ่งที่ต้องทำให้ถูก
+
+- ต้องรักษาอัตราการไหลขั้นต่ำผ่านอีวาโปเรเตอร์และคอนเดนเซอร์ของชิลเลอร์แต่ละเครื่องเสมอ
+- ควรปรับค่าความดันแตกต่างให้ต่ำที่สุดเท่าที่อาคารยังได้ความเย็นเพียงพอ ไม่ใช่คงค่าที่ตั้งไว้ตอนทดสอบระบบ
+- งานปรับปรุงต้องตรวจสอบฮาร์มอนิก ความเหมาะสมของมอเตอร์ และความยาวสายไฟ
+- VSD แต่ละจุดส่งผลถึงกัน การลดความเร็วปั๊มคอนเดนเซอร์หรือพัดลมทาวเวอร์ช่วยประหยัดไฟของตัวมันเอง แต่ทำให้ชิลเลอร์กินไฟเพิ่ม จุดสมดุลเปลี่ยนไปตามภาระและสภาพอากาศ
+
+ผลกระทบต่อกันนี้คือเหตุผลที่ต้องปรับการทำงานทั้งระบบ ระบบ CPMS ของเราปรับความเร็วของชิลเลอร์ ปั๊ม และทาวเวอร์ร่วมกัน เพื่อให้ค่า kW/TR รวมของระบบต่ำที่สุด
+
+## การจัดลำดับเดินชิลเลอร์และประสิทธิภาพที่ภาระบางส่วน
+URL: https://infinitycoolmaster.com/th/insights/chiller-staging-part-load-iplv/
+Published: 2026-11-11
+
+- ชิลเลอร์ทำงานที่ภาระบางส่วนเกือบทั้งปี ค่า IPLV ตาม AHRI 550/590 ให้น้ำหนักภาระเต็มเพียง 1%
+- ชิลเลอร์ความเร็วคงที่มักดีที่สุดที่ภาระสูง ส่วนชิลเลอร์ปรับความเร็วรอบดีที่สุดที่ภาระปานกลาง
+- การจัดลำดับที่ดีเลือกชุดเครื่องที่ใช้กำลังไฟฟ้ารวมของระบบต่ำที่สุด รวมปั๊มและทาวเวอร์
+- ชุดเครื่องที่ดีที่สุดเปลี่ยนทุกชั่วโมง ระบบปรับการทำงานอัตโนมัติจึงให้ผลดีกว่าตารางเวลาตายตัว
+
+ประสิทธิภาพบนแผ่นป้ายของชิลเลอร์วัดที่ภาระเต็มพิกัด แต่ระบบจริงทำงานที่ภาระเต็มเพียงไม่กี่ชั่วโมงต่อปี สิ่งที่คุณจ่ายจริงคือประสิทธิภาพที่ภาระบางส่วน ซึ่งขึ้นกับว่าเดินเครื่องไหนร่วมกันเป็นอย่างมาก
+
+## ประสิทธิภาพที่ภาระบางส่วนและ IPLV
+
+IPLV (Integrated Part-Load Value) คือค่าประสิทธิภาพค่าเดียวที่ถ่วงน้ำหนักจากภาระสี่ระดับ ตามมาตรฐาน AHRI 550/590 น้ำหนักคือ 1% ที่ภาระ 100%, 42% ที่ภาระ 75%, 45% ที่ภาระ 50% และ 12% ที่ภาระ 25% กล่าวคือ มาตรฐานเองก็ถือว่าชิลเลอร์ทำงานต่ำกว่าภาระเต็มเกือบตลอดอายุการใช้งาน
+
+## ชิลเลอร์แต่ละเครื่องมีจุดที่ดีที่สุด
+
+- ชิลเลอร์ความเร็วคงที่ มักมีประสิทธิภาพสูงสุดที่ภาระสูง
+- ชิลเลอร์ปรับความเร็วรอบ มักมีประสิทธิภาพสูงสุดที่ภาระปานกลาง โดยเฉพาะเมื่อน้ำคอนเดนเซอร์เย็น
+- ที่ภาระต่ำกว่าประมาณ 30% ชิลเลอร์ส่วนใหญ่จะประสิทธิภาพต่ำและทำงานไม่เสถียร
+
+## การจัดลำดับที่ดีเป็นอย่างไร
+
+- สั่งเดินและหยุดชิลเลอร์ตามภาระและประสิทธิภาพ ไม่ใช่ตามสัญญาณเตือนอุณหภูมิน้ำจ่ายเพียงอย่างเดียว
+- เลือกชุดเครื่องที่รองรับภาระได้ด้วยกำลังไฟฟ้ารวมของระบบต่ำที่สุด โดยรวมปั๊มและพัดลมทาวเวอร์ด้วย
+- หลีกเลี่ยงการเดินชิลเลอร์สองเครื่องที่ภาระต่ำ เมื่อเครื่องเดียวรองรับได้สบาย ยกเว้นเป็นเครื่องปรับความเร็วรอบที่ทำงานได้ดีกว่าที่ภาระปานกลาง
+- ตั้งเวลาหน่วงและเวลาเดินขั้นต่ำเพื่อป้องกันการเดิน-หยุดถี่
+- สลับเครื่องเพื่อให้ชั่วโมงเดินใกล้เคียงกัน โดยไม่ขัดกับประสิทธิภาพ
+
+## ข้อผิดพลาดที่พบบ่อย
+
+- เดินชิลเลอร์เพิ่มเพื่ออัตราการไหลเพราะ Delta-T ต่ำ ไม่ใช่เพราะภาระ
+- ตารางเวลาตายตัวที่ไม่คำนึงถึงสภาพอากาศและการใช้อาคาร
+- ผู้ปฏิบัติงานเปิดชิลเลอร์ "สำรองไว้ก่อน" ตลอดวัน
+- จัดลำดับชิลเลอร์เก่าและใหม่เหมือนเป็นเครื่องเดียวกัน
+
+## ทำไมระบบอัตโนมัติจึงช่วยได้
+
+ชุดเครื่องที่ดีที่สุดเปลี่ยนไปทุกชั่วโมงตามภาระ อุณหภูมิกระเปาะเปียก และสภาพของแต่ละเครื่อง ระบบบริหารจัดการที่มีแบบจำลองของชิลเลอร์ทุกเครื่องสามารถตัดสินใจได้ต่อเนื่อง นี่คือหน้าที่หลักของระบบ CPMS ของเรา และผลลัพธ์จะถูกตรวจวัดพิสูจน์ทุกเดือนเทียบกับค่าฐานที่ตกลงกันไว้
+
+## โซลาร์รูฟท็อปกับระบบทำความเย็นประสิทธิภาพสูง: ทำไมควรทำคู่กัน
+URL: https://infinitycoolmaster.com/th/insights/rooftop-solar-and-efficient-cooling/
+Published: 2026-11-11
+
+- ความต้องการความเย็นและกำลังผลิตโซลาร์รูฟท็อปสูงสุดในวันที่ร้อนและแดดจัดเหมือนกัน
+- ควรเพิ่มประสิทธิภาพระบบทำความเย็นก่อน แล้วจึงออกแบบขนาดโซลาร์ตามความต้องการที่ลดลง
+- ภายใต้อัตรา TOU การประหยัดและการผลิตไฟใช้เองในช่วงกลางวันมีมูลค่ามากกว่า
+- ทั้งสองอย่างทำได้โดยไม่ต้องลงทุนก้อนแรก: โซลาร์แบบ PPA และระบบทำความเย็นแบบ Cooling-as-a-Service
+
+สำหรับโรงงานและอาคารพาณิชย์ส่วนใหญ่ในไทย ระบบทำความเย็นเป็นภาระไฟฟ้าที่ใหญ่ที่สุดอย่างหนึ่ง และสูงสุดในบ่ายที่ร้อนและแดดจัด ซึ่งเป็นเวลาเดียวกับที่โซลาร์รูฟท็อปผลิตไฟได้มากที่สุด สองมาตรการนี้จึงเข้ากันได้ดี แต่ลำดับการทำมีความสำคัญ
+
+## ประหยัดก่อน แล้วจึงผลิต
+
+- ระบบชิลเลอร์ที่มีประสิทธิภาพสูงขึ้นลดภาระลงอย่างถาวร ทั้งกลางวัน กลางคืน และทุกฤดู
+- โซลาร์จึงครอบคลุมสัดส่วนที่มากขึ้นของภาระที่เหลือ และออกแบบขนาดระบบได้ตามความต้องการจริงที่ลดลงแล้ว
+- การออกแบบขนาดโซลาร์ตามระบบที่ยังสิ้นเปลือง เสี่ยงต่อการจ่ายเงินผลิตไฟฟ้าในส่วนที่การปรับปรุงระบบจะช่วยตัดออกไปได้
+
+## ทำไมช่วงเวลาจึงเข้ากัน
+
+- ภาระความเย็นขึ้นกับความร้อนภายนอกและชั่วโมงทำงาน
+- กำลังผลิตโซลาร์ขึ้นกับแสงอาทิตย์ และสูงสุดช่วงเที่ยงวัน
+- ภายใต้อัตราค่าไฟแบบ TOU ช่วงกลางวันของวันทำการเป็นช่วง On-Peak ทุกหน่วยที่ประหยัดหรือผลิตเองได้ในช่วงนี้จึงมีมูลค่ามากกว่า
+
+## สิ่งที่แต่ละอย่างทำไม่ได้
+
+- โซลาร์ไม่ช่วยลดความต้องการความเย็นในเวลากลางคืนหรือวันที่มีเมฆมาก และไม่ได้แก้ระบบที่ประสิทธิภาพต่ำ
+- การเพิ่มประสิทธิภาพไม่ได้ทำให้ความต้องการที่เหลือหายไป เพียงทำให้น้อยลง
+- เมื่อทำร่วมกัน จะลดได้ทั้งปริมาณไฟฟ้าที่ซื้อและความต้องการพลังไฟฟ้าสูงสุด
+
+## ทั้งสองอย่างทำได้โดยไม่ต้องลงทุนก้อนแรก
+
+- โซลาร์รูฟท็อปทำได้ในรูปแบบสัญญาซื้อขายไฟฟ้า (PPA) ผู้ให้บริการลงทุนและเป็นเจ้าของระบบ ส่วนคุณซื้อไฟฟ้าที่ผลิตได้
+- ระบบชิลเลอร์ทำได้ในรูปแบบ Cooling-as-a-Service ผู้ให้บริการลงทุน เป็นเจ้าของ เดินระบบ และบำรุงรักษา พร้อมตรวจวัดผลประหยัดทุกเดือน
+
+## การรายงานผล
+
+พลังงานที่ประหยัดได้และพลังงานที่โซลาร์ผลิตได้ สามารถแปลงเป็นปริมาณ CO₂ ที่หลีกเลี่ยงได้ด้วยค่าการปล่อยก๊าซเรือนกระจกของระบบไฟฟ้า ซึ่งใช้ประกอบรายงาน ESG ได้ ควรแยกสองตัวเลขนี้ออกจากกันและอ้างอิงจากข้อมูลมิเตอร์
+
+## เตรียมตัวอย่างไรก่อนการตรวจประเมินพลังงานระบบชิลเลอร์
+URL: https://infinitycoolmaster.com/th/insights/prepare-chiller-plant-energy-audit/
+Published: 2026-11-11
+
+- เตรียมบิลค่าไฟ 12 เดือน รายการอุปกรณ์ แผนผังระบบ และบันทึกการเดินเครื่องก่อนการตรวจประเมิน
+- แจ้งชั่วโมงทำงาน พื้นที่สำคัญ และแผนการเปลี่ยนแปลงให้ผู้ตรวจประเมินทราบ
+- ที่หน้างานจะมีการเดินสำรวจ ตรวจวัด ณ จุดต่าง ๆ และบันทึกข้อมูลต่อเนื่องหลายวัน
+- คุณควรได้รับค่าฐาน รายการมาตรการ และข้อเสนอที่ระบุผลประหยัดที่รับประกันพร้อมวิธีตรวจวัด
+
+การตรวจประเมินพลังงานของระบบชิลเลอร์จะเร็วและชัดเจนเมื่อข้อมูลพร้อม และจะคลุมเครือเมื่อข้อมูลไม่พร้อม เช็กลิสต์นี้สรุปสิ่งที่ควรเตรียม เพื่อให้ได้ตัวเลขที่นำไปตัดสินใจได้จริง
+
+## เอกสารที่ควรรวบรวม
+
+- บิลค่าไฟฟ้าย้อนหลัง 12 เดือน และข้อมูลราย 15 นาที หากการไฟฟ้าหรือมิเตอร์ของคุณมีให้
+- รายการอุปกรณ์: ชิลเลอร์ ปั๊ม คูลลิ่งทาวเวอร์ และเครื่องส่งลมเย็น พร้อมขนาด กำลังไฟฟ้า อายุ และสารทำความเย็น
+- แผนผังระบบน้ำเย็นและน้ำคอนเดนเซอร์ และ Single-Line Diagram ของระบบไฟฟ้า
+- บันทึกการเดินเครื่อง: อุณหภูมิน้ำจ่ายและน้ำกลับ ความดัน กระแสไฟฟ้า และชั่วโมงเดินเครื่อง
+- ประวัติการบำรุงรักษา และรายการปัญหาที่ทราบอยู่
+
+## ข้อมูลการใช้งานของสถานที่
+
+- ชั่วโมงทำงาน และตารางการผลิตหรือการใช้อาคาร
+- พื้นที่สำคัญที่ขาดความเย็นไม่ได้ และอุณหภูมิที่ต้องการ
+- แผนขยายในอนาคต ช่วงเวลาที่หยุดระบบได้ และพื้นที่สำหรับอุปกรณ์ใหม่
+
+## สิ่งที่ผู้ตรวจประเมินต้องเข้าถึง
+
+- ห้องเครื่อง ดาดฟ้า ห้องไฟฟ้า และเครื่องส่งลมเย็นหลัก
+- ข้อมูลย้อนหลังจากระบบควบคุมอาคาร (BMS) หากมี
+- การอนุญาตให้ติดตั้งเครื่องบันทึกกำลังไฟฟ้าและอุณหภูมิชั่วคราว
+- ผู้ประสานงานจากฝ่ายวิศวกรรมและฝ่ายการเงิน
+
+## สิ่งที่เกิดขึ้นที่หน้างาน
+
+- เดินสำรวจห้องเครื่องและภาระความเย็นหลัก
+- ตรวจวัดกำลังไฟฟ้า อัตราการไหล และอุณหภูมิ ณ จุดต่าง ๆ
+- บันทึกข้อมูลต่อเนื่องหลายวัน เพื่อดูการเปลี่ยนแปลงของภาระ
+
+## สิ่งที่คุณควรได้รับ
+
+- ค่าฐาน: ระบบใช้พลังงานเท่าไรในปัจจุบัน และค่า kW/TR
+- รายการมาตรการ พร้อมผลประหยัดที่คาดและเงื่อนไขของแต่ละมาตรการ
+- ข้อเสนอที่ระบุผลประหยัดที่รับประกันและวิธีตรวจวัด
+
+การตรวจประเมินของ Infinity CoolMaster ไม่มีค่าใช้จ่ายและไม่มีข้อผูกมัด ใบบันทึกประจำวันและเช็กลิสต์ข้อมูล M&V ที่ดาวน์โหลดได้ฟรีในหน้าดาวน์โหลด เป็นจุดเริ่มต้นที่ดีในการเก็บข้อมูลก่อนที่เราจะเข้าพบ
 
 ## Cooling-as-a-Service กับการเช่าชิลเลอร์ แบบไหนคุ้มกว่า
 URL: https://infinitycoolmaster.com/th/insights/cooling-as-a-service-vs-leasing-chiller/
