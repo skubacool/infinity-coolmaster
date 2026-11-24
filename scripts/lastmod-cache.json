@@ -1,0 +1,434 @@
+{
+ "/en/": {
+  "hash": "b1a37983217aefbd",
+  "date": "2026-11-11"
+ },
+ "/en/about/": {
+  "hash": "11b44a70ca80f853",
+  "date": "2026-11-11"
+ },
+ "/en/insights/": {
+  "hash": "5eaaacd4d5ec1034",
+  "date": "2026-11-11"
+ },
+ "/en/insights/low-delta-t-syndrome-chilled-water/": {
+  "hash": "e12316738000a6b0",
+  "date": "2026-11-11"
+ },
+ "/en/insights/cooling-tower-range-approach-efficiency/": {
+  "hash": "a09158c5bac671c1",
+  "date": "2026-11-11"
+ },
+ "/en/insights/variable-speed-drives-chiller-plant/": {
+  "hash": "8e0dcbbfb1c796b3",
+  "date": "2026-11-11"
+ },
+ "/en/insights/chiller-staging-part-load-iplv/": {
+  "hash": "529a202cc5013743",
+  "date": "2026-11-11"
+ },
+ "/en/insights/rooftop-solar-and-efficient-cooling/": {
+  "hash": "d43ed9a5adf35eba",
+  "date": "2026-11-11"
+ },
+ "/en/insights/prepare-chiller-plant-energy-audit/": {
+  "hash": "62074ee8fa7704cc",
+  "date": "2026-11-11"
+ },
+ "/en/insights/cooling-as-a-service-vs-leasing-chiller/": {
+  "hash": "fbf4055ff04d840f",
+  "date": "2026-11-07"
+ },
+ "/en/insights/thailand-tou-ft-electricity-chiller-cost/": {
+  "hash": "6ba57d7e4bca9e8e",
+  "date": "2026-11-05"
+ },
+ "/en/insights/designated-factory-building-energy-law-thailand/": {
+  "hash": "6198c9b7225d1a93",
+  "date": "2026-11-05"
+ },
+ "/en/insights/food-beverage-factory-cooling/": {
+  "hash": "5f2c089017af12b5",
+  "date": "2026-11-05"
+ },
+ "/en/insights/pharmaceutical-cleanroom-cooling/": {
+  "hash": "d96d3f5045d7536d",
+  "date": "2026-11-05"
+ },
+ "/en/insights/cooling-as-a-service-vs-esco-thailand/": {
+  "hash": "e33195f16786e811",
+  "date": "2026-11-05"
+ },
+ "/en/insights/refrigerant-phase-down-r22-kigali-thailand/": {
+  "hash": "d22dbf24602a18bb",
+  "date": "2026-11-05"
+ },
+ "/en/insights/what-is-cooling-as-a-service/": {
+  "hash": "5d6f8eea62128767",
+  "date": "2026-11-03"
+ },
+ "/en/insights/chiller-replacement-cost-factors/": {
+  "hash": "ba1b149af788a14e",
+  "date": "2026-11-03"
+ },
+ "/en/insights/kw-per-tr-chiller-plant-efficiency/": {
+  "hash": "51c27fc4067e4f43",
+  "date": "2026-11-03"
+ },
+ "/en/insights/cooling-as-a-service-contract-length-end-of-term/": {
+  "hash": "900516bca2c7daa8",
+  "date": "2026-11-03"
+ },
+ "/en/insights/cooling-as-a-service-cfo-questions/": {
+  "hash": "66cd941b9c2d4a55",
+  "date": "2026-11-03"
+ },
+ "/en/insights/reduce-chiller-plant-energy-use/": {
+  "hash": "7dc61f715a1a80fb",
+  "date": "2026-11-03"
+ },
+ "/en/insights/signs-chiller-plant-needs-replacing/": {
+  "hash": "c3940d93c4613955",
+  "date": "2026-11-03"
+ },
+ "/en/insights/water-cooled-vs-air-cooled-chillers/": {
+  "hash": "30f9bfda1a8328bb",
+  "date": "2026-11-03"
+ },
+ "/en/insights/chiller-plant-maintenance-checklist/": {
+  "hash": "99c9edcd662a1aab",
+  "date": "2026-11-03"
+ },
+ "/en/insights/ipmvp-options-a-b-c-d-explained/": {
+  "hash": "d97005343ddb014f",
+  "date": "2026-11-03"
+ },
+ "/en/insights/data-center-cooling-pue/": {
+  "hash": "edb2f8232646c431",
+  "date": "2026-11-03"
+ },
+ "/en/insights/hotel-resort-cooling-cost-reduction/": {
+  "hash": "3f715b679e1fd049",
+  "date": "2026-11-03"
+ },
+ "/en/insights/hospital-cooling-redundancy-n-plus-1-2n/": {
+  "hash": "64ade9b927fecc10",
+  "date": "2026-11-03"
+ },
+ "/en/insights/first-cooling-as-a-service-project-commissioning/": {
+  "hash": "96f3245d5d8d7bd4",
+  "date": "2026-11-03"
+ },
+ "/en/insights/plastics-factory-process-cooling/": {
+  "hash": "2125aedb1bd7ff8b",
+  "date": "2026-11-03"
+ },
+ "/en/insights/cfo-guide-cooling-as-a-service/": {
+  "hash": "8f23e15b52356f9f",
+  "date": "2026-05-18"
+ },
+ "/en/insights/ipmvp-explained-how-savings-are-measured/": {
+  "hash": "c12271490a296c11",
+  "date": "2026-02-20"
+ },
+ "/en/hotels/": {
+  "hash": "d1f39114191c382f",
+  "date": "2026-11-11"
+ },
+ "/en/hospitals/": {
+  "hash": "81c89b1ad69720e5",
+  "date": "2026-11-11"
+ },
+ "/en/shopping-malls/": {
+  "hash": "d04c4a8d27a6677e",
+  "date": "2026-11-11"
+ },
+ "/en/factories/": {
+  "hash": "4c397d5be68c4b0c",
+  "date": "2026-11-11"
+ },
+ "/en/office-buildings/": {
+  "hash": "60f835caa48d9413",
+  "date": "2026-11-11"
+ },
+ "/en/data-centers/": {
+  "hash": "f1437c7ad3884171",
+  "date": "2026-11-11"
+ },
+ "/en/pricing-model/": {
+  "hash": "21f7167421b43443",
+  "date": "2026-11-11"
+ },
+ "/en/caas-vs-buying-chiller/": {
+  "hash": "dba85e50f217d7a9",
+  "date": "2026-11-11"
+ },
+ "/en/chiller-replacement/": {
+  "hash": "8d04e6526183df54",
+  "date": "2026-11-11"
+ },
+ "/en/savings-calculator/": {
+  "hash": "5039f550ebec40d2",
+  "date": "2026-11-11"
+ },
+ "/en/measurement-verification/": {
+  "hash": "9d9ffb4efa9dbf52",
+  "date": "2026-11-11"
+ },
+ "/en/contact/": {
+  "hash": "4ee79ebd46260ffe",
+  "date": "2026-11-11"
+ },
+ "/en/glossary/": {
+  "hash": "57d084a1084f75ae",
+  "date": "2026-11-11"
+ },
+ "/en/chiller-efficiency-check/": {
+  "hash": "856c9e29db6e6c40",
+  "date": "2026-11-11"
+ },
+ "/en/eastern-economic-corridor/": {
+  "hash": "996de281f3a5560b",
+  "date": "2026-11-11"
+ },
+ "/en/cooling-contract-calculator/": {
+  "hash": "db3d4b24fc080f6c",
+  "date": "2026-11-11"
+ },
+ "/en/cost-of-waiting-calculator/": {
+  "hash": "22a453c459e1e0b9",
+  "date": "2026-11-11"
+ },
+ "/en/carbon-calculator/": {
+  "hash": "439b2299b279656a",
+  "date": "2026-11-11"
+ },
+ "/en/engineer-downloads/": {
+  "hash": "556e80947da3d491",
+  "date": "2026-11-11"
+ },
+ "/en/privacy-policy/": {
+  "hash": "448d0e9d4e8fac7d",
+  "date": "2026-11-11"
+ },
+ "/en/caas-fit-check/": {
+  "hash": "020099b2b4418fa7",
+  "date": "2026-11-11"
+ },
+ "/th/": {
+  "hash": "7e0bbeef3c755303",
+  "date": "2026-11-11"
+ },
+ "/th/about/": {
+  "hash": "d316422b3862f2dc",
+  "date": "2026-11-11"
+ },
+ "/th/insights/": {
+  "hash": "2c88c611e7f002b7",
+  "date": "2026-11-11"
+ },
+ "/th/insights/low-delta-t-syndrome-chilled-water/": {
+  "hash": "15fccde544e435d1",
+  "date": "2026-11-11"
+ },
+ "/th/insights/cooling-tower-range-approach-efficiency/": {
+  "hash": "ee572a11f4a24820",
+  "date": "2026-11-11"
+ },
+ "/th/insights/variable-speed-drives-chiller-plant/": {
+  "hash": "2aa51a08f6f65623",
+  "date": "2026-11-11"
+ },
+ "/th/insights/chiller-staging-part-load-iplv/": {
+  "hash": "7e42da43b38bceaf",
+  "date": "2026-11-11"
+ },
+ "/th/insights/rooftop-solar-and-efficient-cooling/": {
+  "hash": "a996d1d86300e76a",
+  "date": "2026-11-11"
+ },
+ "/th/insights/prepare-chiller-plant-energy-audit/": {
+  "hash": "dcd0e01bb2825b95",
+  "date": "2026-11-11"
+ },
+ "/th/insights/cooling-as-a-service-vs-leasing-chiller/": {
+  "hash": "f687a3ab1429dffc",
+  "date": "2026-11-07"
+ },
+ "/th/insights/thailand-tou-ft-electricity-chiller-cost/": {
+  "hash": "2c9490e3ea4bb55a",
+  "date": "2026-11-05"
+ },
+ "/th/insights/designated-factory-building-energy-law-thailand/": {
+  "hash": "05241aa4f89d58ff",
+  "date": "2026-11-05"
+ },
+ "/th/insights/food-beverage-factory-cooling/": {
+  "hash": "9c385d2d2ab892fa",
+  "date": "2026-11-05"
+ },
+ "/th/insights/pharmaceutical-cleanroom-cooling/": {
+  "hash": "ea57861c8f30329c",
+  "date": "2026-11-05"
+ },
+ "/th/insights/cooling-as-a-service-vs-esco-thailand/": {
+  "hash": "2137fd7103a315a4",
+  "date": "2026-11-05"
+ },
+ "/th/insights/refrigerant-phase-down-r22-kigali-thailand/": {
+  "hash": "36051784757b40ac",
+  "date": "2026-11-05"
+ },
+ "/th/insights/what-is-cooling-as-a-service/": {
+  "hash": "7ad399b34a0e6bca",
+  "date": "2026-11-03"
+ },
+ "/th/insights/chiller-replacement-cost-factors/": {
+  "hash": "ebeaa0459953a8b1",
+  "date": "2026-11-03"
+ },
+ "/th/insights/kw-per-tr-chiller-plant-efficiency/": {
+  "hash": "e7d5649eb47beff4",
+  "date": "2026-11-03"
+ },
+ "/th/insights/cooling-as-a-service-contract-length-end-of-term/": {
+  "hash": "f19fe793b47728cf",
+  "date": "2026-11-03"
+ },
+ "/th/insights/cooling-as-a-service-cfo-questions/": {
+  "hash": "9371aaaaee4673bc",
+  "date": "2026-11-03"
+ },
+ "/th/insights/reduce-chiller-plant-energy-use/": {
+  "hash": "30b9f19968c209e1",
+  "date": "2026-11-03"
+ },
+ "/th/insights/signs-chiller-plant-needs-replacing/": {
+  "hash": "5b18d63740207248",
+  "date": "2026-11-03"
+ },
+ "/th/insights/water-cooled-vs-air-cooled-chillers/": {
+  "hash": "82bae4aea7a558c0",
+  "date": "2026-11-03"
+ },
+ "/th/insights/chiller-plant-maintenance-checklist/": {
+  "hash": "457b7cd51772806d",
+  "date": "2026-11-03"
+ },
+ "/th/insights/ipmvp-options-a-b-c-d-explained/": {
+  "hash": "03e81a7b1e9f2243",
+  "date": "2026-11-03"
+ },
+ "/th/insights/data-center-cooling-pue/": {
+  "hash": "6846abdc8f85336f",
+  "date": "2026-11-03"
+ },
+ "/th/insights/hotel-resort-cooling-cost-reduction/": {
+  "hash": "006b4224286c1ce9",
+  "date": "2026-11-03"
+ },
+ "/th/insights/hospital-cooling-redundancy-n-plus-1-2n/": {
+  "hash": "66e594f0061da905",
+  "date": "2026-11-03"
+ },
+ "/th/insights/first-cooling-as-a-service-project-commissioning/": {
+  "hash": "09a1e0e547a89469",
+  "date": "2026-11-03"
+ },
+ "/th/insights/plastics-factory-process-cooling/": {
+  "hash": "0d1b019d89f218f5",
+  "date": "2026-11-03"
+ },
+ "/th/insights/cfo-guide-cooling-as-a-service/": {
+  "hash": "0ae6916be1c43d64",
+  "date": "2026-05-18"
+ },
+ "/th/insights/ipmvp-explained-how-savings-are-measured/": {
+  "hash": "28b295f13baa8860",
+  "date": "2026-02-20"
+ },
+ "/th/hotels/": {
+  "hash": "c5a5e0d737cc23b5",
+  "date": "2026-11-11"
+ },
+ "/th/hospitals/": {
+  "hash": "4cb9ab082e65492d",
+  "date": "2026-11-11"
+ },
+ "/th/shopping-malls/": {
+  "hash": "a938f5254b0c2180",
+  "date": "2026-11-11"
+ },
+ "/th/factories/": {
+  "hash": "ab7991d4767e4bab",
+  "date": "2026-11-11"
+ },
+ "/th/office-buildings/": {
+  "hash": "e62bfed68ce3a811",
+  "date": "2026-11-11"
+ },
+ "/th/data-centers/": {
+  "hash": "d7d0f16ff5a3fb29",
+  "date": "2026-11-11"
+ },
+ "/th/pricing-model/": {
+  "hash": "d641489c95a9f910",
+  "date": "2026-11-11"
+ },
+ "/th/caas-vs-buying-chiller/": {
+  "hash": "2e09527b73f8915a",
+  "date": "2026-11-11"
+ },
+ "/th/chiller-replacement/": {
+  "hash": "75e4129c0d20db17",
+  "date": "2026-11-11"
+ },
+ "/th/savings-calculator/": {
+  "hash": "95e94cab75a1a413",
+  "date": "2026-11-11"
+ },
+ "/th/measurement-verification/": {
+  "hash": "efc98a08a118b8e6",
+  "date": "2026-11-11"
+ },
+ "/th/contact/": {
+  "hash": "6a3e139a5b1c95f6",
+  "date": "2026-11-11"
+ },
+ "/th/glossary/": {
+  "hash": "aff1f9eb200f55a9",
+  "date": "2026-11-11"
+ },
+ "/th/chiller-efficiency-check/": {
+  "hash": "2ef35dface2e6962",
+  "date": "2026-11-11"
+ },
+ "/th/eastern-economic-corridor/": {
+  "hash": "e6fdf9248150fb74",
+  "date": "2026-11-11"
+ },
+ "/th/cooling-contract-calculator/": {
+  "hash": "50f44d100b01159e",
+  "date": "2026-11-11"
+ },
+ "/th/cost-of-waiting-calculator/": {
+  "hash": "2d3eaa8bbf648316",
+  "date": "2026-11-11"
+ },
+ "/th/carbon-calculator/": {
+  "hash": "d8542c6b98b9a9e0",
+  "date": "2026-11-11"
+ },
+ "/th/engineer-downloads/": {
+  "hash": "e646111b1f6c119e",
+  "date": "2026-11-11"
+ },
+ "/th/privacy-policy/": {
+  "hash": "1d820f847505511c",
+  "date": "2026-11-11"
+ },
+ "/th/caas-fit-check/": {
+  "hash": "a32769f2d270fefc",
+  "date": "2026-11-11"
+ }
+}

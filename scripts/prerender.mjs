@@ -12,6 +12,7 @@
  * deploy still update for visitors immediately, but search engines see the
  * new text only after the next build + deploy.
  */
+import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -96,6 +97,38 @@ const write = async (urlPath, content) => {
 
 const today = new Date().toISOString().slice(0, 10);
 const sitemapEntries = [];
+
+// <lastmod> in the sitemap must mean "the content changed". Stamping every
+// page with the build date teaches search engines to ignore it, so each page
+// keeps its own date: a hash of its text, title and description is stored in
+// scripts/lastmod-cache.json, and the date moves to today only when that hash
+// changes. Commit the file after a deploy so every machine agrees.
+// LASTMOD_SEED=YYYY-MM-DD sets the date for pages not yet in the cache.
+const cachePath = path.join(root, 'scripts', 'lastmod-cache.json');
+let lastmodCache = {};
+try {
+  lastmodCache = JSON.parse(await fs.readFile(cachePath, 'utf8'));
+} catch {
+  // first build: no cache yet
+}
+const nextCache = {};
+const seedDate = /^\d{4}-\d{2}-\d{2}$/.test(process.env.LASTMOD_SEED ?? '')
+  ? process.env.LASTMOD_SEED
+  : today;
+const hashPage = (page) => {
+  const pick = (re) => page.head.match(re)?.[1] ?? '';
+  return crypto
+    .createHash('sha1')
+    .update(
+      [
+        page.html,
+        pick(/<title[^>]*>(.*?)<\/title>/s),
+        pick(/name="description" content="([^"]*)"/),
+      ].join('\u0000')
+    )
+    .digest('hex')
+    .slice(0, 16);
+};
 const pages = await server.listSitePaths();
 const seen = new Set();
 for (const { path: p } of pages) {
@@ -124,16 +157,27 @@ for (const { path: urlPath, lastmod } of pages) {
   );
   count += 1;
   if (!page.noindex && page.canonical) {
+    const hash = hashPage(page);
+    const known = lastmodCache[urlPath];
+    const fromData =
+      lastmod && /^\d{4}-\d{2}-\d{2}/.test(lastmod)
+        ? lastmod.slice(0, 10)
+        : null;
+    const date = !known
+      ? (fromData ?? seedDate)
+      : known.hash === hash
+        ? known.date
+        : today;
+    nextCache[urlPath] = { hash, date };
     sitemapEntries.push({
       loc: server.SITE_ORIGIN + page.canonical,
-      lastmod:
-        lastmod && /^\d{4}-\d{2}-\d{2}/.test(lastmod)
-          ? lastmod.slice(0, 10)
-          : today,
+      lastmod: date,
       alternates: page.alternates,
     });
   }
 }
+
+await fs.writeFile(cachePath, JSON.stringify(nextCache, null, 1) + '\n');
 
 // 404 page: GitHub Pages serves it, with status 404, for any unknown path.
 const notFound = await server.renderPage('/th/404/');
