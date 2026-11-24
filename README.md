@@ -117,6 +117,13 @@ python3 scripts/make-thumbnails.py
 If a file's size changes noticeably, update the size shown in
 `src/components/screens/screen-page/sections/engineer-downloads.tsx`.
 
+**Sitemap dates and feeds.** `<lastmod>` in `sitemap.xml` is a real per-page
+date: `scripts/lastmod-cache.json` stores a hash of each page's text, and a
+page's date moves to today only when its text, title or description changes.
+Commit that file after a deploy so every machine agrees. The build also writes
+an Atom feed of the guides for each language (`/th/feed.xml`, `/en/feed.xml`),
+linked from every page.
+
 The build also writes `llms.txt` (an index for AI assistants) and
 `llms-full.txt` (every published page and article as plain text).
 

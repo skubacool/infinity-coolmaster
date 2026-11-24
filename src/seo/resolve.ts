@@ -153,6 +153,18 @@ const organizationLd = (contacts: Contact[]) => {
     email: ORGANIZATION.email,
     telephone: ORGANIZATION.telephone,
     address: { '@type': 'PostalAddress', ...ORGANIZATION.address },
+    description: ORGANIZATION.description,
+    slogan: ORGANIZATION.slogan,
+    areaServed: { '@type': 'Country', name: 'Thailand' },
+    knowsAbout: ORGANIZATION.knowsAbout,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      telephone: ORGANIZATION.telephone,
+      email: ORGANIZATION.email,
+      areaServed: 'TH',
+      availableLanguage: ['th', 'en'],
+    },
     sameAs: social.length ? social : ORGANIZATION.sameAs,
   };
 };
@@ -176,6 +188,34 @@ const localBusinessLd = () => ({
     : {}),
   areaServed: { '@type': 'Country', name: 'Thailand' },
   parentOrganization: { '@id': ORG_ID },
+});
+
+const websiteLd = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_ORIGIN}/#website`,
+  url: `${SITE_ORIGIN}/`,
+  name: ORGANIZATION.name,
+  inLanguage: ['th', 'en'],
+  publisher: { '@id': ORG_ID },
+});
+
+/** Typed WebPage for the about and contact pages. */
+const webPageLd = (
+  type: 'AboutPage' | 'ContactPage',
+  name: string,
+  description: string,
+  url: string,
+  locale: Locale
+) => ({
+  '@context': 'https://schema.org',
+  '@type': type,
+  name,
+  description,
+  url: absoluteUrl(url),
+  inLanguage: locale,
+  isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
+  about: { '@id': ORG_ID },
 });
 
 const breadcrumbLd = (items: { name: string; path: string }[]) => ({
@@ -376,7 +416,9 @@ export const resolvePage = async (
           .description,
         canonical: match.kind === 'root' ? paths.home('th') : null,
         alternates: {},
-        noindex: true,
+        // The bare domain redirects to /th/ and names it as canonical; it must
+        // not carry noindex, which would cancel the signal for links to it.
+        noindex: match.kind !== 'root',
       },
     };
   }
@@ -402,6 +444,11 @@ export const resolvePage = async (
     ogType: 'website',
     ogImage: DEFAULT_SHARE_IMAGE,
     jsonLd: [org],
+    feed: `/${locale}/feed.xml`,
+    feedTitle:
+      locale === 'th'
+        ? 'Infinity CoolMaster: บทความและคู่มือ'
+        : 'Infinity CoolMaster: guides and news',
     ...extra,
   });
 
@@ -417,7 +464,7 @@ export const resolvePage = async (
       const faqs = await listFaqs();
       if (withSeed) Object.assign(seed, await frontSeed());
       const head = base(meta.home, bothLocales(paths.home));
-      head.jsonLd.push(localBusinessLd());
+      head.jsonLd.push(websiteLd(), localBusinessLd());
       if (faqs.length) head.jsonLd.push(faqLd(faqs, locale));
       return { match, status: 200, seed, head };
     }
@@ -432,6 +479,13 @@ export const resolvePage = async (
       }
       const head = base(meta.about, bothLocales(paths.about));
       head.jsonLd.push(
+        webPageLd(
+          'AboutPage',
+          meta.about.title,
+          meta.about.description,
+          paths.about(locale),
+          locale
+        ),
         breadcrumbLd([
           home,
           { name: meta.about.label, path: paths.about(locale) },
@@ -582,7 +636,18 @@ export const resolvePage = async (
           noindex: isDraftPage(match.page),
         }
       );
-      if (match.page === 'contact') head.jsonLd.push(localBusinessLd());
+      if (match.page === 'contact') {
+        head.jsonLd.push(
+          localBusinessLd(),
+          webPageLd(
+            'ContactPage',
+            text.h1,
+            text.description,
+            paths.page(locale, 'contact'),
+            locale
+          )
+        );
+      }
       const { body, guides } = await resolvePageContent(locale, match.page);
       if (withSeed) {
         seed['page.for'] = `${locale}/${match.page}`;
@@ -638,6 +703,63 @@ export const resolvePage = async (
     default:
       return notFound();
   }
+};
+
+const xml = (s: string): string =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/** Atom feed of the guides and news in one language (written to /<locale>/feed.xml). */
+export const buildFeed = async (locale: Locale): Promise<string> => {
+  const activities = (await listActivities()) as Activity[];
+  const items = [...activities]
+    .filter((a) => a.title[locale])
+    .sort((a, b) =>
+      (b.updatedAt || b.publishedAt || '').localeCompare(
+        a.updatedAt || a.publishedAt || ''
+      )
+    );
+  const stamp = (d?: string) =>
+    /^\d{4}-\d{2}-\d{2}/.test(d ?? '')
+      ? `${(d as string).slice(0, 10)}T00:00:00+07:00`
+      : null;
+  const feedUrl = `${SITE_ORIGIN}/${locale}/feed.xml`;
+  const updated =
+    stamp(items[0]?.updatedAt || items[0]?.publishedAt) ??
+    new Date().toISOString();
+  const title =
+    locale === 'th'
+      ? 'Infinity CoolMaster: บทความและคู่มือ'
+      : 'Infinity CoolMaster: guides and news';
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    `<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="${locale}">`,
+    `  <title>${xml(title)}</title>`,
+    `  <id>${feedUrl}</id>`,
+    `  <link rel="self" type="application/atom+xml" href="${feedUrl}"/>`,
+    `  <link rel="alternate" type="text/html" href="${SITE_ORIGIN}${paths.insights(locale)}"/>`,
+    `  <updated>${updated}</updated>`,
+    '  <author><name>Infinity CoolMaster</name></author>',
+    ...items.map((a) => {
+      const url = `${SITE_ORIGIN}${paths.insight(locale, a)}`;
+      const date = stamp(a.updatedAt || a.publishedAt) ?? updated;
+      return [
+        '  <entry>',
+        `    <title>${xml(a.title[locale])}</title>`,
+        `    <id>${url}</id>`,
+        `    <link rel="alternate" type="text/html" href="${url}"/>`,
+        `    <published>${stamp(a.publishedAt) ?? date}</published>`,
+        `    <updated>${date}</updated>`,
+        a.excerpt?.[locale]
+          ? `    <summary>${xml(a.excerpt[locale])}</summary>`
+          : '',
+        '  </entry>',
+      ]
+        .filter(Boolean)
+        .join('\n');
+    }),
+    '</feed>',
+    '',
+  ].join('\n');
 };
 
 /** Every indexable or pre-renderable path, for the build and the sitemap. */

@@ -16,6 +16,10 @@ export interface Head {
   ogType: 'website' | 'article';
   ogImage: string;
   jsonLd: Record<string, unknown>[];
+  /** Path of the Atom feed of guides in this language. */
+  feed?: string;
+  /** Title of that feed link. */
+  feedTitle?: string;
 }
 
 const OG_LOCALE: Record<Locale, string> = { en: 'en_US', th: 'th_TH' };
@@ -64,6 +68,11 @@ export const headToHtml = (head: Head): string => {
         `<link data-seo rel="alternate" hreflang="x-default" href="${esc(absoluteUrl(xDefault))}" />`
       );
     }
+  }
+  if (head.feed) {
+    tags.push(
+      `<link data-seo rel="alternate" type="application/atom+xml" title="${esc(head.feedTitle ?? 'Infinity CoolMaster')}" href="${esc(absoluteUrl(head.feed))}" />`
+    );
   }
   const url = head.canonical ? absoluteUrl(head.canonical) : null;
   tags.push(

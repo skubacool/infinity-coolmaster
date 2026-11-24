@@ -265,6 +265,14 @@ const robots = [
 ].join('\n');
 await fs.writeFile(path.join(dist, 'robots.txt'), robots);
 
+// Atom feeds of the guides, one per language, linked from every page's head.
+for (const locale of server.LOCALES) {
+  await fs.writeFile(
+    path.join(dist, locale, 'feed.xml'),
+    await server.buildFeed(locale)
+  );
+}
+
 // llms.txt (index) and llms-full.txt (all text) for AI assistants.
 const llms = await server.buildLlmsFiles();
 await fs.writeFile(path.join(dist, 'llms.txt'), llms.short);

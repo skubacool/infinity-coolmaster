@@ -29,6 +29,20 @@ export const ORGANIZATION = {
   /** TODO: opening hours, e.g. ['Mo-Fr 08:30-17:30']. */
   openingHours: null as string[] | null,
   /** Fallback social profiles; the CMS contact list overrides these. */
+  /** What the company does, in one sentence (from the company profile). */
+  description:
+    'Cooling-as-a-Service (chiller-as-a-service) provider in Bangkok, Thailand. Infinity CoolMaster designs, finances, installs, owns and operates chiller plants; clients pay for efficient cooling from the savings, with a minimum 10% energy saving guaranteed in writing and verified monthly.',
+  slogan: 'Smart Cooling. Zero Hassle.',
+  /** Topics the site covers, for knowsAbout. */
+  knowsAbout: [
+    'Cooling-as-a-Service',
+    'Chiller plant efficiency',
+    'Chiller replacement',
+    'Energy performance measurement and verification (IPMVP)',
+    'Machine-learning chiller plant optimisation',
+    'Thailand time-of-use electricity tariffs',
+    'Refrigerant phase-down',
+  ],
   sameAs: [
     'https://www.linkedin.com/company/infinity-coolmaster',
     'https://www.facebook.com/infinitycoolmaster',

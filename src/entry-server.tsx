@@ -6,7 +6,7 @@ import { createStore, Provider } from 'jotai';
 import App from './App';
 import { applySeed, PageSeed } from './lib/seed';
 import { headToHtml, safeJson } from './seo/head';
-import { resolvePage, listSitePaths } from './seo/resolve';
+import { resolvePage, listSitePaths, buildFeed } from './seo/resolve';
 import {
   LOCALES,
   SITE_ORIGIN,
@@ -58,7 +58,7 @@ export const renderHeadOnly = async (url: string) => {
   return { lang: resolved.head.lang, head: headToHtml(resolved.head) };
 };
 
-export { listSitePaths, LOCALES, SITE_ORIGIN, safeJson };
+export { listSitePaths, buildFeed, LOCALES, SITE_ORIGIN, safeJson };
 
 /** Built-in guide titles, for scripts/og-images.py (share images). */
 export const guideTitles = async () =>

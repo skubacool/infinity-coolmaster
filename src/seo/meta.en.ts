@@ -10,7 +10,7 @@ const meta: SiteMeta = {
   home: {
     title: 'Chiller as a Service in Thailand | Infinity CoolMaster',
     description:
-      'We install and own a high-efficiency chiller plant at your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Book a free audit.',
+      'We install and own a high-efficiency chiller plant for your building with zero CapEx. You pay per unit of cooling, with IPMVP-verified savings. Free audit.',
   },
   about: {
     label: 'About',
@@ -133,7 +133,7 @@ const meta: SiteMeta = {
       label: 'Data Centers',
       title: 'Data Center Cooling as a Service | Infinity CoolMaster',
       description:
-        'Efficient, redundant cooling for data centers in Thailand, delivered as a service with zero CapEx and measured savings that support PUE reporting. Book an audit.',
+        'Efficient, redundant cooling for data centers in Thailand, delivered as a service with zero CapEx and measured savings that support PUE reporting.',
       h1: 'Cooling as a service for data centers',
       intro:
         'We deliver efficient, redundant data-center cooling as a service, with no upfront cost. Optimisation starts in shadow mode so operators approve every change, and verified monthly energy data supports your PUE reporting.',
@@ -151,7 +151,7 @@ const meta: SiteMeta = {
       label: 'CaaS vs Buying',
       title: 'CaaS vs Buying a Chiller: Compared | Infinity CoolMaster',
       description:
-        'Cooling as a service compared with buying, leasing or an ESCO contract: upfront cost, risk, maintenance and savings guarantees side by side. Read the comparison.',
+        'Cooling as a service compared with buying, leasing or an ESCO contract: upfront cost, risk, maintenance and savings guarantees side by side.',
       h1: 'Cooling as a service vs buying, leasing or ESCO',
       intro:
         'Buying a chiller means paying the full cost upfront and carrying the performance risk yourself. With Cooling-as-a-Service the provider funds, owns and runs the plant and guarantees the saving. This page compares buying, leasing, ESCO contracts and CaaS side by side.',
@@ -178,7 +178,7 @@ const meta: SiteMeta = {
       label: 'Measurement & Verification',
       title: 'IPMVP Measurement & Verification | Infinity CoolMaster',
       description:
-        'How Infinity CoolMaster measures and verifies energy savings under IPMVP: baseline, metering, monthly reports and independent checks. See how savings are proven.',
+        'How Infinity CoolMaster measures and verifies energy savings under IPMVP: baseline, metering, monthly reports and independent checks.',
       h1: 'How we measure and verify savings (IPMVP)',
       intro:
         'Every saving we guarantee is measured, not estimated. We agree an IPMVP-aligned baseline with you before work starts, meter the plant continuously and report the verified saving every month; you or a third party can audit the numbers.',
@@ -196,7 +196,7 @@ const meta: SiteMeta = {
       label: 'Glossary',
       title: 'Chiller & Cooling Glossary | Infinity CoolMaster',
       description:
-        'Plain-English definitions of chiller and cooling terms: TR, kW/TR, COP, delta-T, VSD, IPMVP, ESCO, PUE, TOU and more, for building owners and engineers in Thailand.',
+        'Plain-English definitions of chiller and cooling terms (TR, kW/TR, COP, delta-T, VSD, IPMVP, ESCO, PUE, TOU) for building owners and engineers in Thailand.',
       h1: 'Chiller and cooling glossary',
       intro:
         'Short definitions of the terms used in chiller plants, energy savings and Cooling-as-a-Service contracts. Each term has its own link, so you can share a single definition.',
@@ -232,7 +232,7 @@ const meta: SiteMeta = {
       label: 'Cost of Waiting Calculator',
       title: 'Cost of Delaying Chiller Replacement | Infinity CoolMaster',
       description:
-        'How much does an inefficient chiller plant cost you every month you wait? Enter its kW/TR, load, hours and tariff to see the extra electricity cost per month and year.',
+        'What does an inefficient chiller plant cost every month you wait? Enter its kW/TR, load, hours and tariff to see the extra electricity cost per month and year.',
       h1: 'What does waiting cost you?',
       intro:
         'An inefficient chiller plant costs more every month it keeps running. Enter its current efficiency, average load, operating hours and electricity price to see how much extra you pay compared with a well-run modern plant.',
@@ -241,7 +241,7 @@ const meta: SiteMeta = {
       label: 'CO₂ Savings Calculator',
       title: 'Chiller CO₂ Savings Calculator | Infinity CoolMaster',
       description:
-        'Convert chiller plant energy savings into tonnes of CO₂ avoided, using Thailand’s TGO grid emission factor, for ESG and sustainability reporting. Free calculator.',
+        'Convert chiller plant energy savings into tonnes of CO₂ avoided with Thailand’s TGO grid emission factor, for ESG and sustainability reporting. Free calculator.',
       h1: 'How much CO₂ would better cooling save?',
       intro:
         'Enter your chiller plant’s annual electricity use and the expected saving to see the energy saved and the CO₂ emissions avoided, using a Thai grid emission factor you can adjust to match your report.',
@@ -250,7 +250,7 @@ const meta: SiteMeta = {
       label: 'Free Downloads',
       title: 'Free Chiller Log Sheets & Checklists | Infinity CoolMaster',
       description:
-        'Free Excel templates for chiller plant teams in Thai and English: a daily log sheet, a monthly maintenance checklist and an M&V data checklist. Download and use.',
+        'Free Excel templates for chiller plant teams in Thai and English: a daily log sheet, a maintenance checklist and an M&V data checklist. Download and use.',
       h1: 'Free templates for chiller plant teams',
       intro:
         'Practical Excel templates, in Thai and English, for the people who run chiller plants every day. Free to download, use and share.',
